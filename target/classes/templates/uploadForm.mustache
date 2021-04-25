@@ -572,11 +572,17 @@
                     <td>the Bird</td>
                     <td>@twitter</td>
                 </tr>
-                {{#todos}}
-                    <h2>{{title}}</h2>
-                {{/todos}}
                 </tbody>
             </table>
+            <ul>
+                {{#items}}
+                    <h1>{{title}}</h1>
+
+                    <div>{{description}}</div>
+
+                {{/items}}
+
+            </ul>
         </div>
     </div>
 </div>

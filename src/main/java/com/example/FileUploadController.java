@@ -17,6 +17,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Controller
@@ -30,13 +31,13 @@ public class FileUploadController {
     }
 
     @GetMapping("/file")
-    public String listUploadedFiles(Model model) throws IOException {
-
-        model.addAttribute("files", storageService.loadAll().map(
-                path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
-                        "serveFile", path.getFileName().toString()).build().toUri().toString())
-                .collect(Collectors.toList()));
-
+    public String listUploadedFiles(Map<String, Object> model) throws IOException {
+        List<Dictionary<String, String>> items = new ArrayList<>();
+        Dictionary item = new Hashtable<>();
+        item.put("title", "Alex");
+        item.put("description", "blablabla");
+        items.add(item);
+        model.put("items", items);
         return "uploadForm";
     }
 
