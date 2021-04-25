@@ -32,7 +32,7 @@ public class parse_determine {
         if (fileType.contains("csv")) {
             System.out.println("CSV!");
 
-            File fileread = new File(file_path);
+            File fileread= new File(file_path);
             List<List<String>> records = new ArrayList<>();
             try (BufferedReader br = new BufferedReader(new FileReader(fileread))) {
                 String line;
@@ -41,9 +41,10 @@ public class parse_determine {
                     records.add(Arrays.asList(values));
                 }
                 System.out.println(records);
-            } catch (Exception excep) {
+            } catch (Exception excep){
                 excep.printStackTrace();
             }
+
 
         } else if (fileType.contains("xlsx") || fileType.contains("xml")) {
             System.out.println("Excel!");
@@ -101,12 +102,12 @@ public class parse_determine {
     }
 
 
-    public static void main(String[] args) {
-
-        Scanner scanin = new Scanner(System.in);
-        String file_given = scanin.next();
-        file_path = file_given;
-        System.out.println(getFileTypeByProbeContentType(file_given));
-
-    }
+//    public static void main(String[] args) {
+//
+//        Scanner scanin = new Scanner(System.in);
+//        String file_given = scanin.next();
+//        file_path = file_given;
+//        System.out.println(getFileTypeByProbeContentType(file_given));
+//
+//    }
 }
