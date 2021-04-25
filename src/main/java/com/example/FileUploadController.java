@@ -31,13 +31,14 @@ public class FileUploadController {
     }
 
     @GetMapping("/file")
-    public String listUploadedFiles(Map<String, Object> model) throws IOException {
-        List<Dictionary<String, String>> items = new ArrayList<>();
-        Dictionary item = new Hashtable<>();
-        item.put("title", "Alex");
-        item.put("description", "blablabla");
-        items.add(item);
-        model.put("items", items);
+    public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+
+        final String url = "jdbc:postgresql://localhost/postgres";
+        final String user = "postgres";
+        final String password = "root";
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        model.put("items", shrek.getListOfData());
         return "uploadForm";
     }
 
