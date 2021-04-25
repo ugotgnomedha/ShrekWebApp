@@ -11,7 +11,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -49,7 +51,7 @@ public class FileUploadController {
 
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) throws SQLException, IOException {
+                                   RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
 
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
@@ -62,7 +64,7 @@ public class FileUploadController {
         ShrekBD shrek = new ShrekBD();
         shrek.addFile(connection, file);
 
-        return "redirect:/";
+        return "redirect:/file";
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
