@@ -483,7 +483,7 @@
 
     .main-table {
         overflow: scroll;
-        height: 800px;
+        height: 1000px;
         margin-top: 100px;
     }
 
@@ -498,7 +498,7 @@
 <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="/" class="logo d-flex align-items-center">
+        <a href="index.html" class="logo d-flex align-items-center">
             <span>SHrek</span>
         </a>
 
@@ -515,38 +515,86 @@
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-
 <div class="container-fluid">
-    <div class="main-table">
-        <table class="table table-striped table-bordered main-table" id="main-table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Sex</th>
-                <th scope="col">Age</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-            </tr>
-            </thead>
-            <tbody>
-            {{#items}}
-                <tr>
-                    <th scope="row">{{index}}</th>
-                    <td>{{name}}</td>
-                    <td>{{sex}}</td>
-                    <td>{{age}}</td>
-                    <td>{{phone}}</td>
-                    <td>{{email}}</td>
-                </tr>
-            {{/items}}
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-lg-4" id="left-part">
+            <div class="login-form">
+                <form method="POST" enctype="multipart/form-data" action="/sorting">
+                    <h2 class="text-center">Введите домены для сортировки:</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="domen" required="required">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block buttonToUpload" value="Sort">
+                            Найти в таблице
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="login-form">
+                <form method="POST" enctype="multipart/form-data" action="/export">
+                    <h2 class="text-center">Путь экспортирования:</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="path" required="required" placeholder="Выберете место">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block buttonToUpload" value="Upload">
+                            Экспортировать
+                        </button>
+                    </div>
+                </form>
+                <td>Место для экспортирования:</td>
+            </div>
+            <div class="login-form">
+                <form method="POST" enctype="multipart/form-data" action="/find">
+                    <h2 class="text-center">Поиск по ключевым словам:</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="key" required="required"
+                               placeholder="Ключевые слова">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block buttonToUpload" value="Upload">
+                            Найти
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-8" id="right-part">
+            <div class="main-table">
+                <table class="table table-striped table-bordered main-table" id="main-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Пол</th>
+                        <th scope="col">Врозраст</th>
+                        <th scope="col">Телефон</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#items}}
+                        <tr>
+                            <th scope="row">{{index}}</th>
+                            <td>{{name}}</td>
+                            <td>{{sex}}</td>
+                            <td>{{age}}</td>
+                            <td>{{phone}}</td>
+                            <td>{{email}}</td>
+                        </tr>
+                    {{/items}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
+    <
+</div>
 
-</div>
-</div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -559,7 +607,6 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

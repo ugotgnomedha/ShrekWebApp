@@ -94,7 +94,7 @@ public class ShrekBD {
                         final String yahoo = "yahoo";
                         final String yandex = "yandex";
 
-                        if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + gmail + " ' ") && i==5) {
+                        if (excel_values.contains(gmail) && i == 5) {
                             DatabaseMetaData dbm_f = connection.getMetaData();
                             ResultSet tables_f = dbm_f.getTables(null, null, "gmail_table", null);
                             if (tables_f.next()) {
@@ -108,7 +108,7 @@ public class ShrekBD {
                             }
 
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + mail + " ' ") && i==5) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + mail + " ' ") && i == 5) {
                             DatabaseMetaData dbm_s = connection.getMetaData();
                             ResultSet tables_s = dbm_s.getTables(null, null, "mail_table", null);
                             if (tables_s.next()) {
@@ -121,7 +121,7 @@ public class ShrekBD {
                                 stmt.executeUpdate(CreateSql);
                             }
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yahoo + " ' ") && i==5) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yahoo + " ' ") && i == 5) {
                             DatabaseMetaData dbm_t = connection.getMetaData();
                             ResultSet tables_t = dbm_t.getTables(null, null, "yahoo_table", null);
                             if (tables_t.next()) {
@@ -134,7 +134,7 @@ public class ShrekBD {
                                 stmt.executeUpdate(CreateSql);
                             }
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yandex + " ' ") && i==5) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yandex + " ' ") && i == 5) {
                             DatabaseMetaData dbm_fo = connection.getMetaData();
                             ResultSet tables_fo = dbm_fo.getTables(null, null, "yandex_table", null);
                             if (tables_fo.next()) {
@@ -217,67 +217,6 @@ public class ShrekBD {
     }
 
 
-//    public void addData(Connection con) throws SQLException {
-//        try (PreparedStatement Illstmt = con.prepareStatement(
-//                "INSERT INTO jc_contact (name, sex, age, phone, email) "
-//                        + "VALUES (?, ?, ?, ?, ?)")) {
-//            Statement stmt = con.createStatement();
-//            File exel_file_first = new File("D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\dataShort.xlsx");
-//            FileInputStream fis = new FileInputStream(exel_file_first);
-//            XSSFWorkbook wb = new XSSFWorkbook(fis);
-//            XSSFSheet file_sheet = wb.getSheetAt(0);
-//
-//
-//            int i = 0;
-//            final String spec_sym = "$aesc6$";
-//
-//            Value nv = new Value();
-//
-//            Iterator<Row> rownum = file_sheet.iterator();
-//
-//            ArrayList<String> data = new ArrayList<>();
-//
-//
-//            while (rownum.hasNext()) {
-//                Row rows = rownum.next();
-//                Iterator<Cell> cellIterator = rows.cellIterator();
-//                int number = 0;
-//                while (cellIterator.hasNext()) {
-//                    if (i == 5) {
-//                        stmt.execute("INSERT INTO JC_CONTACT (NAME_ , SEX, AGE, PHONE, EMAIL) VALUES (" + spec_sym + data.get(0) + spec_sym + "," + spec_sym + data.get(1) + spec_sym + "," + spec_sym + data.get(2) + spec_sym + "," + spec_sym + data.get(3) + spec_sym + "," + spec_sym + data.get(4) + spec_sym + ")");
-//                        i = 0;
-//                        data.clear();
-//                    }
-//
-//                    DatabaseMetaData dbm = connection.getMetaData();
-//                    ResultSet tables = dbm.getTables(null, null, "jc_contact", null);
-//                    Cell cell = cellIterator.next();
-//                    String excel_values = encrypt(cell.toString());
-//                    data.add(excel_values);
-//                    String sql_update = "DELETE FROM jc_contact WHERE email = " + spec_sym + "helga@pisem.net" + spec_sym + "";
-//                    stmt.execute(sql_update);
-//                    System.out.print(excel_values);
-//                    System.out.println();
-//                    i++;
-//                }
-//            }
-//            ResultSet gk = stmt.getGeneratedKeys();
-//            while (gk.next()) {
-//                System.out.println("Inserted:" + gk.getString(1));
-//            }
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (BadPaddingException e) {
-//            e.printStackTrace();
-//        } catch (IllegalBlockSizeException e) {
-//            e.printStackTrace();
-//        } catch (InvalidKeyException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
 
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
         File convFile = new File(file.getOriginalFilename());
@@ -342,4 +281,10 @@ public class ShrekBD {
         }
         return items;
     }
+
+    public void export(String path) throws SQLException {
+        stmt = connection.createStatement();
+        stmt.execute("COPY jc_contact TO " + "'" + path + "\\\\jc_contact.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+    }
+
 }
