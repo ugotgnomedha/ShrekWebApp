@@ -539,53 +539,35 @@
 <!-- ======= Hero Section ======= -->
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4" id="left-part">
-            <div class="login-form">
-                <form method="POST" enctype="multipart/form-data" action="/">
-                    <h2 class="text-center">File to upload:</h2>
-                    <div class="form-group">
-                        <input type="file" class="form-control" name="file" required="required">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block buttonToUpload" value="Upload">
-                            Upload data
-                        </button>
-                    </div>
-                </form>
-                <td>File to upload:</td>
-            </div>
-        </div>
-        <div class="col-lg-8" id="right-part">
-            <div class="main-table">
-                <table class="table table-striped table-bordered main-table" id="main-table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Sex</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {{#items}}
-                        <tr>
-                            <th scope="row">{{index}}</th>
-                            <td>{{name}}</td>
-                            <td>{{sex}}</td>
-                            <td>{{age}}</td>
-                            <td>{{phone}}</td>
-                            <td>{{email}}</td>
-                        </tr>
-                    {{/items}}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+    <div class="main-table">
+        <table class="table table-striped table-bordered main-table" id="main-table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Sex</th>
+                <th scope="col">Age</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#items}}
+                <tr>
+                    <th scope="row">{{index}}</th>
+                    <td>{{name}}</td>
+                    <td>{{sex}}</td>
+                    <td>{{age}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{email}}</td>
+                </tr>
+            {{/items}}
+            </tbody>
+        </table>
     </div>
+
+
+</div>
 </div>
 
 <!-- Vendor JS Files -->

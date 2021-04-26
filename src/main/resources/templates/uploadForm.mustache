@@ -28,7 +28,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>FlexStart Bootstrap Template - Index</title>
+    <title>SHrek</title>
     <meta content="" name="description">
 
     <meta content="" name="keywords">
@@ -168,29 +168,6 @@
         margin-top: 3px;
     }
 
-    #left-part {
-        background-color: #0a58ca;
-        text-align: center;
-    }
-
-    #right-part {
-        background-color: #ffcd39;
-    }
-
-    /*#main-table {*/
-    /*    overflow: scroll;*/
-    /*    height: 300px;*/
-    /*}*/
-
-    .main-table {
-        overflow: scroll;
-        height: 600px;
-        margin-top: 100px;
-    }
-
-    .container-fluid {
-
-    }
 
     /*--------------------------------------------------------------
     # Navigation Menu
@@ -489,7 +466,31 @@
         padding-top: 50px;
     }
 
+    .buttonToUpload {
+        padding: 5px;
+        margin-top: 5px;
+    }
 
+    #left-part {
+        /*background-color: #0a58ca;*/
+        text-align: center;
+    }
+
+    #right-part {
+        /*background-color: #ffcd39;*/
+
+    }
+
+    .main-table {
+        overflow: scroll;
+        height: 800px;
+        margin-top: 100px;
+    }
+
+    .container-fluid {
+        padding-right: 50px;
+
+    }
 </style>
 <body>
 
@@ -498,8 +499,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span>FlexStart</span>
+            <span>SHrek</span>
         </a>
 
         <nav id="navbar" class="navbar">
@@ -528,7 +528,7 @@
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                <li><a class="getstarted scrollto" href="/login">Get Started</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -548,19 +548,12 @@
                         <input type="file" class="form-control" name="file" required="required">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block" value="Upload">Upload data
+                        <button type="submit" class="btn btn-primary btn-lg btn-block buttonToUpload" value="Upload">
+                            Upload data
                         </button>
                     </div>
-                    <p><a href="#">Lost your Password?</a></p>
                 </form>
                 <td>File to upload:</td>
-                -->
-                <!--                <td><input type="file" name="file"/></td>-->
-                <!--            </tr>-->
-                <!--            <tr>-->
-                <!--                <td></td>-->
-                <!--                <td><input type="submit" value="Upload"/></td>-->
-                <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
             </div>
         </div>
         <div class="col-lg-8" id="right-part">
@@ -573,7 +566,7 @@
                         <th scope="col">Sex</th>
                         <th scope="col">Age</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Emaile</th>
+                        <th scope="col">Email</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -583,7 +576,7 @@
                             <td>{{name}}</td>
                             <td>{{sex}}</td>
                             <td>{{age}}</td>
-                            <td style="width: 50px">{{phone}}</td>
+                            <td>{{phone}}</td>
                             <td>{{email}}</td>
                         </tr>
                     {{/items}}

@@ -42,6 +42,22 @@ public class FileUploadController {
         return "uploadForm";
     }
 
+    @GetMapping("/us")
+    public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        final String url = "jdbc:postgresql://localhost/postgres";
+        final String user = "postgres";
+        final String password = "root";
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        model.put("items", shrek.getListOfData());
+        return "uploadFormUser";
+    }
+
+    @GetMapping("/login")
+    public String login(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        return "login";
+    }
+
     @GetMapping("/files/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
@@ -67,6 +83,17 @@ public class FileUploadController {
         shrek.addFile(connection, file);
 
         return "redirect:/file";
+    }
+
+    @PostMapping("/log")
+    public String handleLogo(@RequestParam("logo") String logo) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+
+        if (logo.equals("admin@admin")) {
+            return "redirect:/file";
+        } else {
+            return "redirect:/us";
+        }
+
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)

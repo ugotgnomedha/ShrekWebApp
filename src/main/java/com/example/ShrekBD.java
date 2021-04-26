@@ -302,7 +302,20 @@ public class ShrekBD {
 
             //parsing a file.
             getFileTypeByProbeContentType(convertedFile);
-
+//            String sql_addTable = "ALTER TABLE jc_contact" +
+//                    "ADD email_encrypt varbinary(MAX)";
+//            stmt.execute(sql_addTable);
+//            String sql_encryptF = "OPEN SYMMETRIC KEY SymKey_encr " +
+//                    "DECRYPTION BY CERTIFICATE certificate_encr;" +
+//                    "";
+//            String sql_encryptS = "UPDATE jc_contact" +
+//                    "SET email_encrypt = EncryptByKey (Key_GUID('SymKey_encr'), email" +
+//                    "FROM jc_contact;" +
+//                    "GO";
+//            String sql_encryoT = "CLOSE SYMMETRIC KEY SymKey_encr;" +
+//                    "GO";
+//            stmt.execute(sql_encryptF + sql_encryptS);
+//            stmt.execute(sql_encryoT);
 
             ResultSet gk = stmt.getGeneratedKeys();
             while (gk.next()) {

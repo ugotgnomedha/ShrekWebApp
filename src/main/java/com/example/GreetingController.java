@@ -15,7 +15,7 @@ import java.util.Map;
 @Controller
 public class GreetingController {
 
-    @GetMapping("/greeting")
+    @GetMapping("/")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Map<String, Object> model) throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
         model.put("name", name);
         final String url = "jdbc:postgresql://localhost/postgres";
@@ -24,13 +24,8 @@ public class GreetingController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
 //        shrek.addData(connection);
-        return "greeting";
+        return "login";
     }
 
-    @GetMapping
-    public String main(Map<String, Object> model){
-        model.put("some", "Hello");
-        return "main";
-    }
 
 }
