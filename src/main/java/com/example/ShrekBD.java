@@ -94,7 +94,7 @@ public class ShrekBD {
                         final String yahoo = "yahoo";
                         final String yandex = "yandex";
 
-                        if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + gmail + " ' ")) {
+                        if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + gmail + " ' ") && i==5) {
                             DatabaseMetaData dbm_f = connection.getMetaData();
                             ResultSet tables_f = dbm_f.getTables(null, null, "gmail_table", null);
                             if (tables_f.next()) {
@@ -108,7 +108,7 @@ public class ShrekBD {
                             }
 
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + mail + " ' ")) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + mail + " ' ") && i==5) {
                             DatabaseMetaData dbm_s = connection.getMetaData();
                             ResultSet tables_s = dbm_s.getTables(null, null, "mail_table", null);
                             if (tables_s.next()) {
@@ -121,7 +121,7 @@ public class ShrekBD {
                                 stmt.executeUpdate(CreateSql);
                             }
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yahoo + " ' ")) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yahoo + " ' ") && i==5) {
                             DatabaseMetaData dbm_t = connection.getMetaData();
                             ResultSet tables_t = dbm_t.getTables(null, null, "yahoo_table", null);
                             if (tables_t.next()) {
@@ -134,12 +134,12 @@ public class ShrekBD {
                                 stmt.executeUpdate(CreateSql);
                             }
 
-                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yandex + " ' ")) {
+                        } else if (stmt.execute("SELECT email FROM jc_contact WHERE email LIKE ' " + yandex + " ' ") && i==5) {
                             DatabaseMetaData dbm_fo = connection.getMetaData();
-                            ResultSet tables_fo = dbm_fo.getTables(null, null, "mail_table", null);
+                            ResultSet tables_fo = dbm_fo.getTables(null, null, "yandex_table", null);
                             if (tables_fo.next()) {
                                 System.out.println("@mail table already exists!");
-                                String sql_update_fo = "INSERT INTO mail_table (yandex_mail) VALUES (" + spec_sym + excel_values + spec_sym + ")";
+                                String sql_update_fo = "INSERT INTO yandex_table (email_yandex) VALUES (" + spec_sym + excel_values + spec_sym + ")";
                                 stmt.execute(sql_update_fo);
                             } else {
                                 System.out.println("@mail table doesn't exist!");

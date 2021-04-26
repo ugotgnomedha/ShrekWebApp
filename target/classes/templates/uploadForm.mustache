@@ -554,6 +554,13 @@
                     </div>
                 </form>
                 <td>File to upload:</td>
+                <form method="POST" action="/">
+                    <div class="">
+                        <button type="" class="btn btn-primary btn-lg btn-block button" value="">
+                            Export
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col-lg-8" id="right-part">
@@ -586,19 +593,32 @@
         </div>
 
     </div>
+
 </div>
+</form>
+<form method="POST" enctype="multipart/form-data" action="/log">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" required="required" placeholder="name@example.com"
+               name="logo">
+        <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+    </div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 
