@@ -5,10 +5,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
@@ -18,7 +16,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Controller
 public class FileUploadController {
@@ -151,6 +148,19 @@ public class FileUploadController {
 
         return "redirect:/file";
     }
+
+
+    @PostMapping("/drop")
+    public String handleFileUpload() throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+        final String url = "jdbc:postgresql://localhost/postgres";
+        final String user = "postgres";
+        final String password = "root";
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        shrek.drop();
+        return "redirect:/file";
+    }
+
 
     @PostMapping("/export")
     public String handlePath(@RequestParam("path") String path,
