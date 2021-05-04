@@ -12,17 +12,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Map;
 
+import static com.example.Constants.*;
+
 @Controller
 public class GreetingController {
+    Connection connection = DriverManager.getConnection(url, user, password);
+    ShrekBD shrek = new ShrekBD();
+
+    public GreetingController() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+    }
 
     @GetMapping("/")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Map<String, Object> model) throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
         model.put("name", name);
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
+
 //        shrek.addData(connection);
         return "login";
     }

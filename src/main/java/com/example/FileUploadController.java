@@ -15,51 +15,39 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.List;
+import java.util.Map;
+import static com.example.Constants.*;
 
 @Controller
-public class FileUploadController {
+public class FileUploadController{
+    Connection connection = DriverManager.getConnection(url, user, password);
+    ShrekBD shrek = new ShrekBD();
 
     private final StorageService storageService;
     List<Dictionary<String, String>> NeededItems = new ArrayList<>();
 
     @Autowired
-    public FileUploadController(StorageService storageService) {
+    public FileUploadController(StorageService storageService) throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
         this.storageService = storageService;
     }
 
     @GetMapping("/file")
     public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
         return "uploadForm";
     }
 
     @GetMapping("/sorting")
     public String sortin(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         model.put("items", NeededItems);
         return "sorting";
     }
 
     @GetMapping("/sorti")
     public String sorting(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         model.put("items", NeededItems);
         return "sorting";
     }
@@ -68,12 +56,6 @@ public class FileUploadController {
     @PostMapping("/sorting")
     public String handleDomen(@RequestParam("domen") String domen,
                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         List<Dictionary<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
@@ -88,12 +70,6 @@ public class FileUploadController {
     @PostMapping("/find")
     public String handleKey(@RequestParam("key") String key,
                             RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         List<Dictionary<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
@@ -108,11 +84,6 @@ public class FileUploadController {
 
     @GetMapping("/us")
     public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
         return "uploadFormUser";
     }
@@ -138,12 +109,6 @@ public class FileUploadController {
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         shrek.addFile(connection, file);
 
         return "redirect:/file";
@@ -152,11 +117,6 @@ public class FileUploadController {
 
     @PostMapping("/drop")
     public String handleFileUpload() throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         shrek.drop();
         return "redirect:/file";
     }
@@ -165,12 +125,6 @@ public class FileUploadController {
     @PostMapping("/export")
     public String handlePath(@RequestParam("path") String path,
                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-        final String url = "jdbc:postgresql://localhost/postgres";
-        final String user = "postgres";
-        final String password = "root";
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
         shrek.export(path);
 
         return "redirect:/file";
