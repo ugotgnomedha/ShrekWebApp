@@ -19,6 +19,8 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.*;
 
+import static com.example.Constants.*;
+
 public class ShrekBD {
 
     final public static String spec_sym = "$aesc6$";
@@ -154,7 +156,6 @@ public class ShrekBD {
                 }
 
 
-
                 wb.close();
                 fis.close();
 
@@ -190,9 +191,6 @@ public class ShrekBD {
         public String content;
     }
 
-    private static final String url = "jdbc:postgresql://localhost/postgres";
-    private static final String user = "postgres";
-    private static final String password = "root";
     private static final String key = "Bar12345Bar12345";
     public static Connection connection;
     Key aesKey = new SecretKeySpec(key.getBytes(), "AES");
@@ -230,14 +228,14 @@ public class ShrekBD {
         for (int t = 0; t < items.size(); t++) {
             String testPhone = items.get(t).get("phone");
             boolean flag = false;
-            if(!phoneLine.equals("")){
+            if (!phoneLine.equals("")) {
                 flag = true;
             }
             if (!phoneLine.contains(testPhone)) {
-                if(flag){
+                if (flag) {
                     phoneLine = phoneLine + " • " + testPhone;
-                }else {
-                    phoneLine = phoneLine  + testPhone;
+                } else {
+                    phoneLine = phoneLine + testPhone;
                 }
 
             }

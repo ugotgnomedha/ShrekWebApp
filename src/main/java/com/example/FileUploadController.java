@@ -19,10 +19,11 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.List;
 import java.util.Map;
+
 import static com.example.Constants.*;
 
 @Controller
-public class FileUploadController{
+public class FileUploadController {
     Connection connection = DriverManager.getConnection(url, user, password);
     ShrekBD shrek = new ShrekBD();
 
@@ -88,6 +89,11 @@ public class FileUploadController{
         return "uploadFormUser";
     }
 
+    @GetMapping("/loginError")
+    public String loginError() throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        return "loginError";
+    }
+
     @GetMapping("/login")
     public String login(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
         return "login";
@@ -131,12 +137,14 @@ public class FileUploadController{
     }
 
     @PostMapping("/log")
-    public String handleLogo(@RequestParam("logo") String logo) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+    public String handleLogo(@RequestParam("logo") String logo, @RequestParam("passwd") String passwd) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
 
-        if (logo.equals("admin@admin")) {
+        if (logo.equals("admin@admin") && passwd.equals("admin")) {
             return "redirect:/file";
-        } else {
+        } else if (logo.equals("user@user") && passwd.equals("user")) {
             return "redirect:/us";
+        } else {
+            return "redirect:/loginError";
         }
 
     }
