@@ -19,15 +19,15 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.security</groupId>-->
+        <!--            <artifactId>spring-security-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -59,26 +59,76 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
+    <!--    <build>-->
+    <!--        <pluginManagement>-->
+    <!--            <plugins>-->
+    <!--                <plugin>-->
+    <!--                    <groupId>org.springframework.boot</groupId>-->
+    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--                    <configuration>-->
+    <!--                        <archive>-->
+    <!--                            <manifest>-->
+    <!--                                <addClasspath>true</addClasspath>-->
+    <!--                                <classpathPrefix>lib/</classpathPrefix>-->
+    <!--                                <mainClass>com.example.Application</mainClass>-->
+    <!--                            </manifest>-->
+    <!--                        </archive>-->
+    <!--                    </configuration>-->
+    <!--                    <executions>-->
+    <!--                        <execution>-->
+    <!--                            <goals>-->
+    <!--                                <goal>repackage</goal>-->
+    <!--                            </goals>-->
+    <!--                        </execution>-->
+    <!--                    </executions>-->
+    <!--                </plugin>-->
+    <!--            </plugins>-->
+    <!--        </pluginManagement>-->
+    <!--    </build>-->
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
+
+    <!--    <build>-->
+    <!--        <pluginManagement>-->
+    <!--            <plugins>-->
+    <!--                <plugin>-->
+    <!--                    <groupId>org.springframework.boot</groupId>-->
+    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--                </plugin>-->
+    <!--                <plugin>-->
+    <!--                    &lt;!&ndash; Build an executable JAR &ndash;&gt;-->
+    <!--                    <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                    <artifactId>maven-jar-plugin</artifactId>-->
+    <!--                    <version>3.1.0</version>-->
+    <!--                    <configuration>-->
+    <!--                        <archive>-->
+    <!--                            <manifest>-->
+    <!--                                <addClasspath>true</addClasspath>-->
+    <!--                                <classpathPrefix>lib/</classpathPrefix>-->
+    <!--                                <mainClass>com.example.Application</mainClass>-->
+    <!--                            </manifest>-->
+    <!--                        </archive>-->
+    <!--                    </configuration>-->
+    <!--                </plugin>-->
+    <!--            </plugins>-->
+    <!--        </pluginManagement>-->
+    <!--    </build>-->
 
 </project>

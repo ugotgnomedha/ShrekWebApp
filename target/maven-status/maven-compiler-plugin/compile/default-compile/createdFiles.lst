@@ -1,0 +1,14 @@
+META-INF\spring-configuration-metadata.json
+com\example\GreetingController.class
+com\example\ShrekBD.class
+com\example\csv_read.class
+com\example\FileSystemStorageService.class
+com\example\Application.class
+com\example\parse_determine.class
+com\example\StorageService.class
+com\example\StorageException.class
+com\example\Constants.class
+com\example\StorageProperties.class
+com\example\StorageFileNotFoundException.class
+com\example\FileUploadController.class
+com\example\ShrekBD$Value.class
