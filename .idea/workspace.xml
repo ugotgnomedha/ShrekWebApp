@@ -26,19 +26,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/FileSystemStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/FileSystemStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/FileUploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/FileUploadController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/GreetingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD$Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD$Value.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/StorageException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/StorageException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/StorageFileNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/StorageFileNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/StorageProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/StorageProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/StorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/StorageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/csv_read.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/csv_read.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/parse_determine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/parse_determine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,15 +119,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,7 +172,8 @@
       <workItem from="1619944656570" duration="9604000" />
       <workItem from="1620042098691" duration="1000" />
       <workItem from="1620147440614" duration="5965000" />
-      <workItem from="1620294747295" duration="2720000" />
+      <workItem from="1620294747295" duration="2908000" />
+      <workItem from="1620406507154" duration="2233000" />
     </task>
     <servers />
   </component>
@@ -237,38 +229,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619946459634" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1620297341861">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1620408579755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620297341861" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1620297341860">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620408579755" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1620408579755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620297341860" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1620297341860">
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620408579755" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1620408579755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620297341860" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1620297341861">
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620408579755" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1620408579755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620297341861" />
-    <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1620297331171">
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620408579755" />
+    <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1620408408768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620297331171" />
-    <state width="1877" height="274" key="GridCell.Tab.1.center" timestamp="1620297331171">
+    <state width="1877" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620408408768" />
+    <state width="1877" height="274" key="GridCell.Tab.1.center" timestamp="1620408408768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620297331171" />
-    <state width="1877" height="274" key="GridCell.Tab.1.left" timestamp="1620297331171">
+    <state width="1877" height="274" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620408408768" />
+    <state width="1877" height="274" key="GridCell.Tab.1.left" timestamp="1620408408768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620297331171" />
-    <state width="1877" height="274" key="GridCell.Tab.1.right" timestamp="1620297331171">
+    <state width="1877" height="274" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620408408768" />
+    <state width="1877" height="274" key="GridCell.Tab.1.right" timestamp="1620408408768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620297331171" />
+    <state width="1877" height="274" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620408408768" />
     <state x="540" y="263" key="IDE.errors.dialog" timestamp="1619365138901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -293,9 +285,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1619365570379" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1619421796295">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1620408758479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619421796295" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620408758479" />
   </component>
 </project>

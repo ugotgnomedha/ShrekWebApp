@@ -1,5 +1,4 @@
 META-INF\spring-configuration-metadata.json
-com\example\GreetingController.class
 com\example\ShrekBD.class
 com\example\csv_read.class
 com\example\FileSystemStorageService.class

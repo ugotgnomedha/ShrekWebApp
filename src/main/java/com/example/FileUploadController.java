@@ -24,8 +24,8 @@ import static com.example.Constants.*;
 
 @Controller
 public class FileUploadController {
-    Connection connection = DriverManager.getConnection(url, user, password);
-    ShrekBD shrek = new ShrekBD();
+//    Connection connection = DriverManager.getConnection(url, user, password);
+//    ShrekBD shrek = new ShrekBD();
 
     private final StorageService storageService;
     List<Dictionary<String, String>> NeededItems = new ArrayList<>();
@@ -35,8 +35,16 @@ public class FileUploadController {
         this.storageService = storageService;
     }
 
+    @GetMapping("/")
+    public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        return "login";
+    }
+
     @GetMapping("/file")
-    public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+    public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
         return "uploadForm";
     }
@@ -56,7 +64,10 @@ public class FileUploadController {
 
     @PostMapping("/sorting")
     public String handleDomen(@RequestParam("domen") String domen,
-                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         List<Dictionary<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
@@ -70,7 +81,10 @@ public class FileUploadController {
 
     @PostMapping("/find")
     public String handleKey(@RequestParam("key") String key,
-                            RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+                            RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         List<Dictionary<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
@@ -84,7 +98,10 @@ public class FileUploadController {
     }
 
     @GetMapping("/us")
-    public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+    public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
         return "uploadFormUser";
     }
@@ -110,7 +127,10 @@ public class FileUploadController {
 
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+                                   RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
 
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
@@ -122,7 +142,10 @@ public class FileUploadController {
 
 
     @PostMapping("/drop")
-    public String handleFileUpload() throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+    public String handleFileUpload() throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         shrek.drop();
         return "redirect:/file";
     }
@@ -130,7 +153,10 @@ public class FileUploadController {
 
     @PostMapping("/export")
     public String handlePath(@RequestParam("path") String path,
-                             RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
+                             RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
         shrek.export(path);
 
         return "redirect:/file";
