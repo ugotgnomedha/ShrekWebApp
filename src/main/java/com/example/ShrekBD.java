@@ -208,7 +208,8 @@ public class ShrekBD {
 
     public static void deleteDuples(String email, List<String> data) throws SQLException {
         stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from jc_contact WHERE email LIKE '" + email + "'; ");
+//        ResultSet rs = stmt.executeQuery("select * from jc_contact WHERE email LIKE '" + email + "'; ");
+        ResultSet rs = stmt.executeQuery("select * from jc_contact WHERE email LIKE '" + email + "' ");
         List<Dictionary<String, String>> items = new ArrayList<>();
         List<String> phones = new ArrayList<>();
         String phoneLine = "";
