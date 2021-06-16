@@ -11,6 +11,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,6 +27,7 @@ import static com.example.Constants.*;
 
 @Controller
 public class FileUploadController {
+    public static String uploadDirectory = System.getProperty("user.dir")+"/uploads";
 //    Connection connection = DriverManager.getConnection(url, user, password);
 //    ShrekBD shrek = new ShrekBD();
 
@@ -135,6 +139,11 @@ public class FileUploadController {
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
+StringBuilder fileNames = new StringBuilder();
+        Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+        fileNames.append(file.getOriginalFilename());
+        Files.write(fileNameAndPath, file.getBytes());
+
         shrek.addFile(connection, file);
 
         return "redirect:/file";
