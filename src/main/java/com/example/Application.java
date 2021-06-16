@@ -19,6 +19,8 @@ public class Application {
     public static void main(String[] args) {
         new File(FileUploadController.uploadDirectory).mkdir();
         SpringApplication.run(Application.class, args);
+        final String dir = System.getProperty("user.dir");
+        System.out.println("current dir = " + dir);
     }
 
     @Bean

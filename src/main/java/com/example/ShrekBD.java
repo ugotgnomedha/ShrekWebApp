@@ -30,14 +30,15 @@ public class ShrekBD {
 
         System.out.println("Gachi program begins...");
 
-        String fileType = "Undetermined";
-        try {
-            fileType = Files.probeContentType(file.toPath());
-        } catch (IOException ioException) {
-            System.out.println("File type not detected for under");
-        }
+        String fileType;
+//        try {
+//            fileType = Files.probeContentType(file.toPath());
+//        } catch (IOException ioException) {
+//            System.out.println("File type not detected for under");
+//        }
 
-
+        fileType = file.getName();
+        System.out.println(fileType);
         if (fileType.contains("csv")) {
             System.out.println("CSV!");
             List<List<String>> records = new ArrayList<>();
@@ -278,11 +279,13 @@ public class ShrekBD {
             Statement stmt_ = con.createStatement();
             stmt = stmt_;
 
-            File exel_file_first = new File("D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\dataShort.xlsx");
+            final String dir = System.getProperty("user.dir");
+            System.out.println("current dir = " + dir);
+            File exel_file_first = new File(dir + "\\uploads\\data.xlsx");
             String file_path = "D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\dataShort.xlsx";
 
             //parsing a file.
-            getFileTypeByProbeContentType(convertedFile);
+            getFileTypeByProbeContentType(exel_file_first);
 //            String sql_addTable = "ALTER TABLE jc_contact" +
 //                    "ADD email_encrypt varbinary(MAX)";
 //            stmt.execute(sql_addTable);
