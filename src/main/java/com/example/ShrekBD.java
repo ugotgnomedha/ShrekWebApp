@@ -1,6 +1,8 @@
 package com.example;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -313,25 +315,44 @@ public class ShrekBD {
         stmt.execute("delete from jc_contact;");
     }
 
-    public  List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
+    public List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
+//        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
+//
+//        //Converting jsonData string into JSON object
+//        Gson gson = new Gson();
+//
+//        User[] userArray = gson.fromJson(userJson, User[].class);
+//        List<Dictionary<String, String>> items = new ArrayList<>();
+//
+//
+//        for (User user : userArray) {
+//            Dictionary item = new Hashtable<>();
+//            item.put("name", user.getName());
+//            item.put("sets", user.getSets());
+//            items.add(item);
+//        }
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        //Converting jsonData string into JSON object
-        Gson gson = new Gson();
+        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
 
-        User[] userArray = gson.fromJson(userJson, User[].class);
-        List<Dictionary<String, String>> items = new ArrayList<>();
-
-
-        for (User user : userArray) {
-            Dictionary item = new Hashtable<>();
-            item.put("name", user.getName());
-            item.put("string", user.getSets());
-            items.add(item);
+            // Convert JSON to JsonElement, and later to String
+            JsonElement json = gson.fromJson(reader, JsonElement.class);
+            String jsonInString = gson.toJson(json);
+            System.out.println(jsonInString);
+            User[] userArray = gson.fromJson(jsonInString, User[].class);
+            List<Dictionary<String, String>> items = new ArrayList<>();
+            for (User user : userArray) {
+                Dictionary item = new Hashtable<>();
+                item.put("name", user.getName());
+                item.put("sets", user.getSets());
+                items.add(item);
+            }
+            return items;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println(items.get(0).get("name"));
-        return items;
+        return null;
     }
 
 }

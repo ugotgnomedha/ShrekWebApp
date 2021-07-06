@@ -92,15 +92,30 @@
                             <ul>
                                 {{#preSets}}
                                     <li>
-                                            <form action="/preSet" method="POST">
-                                                <input type="text" id="lname" name="chosenPreSet" value="{{name}}" placeholder="{{name}}">
-                                                <button type="submit" value="log">Submit</button>
-                                            </form>
+                                        <form action="/preSet" method="POST">
+                                            <input type="text" id="lname" name="chosenPreSet" value="{{name}}"
+                                                   placeholder="{{name}}">
+                                            <button type="submit" value="log">Submit</button>
+                                        </form>
                                     </li>
                                 {{/preSets}}
                             </ul>
 
                         </details>
+                    </div>
+                    <div class="col">
+                        <form method="POST" enctype="multipart/form-data" action="/addPreSet">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingInput" required="required"
+                                       placeholder="name" name="name">
+                                <label for="floatingInput">Name</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="domens" name="sets">
+                                <label for="floatingPassword">Domens</label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Log">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>

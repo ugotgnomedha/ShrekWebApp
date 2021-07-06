@@ -1,5 +1,6 @@
 package com.example;
 
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -8,9 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.json.*;
 
 import javax.crypto.NoSuchPaddingException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,10 +22,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.example.Constants.*;
 
@@ -86,25 +86,60 @@ public class FileUploadController {
         return "redirect:/sorti";
     }
 
-//    @PostMapping("/preSet")
-//    public String handlePreSet(@RequestParam("chosenPreSet") String chosenPreSet,
-//                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        ShrekBD shrek = new ShrekBD();
-//        List<Dictionary<String, String>> items = new ArrayList<>();
-//        NeededItems.clear();
-//        items = shrek.getListOfData();
-//        List<Dictionary<String, String>> preSets = shrek.getPreSets();
-//        List<String> domens = new ArrayList<>();
-//
-//        for (int i = 0; i < items.size(); i++) {
-//            if (items.get(i).get("email").contains(domen)) {
-//                NeededItems.add(items.get(i));
-//            }
-//        }
-//        return "redirect:/sorti";
-//    }
+    @PostMapping("/preSet")
+    public String handlePreSet(@RequestParam("chosenPreSet") String chosenPreSet,
+                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        List<Dictionary<String, String>> items = new ArrayList<>();
+        NeededItems.clear();
+        String domens = "";
+        items = shrek.getListOfData();
+        List<Dictionary<String, String>> preSets = shrek.getPreSets();
+        System.out.println(chosenPreSet);
+        for (Dictionary dict : preSets) {
+            if (dict.get("name").equals(chosenPreSet)) {
+                System.out.println(dict.get("sets"));
+                domens = (String) dict.get("sets");
+            }
+        }
+        for (Dictionary dict : items) {
+            for (String domen : domens.split(" ")) {
+                if (dict.get("email").toString().contains(domen)) {
+                    NeededItems.add(dict);
+                }
+            }
+        }
+        return "redirect:/sorti";
+    }
+
+    @PostMapping("/addPreSet")
+    public String addPreSet(@RequestParam("name") String name, @RequestParam("sets") String sets, RedirectAttributes redirectAttributes) throws FileNotFoundException {
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        User[] newUserArray = new User[userArray.length+1];
+        for(int i = 0; i<userArray.length; i++){
+            newUserArray[i] = userArray[i];
+        }
+        User newUser = new User();
+        newUser.setName(name);
+        newUser.setSets(sets);
+        newUserArray[newUserArray.length-1] = newUser;
+        System.out.println(newUserArray);
+        String json = gson.toJson(newUserArray);
+        System.out.println(json);
+        try (FileWriter writer = new FileWriter(dir +"\\preSets\\staff.json")) {
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "redirect:/sorti";
+    }
 
     @PostMapping("/find")
     public String handleKey(@RequestParam("key") String key,
