@@ -273,9 +273,9 @@ public class ShrekBD {
             final String dir = System.getProperty("user.dir");
             System.out.println("current dir = " + dir);
             File exel_file_first = new File(dir + "\\uploads\\data.xlsx");
-            String file_path = "D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\dataShort.xlsx";
 
-            getFileTypeByProbeContentType(exel_file_first);
+//            getFileTypeByProbeContentType(exel_file_first);
+            connection_establish.start();
 
             ResultSet gk = stmt.getGeneratedKeys();
             while (gk.next()) {
@@ -292,11 +292,11 @@ public class ShrekBD {
         while (rs.next()) {
             Dictionary item = new Hashtable<>();
             item.put("index", i);
-            item.put("name", rs.getString("name_"));
-            item.put("sex", rs.getString("sex"));
-            item.put("age", rs.getString("age"));
-            item.put("phone", rs.getString("phone"));
-            item.put("email", rs.getString("email"));
+            item.put("name", rs.getString(1));
+            item.put("sex", rs.getString(2));
+            item.put("age", rs.getString(3));
+            item.put("phone", rs.getString(4));
+            item.put("email", rs.getString(5));
             items.add(item);
             i++;
         }

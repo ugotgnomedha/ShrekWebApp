@@ -88,9 +88,15 @@
                         <details>
                             <summary>Test Dropdown</summary>
 
+
                             <ul>
                                 {{#preSets}}
-                                    <li>{{name}}</li>
+                                    <li>
+                                            <form action="/preSet" method="POST">
+                                                <input type="text" id="lname" name="chosenPreSet" value="{{name}}" placeholder="{{name}}">
+                                                <button type="submit" value="log">Submit</button>
+                                            </form>
+                                    </li>
                                 {{/preSets}}
                             </ul>
 

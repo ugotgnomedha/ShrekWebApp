@@ -48,7 +48,7 @@ public class FileUploadController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        model.put("preSets", shrek.getPreSets());
+        model.put("items", shrek.getListOfData());
         return "uploadForm";
     }
 
@@ -85,6 +85,26 @@ public class FileUploadController {
         }
         return "redirect:/sorti";
     }
+
+//    @PostMapping("/preSet")
+//    public String handlePreSet(@RequestParam("chosenPreSet") String chosenPreSet,
+//                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+//        Class.forName("org.postgresql.Driver");
+//        Connection connection = DriverManager.getConnection(url, user, password);
+//        ShrekBD shrek = new ShrekBD();
+//        List<Dictionary<String, String>> items = new ArrayList<>();
+//        NeededItems.clear();
+//        items = shrek.getListOfData();
+//        List<Dictionary<String, String>> preSets = shrek.getPreSets();
+//        List<String> domens = new ArrayList<>();
+//
+//        for (int i = 0; i < items.size(); i++) {
+//            if (items.get(i).get("email").contains(domen)) {
+//                NeededItems.add(items.get(i));
+//            }
+//        }
+//        return "redirect:/sorti";
+//    }
 
     @PostMapping("/find")
     public String handleKey(@RequestParam("key") String key,
@@ -143,7 +163,7 @@ public class FileUploadController {
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
         StringBuilder fileNames = new StringBuilder();
-        Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+        Path fileNameAndPath = Paths.get(uploadDirectory, "data.xlsx");
         fileNames.append(file.getOriginalFilename());
         Files.write(fileNameAndPath, file.getBytes());
 
