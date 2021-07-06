@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.json.*;
 
 import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
@@ -27,9 +28,7 @@ import static com.example.Constants.*;
 
 @Controller
 public class FileUploadController {
-    public static String uploadDirectory = System.getProperty("user.dir")+"/uploads";
-//    Connection connection = DriverManager.getConnection(url, user, password);
-//    ShrekBD shrek = new ShrekBD();
+    public static String uploadDirectory = System.getProperty("user.dir") + "/uploads";
 
     private final StorageService storageService;
     List<Dictionary<String, String>> NeededItems = new ArrayList<>();
@@ -49,18 +48,22 @@ public class FileUploadController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        model.put("items", shrek.getListOfData());
+        model.put("preSets", shrek.getPreSets());
         return "uploadForm";
     }
 
     @GetMapping("/sorting")
     public String sortin(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        ShrekBD shrek = new ShrekBD();
+        model.put("preSets", shrek.getPreSets());
         model.put("items", NeededItems);
         return "sorting";
     }
 
     @GetMapping("/sorti")
     public String sorting(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
+        ShrekBD shrek = new ShrekBD();
+        model.put("preSets", shrek.getPreSets());
         model.put("items", NeededItems);
         return "sorting";
     }
@@ -139,7 +142,7 @@ public class FileUploadController {
         storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
-StringBuilder fileNames = new StringBuilder();
+        StringBuilder fileNames = new StringBuilder();
         Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
         fileNames.append(file.getOriginalFilename());
         Files.write(fileNameAndPath, file.getBytes());
@@ -174,13 +177,21 @@ StringBuilder fileNames = new StringBuilder();
     @PostMapping("/log")
     public String handleLogo(@RequestParam("logo") String logo, @RequestParam("passwd") String passwd) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
 
-        if (logo.equals("admin@admin") && passwd.equals("admin")) {
+//        if (logo.equals("admin@admin") && passwd.equals("admin")) {
+//            return "redirect:/file";
+//        } else if (logo.equals("user@user") && passwd.equals("user")) {
+//            return "redirect:/us";
+//        } else {
+//            return "redirect:/loginError";
+//        }
+        if (logo.equals("admin")) {
             return "redirect:/file";
-        } else if (logo.equals("user@user") && passwd.equals("user")) {
+        } else if (logo.equals("user")) {
             return "redirect:/us";
         } else {
             return "redirect:/loginError";
         }
+
 
     }
 

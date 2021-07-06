@@ -1,5 +1,6 @@
 package com.example;
 
+import com.google.gson.Gson;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -12,7 +13,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
-import java.nio.file.Files;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
@@ -31,11 +31,6 @@ public class ShrekBD {
         System.out.println("Gachi program begins...");
 
         String fileType;
-//        try {
-//            fileType = Files.probeContentType(file.toPath());
-//        } catch (IOException ioException) {
-//            System.out.println("File type not detected for under");
-//        }
 
         fileType = file.getName();
         System.out.println(fileType);
@@ -88,10 +83,6 @@ public class ShrekBD {
                         Cell cell = cellIterator.next();
                         String excel_values = cell.toString();
                         data.add(excel_values);
-//                        String sql_update = "DELETE FROM jc_contact WHERE email = " + spec_sym + excel_values + spec_sym + "";
-//                        stmt.execute(sql_update);
-//                        System.out.print(excel_values);
-//                        System.out.println();
                         i++;
 
 
@@ -284,22 +275,7 @@ public class ShrekBD {
             File exel_file_first = new File(dir + "\\uploads\\data.xlsx");
             String file_path = "D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\dataShort.xlsx";
 
-            //parsing a file.
             getFileTypeByProbeContentType(exel_file_first);
-//            String sql_addTable = "ALTER TABLE jc_contact" +
-//                    "ADD email_encrypt varbinary(MAX)";
-//            stmt.execute(sql_addTable);
-//            String sql_encryptF = "OPEN SYMMETRIC KEY SymKey_encr " +
-//                    "DECRYPTION BY CERTIFICATE certificate_encr;" +
-//                    "";
-//            String sql_encryptS = "UPDATE jc_contact" +
-//                    "SET email_encrypt = EncryptByKey (Key_GUID('SymKey_encr'), email" +
-//                    "FROM jc_contact;" +
-//                    "GO";
-//            String sql_encryoT = "CLOSE SYMMETRIC KEY SymKey_encr;" +
-//                    "GO";
-//            stmt.execute(sql_encryptF + sql_encryptS);
-//            stmt.execute(sql_encryoT);
 
             ResultSet gk = stmt.getGeneratedKeys();
             while (gk.next()) {
@@ -335,6 +311,27 @@ public class ShrekBD {
     public void drop() throws SQLException {
         stmt = connection.createStatement();
         stmt.execute("delete from jc_contact;");
+    }
+
+    public  List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
+
+        //Converting jsonData string into JSON object
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        List<Dictionary<String, String>> items = new ArrayList<>();
+
+
+        for (User user : userArray) {
+            Dictionary item = new Hashtable<>();
+            item.put("name", user.getName());
+            item.put("string", user.getSets());
+            items.add(item);
+        }
+        System.out.println(items.get(0).get("name"));
+        return items;
     }
 
 }

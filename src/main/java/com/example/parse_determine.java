@@ -8,17 +8,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
-/// Users/imac/Desktop/un_mail.csv
-// /Users/imac/Desktop/text_file_.txt
-// /Users/imac/Desktop/test_excel.xlsx
 
 public class parse_determine {
 
     public static String file_path;
 
     public static String getFileTypeByProbeContentType(String fileName) {
-
-        System.out.println("Gachi program begins...");
 
         String fileType = "Undetermined";
         final File file = new File(fileName);
@@ -78,8 +73,6 @@ public class parse_determine {
                 System.exit(111);
             }
 
-            // /Users/imac/Desktop/test_excel.XLSX
-
 
         } else if (fileType.contains("plain")) {
             System.out.println("Text!");
@@ -100,14 +93,4 @@ public class parse_determine {
 
         return "Shrek";
     }
-
-
-//    public static void main(String[] args) {
-//
-//        Scanner scanin = new Scanner(System.in);
-//        String file_given = scanin.next();
-//        file_path = file_given;
-//        System.out.println(getFileTypeByProbeContentType(file_given));
-//
-//    }
 }
