@@ -97,16 +97,17 @@ public class FileUploadController {
         String domens = "";
         items = shrek.getListOfData();
         List<Dictionary<String, String>> preSets = shrek.getPreSets();
-        System.out.println(chosenPreSet);
         for (Dictionary dict : preSets) {
             if (dict.get("name").equals(chosenPreSet)) {
-                System.out.println(dict.get("sets"));
                 domens = (String) dict.get("sets");
             }
         }
         for (Dictionary dict : items) {
             for (String domen : domens.split(" ")) {
-                if (dict.get("email").toString().contains(domen)) {
+//                if (dict.get("email").toString().contains(domen)) {
+//                    NeededItems.add(dict);
+//                }
+                if (dict.get("email").toString().substring(dict.get("email").toString().indexOf("@") + 1).contains(domen)) {
                     NeededItems.add(dict);
                 }
             }
@@ -122,18 +123,16 @@ public class FileUploadController {
         Gson gson = new Gson();
 
         User[] userArray = gson.fromJson(userJson, User[].class);
-        User[] newUserArray = new User[userArray.length+1];
-        for(int i = 0; i<userArray.length; i++){
+        User[] newUserArray = new User[userArray.length + 1];
+        for (int i = 0; i < userArray.length; i++) {
             newUserArray[i] = userArray[i];
         }
         User newUser = new User();
         newUser.setName(name);
         newUser.setSets(sets);
-        newUserArray[newUserArray.length-1] = newUser;
-        System.out.println(newUserArray);
+        newUserArray[newUserArray.length - 1] = newUser;
         String json = gson.toJson(newUserArray);
-        System.out.println(json);
-        try (FileWriter writer = new FileWriter(dir +"\\preSets\\staff.json")) {
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();
@@ -227,6 +226,22 @@ public class FileUploadController {
         shrek.export(path);
 
         return "redirect:/file";
+    }
+
+    @PostMapping("/exportPreSet")
+    public String exportPreSet(@RequestParam("path") String path,
+                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+//        List<Dictionary<String, String>> NeededItems = new ArrayList<>();
+        List<String> listOfEmails = new ArrayList<String>();
+        for (Dictionary dict : NeededItems) {
+            listOfEmails.add(dict.get("email").toString());
+        }
+        shrek.exportPreSet(path, listOfEmails);
+
+        return "redirect:/sorti";
     }
 
     @PostMapping("/log")

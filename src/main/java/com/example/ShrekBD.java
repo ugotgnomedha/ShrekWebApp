@@ -30,12 +30,9 @@ public class ShrekBD {
 
     public static String getFileTypeByProbeContentType(File file) {
 
-        System.out.println("Gachi program begins...");
-
         String fileType;
 
         fileType = file.getName();
-        System.out.println(fileType);
         if (fileType.contains("csv")) {
             System.out.println("CSV!");
             List<List<String>> records = new ArrayList<>();
@@ -236,7 +233,6 @@ public class ShrekBD {
             }
 
         }
-        System.out.println(phoneLine);
         String sql_update = "DELETE FROM jc_contact WHERE email = " + spec_sym + email + spec_sym + "";
         stmt.execute(sql_update);
         stmt.execute("INSERT INTO JC_CONTACT (NAME_ , SEX, AGE, PHONE, EMAIL) VALUES (" + spec_sym + data.get(0) + spec_sym + "," + spec_sym + data.get(1) + spec_sym + "," + spec_sym + data.get(2) + spec_sym + "," + spec_sym + phoneLine + spec_sym + "," + spec_sym + data.get(4) + spec_sym + ")");
@@ -273,7 +269,6 @@ public class ShrekBD {
             stmt = stmt_;
 
             final String dir = System.getProperty("user.dir");
-            System.out.println("current dir = " + dir);
             File exel_file_first = new File(dir + "\\uploads\\data.xlsx");
 
 //            getFileTypeByProbeContentType(exel_file_first);
@@ -310,6 +305,17 @@ public class ShrekBD {
         stmt.execute("COPY jc_contact TO " + "'" + path + "\\\\jc_contact.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
     }
 
+    public void exportPreSet(String path, List<String> listOfEmails) throws SQLException {
+        stmt = connection.createStatement();
+        stmt.execute("DROP TABLE MyTemporary");
+        stmt.execute("CREATE TABLE MyTemporary AS TABLE jc_contact WITH NO DATA;");
+        for (String email : listOfEmails) {
+            stmt.execute(" INSERT INTO MyTemporary SELECT * FROM jc_contact WHERE e_test LIKE '" + "%" + email + "%" + "' ");
+        }
+        stmt.execute("COPY MyTemporary TO " + "'" + path + "\\\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+
+    }
+
     public void drop() throws SQLException {
         stmt = connection.createStatement();
         stmt.execute("delete from jc_contact;");
@@ -317,21 +323,7 @@ public class ShrekBD {
 
     public List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
         final String dir = System.getProperty("user.dir");
-//        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
-//
-//        //Converting jsonData string into JSON object
-//        Gson gson = new Gson();
-//
-//        User[] userArray = gson.fromJson(userJson, User[].class);
-//        List<Dictionary<String, String>> items = new ArrayList<>();
-//
-//
-//        for (User user : userArray) {
-//            Dictionary item = new Hashtable<>();
-//            item.put("name", user.getName());
-//            item.put("sets", user.getSets());
-//            items.add(item);
-//        }
+
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
@@ -339,7 +331,6 @@ public class ShrekBD {
             // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
             String jsonInString = gson.toJson(json);
-            System.out.println(jsonInString);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
             List<Dictionary<String, String>> items = new ArrayList<>();
             for (User user : userArray) {
