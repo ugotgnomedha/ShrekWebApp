@@ -118,7 +118,7 @@ public class FileUploadController {
     @PostMapping("/addPreSet")
     public String addPreSet(@RequestParam("name") String name, @RequestParam("sets") String sets, RedirectAttributes redirectAttributes) throws FileNotFoundException {
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\preSets.txt")).useDelimiter("\\Z").next();
+        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
 
         Gson gson = new Gson();
 

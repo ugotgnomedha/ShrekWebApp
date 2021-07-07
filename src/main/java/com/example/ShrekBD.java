@@ -294,6 +294,7 @@ public class ShrekBD {
             item.put("age", rs.getString(3));
             item.put("phone", rs.getString(4));
             item.put("email", rs.getString(5));
+            item.put("comment", rs.getString(6));
             items.add(item);
             i++;
         }

@@ -111,7 +111,8 @@
                                 <label for="floatingInput">Name</label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="domens" name="sets">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="domens"
+                                       name="sets">
                                 <label for="floatingPassword">Domens</label>
                             </div>
                             <button class="w-100 btn btn-lg btn-primary" type="submit" value="Log">Add</button>
@@ -124,7 +125,7 @@
 
 </div>
 <div class="login-form">
-    <form method="POST" enctype="multipart/form-data" action="/export">
+    <form method="POST" enctype="multipart/form-data" action="/exportPreSet">
         <h2 class="text-center">Путь экспортирования:</h2>
         <div class="form-group">
             <input type="text" class="form-control" name="path" required="required" placeholder="Выберете место">
@@ -163,6 +164,7 @@
                 <th scope="col">Врозраст</th>
                 <th scope="col">Телефон</th>
                 <th scope="col">Email</th>
+                <th scope="col">Comment</th>
             </tr>
             </thead>
             <tbody>
@@ -174,6 +176,7 @@
                     <td>{{age}}</td>
                     <td>{{phone}}</td>
                     <td>{{email}}</td>
+                    <td>{{comment}}</td>
                 </tr>
             {{/items}}
             </tbody>
