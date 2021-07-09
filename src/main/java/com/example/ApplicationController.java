@@ -27,16 +27,10 @@ import java.util.*;
 import static com.example.Constants.*;
 
 @Controller
-public class FileUploadController {
+public class ApplicationController {
+
     public static String uploadDirectory = System.getProperty("user.dir") + "/uploads";
-
-    private final StorageService storageService;
     List<Dictionary<String, String>> NeededItems = new ArrayList<>();
-
-    @Autowired
-    public FileUploadController(StorageService storageService) throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        this.storageService = storageService;
-    }
 
     @GetMapping("/")
     public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
@@ -177,23 +171,12 @@ public class FileUploadController {
         return "login";
     }
 
-    @GetMapping("/files/{filename:.+}")
-    @ResponseBody
-    public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
-
-        Resource file = storageService.loadAsResource(filename);
-        return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
-                "attachment; filename=\"" + file.getFilename() + "\"").body(file);
-    }
-
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-
-        storageService.store(file);
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
         StringBuilder fileNames = new StringBuilder();
@@ -265,9 +248,5 @@ public class FileUploadController {
 
     }
 
-    @ExceptionHandler(StorageFileNotFoundException.class)
-    public ResponseEntity<?> handleStorageFileNotFound(StorageFileNotFoundException exc) {
-        return ResponseEntity.notFound().build();
-    }
 }
 
