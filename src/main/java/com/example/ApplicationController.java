@@ -1,12 +1,13 @@
 package com.example;
 
+import com.example.storage.StorageService;
 import com.google.gson.Gson;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -15,9 +16,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,7 +27,14 @@ import static com.example.Constants.*;
 @Controller
 public class ApplicationController {
 
-    public static String uploadDirectory = System.getProperty("user.dir") + "/uploads";
+    private final StorageService storageService;
+
+    @Autowired
+    public ApplicationController(StorageService storageService) {
+        this.storageService = storageService;
+    }
+
+    public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
     List<Dictionary<String, String>> NeededItems = new ArrayList<>();
 
     @GetMapping("/")
@@ -43,7 +48,7 @@ public class ApplicationController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
-        return "uploadForm";
+        return "application";
     }
 
     @GetMapping("/sorting")
@@ -174,18 +179,9 @@ public class ApplicationController {
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-        redirectAttributes.addFlashAttribute("message",
-                "You successfully uploaded " + file.getOriginalFilename() + "!");
-        StringBuilder fileNames = new StringBuilder();
-        Path fileNameAndPath = Paths.get(uploadDirectory, "data.xlsx");
-        fileNames.append(file.getOriginalFilename());
-        Files.write(fileNameAndPath, file.getBytes());
-
-        shrek.addFile(connection, file);
-
+        FileUtils.cleanDirectory(new File(uploadDirectory));
+        storageService.store(file);
+        StartConnection.start();
         return "redirect:/file";
     }
 

@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "storage",
-      "type": "com.example.StorageProperties",
-      "sourceType": "com.example.StorageProperties"
+      "type": "com.example.storage.StorageProperties",
+      "sourceType": "com.example.storage.StorageProperties"
     }
   ],
   "properties": [
@@ -11,7 +11,7 @@
       "name": "storage.location",
       "type": "java.lang.String",
       "description": "Folder location for storing files",
-      "sourceType": "com.example.StorageProperties",
+      "sourceType": "com.example.storage.StorageProperties",
       "defaultValue": "upload-dir"
     }
   ],

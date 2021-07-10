@@ -74,29 +74,6 @@ public class ShrekBD {
         return convFile;
     }
 
-    public void addFile(Connection con, MultipartFile file) throws SQLException, IOException {
-
-        File convertedFile = convertMultiPartToFile(file);
-
-        try (PreparedStatement Illstmt = con.prepareStatement(
-                "INSERT INTO " + mainDataBaseName + " (name, sex, age, phone, email) "
-                        + "VALUES (?, ?, ?, ?, ?)")) {
-            Statement stmt_ = con.createStatement();
-            stmt = stmt_;
-
-            final String dir = System.getProperty("user.dir");
-            File exel_file_first = new File(dir + "\\uploads\\data.xlsx");
-
-//            getFileTypeByProbeContentType(exel_file_first);
-            StartConnection.start();
-
-            ResultSet gk = stmt.getGeneratedKeys();
-            while (gk.next()) {
-                System.out.println("Inserted:" + gk.getString(1));
-            }
-        }
-    }
-
     public List<Dictionary<String, String>> getListOfData() throws SQLException {
         stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + ";");
