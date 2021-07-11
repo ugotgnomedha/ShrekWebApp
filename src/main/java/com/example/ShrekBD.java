@@ -82,12 +82,12 @@ public class ShrekBD {
         while (rs.next()) {
             Dictionary item = new Hashtable<>();
             item.put("index", i);
-            item.put("name", rs.getString(1));
-            item.put("sex", rs.getString(2));
-            item.put("age", rs.getString(3));
-            item.put("phone", rs.getString(4));
-            item.put("email", rs.getString(5));
-            item.put("comment", rs.getString(6));
+            item.put("comment", rs.getString(1));
+            item.put("name", rs.getString(2));
+            item.put("sex", rs.getString(3));
+            item.put("age", rs.getString(4));
+            item.put("phone", rs.getString(5));
+            item.put("email", rs.getString(6));
             items.add(item);
             i++;
         }

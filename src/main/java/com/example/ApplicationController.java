@@ -48,6 +48,7 @@ public class ApplicationController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
         model.put("items", shrek.getListOfData());
+        model.put("preSets", shrek.getPreSets());
         return "application";
     }
 
