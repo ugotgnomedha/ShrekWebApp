@@ -66,6 +66,7 @@ public class ShrekBD {
         stmt.execute("INSERT INTO " + mainDataBaseName + " (NAME_ , SEX, AGE, PHONE, EMAIL) VALUES (" + spec_sym + data.get(0) + spec_sym + "," + spec_sym + data.get(1) + spec_sym + "," + spec_sym + data.get(2) + spec_sym + "," + spec_sym + phoneLine + spec_sym + "," + spec_sym + data.get(4) + spec_sym + ")");
     }
 
+
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
         File convFile = new File(file.getOriginalFilename());
         FileOutputStream fos = new FileOutputStream(convFile);
@@ -115,6 +116,14 @@ public class ShrekBD {
         stmt.execute("delete from " + mainDataBaseName + ";");
     }
 
+    public static String quote(String s) {
+        return new StringBuilder()
+                .append('\'' )
+                .append(s)
+                .append('\'' )
+                .toString();
+    }
+
     public List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
         final String dir = System.getProperty("user.dir");
 
@@ -138,6 +147,21 @@ public class ShrekBD {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
+//        ArrayList<String> column_names = ExelParser.getColumnNames();
+        List<String> column_names = new ArrayList<>();
+        column_names.add("Комментарии");
+        column_names.add("Фио");
+        column_names.add("Пол");
+        column_names.add("Возраст");
+        column_names.add("Телефон");
+        column_names.add("e_test");
+        System.out.println(key);
+        stmt = connection.createStatement();
+        System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
+        stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
     }
 
 }

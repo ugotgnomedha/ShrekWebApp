@@ -86,6 +86,15 @@ public class ApplicationController {
         return "redirect:/sorti";
     }
 
+    @PostMapping("/liveEdit")
+    public String handleLiveEditing(@RequestParam("key") String key, @RequestParam("name") String name ,@RequestParam("sex") String sex,@RequestParam("age") String age,@RequestParam("phone") String phone,@RequestParam("email") String email,@RequestParam("comment") String comment) throws ClassNotFoundException, SQLException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        ShrekBD.applyLiveEdit(key, name, sex, age, phone, email, comment);
+        return "redirect:/file";
+    }
+
     @PostMapping("/preSet")
     public String handlePreSet(@RequestParam("chosenPreSet") String chosenPreSet,
                                RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
