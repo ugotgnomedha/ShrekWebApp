@@ -160,7 +160,6 @@ public class ShrekBD {
         column_names.add("e_test");
         System.out.println(key);
         stmt = connection.createStatement();
-        System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
         stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
     }
 
