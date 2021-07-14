@@ -27,8 +27,9 @@ import static com.example.Constants.*;
 @Controller
 public class ApplicationController {
 
+    private final int numerOfTableLines = 250;
     private final StorageService storageService;
-    private int startPosition = 0;
+    private int startPosition = numerOfTableLines;
     private boolean flag = false;
 
     @Autowired
@@ -49,11 +50,10 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        System.out.println(NeededItems);
         if (NeededItems.isEmpty()) {
             List<HashMap<String, String>> allData = shrek.getListOfData();
             if (!allData.isEmpty()) {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < numerOfTableLines; i++) {
                     NeededItems.add(allData.get(i));
                 }
             }
@@ -61,8 +61,6 @@ public class ApplicationController {
         }
         model.put("items", NeededItems);
         model.put("preSets", shrek.getPreSets());
-        if (flag) {
-        }
         return "application";
     }
 
@@ -181,33 +179,6 @@ public class ApplicationController {
         return "redirect:/sorti";
     }
 
-    @PostMapping("/moveView")
-    public String moveView(@RequestParam("direction") String direction,
-                           RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        if (direction.equals("right")) {
-            startPosition = startPosition + 100;
-            System.out.println("Hello");
-            System.out.println(startPosition);
-        }
-
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-
-        List<HashMap<String, String>> allData = shrek.getListOfData();
-        NeededItems.clear();
-        if (allData.size() > 100) {
-            for (int i = startPosition; i < startPosition + 100; i++) {
-                NeededItems.add(allData.get(i));
-            }
-        } else {
-            NeededItems = allData;
-        }
-        flag = true;
-
-        return "redirect:/file";
-    }
-
     @GetMapping("/us")
     public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
@@ -294,6 +265,37 @@ public class ApplicationController {
 
 
     }
+
+    @PostMapping("/changeView")
+    public String moveRight(@RequestParam("direction") String direction) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+
+        List<HashMap<String, String>> allData = shrek.getListOfData();
+        NeededItems.clear();
+        if (direction.equals("right")) {
+
+            if (allData.size() > numerOfTableLines) {
+                for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
+                    NeededItems.add(allData.get(i));
+                }
+            } else {
+                NeededItems = allData;
+            }
+            startPosition += numerOfTableLines;
+        } else if (direction.equals("left")) {
+            for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
+                NeededItems.add(allData.get(i));
+            }
+            startPosition -= numerOfTableLines;
+        }
+
+
+        return "redirect:/file";
+
+    }
+
 
 }
 
