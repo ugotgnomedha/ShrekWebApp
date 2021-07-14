@@ -8,9 +8,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.example.Constants.*;
 
@@ -30,13 +30,13 @@ public class ShrekBD {
     public static void deleteDuples(String email, List<String> data) throws SQLException {
         stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " WHERE email LIKE '" + email + "' ");
-        List<Dictionary<String, String>> items = new ArrayList<>();
+        List<Map> items = new ArrayList<>();
         List<String> phones = new ArrayList<>();
         String phoneLine = "";
         int i = 1;
         while (rs.next()) {
-            Dictionary item = new Hashtable<>();
-            item.put("index", i);
+            Map<String, String> item = new HashMap<>();
+            item.put("index", String.valueOf(i));
             item.put("name", rs.getString("name_"));
             item.put("sex", rs.getString("sex"));
             item.put("age", rs.getString("age"));
@@ -46,7 +46,7 @@ public class ShrekBD {
             i++;
         }
         for (int t = 0; t < items.size(); t++) {
-            String testPhone = items.get(t).get("phone");
+            String testPhone = String.valueOf(items.get(t).get("phone"));
             boolean flag = false;
             if (!phoneLine.equals("")) {
                 flag = true;
@@ -75,14 +75,14 @@ public class ShrekBD {
         return convFile;
     }
 
-    public List<Dictionary<String, String>> getListOfData() throws SQLException {
+    public List<HashMap<String, String>> getListOfData() throws SQLException {
         stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + ";");
-        List<Dictionary<String, String>> items = new ArrayList<>();
+        List<HashMap<String, String>> items = new ArrayList<>();
         int i = 1;
         while (rs.next()) {
-            Dictionary item = new Hashtable<>();
-            item.put("index", i);
+            HashMap<String, String> item = new HashMap<>();
+            item.put("index", String.valueOf(i));
             item.put("comment", rs.getString(1));
             item.put("name", rs.getString(2));
             item.put("sex", rs.getString(3));
@@ -118,13 +118,13 @@ public class ShrekBD {
 
     public static String quote(String s) {
         return new StringBuilder()
-                .append('\'' )
+                .append('\'')
                 .append(s)
-                .append('\'' )
+                .append('\'')
                 .toString();
     }
 
-    public List<Dictionary<String, String>> getPreSets() throws FileNotFoundException {
+    public List<HashMap<String, String>> getPreSets() throws FileNotFoundException {
         final String dir = System.getProperty("user.dir");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -135,9 +135,9 @@ public class ShrekBD {
             JsonElement json = gson.fromJson(reader, JsonElement.class);
             String jsonInString = gson.toJson(json);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
-            List<Dictionary<String, String>> items = new ArrayList<>();
+            List<HashMap<String, String>> items = new ArrayList<>();
             for (User user : userArray) {
-                Dictionary item = new Hashtable<>();
+                HashMap<String, String> item = new HashMap<>();
                 item.put("name", user.getName());
                 item.put("sets", user.getSets());
                 items.add(item);
@@ -151,15 +151,17 @@ public class ShrekBD {
 
     public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
 //        ArrayList<String> column_names = ExelParser.getColumnNames();
-        List<String> column_names = new ArrayList<>();
-        column_names.add("Комментарии");
-        column_names.add("Фио");
-        column_names.add("Пол");
-        column_names.add("Возраст");
-        column_names.add("Телефон");
-        column_names.add("e_test");
-        System.out.println(key);
+//        List<String> column_names = new ArrayList<>();
+//        column_names.add("Комментарии");
+//        column_names.add("Фио");
+//        column_names.add("Пол");
+//        column_names.add("Возраст");
+//        column_names.add("Телефон");
+//        column_names.add("e_test");
+//        System.out.println(key);
+        ArrayList<String> column_names = ExelParser.getColumnNames();
         stmt = connection.createStatement();
+        System.out.println(ExelParser.getColumnNames());
         stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
     }
 

@@ -28,6 +28,8 @@ import static com.example.Constants.*;
 public class ApplicationController {
 
     private final StorageService storageService;
+    private int startPosition = 0;
+    private boolean flag = false;
 
     @Autowired
     public ApplicationController(StorageService storageService) {
@@ -35,7 +37,7 @@ public class ApplicationController {
     }
 
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-    List<Dictionary<String, String>> NeededItems = new ArrayList<>();
+    List<HashMap<String, String>> NeededItems = new ArrayList<>();
 
     @GetMapping("/")
     public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
@@ -47,8 +49,20 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        model.put("items", shrek.getListOfData());
+        System.out.println(NeededItems);
+        if (NeededItems.isEmpty()) {
+            List<HashMap<String, String>> allData = shrek.getListOfData();
+            if (!allData.isEmpty()) {
+                for (int i = 0; i < 100; i++) {
+                    NeededItems.add(allData.get(i));
+                }
+            }
+
+        }
+        model.put("items", NeededItems);
         model.put("preSets", shrek.getPreSets());
+        if (flag) {
+        }
         return "application";
     }
 
@@ -75,7 +89,7 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        List<Dictionary<String, String>> items = new ArrayList<>();
+        List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
         for (int i = 0; i < items.size(); i++) {
@@ -87,7 +101,7 @@ public class ApplicationController {
     }
 
     @PostMapping("/liveEdit")
-    public String handleLiveEditing(@RequestParam("key") String key, @RequestParam("name") String name ,@RequestParam("sex") String sex,@RequestParam("age") String age,@RequestParam("phone") String phone,@RequestParam("email") String email,@RequestParam("comment") String comment) throws ClassNotFoundException, SQLException {
+    public String handleLiveEditing(@RequestParam("key") String key, @RequestParam("name") String name, @RequestParam("sex") String sex, @RequestParam("age") String age, @RequestParam("phone") String phone, @RequestParam("email") String email, @RequestParam("comment") String comment) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
@@ -101,17 +115,17 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        List<Dictionary<String, String>> items = new ArrayList<>();
+        List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         String domens = "";
         items = shrek.getListOfData();
-        List<Dictionary<String, String>> preSets = shrek.getPreSets();
-        for (Dictionary dict : preSets) {
+        List<HashMap<String, String>> preSets = shrek.getPreSets();
+        for (HashMap dict : preSets) {
             if (dict.get("name").equals(chosenPreSet)) {
                 domens = (String) dict.get("sets");
             }
         }
-        for (Dictionary dict : items) {
+        for (HashMap dict : items) {
             for (String domen : domens.split(" ")) {
 //                if (dict.get("email").toString().contains(domen)) {
 //                    NeededItems.add(dict);
@@ -121,7 +135,7 @@ public class ApplicationController {
                 }
             }
         }
-        return "redirect:/sorti";
+        return "redirect:/file";
     }
 
     @PostMapping("/addPreSet")
@@ -155,7 +169,7 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        List<Dictionary<String, String>> items = new ArrayList<>();
+        List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         items = shrek.getListOfData();
         for (int i = 0; i < items.size(); i++) {
@@ -165,6 +179,33 @@ public class ApplicationController {
             }
         }
         return "redirect:/sorti";
+    }
+
+    @PostMapping("/moveView")
+    public String moveView(@RequestParam("direction") String direction,
+                           RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        if (direction.equals("right")) {
+            startPosition = startPosition + 100;
+            System.out.println("Hello");
+            System.out.println(startPosition);
+        }
+
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+
+        List<HashMap<String, String>> allData = shrek.getListOfData();
+        NeededItems.clear();
+        if (allData.size() > 100) {
+            for (int i = startPosition; i < startPosition + 100; i++) {
+                NeededItems.add(allData.get(i));
+            }
+        } else {
+            NeededItems = allData;
+        }
+        flag = true;
+
+        return "redirect:/file";
     }
 
     @GetMapping("/us")
@@ -223,9 +264,9 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-//        List<Dictionary<String, String>> NeededItems = new ArrayList<>();
+//        List<HashMap<String, String>> NeededItems = new ArrayList<>();
         List<String> listOfEmails = new ArrayList<String>();
-        for (Dictionary dict : NeededItems) {
+        for (HashMap dict : NeededItems) {
             listOfEmails.add(dict.get("email").toString());
         }
         shrek.exportPreSet(path, listOfEmails);
