@@ -53,9 +53,14 @@ public class ApplicationController {
         if (NeededItems.isEmpty()) {
             List<HashMap<String, String>> allData = shrek.getListOfData();
             if (!allData.isEmpty()) {
-                for (int i = 0; i < numerOfTableLines; i++) {
-                    NeededItems.add(allData.get(i));
+                if (numerOfTableLines < allData.size()) {
+                    for (int i = 0; i < numerOfTableLines; i++) {
+                        NeededItems.add(allData.get(i));
+                    }
+                } else {
+                    NeededItems = allData;
                 }
+
             }
 
         }

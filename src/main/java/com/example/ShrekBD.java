@@ -77,18 +77,18 @@ public class ShrekBD {
 
     public List<HashMap<String, String>> getListOfData() throws SQLException {
         stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + ";");
+        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY Домены ASC, Фио ASC;");
         List<HashMap<String, String>> items = new ArrayList<>();
         int i = 1;
         while (rs.next()) {
             HashMap<String, String> item = new HashMap<>();
             item.put("index", String.valueOf(i));
             item.put("comment", rs.getString(1));
-            item.put("name", rs.getString(2));
-            item.put("sex", rs.getString(3));
-            item.put("age", rs.getString(4));
-            item.put("phone", rs.getString(5));
-            item.put("email", rs.getString(6));
+            item.put("name", rs.getString(3));
+            item.put("sex", rs.getString(4));
+            item.put("age", rs.getString(5));
+            item.put("phone", rs.getString(6));
+            item.put("email", rs.getString(7));
             items.add(item);
             i++;
         }
@@ -150,19 +150,34 @@ public class ShrekBD {
     }
 
     public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
-//        ArrayList<String> column_names = ExelParser.getColumnNames();
-//        List<String> column_names = new ArrayList<>();
-//        column_names.add("Комментарии");
-//        column_names.add("Фио");
-//        column_names.add("Пол");
-//        column_names.add("Возраст");
-//        column_names.add("Телефон");
-//        column_names.add("e_test");
-//        System.out.println(key);
         ArrayList<String> column_names = ExelParser.getColumnNames();
         stmt = connection.createStatement();
-        System.out.println(ExelParser.getColumnNames());
-        stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(1) + " = " + quote(name) + ", " + column_names.get(2) + " = " + quote(sex) + ", " + column_names.get(3) + " = " + quote(age) + ", " + column_names.get(4) + " = " + quote(phone) + ", " + column_names.get(5) + " = " + quote(email) + " WHERE " + column_names.get(5) + " = " + quote(key));
+        System.out.println(column_names.get(6));
+        stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
+        System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
+
+    }
+
+    public static List<HashMap<String, String>> getSortedListOfData() throws SQLException {
+        stmt = connection.createStatement();
+        stmt.execute("INSERT INTO sorted SELECT * FROM jc_contact ORDER BY Домены asc;");
+        ResultSet rs = stmt.executeQuery("select * from " + "sorted" + ";");
+        List<HashMap<String, String>> items = new ArrayList<>();
+        int i = 1;
+        while (rs.next()) {
+            HashMap<String, String> item = new HashMap<>();
+            item.put("index", String.valueOf(i));
+            item.put("comment", rs.getString(1));
+            item.put("name", rs.getString(3));
+            item.put("sex", rs.getString(4));
+            item.put("age", rs.getString(5));
+            item.put("phone", rs.getString(6));
+            item.put("email", rs.getString(7));
+            items.add(item);
+            i++;
+        }
+        return items;
+
     }
 
 }

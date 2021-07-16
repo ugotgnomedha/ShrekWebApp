@@ -22,9 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="add pagination">
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="sweet pagination">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -129,13 +132,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,7 +207,8 @@
       <workItem from="1626000575876" duration="15544000" />
       <workItem from="1626209444539" duration="254000" />
       <workItem from="1626211934510" duration="38000" />
-      <workItem from="1626253781757" duration="12251000" />
+      <workItem from="1626253781757" duration="13914000" />
+      <workItem from="1626422807759" duration="10018000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -281,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626266653092</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="sweet pagination">
+      <created>1626272788949</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626272788949</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +322,8 @@
     <MESSAGE value="Add live edit" />
     <MESSAGE value="Clean code" />
     <MESSAGE value="add pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pagination" />
+    <MESSAGE value="sweet pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="sweet pagination" />
   </component>
   <component name="WindowStateProjectService">
     <state x="733" y="0" key="#Auto_Import" timestamp="1619954730788">
@@ -336,6 +350,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1625947668093" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1626425005440">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1626425005440" />
     <state x="1052" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1619420519436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -348,46 +366,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625855851054" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1619366095418">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1626431958798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619366095418" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626431958798" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1626209698351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1626209698351" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.1.center" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.1.center" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.1.left" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.1.left" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
-    <state width="1877" height="277" key="GridCell.Tab.1.right" timestamp="1626272650036">
+    <state width="1877" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right" timestamp="1626432793516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626272650036" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626432793516" />
     <state x="540" y="263" key="IDE.errors.dialog" timestamp="1619365138901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -400,10 +418,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="361" key="MavenRunHelper.GoalEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620295623364" />
-    <state x="666" y="240" key="RollbackChangesDialog" timestamp="1619438504570">
+    <state x="666" y="240" key="RollbackChangesDialog" timestamp="1626428546424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619438504570" />
+    <state x="666" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626428546424" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1626255093621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -412,18 +430,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1619365570379" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1626266663583">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1626272792545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626266663583" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1620408758479">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626272792545" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1626431958798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620408758479" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1625605774701">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626431958798" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626429673752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625605774701" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626429673752" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626428522972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626428522972" />
     <state x="690" y="281" key="extract.method.dialog" timestamp="1625566046740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
