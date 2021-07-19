@@ -27,7 +27,7 @@ import static com.example.Constants.*;
 @Controller
 public class ApplicationController {
 
-    private final int numerOfTableLines = 250;
+    private final int numerOfTableLines = 100;
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
@@ -51,7 +51,7 @@ public class ApplicationController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
         if (NeededItems.isEmpty()) {
-            List<HashMap<String, String>> allData = shrek.getListOfData();
+            List<HashMap<String, String>> allData = shrek.getSortedListOfData();
             if (!allData.isEmpty()) {
                 if (numerOfTableLines < allData.size()) {
                     for (int i = 0; i < numerOfTableLines; i++) {
@@ -94,7 +94,7 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
-        items = shrek.getListOfData();
+        items = shrek.getSortedListOfData();
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).get("email").contains(domen)) {
                 NeededItems.add(items.get(i));
@@ -121,7 +121,7 @@ public class ApplicationController {
         List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
         String domens = "";
-        items = shrek.getListOfData();
+        items = shrek.getSortedListOfData();
         List<HashMap<String, String>> preSets = shrek.getPreSets();
         for (HashMap dict : preSets) {
             if (dict.get("name").equals(chosenPreSet)) {
@@ -174,7 +174,7 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
-        items = shrek.getListOfData();
+        items = shrek.getSortedListOfData();
         for (int i = 0; i < items.size(); i++) {
 //            if (items.get(i).get("name").contains(key) || items.get(i).get("age").contains(key) || items.get(i).get("phone").contains(key) || items.get(i).get("email").contains(key)) {
             if (items.get(i).get("name").contains(key) || items.get(i).get("age").contains(key) || items.get(i).get("phone").contains(key)) {
@@ -189,7 +189,7 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        model.put("items", shrek.getListOfData());
+        model.put("items", shrek.getSortedListOfData());
         return "uploadFormUser";
     }
 
@@ -272,28 +272,54 @@ public class ApplicationController {
     }
 
     @PostMapping("/changeView")
-    public String moveRight(@RequestParam("direction") String direction) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+    public String moveView(@RequestParam("direction") String direction) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
 
-        List<HashMap<String, String>> allData = shrek.getListOfData();
+        List<HashMap<String, String>> allData = shrek.getSortedListOfData();
         NeededItems.clear();
-        if (direction.equals("right")) {
 
-            if (allData.size() > numerOfTableLines) {
-                for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
+        Boolean movementRight = true;
+        if (direction.equals("right")) {
+            if (movementRight) {
+                if (allData.size() > numerOfTableLines) {
+                    for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
+                        NeededItems.add(allData.get(i));
+                    }
+                } else {
+                    NeededItems = allData;
+                }
+                startPosition += numerOfTableLines;
+            } else {
+                movementRight = true;
+                startPosition += numerOfTableLines;
+
+                if (allData.size() > numerOfTableLines) {
+                    for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
+                        NeededItems.add(allData.get(i));
+                    }
+                } else {
+                    NeededItems = allData;
+                }
+                startPosition += numerOfTableLines;
+            }
+
+        } else if (direction.equals("left")) {
+            if (!movementRight) {
+                for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
                     NeededItems.add(allData.get(i));
                 }
+                startPosition -= numerOfTableLines;
             } else {
-                NeededItems = allData;
+                movementRight = false;
+                startPosition -= numerOfTableLines;
+                for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
+                    NeededItems.add(allData.get(i));
+                }
+                startPosition -= numerOfTableLines;
             }
-            startPosition += numerOfTableLines;
-        } else if (direction.equals("left")) {
-            for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
-                NeededItems.add(allData.get(i));
-            }
-            startPosition -= numerOfTableLines;
+
         }
 
 

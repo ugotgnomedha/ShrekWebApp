@@ -75,7 +75,7 @@ public class ShrekBD {
         return convFile;
     }
 
-    public List<HashMap<String, String>> getListOfData() throws SQLException {
+    public List<HashMap<String, String>> getSortedListOfData() throws SQLException {
         stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY Домены ASC, Фио ASC;");
         List<HashMap<String, String>> items = new ArrayList<>();
@@ -155,28 +155,6 @@ public class ShrekBD {
         System.out.println(column_names.get(6));
         stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
         System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
-
-    }
-
-    public static List<HashMap<String, String>> getSortedListOfData() throws SQLException {
-        stmt = connection.createStatement();
-        stmt.execute("INSERT INTO sorted SELECT * FROM jc_contact ORDER BY Домены asc;");
-        ResultSet rs = stmt.executeQuery("select * from " + "sorted" + ";");
-        List<HashMap<String, String>> items = new ArrayList<>();
-        int i = 1;
-        while (rs.next()) {
-            HashMap<String, String> item = new HashMap<>();
-            item.put("index", String.valueOf(i));
-            item.put("comment", rs.getString(1));
-            item.put("name", rs.getString(3));
-            item.put("sex", rs.getString(4));
-            item.put("age", rs.getString(5));
-            item.put("phone", rs.getString(6));
-            item.put("email", rs.getString(7));
-            items.add(item);
-            i++;
-        }
-        return items;
 
     }
 
