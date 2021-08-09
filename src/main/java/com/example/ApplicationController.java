@@ -31,6 +31,11 @@ public class ApplicationController {
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
+    List<HashMap<String, String>> NeededItems = new ArrayList<>();
+    List<HashMap<String, String>> ItemsToLoad = new ArrayList<>();
+    List<HashMap<String, String>> Pull = new ArrayList<>();
+    List<HashMap<String, String>> ActivePull = new ArrayList<>();
+    List<HashMap<String, String>> PullToShow = new ArrayList<>();
 
     @Autowired
     public ApplicationController(StorageService storageService) {
@@ -38,7 +43,7 @@ public class ApplicationController {
     }
 
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-    List<HashMap<String, String>> NeededItems = new ArrayList<>();
+
 
     @GetMapping("/")
     public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
@@ -50,21 +55,22 @@ public class ApplicationController {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        if (NeededItems.isEmpty()) {
-            List<HashMap<String, String>> allData = shrek.getSortedListOfData();
-            if (!allData.isEmpty()) {
-                if (numerOfTableLines < allData.size()) {
-                    for (int i = 0; i < numerOfTableLines; i++) {
-                        NeededItems.add(allData.get(i));
-                    }
-                } else {
-                    NeededItems = allData;
-                }
+        List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
 
-            }
-
+        if (Pull.isEmpty()) {
+            Pull = shrek.getSortedListOfData();
         }
-        model.put("items", NeededItems);
+        System.out.println(Pull.get(1));
+        if (ActivePull.isEmpty()) {
+            if (numerOfTableLines < Pull.size()) {
+                for (int i = 0; i < numerOfTableLines; i++) {
+                    ActivePull.add(Pull.get(i));
+                }
+            } else {
+                ActivePull = Pull;
+            }
+        }
+        model.put("items", ActivePull);
         model.put("preSets", shrek.getPreSets());
         return "application";
     }
@@ -277,30 +283,29 @@ public class ApplicationController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
 
-        List<HashMap<String, String>> allData = shrek.getSortedListOfData();
-        NeededItems.clear();
+        ActivePull.clear();
+        System.out.println(Pull);
 
         Boolean movementRight = true;
         if (direction.equals("right")) {
             if (movementRight) {
-                if (allData.size() > numerOfTableLines) {
+                if (Pull.size() > numerOfTableLines) {
                     for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
-                        NeededItems.add(allData.get(i));
+                        ActivePull.add(Pull.get(i));
                     }
-                } else {
-                    NeededItems = allData;
+                    startPosition += numerOfTableLines;
                 }
-                startPosition += numerOfTableLines;
+
             } else {
                 movementRight = true;
                 startPosition += numerOfTableLines;
 
-                if (allData.size() > numerOfTableLines) {
+                if (Pull.size() > numerOfTableLines) {
                     for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
-                        NeededItems.add(allData.get(i));
+                        ActivePull.add(Pull.get(i));
                     }
                 } else {
-                    NeededItems = allData;
+                    ActivePull = Pull;
                 }
                 startPosition += numerOfTableLines;
             }
@@ -308,19 +313,60 @@ public class ApplicationController {
         } else if (direction.equals("left")) {
             if (!movementRight) {
                 for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
-                    NeededItems.add(allData.get(i));
+                    ActivePull.add(Pull.get(i));
                 }
                 startPosition -= numerOfTableLines;
             } else {
                 movementRight = false;
                 startPosition -= numerOfTableLines;
                 for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
-                    NeededItems.add(allData.get(i));
+                    ActivePull.add(Pull.get(i));
                 }
                 startPosition -= numerOfTableLines;
             }
 
         }
+
+
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/usePreSet")
+    public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        List<HashMap<String, String>> items = new ArrayList<>();
+        NeededItems.clear();
+        System.out.println(used
+        );
+        String domens = "";
+        items = shrek.getSortedListOfData();
+        List<String> preSetsInForm = new ArrayList<>();
+        List<HashMap<String, String>> preSets = shrek.getPreSets();
+        for (String preSet : used.split(",")) {
+            preSet = preSet.replaceAll("[<>]*", "");
+            preSetsInForm.add(preSet);
+            for (HashMap dict : preSets) {
+                if (dict.get("name").equals(preSet)) {
+                    domens = (String) dict.get("sets");
+                }
+            }
+
+        }
+        for (HashMap dict : items) {
+            for (String domen : domens.split(" ")) {
+                if (dict.get("email").toString().substring(dict.get("email").toString().indexOf("@") + 1).contains(domen)) {
+                    NeededItems.add(dict);
+                }
+            }
+        }
+        System.out.println(NeededItems);
+        Pull.clear();
+        Pull = NeededItems;
+        ActivePull.clear();
+        System.out.println(Pull);
 
 
         return "redirect:/file";
