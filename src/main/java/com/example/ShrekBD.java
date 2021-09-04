@@ -101,7 +101,6 @@ public class ShrekBD {
                 i++;
             }
         }
-        System.out.println(items);
         return items;
     }
 

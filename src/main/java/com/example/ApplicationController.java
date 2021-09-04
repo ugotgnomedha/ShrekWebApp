@@ -72,21 +72,50 @@ public class ApplicationController {
 
 
         List<HashMap<String, String>> testItems = new ArrayList<>();
+        List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            HashMap<String, String> number = new HashMap<>();
-            number.put("number", String.valueOf(i));
-            testItems.add(number);
+
+        List<String> headers = parser_excel.headers;
+        List<HashMap<String, String>> allData = new ArrayList<>();
+        if (headers != null) {
+            for (int i = 0; i < headers.size(); i++) {
+                HashMap<String, String> header = new HashMap<>();
+                header.put("header", headers.get(i));
+                tableHeaders.add(header);
+            }
         }
+
 
         List<HashMap<String, String>> List = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            HashMap<String, String> name = new HashMap<>();
-            name.put("Data", String.valueOf(i));
-            List.add(name);
+
+
+        List<List<HashMap<String, String>>> data = new ArrayList<>();
+        if (headers != null) {
+            for (int i = 0; i < 5; i++) {
+                List<HashMap<String, String>> lData = new ArrayList<>();
+                for (int t = 0; t < headers.size(); t++) {
+                    HashMap<String, String> name = new HashMap<>();
+                    name.put("Data", String.valueOf(t));
+                    lData.add(name);
+                }
+                data.add(lData);
+            }
+
         }
+        if (headers != null) {
+            for (int i = 0; i < headers.size(); i++) {
+                HashMap<String, String> name = new HashMap<>();
+                name.put("Data", String.valueOf(i));
+                List.add(name);
+                testItems.add(new HashMap<>());
+            }
+        }
+        System.out.println(data);
+
+        model.put("headers", tableHeaders);
         model.put("items", testItems);
         model.put("List", List);
+        model.put("data", data);
         model.put("preSets", shrek.getPreSets());
         return "application";
     }
