@@ -60,7 +60,6 @@ public class ApplicationController {
         if (Pull.isEmpty()) {
             Pull = shrek.getSortedListOfData();
         }
-        System.out.println(Pull.get(1));
         if (ActivePull.isEmpty()) {
             if (numerOfTableLines < Pull.size()) {
                 for (int i = 0; i < numerOfTableLines; i++) {
@@ -70,7 +69,24 @@ public class ApplicationController {
                 ActivePull = Pull;
             }
         }
-        model.put("items", ActivePull);
+
+
+        List<HashMap<String, String>> testItems = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            HashMap<String, String> number = new HashMap<>();
+            number.put("number", String.valueOf(i));
+            testItems.add(number);
+        }
+
+        List<HashMap<String, String>> List = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            HashMap<String, String> name = new HashMap<>();
+            name.put("Data", String.valueOf(i));
+            List.add(name);
+        }
+        model.put("items", testItems);
+        model.put("List", List);
         model.put("preSets", shrek.getPreSets());
         return "application";
     }
@@ -284,7 +300,6 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
 
         ActivePull.clear();
-        System.out.println(Pull);
 
         Boolean movementRight = true;
         if (direction.equals("right")) {
@@ -339,8 +354,6 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         List<HashMap<String, String>> items = new ArrayList<>();
         NeededItems.clear();
-        System.out.println(used
-        );
         String domens = "";
         items = shrek.getSortedListOfData();
         List<String> preSetsInForm = new ArrayList<>();
@@ -362,13 +375,9 @@ public class ApplicationController {
                 }
             }
         }
-        System.out.println(NeededItems);
         Pull.clear();
         Pull = NeededItems;
         ActivePull.clear();
-        System.out.println(Pull);
-
-
         return "redirect:/file";
 
     }

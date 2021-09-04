@@ -37,10 +37,10 @@ public class ShrekBD {
         while (rs.next()) {
             Map<String, String> item = new HashMap<>();
             item.put("index", String.valueOf(i));
-            item.put("name", rs.getString("name_"));
-            item.put("sex", rs.getString("sex"));
-            item.put("age", rs.getString("age"));
-            item.put("phone", rs.getString("phone"));
+            item.put("Фио", rs.getString("name_"));
+            item.put("Пол", rs.getString("sex"));
+            item.put("Возраст", rs.getString("age"));
+            item.put("Телефон", rs.getString("phone"));
             item.put("email", rs.getString("email"));
             items.add(item);
             i++;
@@ -77,21 +77,31 @@ public class ShrekBD {
 
     public List<HashMap<String, String>> getSortedListOfData() throws SQLException {
         stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY Домены ASC, Фио ASC;");
+        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC, Фио ASC;");
         List<HashMap<String, String>> items = new ArrayList<>();
         int i = 1;
-        while (rs.next()) {
-            HashMap<String, String> item = new HashMap<>();
-            item.put("index", String.valueOf(i));
-            item.put("comment", rs.getString(1));
-            item.put("name", rs.getString(3));
-            item.put("sex", rs.getString(4));
-            item.put("age", rs.getString(5));
-            item.put("phone", rs.getString(6));
-            item.put("email", rs.getString(7));
-            items.add(item);
-            i++;
+        if (parser_excel.getHeaders() != null) {
+            while (rs.next()) {
+                HashMap<String, String> item = new HashMap<>();
+
+
+                item.put("index", String.valueOf(i));
+                for (String header : parser_excel.getHeaders()) {
+                    item.put(header, rs.getString(header));
+                }
+
+
+//            item.put("comment", rs.getString(1));
+//            item.put("name", rs.getString(3));
+//            item.put("sex", rs.getString(4));
+//            item.put("age", rs.getString(5));
+//            item.put("phone", rs.getString(6));
+//            item.put("email", rs.getString(7));
+                items.add(item);
+                i++;
+            }
         }
+        System.out.println(items);
         return items;
     }
 
@@ -157,6 +167,6 @@ public class ShrekBD {
         System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
 
     }
-    
+
 
 }

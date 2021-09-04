@@ -7,5 +7,5 @@ public class Constants {
     public static final String spec_sym = "$aesc6$";
     public static final String mainDataBaseName = "jc_contact";
     public static final String temporaryDataBaseName = "MyTemporary";
-    public static final String uploadDirectory = System.getProperty("user.dir") + "/uploads";
+    public static final String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
 }
