@@ -83,8 +83,6 @@ public class ShrekBD {
         if (parser_excel.getHeaders() != null) {
             while (rs.next()) {
                 HashMap<String, String> item = new HashMap<>();
-
-
                 item.put("index", String.valueOf(i));
                 for (String header : parser_excel.getHeaders()) {
                     item.put(header, rs.getString(header));
@@ -98,6 +96,29 @@ public class ShrekBD {
 //            item.put("phone", rs.getString(6));
 //            item.put("email", rs.getString(7));
                 items.add(item);
+                i++;
+            }
+        }
+        return items;
+    }
+
+    public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
+        stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName);
+        List<List<HashMap<String, String>>> items = new ArrayList<>();
+        int i = 1;
+        if (parser_excel.getHeaders() != null) {
+            while (rs.next()) {
+                List<HashMap<String, String>> mData = new ArrayList<>();
+                HashMap<String, String> indexH = new HashMap<>();
+                indexH.put("Data", String.valueOf(i));
+                mData.add(indexH);
+                for (String header : parser_excel.getHeaders()) {
+                    HashMap<String, String> item = new HashMap<>();
+                    item.put("Data", rs.getString(header));
+                    mData.add(item);
+                }
+                items.add(mData);
                 i++;
             }
         }

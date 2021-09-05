@@ -3,6 +3,8 @@ package com.example;
 import com.example.storage.StorageService;
 import com.google.gson.Gson;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,16 +28,17 @@ import static com.example.Constants.*;
 
 @Controller
 public class ApplicationController {
+    private static final Logger logger = LogManager.getLogger(StartConnection.class);
 
     private final int numerOfTableLines = 100;
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
     List<HashMap<String, String>> NeededItems = new ArrayList<>();
-    List<HashMap<String, String>> ItemsToLoad = new ArrayList<>();
-    List<HashMap<String, String>> Pull = new ArrayList<>();
-    List<HashMap<String, String>> ActivePull = new ArrayList<>();
-    List<HashMap<String, String>> PullToShow = new ArrayList<>();
+    List<List<HashMap<String, String>>> ItemsToLoad = new ArrayList<>();
+    List<List<HashMap<String, String>>> Pull = new ArrayList<>();
+    List<List<HashMap<String, String>>> ActivePull = new ArrayList<>();
+    List<List<HashMap<String, String>>> PullToShow = new ArrayList<>();
 
     @Autowired
     public ApplicationController(StorageService storageService) {
@@ -52,71 +55,65 @@ public class ApplicationController {
 
     @GetMapping("/file")
     public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-        List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(url, user, password);
+            ShrekBD shrek = new ShrekBD();
+            List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
 
-        if (Pull.isEmpty()) {
-            Pull = shrek.getSortedListOfData();
-        }
-        if (ActivePull.isEmpty()) {
-            if (numerOfTableLines < Pull.size()) {
-                for (int i = 0; i < numerOfTableLines; i++) {
-                    ActivePull.add(Pull.get(i));
+//        if (Pull.isEmpty()) {
+//            Pull = shrek.getSortedListOfDataImpact();
+//        }
+//        if (ActivePull.isEmpty()) {
+//            if (numerOfTableLines < Pull.size()) {
+//                for (int i = 0; i < numerOfTableLines; i++) {
+//                    ActivePull.add(Pull.get(i));
+//                }
+//            } else {
+//                ActivePull = Pull;
+//            }
+//        }
+
+
+            List<HashMap<String, String>> tableHeaders = new ArrayList<>();
+
+            List<String> headers = parser_excel.headers;
+
+
+            List<HashMap<String, String>> allData = new ArrayList<>();
+            if (headers != null) {
+                HashMap<String, String> index = new HashMap<>();
+                index.put("header", "index");
+                tableHeaders.add(index);
+                for (int i = 0; i < headers.size(); i++) {
+                    HashMap<String, String> header = new HashMap<>();
+                    header.put("header", headers.get(i));
+                    tableHeaders.add(header);
                 }
-            } else {
-                ActivePull = Pull;
-            }
-        }
-
-
-        List<HashMap<String, String>> testItems = new ArrayList<>();
-        List<HashMap<String, String>> tableHeaders = new ArrayList<>();
-
-
-        List<String> headers = parser_excel.headers;
-        List<HashMap<String, String>> allData = new ArrayList<>();
-        if (headers != null) {
-            for (int i = 0; i < headers.size(); i++) {
-                HashMap<String, String> header = new HashMap<>();
-                header.put("header", headers.get(i));
-                tableHeaders.add(header);
-            }
-        }
-
-
-        List<HashMap<String, String>> List = new ArrayList<>();
-
-
-        List<List<HashMap<String, String>>> data = new ArrayList<>();
-        if (headers != null) {
-            for (int i = 0; i < 5; i++) {
-                List<HashMap<String, String>> lData = new ArrayList<>();
-                for (int t = 0; t < headers.size(); t++) {
-                    HashMap<String, String> name = new HashMap<>();
-                    name.put("Data", String.valueOf(t));
-                    lData.add(name);
-                }
-                data.add(lData);
             }
 
-        }
-        if (headers != null) {
-            for (int i = 0; i < headers.size(); i++) {
-                HashMap<String, String> name = new HashMap<>();
-                name.put("Data", String.valueOf(i));
-                List.add(name);
-                testItems.add(new HashMap<>());
-            }
-        }
-        System.out.println(data);
+//        List<List<HashMap<String, String>>> data = new ArrayList<>();
+//        if (headers != null) {
+//            for (int i = 0; i < 5; i++) {
+//                List<HashMap<String, String>> lData = new ArrayList<>();
+//                for (int t = 0; t < headers.size(); t++) {
+//                    HashMap<String, String> name = new HashMap<>();
+//                    name.put("Data", String.valueOf(t));
+//                    lData.add(name);
+//                }
+//                data.add(lData);
+//            }
+//
+//        }
 
-        model.put("headers", tableHeaders);
-        model.put("items", testItems);
-        model.put("List", List);
-        model.put("data", data);
-        model.put("preSets", shrek.getPreSets());
+            logger.info("Data received");
+            model.put("headers", tableHeaders);
+            model.put("data", shrek.getSortedListOfDataImpact());
+            model.put("preSets", shrek.getPreSets());
+
+        } catch (Exception e) {
+            logger.error("Connection failed", e);
+        }
         return "application";
     }
 
@@ -405,7 +402,7 @@ public class ApplicationController {
             }
         }
         Pull.clear();
-        Pull = NeededItems;
+//        Pull = NeededItems;
         ActivePull.clear();
         return "redirect:/file";
 
