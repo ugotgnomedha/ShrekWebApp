@@ -22,13 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="adding free columns">
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="add logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataFull.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/dataFull.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Constants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/parse_determine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/parse_determine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,17 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShrekWebApp-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" />
       <method v="2" />
@@ -214,7 +205,9 @@
       <workItem from="1630668341555" duration="623000" />
       <workItem from="1630678511608" duration="3381000" />
       <workItem from="1630736720324" duration="14518000" />
-      <workItem from="1630857249067" duration="9453000" />
+      <workItem from="1630857249067" duration="10182000" />
+      <workItem from="1630870572906" duration="606000" />
+      <workItem from="1630871433809" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -335,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630752677494</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add logging">
+      <created>1630869909962</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630869909962</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +368,8 @@
     <MESSAGE value="fix pagination" />
     <MESSAGE value="more pagination" />
     <MESSAGE value="adding free columns" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding free columns" />
+    <MESSAGE value="add logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logging" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1630869507850">
@@ -403,38 +404,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1626693990825" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1630871183139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630871183139" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1630871183139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630871183139" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1630871183139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630871183139" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1630871183139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630871183139" />
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1630870544161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.1.center" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630870544161" />
+    <state width="1877" height="277" key="GridCell.Tab.1.center" timestamp="1630870544161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.1.left" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630870544161" />
+    <state width="1877" height="277" key="GridCell.Tab.1.left" timestamp="1630870544161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
-    <state width="1877" height="277" key="GridCell.Tab.1.right" timestamp="1630869797052">
+    <state width="1877" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630870544161" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right" timestamp="1630870544161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630869797052" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630870544161" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1630752686499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -459,10 +460,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630668367781" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630752681592">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1630869927330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1630752681592" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1630869927330" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1630743767861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
