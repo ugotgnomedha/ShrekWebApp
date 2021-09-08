@@ -30,7 +30,7 @@ import static com.example.Constants.*;
 public class ApplicationController {
     private static final Logger logger = LogManager.getLogger(StartConnection.class);
 
-    private final int numerOfTableLines = 100;
+    private final int numerOfTableLines = 20;
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
@@ -61,23 +61,27 @@ public class ApplicationController {
             ShrekBD shrek = new ShrekBD();
             List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
 
-//        if (Pull.isEmpty()) {
-//            Pull = shrek.getSortedListOfDataImpact();
-//        }
-//        if (ActivePull.isEmpty()) {
-//            if (numerOfTableLines < Pull.size()) {
-//                for (int i = 0; i < numerOfTableLines; i++) {
-//                    ActivePull.add(Pull.get(i));
-//                }
-//            } else {
-//                ActivePull = Pull;
-//            }
-//        }
+            if (Pull.isEmpty()) {
+                Pull = shrek.getSortedListOfDataImpact();
+            }
+            if (ActivePull.isEmpty()) {
+                if (numerOfTableLines < Pull.size()) {
+                    for (int i = 0; i < numerOfTableLines; i++) {
+                        ActivePull.add(Pull.get(i));
+                    }
+                } else {
+                    ActivePull = Pull;
+                }
+            }
 
 
             List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
             List<String> headers = parser_excel.headers;
+            if (headers != null && !headers.contains("comment")) {
+                headers.add("comment");
+
+            }
 
 
             List<HashMap<String, String>> allData = new ArrayList<>();
@@ -92,23 +96,9 @@ public class ApplicationController {
                 }
             }
 
-//        List<List<HashMap<String, String>>> data = new ArrayList<>();
-//        if (headers != null) {
-//            for (int i = 0; i < 5; i++) {
-//                List<HashMap<String, String>> lData = new ArrayList<>();
-//                for (int t = 0; t < headers.size(); t++) {
-//                    HashMap<String, String> name = new HashMap<>();
-//                    name.put("Data", String.valueOf(t));
-//                    lData.add(name);
-//                }
-//                data.add(lData);
-//            }
-//
-//        }
-
             logger.info("Data received");
             model.put("headers", tableHeaders);
-            model.put("data", shrek.getSortedListOfDataImpact());
+            model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
 
         } catch (Exception e) {
@@ -308,13 +298,14 @@ public class ApplicationController {
 //        } else {
 //            return "redirect:/loginError";
 //        }
-        if (logo.equals("admin")) {
-            return "redirect:/file";
-        } else if (logo.equals("user")) {
-            return "redirect:/us";
-        } else {
-            return "redirect:/loginError";
-        }
+//        if (logo.equals("admin")) {
+//            return "redirect:/file";
+//        } else if (logo.equals("user")) {
+//            return "redirect:/us";
+//        } else {
+//            return "redirect:/loginError";
+//        }
+        return "redirect:/file";
 
 
     }
@@ -334,8 +325,9 @@ public class ApplicationController {
                     for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
                         ActivePull.add(Pull.get(i));
                     }
-                    startPosition += numerOfTableLines;
-                }
+                    if (startPosition + numerOfTableLines < Pull.size()) {
+                        startPosition += numerOfTableLines;
+                    }                }
 
             } else {
                 movementRight = true;
@@ -348,7 +340,9 @@ public class ApplicationController {
                 } else {
                     ActivePull = Pull;
                 }
-                startPosition += numerOfTableLines;
+                if (startPosition + numerOfTableLines < Pull.size()) {
+                    startPosition += numerOfTableLines;
+                }
             }
 
         } else if (direction.equals("left")) {
@@ -356,15 +350,20 @@ public class ApplicationController {
                 for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
                     ActivePull.add(Pull.get(i));
                 }
-                startPosition -= numerOfTableLines;
+                if (startPosition - numerOfTableLines > 0) {
+                    startPosition -= numerOfTableLines;
+                }
+
             } else {
                 movementRight = false;
-                startPosition -= numerOfTableLines;
-                for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
+                if (startPosition - numerOfTableLines > 0) {
+                    startPosition -= numerOfTableLines;
+                }                for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
                     ActivePull.add(Pull.get(i));
                 }
-                startPosition -= numerOfTableLines;
-            }
+                if (startPosition - numerOfTableLines > 0) {
+                    startPosition -= numerOfTableLines;
+                }            }
 
         }
 

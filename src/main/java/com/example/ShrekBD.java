@@ -6,6 +6,10 @@ import com.google.gson.JsonElement;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -107,21 +111,35 @@ public class ShrekBD {
         ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName);
         List<List<HashMap<String, String>>> items = new ArrayList<>();
         int i = 1;
+        List<String> headers = parser_excel.getHeaders();
+        System.out.println(headers);
+//        if (headers != null) {
+//            headers.add("comment");
+//        }
+
+
         if (parser_excel.getHeaders() != null) {
             while (rs.next()) {
                 List<HashMap<String, String>> mData = new ArrayList<>();
                 HashMap<String, String> indexH = new HashMap<>();
                 indexH.put("Data", String.valueOf(i));
                 mData.add(indexH);
-                for (String header : parser_excel.getHeaders()) {
+
+                for (String header : headers) {
                     HashMap<String, String> item = new HashMap<>();
-                    item.put("Data", rs.getString(header));
+                    if (rs.getString(header) == null) {
+                        item.put("Data", "-");
+                    } else {
+                        item.put("Data", rs.getString(header));
+                    }
+
                     mData.add(item);
                 }
                 items.add(mData);
                 i++;
             }
         }
+        System.out.println(items);
         return items;
     }
 
@@ -186,6 +204,19 @@ public class ShrekBD {
         stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
         System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
 
+    }
+
+    public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {
+        ArrayList<String> fileList = new ArrayList<>();
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(dir))) {
+            for (Path path : stream) {
+                if (!Files.isDirectory(path)) {
+                    fileList.add(path.getFileName()
+                            .toString());
+                }
+            }
+        }
+        return fileList;
     }
 
 
