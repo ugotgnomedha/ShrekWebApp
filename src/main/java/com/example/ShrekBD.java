@@ -108,15 +108,10 @@ public class ShrekBD {
 
     public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
         stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName);
+        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
         List<List<HashMap<String, String>>> items = new ArrayList<>();
         int i = 1;
         List<String> headers = parser_excel.getHeaders();
-        System.out.println(headers);
-//        if (headers != null) {
-//            headers.add("comment");
-//        }
-
 
         if (parser_excel.getHeaders() != null) {
             while (rs.next()) {
@@ -138,8 +133,9 @@ public class ShrekBD {
                 items.add(mData);
                 i++;
             }
+        }else {
+            
         }
-        System.out.println(items);
         return items;
     }
 
@@ -200,10 +196,7 @@ public class ShrekBD {
     public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
         ArrayList<String> column_names = ExelParser.getColumnNames();
         stmt = connection.createStatement();
-        System.out.println(column_names.get(6));
         stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
-        System.out.println("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
-
     }
 
     public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {
