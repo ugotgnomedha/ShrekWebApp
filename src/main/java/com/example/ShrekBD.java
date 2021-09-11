@@ -108,17 +108,25 @@ public class ShrekBD {
 
     public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
         stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
         List<List<HashMap<String, String>>> items = new ArrayList<>();
         int i = 1;
+        Boolean onlineExists = false;
         List<String> headers = parser_excel.getHeaders();
+        if (headers == null) {
+            headers = getOnlineTableHeaders();
+            onlineExists = true;
+        }
 
-        if (parser_excel.getHeaders() != null) {
+        if (headers != null) {
+            ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
             while (rs.next()) {
                 List<HashMap<String, String>> mData = new ArrayList<>();
                 HashMap<String, String> indexH = new HashMap<>();
-                indexH.put("Data", String.valueOf(i));
-                mData.add(indexH);
+                if (!onlineExists) {
+                    indexH.put("Data", String.valueOf(i));
+                    mData.add(indexH);
+                }
+
 
                 for (String header : headers) {
                     HashMap<String, String> item = new HashMap<>();
@@ -133,8 +141,8 @@ public class ShrekBD {
                 items.add(mData);
                 i++;
             }
-        }else {
-            
+        } else {
+
         }
         return items;
     }
@@ -142,6 +150,21 @@ public class ShrekBD {
     public void export(String path) throws SQLException {
         stmt = connection.createStatement();
         stmt.execute("COPY " + mainDataBaseName + " TO " + "'" + path + "\\\\" + mainDataBaseName + ".csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+    }
+
+    public ArrayList<String> getOnlineTableHeaders() throws SQLException {
+        stmt = connection.createStatement();
+        ArrayList<String> headers = new ArrayList<>();
+        headers = new ArrayList<String>();
+        ResultSet rsH = stmt.executeQuery("SELECT *\n" +
+                "  FROM information_schema.columns\n" +
+                " WHERE table_schema = 'public'\n" +
+                "   AND table_name   = 'jc_contact'\n" +
+                "     ;");
+        while (rsH.next()) {
+            headers.add(rsH.getString("column_name"));
+        }
+        return headers;
     }
 
     public void exportPreSet(String path, List<String> listOfEmails) throws SQLException {

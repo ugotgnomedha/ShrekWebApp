@@ -2,6 +2,7 @@ package com.example;
 
 import com.example.storage.StorageService;
 import com.google.gson.Gson;
+import org.apache.catalina.util.ToStringUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -78,21 +79,29 @@ public class ApplicationController {
             List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
             List<String> headers = parser_excel.headers;
-            if (headers != null && !headers.contains("comment")) {
-                headers.add("comment");
-
+            if (headers == null) {
+                headers = shrek.getOnlineTableHeaders();
             }
 
-
-            List<HashMap<String, String>> allData = new ArrayList<>();
             if (headers != null) {
                 HashMap<String, String> index = new HashMap<>();
-                index.put("header", "index");
-                tableHeaders.add(index);
+                Boolean flag = false;
+                for (String header : headers) {
+                    if (header.equals("id")) flag = true;
+                }
+                if (!flag) {
+                    index.put("header", "id");
+                    tableHeaders.add(index);
+                }
+
                 for (int i = 0; i < headers.size(); i++) {
                     HashMap<String, String> header = new HashMap<>();
                     header.put("header", headers.get(i));
                     tableHeaders.add(header);
+                }
+                if (headers != null && !headers.contains("comment")) {
+                    headers.add("comment");
+
                 }
             }
 
@@ -395,20 +404,18 @@ public class ApplicationController {
             }
 
         }
-        System.out.println(domens);
-
         for (List<HashMap<String, String>> list : items) {
             for (HashMap<String, String> dict : list) {
                 for (String domen : domens.split(" ")) {
-                    if (dict.get("Data").contains(domen)) {
+                    if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
                         NeededItems.add(list);
                     }
                 }
             }
         }
-        Pull.clear();
         Pull = NeededItems;
         ActivePull.clear();
+        System.out.println(domens);
         return "redirect:/file";
 
     }
