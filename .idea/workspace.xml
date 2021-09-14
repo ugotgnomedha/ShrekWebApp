@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="fix preSets" />
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="fix preSets">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,19 +124,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ShrekWebApp-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/ShrekWebApp-1.0-SNAPSHOT.jar" />
       <method v="2" />
@@ -218,6 +207,7 @@
       <workItem from="1631259742008" duration="87000" />
       <workItem from="1631286669068" duration="4345000" />
       <workItem from="1631356196010" duration="5433000" />
+      <workItem from="1631606252900" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
