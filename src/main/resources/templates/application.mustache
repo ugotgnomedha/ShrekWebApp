@@ -59,8 +59,37 @@
 <div id="filter-section">
     <div class="container">
         <div class="row">
+            <input name="searchTxt" type="text" id="searchTxt"/>
+        </div>
+        <div class="row">
             <div class="col">
                 <button type="button" class="btn btn-primary" id="play-button">Play</button>
+            </div>
+            <div class="col">
+                <div class="preset-table">
+                    <table class="table table-light table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Use</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
+                            {{#preSets}}
+                                <tr>
+
+                                    <td><input type="checkbox" name="used" value="<{{name}}>>"></td>
+                                    <td>{{name}}</td>
+                                    <td><input type="checkbox" name="delete" value="<{{name}}>>"></td>
+
+                                </tr>
+                            {{/preSets}}
+                        </form>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="col">
                 <div class="preset-table">

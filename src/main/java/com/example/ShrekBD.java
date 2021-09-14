@@ -117,7 +117,7 @@ public class ShrekBD {
             onlineExists = true;
         }
 
-        if (headers != null) {
+        if (headers.size() > 0) {
             ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
             while (rs.next()) {
                 List<HashMap<String, String>> mData = new ArrayList<>();
