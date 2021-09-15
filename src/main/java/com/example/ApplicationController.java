@@ -2,7 +2,6 @@ package com.example;
 
 import com.example.storage.StorageService;
 import com.google.gson.Gson;
-import org.apache.catalina.util.ToStringUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -109,6 +108,7 @@ public class ApplicationController {
             model.put("headers", tableHeaders);
             model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
+            model.put("domens", shrek.getDomens());
 
         } catch (Exception e) {
             logger.error("Connection failed", e);
@@ -188,30 +188,30 @@ public class ApplicationController {
 //        return "redirect:/file";
 //    }
 
-    @PostMapping("/addPreSet")
-    public String addPreSet(@RequestParam("name") String name, @RequestParam("sets") String sets, RedirectAttributes redirectAttributes) throws FileNotFoundException {
-        final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
-
-        Gson gson = new Gson();
-
-        User[] userArray = gson.fromJson(userJson, User[].class);
-        User[] newUserArray = new User[userArray.length + 1];
-        for (int i = 0; i < userArray.length; i++) {
-            newUserArray[i] = userArray[i];
-        }
-        User newUser = new User();
-        newUser.setName(name);
-        newUser.setSets(sets);
-        newUserArray[newUserArray.length - 1] = newUser;
-        String json = gson.toJson(newUserArray);
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
-            writer.write(json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "redirect:/sorti";
-    }
+//    @PostMapping("/addPreSet")
+//    public String addPreSet(@RequestParam("name") String name, @RequestParam("sets") String sets, RedirectAttributes redirectAttributes) throws FileNotFoundException {
+//        final String dir = System.getProperty("user.dir");
+//        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+//
+//        Gson gson = new Gson();
+//
+//        User[] userArray = gson.fromJson(userJson, User[].class);
+//        User[] newUserArray = new User[userArray.length + 1];
+//        for (int i = 0; i < userArray.length; i++) {
+//            newUserArray[i] = userArray[i];
+//        }
+//        User newUser = new User();
+//        newUser.setName(name);
+//        newUser.setSets(sets);
+//        newUserArray[newUserArray.length - 1] = newUser;
+//        String json = gson.toJson(newUserArray);
+//        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+//            writer.write(json);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return "redirect:/sorti";
+//    }
 
 //    @PostMapping("/find")
 //    public String handleKey(@RequestParam("key") String key,
@@ -384,6 +384,39 @@ public class ApplicationController {
 
     }
 
+    @PostMapping("/addPreSet")
+    public String addPreSet(@RequestParam("name") String name) throws FileNotFoundException {
+        System.out.println(name);
+        String sets = "";
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        User[] newUserArray = new User[userArray.length + 1];
+        for (int i = 0; i < userArray.length; i++) {
+            newUserArray[i] = userArray[i];
+        }
+        User newUser = new User();
+        newUser.setName(name);
+        newUser.setSets(sets);
+        newUserArray[newUserArray.length - 1] = newUser;
+        String json = gson.toJson(newUserArray);
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/add-form")
+    public String addForm() {
+        return "redirect:/file";
+    }
+
     @PostMapping("/usePreSet")
     public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
@@ -416,6 +449,41 @@ public class ApplicationController {
         Pull = NeededItems;
         ActivePull.clear();
         System.out.println(domens);
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/addDomen")
+    public String addDomen(@RequestParam("domens") String domens, @RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+
+        List<String> domenList = new ArrayList<>();
+        for (String domen : domens.split(",")) {
+            domen = domen.replaceAll("[<>]*", "");
+            domenList.add(domen);
+        }
+
+        List<String> preSetsInForm = new ArrayList<>();
+
+        for (String preSet : used.split(",")) {
+            preSet = preSet.replaceAll("[<>]*", "");
+            preSetsInForm.add(preSet);
+
+        }
+
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        System.out.println(domens);
+        System.out.println(preSetsInForm);
+//        for(int i = 0; i <userArray.length; i++){
+//            if(userArray[i].ge)
+//        }
         return "redirect:/file";
 
     }

@@ -55,5 +55,60 @@ $("#play-button").click(function () {
     $('#preSetForm').submit();
 });
 
+$("#add-domen").click(function () {
+    $('#domenForm').submit();
+});
+
+$("#add-preSet").click(function () {
+    let data = document.getElementById("searchTxt").value;
+    const XHR = new XMLHttpRequest();
+
+    let urlEncodedData = "",
+        urlEncodedDataPairs = [],
+        name;
+
+    urlEncodedDataPairs.push(encodeURIComponent('name') + '=' + encodeURIComponent(data));
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+    // Define what happens on successful data submission
+    XHR.addEventListener('load', function (event) {
+        // alert('Yeah! Data sent and response loaded.');
+    });
+
+    // Define what happens in case of error
+    XHR.addEventListener('error', function (event) {
+        alert('Oops! Something went wrong.');
+    });
+
+    XHR.open('POST', '/addPreSet');
+
+    // Add the required HTTP header for form data POST requests
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Finally, send our data.
+    XHR.send(urlEncodedData);
+    // alert(data);
+    $("#add-form").submit();
+
+});
+
+// Pass the checkbox name to the function
+function getCheckedBoxes(chkboxName) {
+    var checkboxes = document.getElementsByName(chkboxName);
+    var checkboxesChecked = [];
+    // loop over them all
+    for (var i=0; i<checkboxes.length; i++) {
+        // And stick the checked ones onto an array...
+        if (checkboxes[i].checked) {
+            checkboxesChecked.push(checkboxes[i]);
+        }
+    }
+    // Return the array if it is non-empty, or null
+    return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+}
+
+// Call as
+var checkedBoxes = getCheckedBoxes("mycheckboxes");
+
 
 

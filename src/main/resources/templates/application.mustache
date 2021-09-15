@@ -59,11 +59,18 @@
 <div id="filter-section">
     <div class="container">
         <div class="row">
-            <input name="searchTxt" type="text" id="searchTxt"/>
+            <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
+                <input name="searchTxt" type="text" id="searchTxt"/>
+            </form>
         </div>
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-primary" id="play-button">Play</button>
+                <div class="container-c">
+                    <div class="center-c">
+                        <button type="button" class="btn btn-primary" id="play-button">Play</button>
+                    </div>
+                </div>
+
             </div>
             <div class="col">
                 <div class="preset-table">
@@ -72,7 +79,6 @@
                         <tr>
                             <th scope="col">Use</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -82,14 +88,23 @@
 
                                     <td><input type="checkbox" name="used" value="<{{name}}>>"></td>
                                     <td>{{name}}</td>
-                                    <td><input type="checkbox" name="delete" value="<{{name}}>>"></td>
-
                                 </tr>
                             {{/preSets}}
                         </form>
                         </tbody>
                     </table>
                 </div>
+                <table>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-secondary" id="add-preSet">Добавить</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </td>
+                    </tr>
+
+                </table>
             </div>
             <div class="col">
                 <div class="preset-table">
@@ -98,24 +113,31 @@
                         <tr>
                             <th scope="col">Use</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Delete</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
-                            {{#preSets}}
+                        <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
+                            {{#domens}}
                                 <tr>
-
-                                    <td><input type="checkbox" name="used" value="<{{name}}>>"></td>
+                                    <td><input type="checkbox" name="domens" value="<{{name}}>>"></td>
                                     <td>{{name}}</td>
-                                    <td><input type="checkbox" name="delete" value="<{{name}}>>"></td>
-
                                 </tr>
-                            {{/preSets}}
+                            {{/domens}}
                         </form>
                         </tbody>
                     </table>
                 </div>
+                <table>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-secondary" id="add-domen">Добавить</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </td>
+                    </tr>
+
+                </table>
             </div>
             <div class="col">
 

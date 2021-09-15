@@ -216,6 +216,30 @@ public class ShrekBD {
         return null;
     }
 
+    public List<HashMap<String, String>> getDomens() throws FileNotFoundException {
+        final String dir = System.getProperty("user.dir");
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        try (Reader reader = new FileReader(dir + "\\preSets\\domens.json")) {
+
+            // Convert JSON to JsonElement, and later to String
+            JsonElement json = gson.fromJson(reader, JsonElement.class);
+            String jsonInString = gson.toJson(json);
+            User[] userArray = gson.fromJson(jsonInString, User[].class);
+            List<HashMap<String, String>> items = new ArrayList<>();
+            for (User user : userArray) {
+                HashMap<String, String> item = new HashMap<>();
+                item.put("name", user.getName());
+                items.add(item);
+            }
+            return items;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
         ArrayList<String> column_names = ExelParser.getColumnNames();
         stmt = connection.createStatement();
