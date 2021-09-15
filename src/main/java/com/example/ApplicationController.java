@@ -2,6 +2,8 @@ package com.example;
 
 import com.example.storage.StorageService;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -14,10 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -453,37 +452,46 @@ public class ApplicationController {
 
     }
 
-    @PostMapping("/addDomen")
-    public String addDomen(@RequestParam("domens") String domens, @RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+    @PostMapping("/getData")
+    public String addDomen(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
 
         List<String> domenList = new ArrayList<>();
-        for (String domen : domens.split(",")) {
+        for (String domen : domens.split("!")) {
             domen = domen.replaceAll("[<>]*", "");
             domenList.add(domen);
         }
 
         List<String> preSetsInForm = new ArrayList<>();
 
-        for (String preSet : used.split(",")) {
+        for (String preSet : preSets.split("!")) {
             preSet = preSet.replaceAll("[<>]*", "");
             preSetsInForm.add(preSet);
 
         }
 
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
 
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
 
-        User[] userArray = gson.fromJson(userJson, User[].class);
-        System.out.println(domens);
-        System.out.println(preSetsInForm);
-//        for(int i = 0; i <userArray.length; i++){
-//            if(userArray[i].ge)
-//        }
+            // Convert JSON to JsonElement, and later to String
+            JsonElement json = gson.fromJson(reader, JsonElement.class);
+            String jsonInString = gson.toJson(json);
+            User[] userArray = gson.fromJson(jsonInString, User[].class);
+            for (User user : userArray) {
+                for (String preSet : preSetsInForm) {
+                    if (user.getName().equals(preSet)) {
+                        user.setSets(user.getSets() + " " + preSet);
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return "redirect:/file";
 
     }
