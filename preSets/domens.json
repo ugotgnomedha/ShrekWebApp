@@ -1,1 +1,18 @@
-[{"sets":"live","name":"live.ru"},{"sets":"","name":"usa.com"},{"sets":"","name":"genshi"}]
+[
+  {
+    "sets": "live",
+    "name": "live.rf"
+  },
+  {
+    "sets": "",
+    "name": "usa.com"
+  },
+  {
+    "sets": "",
+    "name": "panda"
+  },
+  {
+    "sets": "",
+    "name": "ngs.rf"
+  }
+]

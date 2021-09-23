@@ -446,14 +446,14 @@ public class ApplicationController {
             }
         }
         Pull = NeededItems;
+        System.out.println(Pull);
         ActivePull.clear();
-        System.out.println(domens);
         return "redirect:/file";
 
     }
 
     @PostMapping("/getData")
-    public String addDomen(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+    public String addData(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
@@ -471,7 +471,8 @@ public class ApplicationController {
             preSetsInForm.add(preSet);
 
         }
-
+        System.out.println(domenList);
+        System.out.println(preSetsInForm);
         final String dir = System.getProperty("user.dir");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -484,10 +485,24 @@ public class ApplicationController {
             for (User user : userArray) {
                 for (String preSet : preSetsInForm) {
                     if (user.getName().equals(preSet)) {
-                        user.setSets(user.getSets() + " " + preSet);
+                        for (String domen : domenList) {
+                            if (user.getSets().equals("")) {
+                                user.setSets(domen);
+                            } else {
+                                user.setSets(user.getSets() + " " + domen);
+                            }
+                        }
                     }
                 }
             }
+
+            String jsonToWrite = gson.toJson(userArray);
+            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+                writer.write(jsonToWrite);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
 
         } catch (IOException e) {
             e.printStackTrace();

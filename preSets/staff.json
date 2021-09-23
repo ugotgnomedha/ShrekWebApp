@@ -1,1 +1,14 @@
-[{"sets":"live","name":"Live"},{"sets":"","name":"ffdfdfdf"},{"sets":"","name":"New"},{"sets":"","name":"Moscow"},{"sets":"","name":""}]
+[
+  {
+    "sets": "live",
+    "name": "Live"
+  },
+  {
+    "sets": "ngs.rf",
+    "name": "newOne"
+  },
+  {
+    "sets": "panda",
+    "name": "Panda"
+  }
+]

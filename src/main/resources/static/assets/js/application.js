@@ -145,7 +145,6 @@ $("#add-domen").click(function () {
     // Combine the pairs into a single string and replace all %-encoded spaces to
     // the '+' character; matches the behavior of browser form submissions.
     urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-
     // Define what happens on successful data submission
     XHR.addEventListener('load', function (event) {
         // alert('Yeah! Data sent and response loaded.');
