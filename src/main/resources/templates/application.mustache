@@ -86,8 +86,18 @@
                             {{#preSets}}
                                 <tr>
 
-                                    <td><input type="checkbox" name="used" value="<{{name}}>>"></td>
-                                    <td>{{name}}</td>
+                                    <td><input type="checkbox" name="used" value="<{{name}}>>">
+
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="dropbtn">{{name}}</button>
+                                            <div class="dropdown-content">
+                                                <div>{{sets}}</div>
+                                            </div>
+                                        </div>
+                                    </td>
+
                                 </tr>
                             {{/preSets}}
                         </form>
@@ -100,7 +110,7 @@
                             <button type="button" class="btn btn-secondary" id="add-preSet">Добавить</button>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-secondary">Secondary</button>
+                            <button type="button" class="btn btn-secondary">Удалить</button>
                         </td>
                     </tr>
 
@@ -130,10 +140,13 @@
                 <table>
                     <tr>
                         <td>
-                            <button type="button" class="btn btn-secondary" id="add-domen">Добавить</button>
+                            <button type="button" class="btn btn-secondary" id="add-domen">Добавить в пре-сет</button>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-secondary">Secondary</button>
+                            <button type="button" class="btn btn-secondary" id="delete-domen">Удалить</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary" id="add-new-domen">Добавить домен</button>
                         </td>
                     </tr>
 

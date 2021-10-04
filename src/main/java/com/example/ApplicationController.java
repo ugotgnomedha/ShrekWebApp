@@ -411,6 +411,62 @@ public class ApplicationController {
 
     }
 
+    @PostMapping("/addDomen")
+    public String addDomen(@RequestParam("name") String name) throws FileNotFoundException {
+        System.out.println(name);
+        String sets = "";
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        User[] newUserArray = new User[userArray.length + 1];
+        for (int i = 0; i < userArray.length; i++) {
+            newUserArray[i] = userArray[i];
+        }
+        User newUser = new User();
+        newUser.setName(name);
+        newUser.setSets(sets);
+        newUserArray[newUserArray.length - 1] = newUser;
+        String json = gson.toJson(newUserArray);
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/deleteDomen")
+    public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
+        System.out.println(name);
+        String sets = "";
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        User[] newUserArray = new User[userArray.length - 1];
+        int counter = 0;
+        for (int i = 0; i < userArray.length; i++) {
+            if (!name.replaceAll("[<>]*", "").equals(userArray[i].getName())) {
+                newUserArray[counter] = userArray[i];
+                counter++;
+            }
+        }
+        String json = gson.toJson(newUserArray);
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "redirect:/file";
+
+    }
+
     @PostMapping("/add-form")
     public String addForm() {
         return "redirect:/file";
