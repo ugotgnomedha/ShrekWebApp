@@ -467,6 +467,34 @@ public class ApplicationController {
 
     }
 
+    @PostMapping("/deletePreset")
+    public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
+        System.out.println(name);
+        String sets = "";
+        final String dir = System.getProperty("user.dir");
+        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+
+        Gson gson = new Gson();
+
+        User[] userArray = gson.fromJson(userJson, User[].class);
+        User[] newUserArray = new User[userArray.length - 1];
+        int counter = 0;
+        for (int i = 0; i < userArray.length; i++) {
+            if (!name.replaceAll("[<>]*", "").equals(userArray[i].getName())) {
+                newUserArray[counter] = userArray[i];
+                counter++;
+            }
+        }
+        String json = gson.toJson(newUserArray);
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+            writer.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "redirect:/file";
+
+    }
+
     @PostMapping("/add-form")
     public String addForm() {
         return "redirect:/file";
@@ -527,8 +555,6 @@ public class ApplicationController {
             preSetsInForm.add(preSet);
 
         }
-        System.out.println(domenList);
-        System.out.println(preSetsInForm);
         final String dir = System.getProperty("user.dir");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();

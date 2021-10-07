@@ -1,26 +1,6 @@
 [
   {
-    "sets": "live panda ngs.rf",
-    "name": "Live"
-  },
-  {
-    "sets": "ngs.rf usa.com panda ngs.rf",
-    "name": "newOne"
-  },
-  {
-    "sets": "panda",
-    "name": "Panda"
-  },
-  {
-    "sets": "live.rf",
+    "sets": "test.rf",
     "name": "Test"
-  },
-  {
-    "sets": "y1",
-    "name": "yFirst"
-  },
-  {
-    "sets": "inb0x.rf panda ngs.rf y1 inb0x.rf xzcxzczc",
-    "name": "InboxInvesting"
   }
 ]
