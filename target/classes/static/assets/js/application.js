@@ -238,7 +238,7 @@ $("#delete-domen").click(function () {
 })
 
 $("#delete-preset").click(function () {
-    
+
     var checkBoxes = getCheckedBoxes("preSetForm");
     var checkBoxesDomens = "";
     for (var i = 0; i < checkBoxes.length; i++) {
@@ -275,6 +275,19 @@ $("#delete-preset").click(function () {
     XHR.send(urlEncodedData);
     $("#add-form").submit();
 })
+
+var table=document.getElementById("main-table");
+var r=0;
+while(row=table.rows[r++])
+{
+    var c=0;
+    while(cell=row.cells[c++])
+    {
+        cell.innerHTML='[Row='+r+',Col='+c+']'; // do sth with cell
+    }
+}
+
+
 
 
 

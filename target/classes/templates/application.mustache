@@ -161,20 +161,22 @@
 
 </div>
 <div class="main-table">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered" id="main-table">
         <thead>
         <tr id="table-names">
             {{#headers}}
                 <th scope="col">{{header}}</th>
             {{/headers}}
+            <th>Confirm</th>
         </tr>
         </thead>
         <tbody>
         {{#data}}
             <tr>
                 {{#.}}
-                    <td>{{Data}}</td>
+                    <td><input value="{{Data}}"></td>
                 {{/.}}
+                <th><button type="button" class="btn btn-secondary" id="add-domen">Edit</button></th>
             </tr>
         {{/data}}
         </tbody>
