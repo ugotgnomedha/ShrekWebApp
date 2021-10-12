@@ -302,7 +302,7 @@ $(".eButton").click(function () {
         // $(item).children(':first').attr("value", "new value");// transforming to jquery item
 
         data = data + "|" + $(item).children(':first').val();
-        
+
 
     }
     alert(data);

@@ -59,28 +59,27 @@
 <div id="filter-section">
     <div class="container">
         <div class="row">
-            <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
-                <input name="searchTxt" type="text" id="searchTxt"/>
-            </form>
+            <div>
+                <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
+                    <input name="searchTxt" type="text" id="searchTxt"/>
+                </form>
+            </div>
+
         </div>
         <div class="row">
             <div class="col">
                 <div class="container-c">
                     <div class="center-c">
-                        <button type="button" class="btn btn-primary" id="play-button">Play</button>
+                        <!--                        <button type="button" class="btn btn-primary" id="play-button">Play</button>-->
+                        <img src="assets/img/552-5520952_play-button-watch-video-understand-the-power-clarip.png"
+                             id="play-button">
                     </div>
                 </div>
 
             </div>
-            <div class="col">
+            <div class="col colTwo">
                 <div class="preset-table">
-                    <table class="table table-light table-bordered">
-                        <thead>
-                        <tr>
-                            <th scope="col">Use</th>
-                            <th scope="col">Name</th>
-                        </tr>
-                        </thead>
+                    <table class="table gray">
                         <tbody>
                         <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
                             {{#preSets}}
@@ -118,13 +117,7 @@
             </div>
             <div class="col">
                 <div class="preset-table">
-                    <table class="table table-light table-bordered">
-                        <thead>
-                        <tr>
-                            <th scope="col">Use</th>
-                            <th scope="col">Name</th>
-                        </tr>
-                        </thead>
+                    <table class="table">
                         <tbody>
                         <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
                             {{#domens}}

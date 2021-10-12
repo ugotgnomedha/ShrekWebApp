@@ -385,7 +385,6 @@ public class ApplicationController {
 
     @PostMapping("/addPreSet")
     public String addPreSet(@RequestParam("name") String name) throws FileNotFoundException {
-        System.out.println(name);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -413,7 +412,6 @@ public class ApplicationController {
 
     @PostMapping("/addDomen")
     public String addDomen(@RequestParam("name") String name) throws FileNotFoundException {
-        System.out.println(name);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -441,7 +439,6 @@ public class ApplicationController {
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
-        System.out.println(name);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -469,7 +466,6 @@ public class ApplicationController {
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
-        System.out.println(name);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -530,7 +526,6 @@ public class ApplicationController {
             }
         }
         Pull = NeededItems;
-        System.out.println(Pull);
         ActivePull.clear();
         return "redirect:/file";
 

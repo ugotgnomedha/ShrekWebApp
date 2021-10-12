@@ -136,7 +136,6 @@ details[open] summary:after {
 .container-c {
     height: 200px;
     position: relative;
-    border: 3px solid green;
 }
 
 .center-c {
@@ -146,6 +145,38 @@ details[open] summary:after {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.my-center{
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#play-button {
+    height: 10rem;
+}
+
+.gray{
+    background-color: #B0B0B0;
+}
+.colTwo{
+    border-left: 1px solid #000000;
+}
+
+.preset-table{
+    background-color: #B0B0B0;
+}
+#searchTxt {
+    background-color: #717ff5;
+    width: 50rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: none;
 }
 
 /* Dropdown Button */
