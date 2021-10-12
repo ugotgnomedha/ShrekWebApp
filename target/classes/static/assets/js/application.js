@@ -10,6 +10,7 @@ $("#filterButton").click(function () {
     }
 });
 
+
 const btn = document.querySelector("#rightButton");
 
 function sendData(data) {
@@ -237,6 +238,10 @@ $("#delete-domen").click(function () {
     $("#add-form").submit();
 })
 
+function dosomething(element) {
+    alert(element.value);
+}
+
 $("#delete-preset").click(function () {
 
     var checkBoxes = getCheckedBoxes("preSetForm");
@@ -275,17 +280,35 @@ $("#delete-preset").click(function () {
     XHR.send(urlEncodedData);
     $("#add-form").submit();
 })
-
-var table=document.getElementById("main-table");
-var r=0;
-while(row=table.rows[r++])
-{
-    var c=0;
-    while(cell=row.cells[c++])
-    {
-        cell.innerHTML='[Row='+r+',Col='+c+']'; // do sth with cell
+var table = document.getElementById("main-table");
+var r = 0;
+while (row = table.rows[r++]) {
+    var c = 0;
+    // row.className = r;
+    while (cell = row.cells[c++]) {
+        cell.className = r;
     }
 }
+;
+
+
+$(".eButton").click(function () {
+    var myClass = $(this).parent().attr("class");
+
+    var cusid_ele = $("." + myClass)
+    var data = "";
+    for (var i = 0; i < cusid_ele.length; ++i) {
+        var item = cusid_ele[i];
+        // $(item).children(':first').attr("value", "new value");// transforming to jquery item
+
+        data = data + "|" + $(item).children(':first').val();
+        
+
+    }
+    alert(data);
+});
+
+
 
 
 
