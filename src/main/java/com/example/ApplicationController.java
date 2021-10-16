@@ -150,11 +150,11 @@ public class ApplicationController {
 //    }
 
     @PostMapping("/liveEdit")
-    public String handleLiveEditing(@RequestParam("key") String key, @RequestParam("name") String name, @RequestParam("sex") String sex, @RequestParam("age") String age, @RequestParam("phone") String phone, @RequestParam("email") String email, @RequestParam("comment") String comment) throws ClassNotFoundException, SQLException {
+    public String handleLiveEditing(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        ShrekBD.applyLiveEdit(key, name, sex, age, phone, email, comment);
+        ShrekBD.applyLiveEdit(stringToEdit);
         return "redirect:/file";
     }
 

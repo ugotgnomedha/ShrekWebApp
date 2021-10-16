@@ -300,12 +300,46 @@ $(".eButton").click(function () {
     for (var i = 0; i < cusid_ele.length; ++i) {
         var item = cusid_ele[i];
         // $(item).children(':first').attr("value", "new value");// transforming to jquery item
-
-        data = data + "|" + $(item).children(':first').val();
-
+        if (i == 0) {
+            data = $(item).children(':first').val();
+        } else {
+            data = data + "##" + $(item).children(':first').val();
+        }
 
     }
-    alert(data);
+
+    const XHR = new XMLHttpRequest();
+
+    let urlEncodedData = "",
+        urlEncodedDataPairs = [],
+        name;
+
+    // Turn the data object into an array of URL-encoded key/value pairs.
+    urlEncodedDataPairs.push(encodeURIComponent('stringToEdit') + '=' + encodeURIComponent(data));
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to
+    // the '+' character; matches the behavior of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+    // Define what happens on successful data submission
+    XHR.addEventListener('load', function (event) {
+        // alert('Yeah! Data sent and response loaded.');
+    });
+
+    // Define what happens in case of error
+    XHR.addEventListener('error', function (event) {
+        alert('Oops! Something went wrong.');
+    });
+
+    // Set up our request
+    XHR.open('POST', '/liveEdit');
+
+    // Add the required HTTP header for form data POST requests
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Finally, send our data.
+    XHR.send(urlEncodedData);
+    $("#add-form").submit();
+
 });
 
 

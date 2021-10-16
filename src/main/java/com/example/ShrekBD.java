@@ -11,10 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.example.Constants.*;
 
@@ -152,7 +149,7 @@ public class ShrekBD {
         stmt.execute("COPY " + mainDataBaseName + " TO " + "'" + path + "\\\\" + mainDataBaseName + ".csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
     }
 
-    public ArrayList<String> getOnlineTableHeaders() throws SQLException {
+    public static ArrayList<String> getOnlineTableHeaders() throws SQLException {
         stmt = connection.createStatement();
         ArrayList<String> headers = new ArrayList<>();
         headers = new ArrayList<String>();
@@ -240,10 +237,24 @@ public class ShrekBD {
         return null;
     }
 
-    public static void applyLiveEdit(String key, String name, String sex, String age, String phone, String email, String comment) throws SQLException {
-        ArrayList<String> column_names = ExelParser.getColumnNames();
+    public static void applyLiveEdit(String stringToEdit) throws SQLException {
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
+        System.out.println(data);
+        ArrayList<String> column_names = column_names = getOnlineTableHeaders();
         stmt = connection.createStatement();
-        stmt.executeUpdate("UPDATE " + mainDataBaseName + " SET " + column_names.get(0) + " = " + quote(comment) + ", " + column_names.get(2) + " = " + quote(name) + ", " + column_names.get(3) + " = " + quote(sex) + ", " + column_names.get(4) + " = " + quote(age) + ", " + column_names.get(5) + " = " + quote(phone) + ", " + column_names.get(6) + " = " + quote(email) + " WHERE " + column_names.get(6) + " = " + quote(key));
+        int j = 1;
+        int i = 0;
+        for (String column : column_names) {
+            System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)));
+            stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)));
+            if (j == data.size()-1) {
+                break;
+            }
+
+            j++;
+        }
+
+//        stmt.executeUpdate( );
     }
 
     public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {
