@@ -242,7 +242,7 @@ function dosomething(element) {
     alert(element.value);
 }
 
-$("#delete-preset").click(function () {
+function deletePreSet() {
 
     var checkBoxes = getCheckedBoxes("preSetForm");
     var checkBoxesDomens = "";
@@ -279,7 +279,8 @@ $("#delete-preset").click(function () {
     // Finally, send our data.
     XHR.send(urlEncodedData);
     $("#add-form").submit();
-})
+}
+
 var table = document.getElementById("main-table");
 var r = 0;
 while (row = table.rows[r++]) {
@@ -342,8 +343,17 @@ $(".eButton").click(function () {
 
 });
 
+document.getElementById("delete-preset").addEventListener("click", function () {
+    document.getElementsByClassName("popup")[0].classList.add("active");
+});
 
-
+document.getElementById("dismiss-popup-btn").addEventListener("click", function () {
+    document.getElementsByClassName("popup")[0].classList.remove("active");
+});
+document.getElementById("confirm-popup-btn").addEventListener("click", function () {
+    deletePreSet();
+    document.getElementsByClassName("popup")[0].classList.remove("active");
+});
 
 
 
