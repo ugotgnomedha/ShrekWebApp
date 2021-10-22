@@ -200,7 +200,7 @@ $("#add-domen").click(function () {
     $("#add-form").submit();
 })
 
-$("#delete-domen").click(function () {
+function deleteDomen() {
     var checkBoxes = getCheckedBoxes("domenForm");
     var checkBoxesDomens = "";
     for (var i = 0; i < checkBoxes.length; i++) {
@@ -236,7 +236,7 @@ $("#delete-domen").click(function () {
     // Finally, send our data.
     XHR.send(urlEncodedData);
     $("#add-form").submit();
-})
+}
 
 function dosomething(element) {
     alert(element.value);
@@ -309,51 +309,83 @@ $(".eButton").click(function () {
 
     }
 
-    const XHR = new XMLHttpRequest();
+    document.getElementById("confirm-popup-btn-edit").addEventListener("click", function () {
+        const XHR = new XMLHttpRequest();
 
-    let urlEncodedData = "",
-        urlEncodedDataPairs = [],
-        name;
+        let urlEncodedData = "",
+            urlEncodedDataPairs = [],
+            name;
 
-    // Turn the data object into an array of URL-encoded key/value pairs.
-    urlEncodedDataPairs.push(encodeURIComponent('stringToEdit') + '=' + encodeURIComponent(data));
+        // Turn the data object into an array of URL-encoded key/value pairs.
+        urlEncodedDataPairs.push(encodeURIComponent('stringToEdit') + '=' + encodeURIComponent(data));
 
-    // Combine the pairs into a single string and replace all %-encoded spaces to
-    // the '+' character; matches the behavior of browser form submissions.
-    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-    // Define what happens on successful data submission
-    XHR.addEventListener('load', function (event) {
-        // alert('Yeah! Data sent and response loaded.');
+        // Combine the pairs into a single string and replace all %-encoded spaces to
+        // the '+' character; matches the behavior of browser form submissions.
+        urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+        // Define what happens on successful data submission
+        XHR.addEventListener('load', function (event) {
+            // alert('Yeah! Data sent and response loaded.');
+        });
+
+        // Define what happens in case of error
+        XHR.addEventListener('error', function (event) {
+            alert('Oops! Something went wrong.');
+        });
+
+        // Set up our request
+        XHR.open('POST', '/liveEdit');
+
+        // Add the required HTTP header for form data POST requests
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Finally, send our data.
+        XHR.send(urlEncodedData);
+
+        document.getElementsByClassName("popup-edit")[0].classList.remove("active");
+        $("#add-form").submit();
     });
 
-    // Define what happens in case of error
-    XHR.addEventListener('error', function (event) {
-        alert('Oops! Something went wrong.');
-    });
-
-    // Set up our request
-    XHR.open('POST', '/liveEdit');
-
-    // Add the required HTTP header for form data POST requests
-    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-    // Finally, send our data.
-    XHR.send(urlEncodedData);
-    $("#add-form").submit();
 
 });
 
 document.getElementById("delete-preset").addEventListener("click", function () {
-    document.getElementsByClassName("popup")[0].classList.add("active");
+    document.getElementsByClassName("popup-preset")[0].classList.add("active");
+});
+document.getElementById("dismiss-popup-btn-preset").addEventListener("click", function () {
+    document.getElementsByClassName("popup-preset")[0].classList.remove("active");
+});
+document.getElementById("confirm-popup-btn-preset").addEventListener("click", function () {
+    deletePreSet();
+    document.getElementsByClassName("popup-preset")[0].classList.remove("active");
 });
 
-document.getElementById("dismiss-popup-btn").addEventListener("click", function () {
-    document.getElementsByClassName("popup")[0].classList.remove("active");
+
+document.getElementById("delete-domen").addEventListener("click", function () {
+    document.getElementsByClassName("popup-domen")[0].classList.add("active");
 });
-document.getElementById("confirm-popup-btn").addEventListener("click", function () {
-    deletePreSet();
-    document.getElementsByClassName("popup")[0].classList.remove("active");
+document.getElementById("dismiss-popup-btn-domen").addEventListener("click", function () {
+    document.getElementsByClassName("popup-domen")[0].classList.remove("active");
 });
+document.getElementById("confirm-popup-btn-domen").addEventListener("click", function () {
+    deleteDomen();
+    document.getElementsByClassName("popup-domen")[0].classList.remove("active");
+});
+
+
+var cusid_ele = $(".eButton" )
+for (var i = 0; i < cusid_ele.length; ++i) {
+    var item = cusid_ele[i];
+    item.addEventListener("click", function () {
+        document.getElementsByClassName("popup-edit")[0].classList.add("active");
+    });
+
+}
+document.getElementById("dismiss-popup-btn-edit").addEventListener("click", function () {
+    document.getElementsByClassName("popup-edit")[0].classList.remove("active");
+});
+
+
+
 
 
 

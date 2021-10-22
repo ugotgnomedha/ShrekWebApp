@@ -49,7 +49,7 @@ public class ApplicationController {
 
     @GetMapping("/")
     public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        return "login";
+        return "application";
     }
 
     @GetMapping("/file")
