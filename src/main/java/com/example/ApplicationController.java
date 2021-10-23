@@ -49,7 +49,7 @@ public class ApplicationController {
 
     @GetMapping("/")
     public String home() throws SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        return "application";
+        return "redirect:/file";
     }
 
     @GetMapping("/file")
@@ -155,6 +155,7 @@ public class ApplicationController {
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
         ShrekBD.applyLiveEdit(stringToEdit);
+        applyFrontLiveEdt(stringToEdit);
         return "redirect:/file";
     }
 
@@ -588,6 +589,24 @@ public class ApplicationController {
 
     }
 
+    public void applyFrontLiveEdt(String dataToEdit) {
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(dataToEdit.split("##")));
+        String idToEdit = data.get(0);
+        List<HashMap<String, String>> finded = new ArrayList<>();
+        List<HashMap<String, String>> newDataRow = new ArrayList<>();
+        for (List<HashMap<String, String>> dataRow : ActivePull) {
+            if (dataRow.get(0).get("Data").equals(idToEdit)) {
+                for (String dataCell : data) {
+                    HashMap<String, String> d = new HashMap<>();
+                    d.put("Data", dataCell);
+                    newDataRow.add(d);
+                }
+                finded = dataRow;
+                break;
+            }
+        }
+        ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+    }
 
 }
 

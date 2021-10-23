@@ -245,7 +245,6 @@ public class ShrekBD {
         int j = 1;
         int i = 0;
         for (String column : column_names) {
-            System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)));
             stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)));
             if (j == data.size()-1) {
                 break;

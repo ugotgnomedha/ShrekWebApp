@@ -296,20 +296,19 @@ while (row = table.rows[r++]) {
 $(".eButton").click(function () {
     var myClass = $(this).parent().attr("class");
 
-    var cusid_ele = $("." + myClass)
-    var data = "";
-    for (var i = 0; i < cusid_ele.length; ++i) {
-        var item = cusid_ele[i];
-        // $(item).children(':first').attr("value", "new value");// transforming to jquery item
-        if (i == 0) {
-            data = $(item).children(':first').val();
-        } else {
-            data = data + "##" + $(item).children(':first').val();
-        }
-
-    }
-
     document.getElementById("confirm-popup-btn-edit").addEventListener("click", function () {
+        var cusid_ele = $("." + myClass)
+        var data = "";
+        for (var i = 0; i < cusid_ele.length; ++i) {
+            var item = cusid_ele[i];
+            // $(item).children(':first').attr("value", "new value");// transforming to jquery item
+            if (i == 0) {
+                data = $(item).children(':first').val();
+            } else {
+                data = data + "##" + $(item).children(':first').val();
+            }
+
+        }
         const XHR = new XMLHttpRequest();
 
         let urlEncodedData = "",
@@ -372,7 +371,7 @@ document.getElementById("confirm-popup-btn-domen").addEventListener("click", fun
 });
 
 
-var cusid_ele = $(".eButton" )
+var cusid_ele = $(".eButton")
 for (var i = 0; i < cusid_ele.length; ++i) {
     var item = cusid_ele[i];
     item.addEventListener("click", function () {
