@@ -383,6 +383,12 @@ document.getElementById("dismiss-popup-btn-edit").addEventListener("click", func
     document.getElementsByClassName("popup-edit")[0].classList.remove("active");
 });
 
+document.getElementById("cancel-button").addEventListener("click", function () {
+    $("#cancel-form").submit();
+});
+
+
+
 
 
 

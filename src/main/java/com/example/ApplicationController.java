@@ -38,6 +38,7 @@ public class ApplicationController {
     List<List<HashMap<String, String>>> Pull = new ArrayList<>();
     List<List<HashMap<String, String>>> ActivePull = new ArrayList<>();
     List<List<HashMap<String, String>>> PullToShow = new ArrayList<>();
+    List<List<String>> history = new ArrayList<>();
 
     @Autowired
     public ApplicationController(StorageService storageService) {
@@ -386,6 +387,7 @@ public class ApplicationController {
 
     @PostMapping("/addPreSet")
     public String addPreSet(@RequestParam("name") String name) throws FileNotFoundException {
+        createCheckPoint();
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -413,6 +415,7 @@ public class ApplicationController {
 
     @PostMapping("/addDomen")
     public String addDomen(@RequestParam("name") String name) throws FileNotFoundException {
+        createCheckPoint();
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -440,6 +443,7 @@ public class ApplicationController {
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
+        createCheckPoint();
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -467,6 +471,7 @@ public class ApplicationController {
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
+        createCheckPoint();
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -494,6 +499,12 @@ public class ApplicationController {
 
     @PostMapping("/add-form")
     public String addForm() {
+        return "redirect:/file";
+    }
+
+    @PostMapping("/cancel-form")
+    public String cancelForm() {
+        cancelPresetsAndDomens();
         return "redirect:/file";
     }
 
@@ -534,6 +545,7 @@ public class ApplicationController {
 
     @PostMapping("/getData")
     public String addData(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        createCheckPoint();
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
@@ -606,6 +618,70 @@ public class ApplicationController {
             }
         }
         ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+    }
+
+    public void cancelPresetsAndDomens() {
+        final String dir = System.getProperty("user.dir");
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
+            // запись всей строки
+            if (history.size() > 0) {
+                String text = history.get(history.size() - 1).get(0);
+                writer.write(text);
+            }
+
+            writer.flush();
+
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json", false)) {
+            // запись всей строки
+            if (history.size() > 0) {
+                String text = history.get(history.size() - 1).get(1);
+                writer.write(text);
+                history.remove(history.size() - 1);
+            }
+
+            writer.flush();
+
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+    }
+
+
+    public void createCheckPoint() {
+        final String dir = System.getProperty("user.dir");
+        String resultOfReading = "";
+        try (FileReader reader = new FileReader(dir + "\\preSets\\domens.json")) {
+            // читаем посимвольно
+            int c;
+            while ((c = reader.read()) != -1) {
+
+                resultOfReading += (char) c;
+            }
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+        List<String> data = new ArrayList<>();
+        data.add(resultOfReading);
+        resultOfReading = "";
+        try (FileReader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+            // читаем посимвольно
+            int c;
+            while ((c = reader.read()) != -1) {
+
+                resultOfReading += (char) c;
+            }
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+        data.add(resultOfReading);
+        history.add(data);
     }
 
 }

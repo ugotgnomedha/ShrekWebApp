@@ -322,6 +322,10 @@ details[open] summary:after {
     transition: all 300ms ease-in-out 400ms;
 }
 
+#cancel-button{
+    height: 2rem;
+}
+
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 2000px;

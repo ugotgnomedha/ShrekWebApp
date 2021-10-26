@@ -225,11 +225,14 @@ public class ShrekBD {
             String jsonInString = gson.toJson(json);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
             List<HashMap<String, String>> items = new ArrayList<>();
-            for (User user : userArray) {
-                HashMap<String, String> item = new HashMap<>();
-                item.put("name", user.getName());
-                items.add(item);
+            if(userArray != null){
+                for (User user : userArray) {
+                    HashMap<String, String> item = new HashMap<>();
+                    item.put("name", user.getName());
+                    items.add(item);
+                }
             }
+
             return items;
         } catch (IOException e) {
             e.printStackTrace();
@@ -239,7 +242,6 @@ public class ShrekBD {
 
     public static void applyLiveEdit(String stringToEdit) throws SQLException {
         ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
-        System.out.println(data);
         ArrayList<String> column_names = column_names = getOnlineTableHeaders();
         stmt = connection.createStatement();
         int j = 1;
