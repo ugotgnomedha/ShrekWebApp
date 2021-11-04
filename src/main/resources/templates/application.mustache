@@ -9,55 +9,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/application.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/application.css">
     <title>Hello, world!</title>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="assets/img/2.png" id="logo-img" style="margin-left: 2rem">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <div class="container-centre">
+                            <div class="c-c">
+                                <form id="target" method="POST" enctype="multipart/form-data" action="/">
+                                    <div class="box">
+                                        <div class="example-1">
+                                            <div class="form-group">
+                                                <label class="label">
+                                                    <div class="container-centre">
+                                                        <div class="c-c">
+                                                            <img class="import-img" src="assets/img/1588.png">
+                                                            <input class="out" id="file" name="file" type="file"
+                                                                   onChange="$(this).closest('form').submit()">
+                                                        </div>
+                                                    </div>
 
-                        <form method="POST" enctype="multipart/form-data" action="/">
-                            <div class="box">
-                                <input type="file" name="file" class="form-control"/>
-                                <input type="submit" value="Upload"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
 
 
                     </li>
 
                     <li class="nav-item">
-                        <form method="POST" enctype="multipart/form-data" action="/">
-                            <form method="POST" enctype="multipart/form-data" action="/exportPreSet">
-                                <div class="box">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="path" required="required"
-                                               placeholder="Выберете место">
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block buttonToUpload"
-                                                value="Upload">
-                                            Экспортировать
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </form>
+                        <div class="container-centre">
+                            <div class="c-c">
+                                <img src="assets/img/export.png" id="export-button">
+                            </div>
+                        </div>
+
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" id="filterButton" type="button">Filter</button>
+                        <div class="container-centre">
+                            <div class="c-c">
+                                <img id="filterButton" src="assets/img/filter.png" id="export-button">
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item"><img src="assets/img/vr.png" id="cancel-button"></li>
+                    <li class="nav-item">
+                        <div class="container-centre">
+                            <div class="c-c">
+                                <img src="assets/img/vr.png" id="cancel-button">
+                            </div>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+<hr class="top-hr">
 <!--PopUp-->
 <div class="popup center popup-preset">
     <div class="icon">
@@ -72,6 +93,37 @@
         </button>
         <button id="confirm-popup-btn-preset">
             Да
+        </button>
+    </div>
+</div>
+<!--PopUp-->
+<!--PopUp-->
+<div class="popup center popup-export">
+    <div class="icon">
+        <i class="fa fa-check"></i>
+    </div>
+    <div class="title">
+        <form method="POST" enctype="multipart/form-data" action="/exportPreSet">
+            <div class="box">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="path" required="required"
+                           placeholder="Выберете место">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block buttonToUpload"
+                            value="Upload">
+                        Экспортировать
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dismiss-btn">
+        <button id="dismiss-popup-btn-export">
+            Отмена
+        </button>
+        <button id="confirm-popup-btn-export">
+            Экспортировать
         </button>
     </div>
 </div>
@@ -117,42 +169,62 @@
 <div id="filter-section">
     <div class="container">
         <div class="row">
-            <div>
+            <div class="ineer-div">
                 <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
-                    <input name="searchTxt" type="text" id="searchTxt"/>
+                    <input name="searchTxt" placeholder="Name" type="text"  id="searchTxt" style="margin-left: 2rem"/>
                 </form>
             </div>
 
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="container-c">
-                    <div class="center-c">
-                        <!--                        <button type="button" class="btn btn-primary" id="play-button">Play</button>-->
+        <div class="row second-row">
+            <div class="col-2">
+                <div class="container-centre cont-1">
+                    <div class="c-c">
                         <img src="assets/img/552-5520952_play-button-watch-video-understand-the-power-clarip.png"
                              id="play-button">
                     </div>
                 </div>
-
             </div>
-            <div class="col colTwo">
+            <div class="col-3 colTwo">
+                <div class="container-centre d-t">
+                    <div class="c-c">
+                        <div>Пресеты</div>
+                    </div>
+                </div>
+
                 <div class="preset-table">
                     <table class="table gray">
                         <tbody>
                         <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
                             {{#preSets}}
-                                <tr>
+                                <tr style="border: none; height: 3rem">
 
-                                    <td><input type="checkbox" name="used" value="<{{name}}>>">
+                                    <td style="border: none; width: 3rem">
 
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="dropbtn">{{name}}</button>
-                                            <div class="dropdown-content">
-                                                <div>{{sets}}</div>
+                                        <div class="container-centre" style="height: 3rem; ">
+                                            <div class="c-c">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" name="used" value="{{name}}">
+                                                    <span></span>
+                                                </label>
                                             </div>
                                         </div>
+
+
+                                    </td>
+                                    <td style="border: none; text-align: center;background: #b0b0b0;">
+                                        <div class="container-centre" style="height: 3rem; ">
+                                            <div class="c-c">
+                                                <div class="dropdown" style="background: #b0b0b0; ">
+                                                    <button class="dropbtn"
+                                                            style="background: #b0b0b0; border: none;">{{name}}</button>
+                                                    <div style="text-align: center" class="dropdown-content">
+                                                        <div style="text-align: center">{{sets}}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </td>
 
                                 </tr>
@@ -173,15 +245,38 @@
 
                 </table>
             </div>
-            <div class="col">
+            <div class="col-3">
+                <div class="container-centre d-t">
+                    <div class="c-c">
+                        <div>Домены</div>
+                    </div>
+                </div>
+
                 <div class="preset-table">
                     <table class="table">
                         <tbody>
                         <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
                             {{#domens}}
-                                <tr>
-                                    <td><input type="checkbox" name="domens" value="<{{name}}>>"></td>
-                                    <td>{{name}}</td>
+                                <tr style="border: none; text-align: center">
+                                    <td style="border: none; width: 3rem">
+                                        <div class="container-centre" style="height: 3rem; width: 3rem">
+                                            <div class="c-c">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" name="used" value="{{name}}">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </td>
+                                    <td style="border: none; text-align: center">
+                                        <div class="container-centre" style="height: 3rem; ">
+                                            <div class="c-c">
+                                                {{name}}
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                             {{/domens}}
                         </form>
@@ -203,7 +298,7 @@
 
                 </table>
             </div>
-            <div class="col">
+            <div class="col-4">
 
             </div>
         </div>
@@ -211,24 +306,31 @@
 
 
 </div>
-<div class="main-table">
-    <table class="table table-striped table-bordered" id="main-table">
+<div class="main-table" style="margin-left: 0">
+    <table class="table" id="main-table">
         <thead>
         <tr id="table-names">
             {{#headers}}
-                <th scope="col">{{header}}</th>
+                <th style="border: none" scope="col">{{header}}</th>
             {{/headers}}
-            <th>Confirm</th>
+            <th style="border: none">Confirm</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="tbod">
         {{#data}}
-            <tr>
+            <tr class="trr" style='border:  border-left: 1px solid #ddd;
+    border-right: none; border-bottom: none;'>
                 {{#.}}
-                    <td><input value="{{Data}}"></td>
+                    <td style='border:  border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd; border-bottom: none; text-align: center;' class="main-table-cell"><input
+                            style=' fon text-align: center; border: 0px;'
+                            value="{{Data}}"></td>
                 {{/.}}
-                <th>
-                    <button type="button" class="btn btn-secondary eButton">Edit</button>
+                <th style='border:  border-left: 1px solid #ddd;
+    border-right: none; border-bottom: none; text-align: center;'>
+                    <button style='border-radius: 20px' type="button" class=" btn btn-primary conf-button eButton">
+                        Подтвердить
+                    </button>
                 </th>
             </tr>
         {{/data}}
@@ -245,9 +347,6 @@
         <button class="btn btn-primary" type="submit" value="Log">right</button>
     </form>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 <script src="assets/js/application.js"></script>
 </body>
 </html>

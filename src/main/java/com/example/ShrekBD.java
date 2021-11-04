@@ -19,6 +19,8 @@ public class ShrekBD {
 
     public static Statement stmt;
     public static Connection connection;
+    public static Integer changes_num = 0;
+    public static Integer caller_transaction = 0;
 
     static {
         try {
@@ -200,12 +202,15 @@ public class ShrekBD {
             String jsonInString = gson.toJson(json);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
             List<HashMap<String, String>> items = new ArrayList<>();
-            for (User user : userArray) {
-                HashMap<String, String> item = new HashMap<>();
-                item.put("name", user.getName());
-                item.put("sets", user.getSets());
-                items.add(item);
+            if (userArray != null) {
+                for (User user : userArray) {
+                    HashMap<String, String> item = new HashMap<>();
+                    item.put("name", user.getName());
+                    item.put("sets", user.getSets());
+                    items.add(item);
+                }
             }
+
             return items;
         } catch (IOException e) {
             e.printStackTrace();
@@ -225,7 +230,7 @@ public class ShrekBD {
             String jsonInString = gson.toJson(json);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
             List<HashMap<String, String>> items = new ArrayList<>();
-            if(userArray != null){
+            if (userArray != null) {
                 for (User user : userArray) {
                     HashMap<String, String> item = new HashMap<>();
                     item.put("name", user.getName());
@@ -241,21 +246,24 @@ public class ShrekBD {
     }
 
     public static void applyLiveEdit(String stringToEdit) throws SQLException {
+        if (caller_transaction == 0) {
+            stmt.executeUpdate("BEGIN WORK;");
+            caller_transaction = caller_transaction + 1;
+        }
         ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
-        ArrayList<String> column_names = column_names = getOnlineTableHeaders();
-        stmt = connection.createStatement();
-        int j = 1;
-        int i = 0;
-        for (String column : column_names) {
-            stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)));
-            if (j == data.size()-1) {
+        ArrayList<String> column_names = getOnlineTableHeaders();
+        int j = 0;
+        for (String ignored : column_names) {
+            System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)) + ";");
+            stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
+            stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)) + ";");
+            if (j == data.size() - 1) {
                 break;
             }
-
             j++;
         }
-
-//        stmt.executeUpdate( );
+        System.out.println("CREATED --- SAVEPOINT savepoint" + changes_num + ";");
+        changes_num++;
     }
 
     public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {

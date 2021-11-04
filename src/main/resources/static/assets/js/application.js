@@ -370,6 +370,16 @@ document.getElementById("confirm-popup-btn-domen").addEventListener("click", fun
     document.getElementsByClassName("popup-domen")[0].classList.remove("active");
 });
 
+document.getElementById("export-button").addEventListener("click", function () {
+    document.getElementsByClassName("popup-export")[0].classList.add("active");
+});
+document.getElementById("dismiss-popup-btn-export").addEventListener("click", function () {
+    document.getElementsByClassName("popup-export")[0].classList.remove("active");
+});
+document.getElementById("confirm-popup-btn-export").addEventListener("click", function () {
+    document.getElementsByClassName("popup-export")[0].classList.remove("active");
+});
+
 
 var cusid_ele = $(".eButton")
 for (var i = 0; i < cusid_ele.length; ++i) {
@@ -386,6 +396,9 @@ document.getElementById("dismiss-popup-btn-edit").addEventListener("click", func
 document.getElementById("cancel-button").addEventListener("click", function () {
     $("#cancel-form").submit();
 });
+// $('#file').change(function() {
+//     $('#target').submit();
+// });
 
 
 

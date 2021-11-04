@@ -3300,3 +3300,1836 @@ INFO    2021-10-26 18:47:42,631 [http-nio-8080-exec-1] com.example.StartConnecti
 INFO    2021-10-26 18:47:42,757 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
 INFO    2021-10-26 18:47:44,627 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
 INFO    2021-10-26 18:47:45,550 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:07,751 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:12,713 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:12,848 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:16,150 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:16,282 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:18,013 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:18,146 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:20,070 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:20,193 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:26,127 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:20:26,258 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:22:43,627 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:23:35,015 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:23:39,310 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:23:39,311 [http-nio-8080-exec-8] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:24:17,153 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:24:17,158 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:24:38,609 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:24:38,614 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:24:53,295 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:24:53,300 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:33:05,906 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:33:05,911 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:33:59,911 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:33:59,916 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:35:31,317 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:35:31,322 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:39:04,892 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:39:04,898 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:42:35,578 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-27 18:42:35,583 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-27 18:44:31,372 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:45:45,400 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:46:35,203 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:47:14,683 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:47:41,367 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:48:11,343 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:50:02,457 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:52:19,728 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:52:33,573 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:55:58,917 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 18:58:01,082 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:00:30,736 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:01:05,532 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:02:28,993 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:02:44,327 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:04:00,224 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:04:16,438 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:04:48,478 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:05:06,118 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:07:09,479 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:07:48,961 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:09:06,751 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-27 19:11:52,381 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:47:09,098 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:48:15,356 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:48:15,493 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:49:26,576 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:49:33,549 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:49:52,668 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:58:25,519 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:58:37,404 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 12:58:53,228 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:00:30,587 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:00:50,969 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:24:05,644 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:24:14,011 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:26:17,588 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:26:53,843 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:27:01,480 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:27:01,631 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:29:06,635 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:29:13,862 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:29:14,003 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:30:08,400 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+ERROR   2021-10-29 13:30:08,401 [http-nio-8080-exec-8] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:205)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-29 13:30:10,439 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-10-29 13:30:10,440 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:205)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-29 13:30:11,262 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+ERROR   2021-10-29 13:30:11,262 [http-nio-8080-exec-6] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:205)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-29 13:31:03,950 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:31:05,538 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+ERROR   2021-10-29 13:31:05,539 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot read the array length because "<local8>" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:205)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-10-29 13:32:19,637 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:32:28,390 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:32:28,530 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:32:45,216 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:32:54,171 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:32:56,810 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:34:01,430 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:34:07,057 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:34:07,208 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:46:48,570 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:48:40,565 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:50:46,287 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:51:51,788 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:53:12,785 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:56:09,471 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:57:12,015 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:57:49,802 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 13:58:58,714 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:01:56,767 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:02:16,883 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:03:55,771 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:03:58,871 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:13:26,715 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:14:57,128 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:15:15,649 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:16:19,129 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:17:29,750 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:18:42,276 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:20:58,833 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:35:02,875 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:35:42,592 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:41:18,116 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:41:41,727 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:57:29,889 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:57:49,026 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:57:55,757 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:05,466 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:25,355 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:25,500 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:30,237 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:35,188 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:35,333 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:38,560 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:42,682 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:47,067 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:48,147 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-10-29 14:58:50,869 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:36:09,435 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:23,520 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:23,655 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:26,957 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:28,603 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:29,607 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:30,593 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:31,358 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:32,188 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:39,099 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:46,675 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:46,803 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:50,026 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:50,153 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:52,105 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:53,441 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:54,630 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:37:56,304 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:02,418 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:02,545 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:04,552 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:08,092 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:20,595 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:42,165 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:50,018 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:50,147 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:54,807 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:54,940 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:57,440 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:38:58,792 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:39:00,949 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:39:01,914 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:43,322 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:49,376 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:49,517 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:52,517 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:52,644 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:58,014 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:50:58,261 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:52:03,821 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:52:09,765 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:52:48,553 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:52:50,706 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:52:50,835 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:53:46,670 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:53:51,748 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:53:51,890 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:54:06,964 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:54:07,086 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:10,526 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:56:10,532 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 19:56:24,860 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:30,082 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:30,225 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:34,869 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:34,997 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:43,255 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:43,383 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:56:44,611 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:56:44,613 [http-nio-8080-exec-7] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 19:56:47,432 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:56:47,433 [http-nio-8080-exec-7] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 19:56:48,791 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:56:48,792 [http-nio-8080-exec-7] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 19:57:33,727 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:57:38,366 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:57:38,507 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:57:40,868 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:57:40,870 [http-nio-8080-exec-4] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 19:57:41,748 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:57:42,818 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:58:27,581 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:58:30,112 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:03,684 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:06,232 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:06,362 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:09,618 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:09,743 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 19:59:11,836 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+ERROR   2021-11-01 19:59:11,838 [http-nio-8080-exec-5] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 20:02:06,510 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2021-11-01 20:02:06,518 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.Gson.fromJson(Gson.java:944)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at com.google.gson.Gson.fromJson(Gson.java:846)
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:203)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginArray(JsonReader.java:349)
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:70)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	... 55 more
+INFO    2021-11-01 20:02:17,660 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:20,076 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:20,206 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:21,992 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:22,117 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:23,608 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:24,626 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:27,118 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:27,240 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:30,885 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:31,013 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:37,552 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:37,672 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:44,062 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:45,353 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:02:46,443 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:04,913 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:31,632 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:31,757 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:40,662 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:40,797 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:44,355 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:44,592 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:46,678 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:46,803 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:48,832 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:50,027 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:51,241 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:52,938 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:03:54,020 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:19,928 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:24,484 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:24,626 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:28,315 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:28,444 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:32,453 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:32,698 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:34,131 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:35,131 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:36,002 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:36,765 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:37,801 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:38,637 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:05:39,438 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:24,665 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:30,416 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:30,549 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:32,873 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:32,999 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:46,016 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:53,154 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:53,281 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:59,751 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:06:59,887 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:04,230 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:04,357 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:10,675 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:10,795 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:12,700 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:14,684 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:19,500 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:20,689 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:22,466 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:23,511 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:07:28,497 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:31:41,378 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:31:51,616 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:41:12,632 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:41:45,618 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:42:35,509 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:42:52,922 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:43:56,342 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:44:49,494 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:45:18,298 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:47:11,254 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:47:13,521 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:47:20,696 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:47:49,595 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:50:03,601 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:50:55,566 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:51:58,834 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:53:10,959 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:54:39,174 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:57:23,467 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:59:34,143 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 20:59:53,413 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:00:15,267 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:00:41,740 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:00:58,194 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:01:15,319 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:01:36,871 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:02:04,578 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-01 21:02:23,585 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 18:04:00,478 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-02 18:04:23,049 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-02 18:04:30,882 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-02 18:04:49,097 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-02 18:05:04,946 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:52:58,050 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:58:01,508 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:58:11,386 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:58:27,674 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:22,437 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:22,563 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:26,482 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:26,601 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:31,812 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-02 21:59:31,953 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:05:39,014 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:06:55,328 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:08:06,928 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:09:36,387 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:09:56,154 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:14:31,306 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:15:03,783 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:15:14,483 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:15:25,197 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:15:38,434 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:17:01,467 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:18:12,651 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:18:14,939 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:19:18,778 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:19:36,241 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:20:03,196 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:20:26,712 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:21:52,306 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:23:49,428 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:24:17,057 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:25:48,853 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:28:47,487 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:29:25,799 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:31:10,205 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:32:48,901 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:34:51,501 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:35:35,219 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:38:01,024 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:38:32,917 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:39:06,070 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:39:56,079 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:42:37,309 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:43:04,448 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:43:36,397 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:44:31,362 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:44:52,556 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:46:10,786 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:47:02,142 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:47:55,796 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:48:41,065 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:49:03,555 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:49:24,775 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:49:36,278 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:49:49,861 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:50:06,813 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:52:32,865 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:53:03,278 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:53:20,381 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:53:38,880 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:54:26,907 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:54:53,917 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:55:08,863 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:56:05,214 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-02 22:57:48,191 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:16:17,300 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:30:58,434 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:32:00,892 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:34:56,911 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:35:48,350 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:36:23,405 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:37:52,672 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:39:19,873 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:40:05,966 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:40:26,702 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:44:57,925 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:45:56,378 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:46:18,595 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:48:40,120 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:49:59,255 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:50:50,487 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:52:42,538 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:54:25,487 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:54:58,719 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:55:18,363 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:55:44,752 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:56:38,191 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:59:11,938 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-03 12:59:28,671 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:00:53,054 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:02:21,655 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:03:22,896 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:03:58,027 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:04:28,666 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:04:45,228 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:05:22,667 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:06:19,962 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:06:49,261 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:07:04,799 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:09:15,844 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:09:34,160 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:10:21,320 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:12:15,296 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:12:24,824 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:12:43,766 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:13:20,300 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:13:54,603 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:14:07,068 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:14:23,236 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:14:55,692 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:15:28,020 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:15:55,396 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:16:58,214 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:17:28,676 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:21:38,039 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:22:45,605 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:24:16,316 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:24:47,587 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:26:19,745 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:28:01,239 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:28:41,259 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:29:16,949 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:29:20,539 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:29:23,489 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:31:56,193 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:31:56,318 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:31:57,689 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:32:07,155 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:32:07,273 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-03 13:32:08,648 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:09:22,441 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:14:04,109 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:15:01,974 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:17:11,880 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:18:19,298 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:18:47,194 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:19:08,910 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:20:15,332 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:21:20,222 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:32:12,029 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:35:37,453 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:44:10,025 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:44:27,563 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:45:24,517 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:45:43,440 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:46:09,956 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:46:36,570 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:48:23,462 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 19:59:11,789 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 20:02:04,765 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 20:02:31,673 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 20:04:07,607 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:01:52,728 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:03:31,701 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:04:17,226 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:05:14,694 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:05:37,394 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:06:10,147 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:11:20,719 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:13:00,422 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:13:53,373 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:15:14,603 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:17,939 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:22,915 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:23,044 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:26,699 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:26,834 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:36,744 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:36,865 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:40,270 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:40,392 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:53,278 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:16:53,400 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:17:03,871 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:17:04,001 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:17:08,696 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:17:38,452 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:27:35,826 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:00,291 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:39,237 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:46,625 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:56,262 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:56,400 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:58,973 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:30:59,098 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:31:01,388 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:31:01,514 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:31:03,304 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:31:03,537 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:32:54,089 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:33:54,087 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:34:56,701 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:35:56,708 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:36:10,546 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:36:44,726 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:37:11,248 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:37:44,469 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:38:23,443 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:38:51,957 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:39:21,719 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:40:29,242 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:40:49,282 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:41:53,459 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:43:35,589 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:44:08,258 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:44:32,912 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:44:54,943 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:13,043 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:20,649 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:20,800 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:29,266 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:29,390 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:45:36,286 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+ERROR   2021-11-04 21:45:36,291 [http-nio-8080-exec-8] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot invoke "com.example.User.getName()" because "user" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:208)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-11-04 21:45:36,412 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+ERROR   2021-11-04 21:45:36,413 [http-nio-8080-exec-6] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot invoke "com.example.User.getName()" because "user" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:208)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-11-04 21:45:39,048 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+ERROR   2021-11-04 21:45:39,049 [http-nio-8080-exec-8] com.example.StartConnection  - Connection failed
+java.lang.NullPointerException: Cannot invoke "com.example.User.getName()" because "user" is null
+	at com.example.ShrekBD.getPreSets(ShrekBD.java:208)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO    2021-11-04 21:46:09,891 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:15,256 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:15,387 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:18,780 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:18,912 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:23,045 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:23,167 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:27,973 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:28,098 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:31,769 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:31,907 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:47,500 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:47,622 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:53,067 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:46:53,186 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:00,407 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:00,535 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:02,748 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:02,872 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:08,984 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:09,109 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:16,748 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:47:16,886 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2021-11-04 21:49:33,524 [http-nio-8080-exec-1] com.example.StartConnection  - Data received

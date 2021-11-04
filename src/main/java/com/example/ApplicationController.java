@@ -18,9 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.crypto.NoSuchPaddingException;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
 
 import static com.example.Constants.*;
@@ -30,6 +28,7 @@ public class ApplicationController {
     private static final Logger logger = LogManager.getLogger(StartConnection.class);
 
     private final int numerOfTableLines = 20;
+    public static Integer counter = 1;
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
@@ -152,6 +151,7 @@ public class ApplicationController {
 
     @PostMapping("/liveEdit")
     public String handleLiveEditing(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
+        createCheckPoint(Boolean.TRUE);
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
@@ -160,77 +160,6 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-//    @PostMapping("/preSet")
-//    public String handlePreSet(@RequestParam("chosenPreSet") String chosenPreSet,
-//                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        ShrekBD shrek = new ShrekBD();
-//        List<HashMap<String, String>> items = new ArrayList<>();
-//        NeededItems.clear();
-//        String domens = "";
-//        items = shrek.getSortedListOfData();
-//        List<HashMap<String, String>> preSets = shrek.getPreSets();
-//        for (HashMap dict : preSets) {
-//            if (dict.get("name").equals(chosenPreSet)) {
-//                domens = (String) dict.get("sets");
-//            }
-//        }
-//        for (HashMap dict : items) {
-//            for (String domen : domens.split(" ")) {
-////                if (dict.get("email").toString().contains(domen)) {
-////                    NeededItems.add(dict);
-////                }
-//                if (dict.get("email").toString().substring(dict.get("email").toString().indexOf("@") + 1).contains(domen)) {
-//                    NeededItems.add(dict);
-//                }
-//            }
-//        }
-//        return "redirect:/file";
-//    }
-
-//    @PostMapping("/addPreSet")
-//    public String addPreSet(@RequestParam("name") String name, @RequestParam("sets") String sets, RedirectAttributes redirectAttributes) throws FileNotFoundException {
-//        final String dir = System.getProperty("user.dir");
-//        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
-//
-//        Gson gson = new Gson();
-//
-//        User[] userArray = gson.fromJson(userJson, User[].class);
-//        User[] newUserArray = new User[userArray.length + 1];
-//        for (int i = 0; i < userArray.length; i++) {
-//            newUserArray[i] = userArray[i];
-//        }
-//        User newUser = new User();
-//        newUser.setName(name);
-//        newUser.setSets(sets);
-//        newUserArray[newUserArray.length - 1] = newUser;
-//        String json = gson.toJson(newUserArray);
-//        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
-//            writer.write(json);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return "redirect:/sorti";
-//    }
-
-//    @PostMapping("/find")
-//    public String handleKey(@RequestParam("key") String key,
-//                            RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        ShrekBD shrek = new ShrekBD();
-//        List<HashMap<String, String>> items = new ArrayList<>();
-//        NeededItems.clear();
-//        items = shrek.getSortedListOfData();
-//        for (int i = 0; i < items.size(); i++) {
-////            if (items.get(i).get("name").contains(key) || items.get(i).get("age").contains(key) || items.get(i).get("phone").contains(key) || items.get(i).get("email").contains(key)) {
-//            if (items.get(i).get("name").contains(key) || items.get(i).get("age").contains(key) || items.get(i).get("phone").contains(key)) {
-//                NeededItems.add(items.get(i));
-//            }
-//        }
-//        return "redirect:/sorti";
-//    }
 
     @GetMapping("/us")
     public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
@@ -282,21 +211,22 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-//    @PostMapping("/exportPreSet")
-//    public String exportPreSet(@RequestParam("path") String path,
-//                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        ShrekBD shrek = new ShrekBD();
-//       List<HashMap<String, String>> NeededItems = new ArrayList<>();
-//        List<String> listOfEmails = new ArrayList<String>();
-//        for (HashMap dict : NeededItems) {
-//            listOfEmails.add(dict.get("email").toString());
-//        }
-//        shrek.exportPreSet(path, listOfEmails);
-//
-//        return "redirect:/sorti";
-//    }
+    @PostMapping("/exportPreSet")
+    public String exportPreSet(@RequestParam("path") String path,
+                               RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        System.out.println(path);
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        List<HashMap<String, String>> NeededItems = new ArrayList<>();
+        List<String> listOfEmails = new ArrayList<String>();
+        for (HashMap dict : NeededItems) {
+            listOfEmails.add(dict.get("email").toString());
+        }
+        shrek.exportPreSet(path, listOfEmails);
+
+        return "redirect:/file";
+    }
 
     @PostMapping("/log")
     public String handleLogo(@RequestParam("logo") String logo, @RequestParam("passwd") String passwd) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
@@ -387,7 +317,7 @@ public class ApplicationController {
 
     @PostMapping("/addPreSet")
     public String addPreSet(@RequestParam("name") String name) throws FileNotFoundException {
-        createCheckPoint();
+        createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -415,7 +345,7 @@ public class ApplicationController {
 
     @PostMapping("/addDomen")
     public String addDomen(@RequestParam("name") String name) throws FileNotFoundException {
-        createCheckPoint();
+        createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -443,7 +373,7 @@ public class ApplicationController {
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
-        createCheckPoint();
+        createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -471,7 +401,7 @@ public class ApplicationController {
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
-        createCheckPoint();
+        createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -503,9 +433,23 @@ public class ApplicationController {
     }
 
     @PostMapping("/cancel-form")
-    public String cancelForm() {
+    public String cancelForm() throws SQLException {
         cancelPresetsAndDomens();
+        Pull = new ArrayList<>();
+        ActivePull = new ArrayList<>();
         return "redirect:/file";
+    }
+
+    public void cancelLiveEdit() throws SQLException {
+        ShrekBD shrek = new ShrekBD();
+        Statement stmt = shrek.stmt;
+        Integer index = shrek.changes_num - counter;
+        if (shrek.changes_num - counter >= 0) {
+            System.out.println("ROLLBACK TO savepoint" + index + "");
+            //index = index - 1;
+            stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
+            counter = counter + 1;
+        }
     }
 
     @PostMapping("/usePreSet")
@@ -545,7 +489,7 @@ public class ApplicationController {
 
     @PostMapping("/getData")
     public String addData(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        createCheckPoint();
+        createCheckPoint(Boolean.FALSE);
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
@@ -620,7 +564,7 @@ public class ApplicationController {
         ActivePull.set(ActivePull.indexOf(finded), newDataRow);
     }
 
-    public void cancelPresetsAndDomens() {
+    public void cancelPresetsAndDomens() throws SQLException {
         final String dir = System.getProperty("user.dir");
         try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
             // запись всей строки
@@ -640,7 +584,6 @@ public class ApplicationController {
             if (history.size() > 0) {
                 String text = history.get(history.size() - 1).get(1);
                 writer.write(text);
-                history.remove(history.size() - 1);
             }
 
             writer.flush();
@@ -649,10 +592,14 @@ public class ApplicationController {
 
             System.out.println(ex.getMessage());
         }
+        if (history.size() > 0) {
+            cancelLiveEdit();
+        }
+        if (history.size() > 0) history.remove(history.size() - 1);
     }
 
 
-    public void createCheckPoint() {
+    public void createCheckPoint(Boolean liveEdit) {
         final String dir = System.getProperty("user.dir");
         String resultOfReading = "";
         try (FileReader reader = new FileReader(dir + "\\preSets\\domens.json")) {
@@ -681,6 +628,10 @@ public class ApplicationController {
             System.out.println(ex.getMessage());
         }
         data.add(resultOfReading);
+        if (liveEdit) {
+            data.add("RegisteredLiveEdit");
+        } else data.add("LiveEditNotRegistered");
+
         history.add(data);
     }
 
