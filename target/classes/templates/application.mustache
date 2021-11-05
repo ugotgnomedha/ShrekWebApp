@@ -171,7 +171,7 @@
         <div class="row">
             <div class="ineer-div">
                 <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
-                    <input name="searchTxt" placeholder="Name" type="text"  id="searchTxt" style="margin-left: 2rem"/>
+                    <input name="searchTxt" placeholder="Name" type="text" id="searchTxt" style="margin-left: 2rem"/>
                 </form>
             </div>
 
@@ -193,9 +193,30 @@
                 </div>
 
                 <div class="preset-table">
-                    <table class="table gray">
+                    <table class="table gray" id="controls">
                         <tbody>
                         <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
+                        <tr style="border: none; height: 3rem">
+                            <td style="border: none; width: 3rem">
+
+                                <div class="container-centre" style="height: 3rem; ">
+                                    <div class="c-c">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="checkbox">
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="border: none; text-align: center;background: #b0b0b0;">
+                                <div class="container-centre" style="height: 3rem; font-weight: 700;">
+                                    <div class="c-c">
+                                       Выбрать все
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
                             {{#preSets}}
                                 <tr style="border: none; height: 3rem">
 
@@ -232,18 +253,36 @@
                         </form>
                         </tbody>
                     </table>
+                    <script>
+                        $('#checkbox').click(function(){
+                            if ($(this).is(':checked')){
+                                $('#controls input:checkbox').prop('checked', true);
+                            } else {
+                                $('#controls input:checkbox').prop('checked', false);
+                            }
+                        });
+                    </script>
                 </div>
-                <table>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-secondary" id="add-preSet">Добавить</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-secondary" id="delete-preset">Удалить</button>
-                        </td>
-                    </tr>
+                <div class="container" style="background-color: #b0b0b0;
+font-size: 1rem;
+color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">
+                    <div class="row">
+                        <div class="col-6" id="delete-preset" style=" border-right: 2px solid; border-color: white;">
+                            Удалить
+                        </div>
+                        <div class="col-6" id="add-preSet">
+                            Добавить домен
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="container-centre" style=" height: 250px;">
+                    <div class="c-c">
+                        <img id="add-domen" src="assets/img/arrow.png" style="margin-top: 7rem;">
 
-                </table>
+                    </div>
+                </div>
             </div>
             <div class="col-3">
                 <div class="container-centre d-t">
@@ -253,9 +292,30 @@
                 </div>
 
                 <div class="preset-table">
-                    <table class="table">
+                    <table class="table" id="controls-2">
                         <tbody>
                         <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
+                            <tr style="border: none; height: 3rem">
+                                <td style="border: none; width: 3rem">
+
+                                    <div class="container-centre" style="height: 3rem; ">
+                                        <div class="c-c">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" id="checkbox-2">
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="border: none; text-align: center;background: #b0b0b0;">
+                                    <div class="container-centre" style="height: 3rem; font-weight: 700;">
+                                        <div class="c-c">
+                                            Выбрать все
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
                             {{#domens}}
                                 <tr style="border: none; text-align: center">
                                     <td style="border: none; width: 3rem">
@@ -282,24 +342,46 @@
                         </form>
                         </tbody>
                     </table>
+                    <script>
+                        $('#checkbox-2').click(function(){
+                            if ($(this).is(':checked')){
+                                $('#controls-2 input:checkbox').prop('checked', true);
+                            } else {
+                                $('#controls-2 input:checkbox').prop('checked', false);
+                            }
+                        });
+                    </script>
                 </div>
-                <table>
-                    <tr>
-                        <td>
-                            <button type="button" class="btn btn-secondary" id="add-domen">Добавить в пре-сет</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-secondary" id="delete-domen">Удалить</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-secondary" id="add-new-domen">Добавить домен</button>
-                        </td>
-                    </tr>
+                <!--                <table>-->
+                <!--                    <tr>-->
+                <!--                        <td>-->
+                <!--                            <button type="button" class="btn btn-secondary" id="delete-domen">Удалить</button>-->
+                <!--                        </td>-->
+                <!--                        <td>-->
+                <!--                            <button type="button" class="btn btn-secondary" id="add-new-domen">Добавить домен</button>-->
+                <!--                        </td>-->
+                <!--                    </tr>-->
 
-                </table>
+                <!--                </table>-->
+                <div class="container" style="background-color: #b0b0b0;
+font-size: 1rem;
+color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">
+                    <div class="row">
+                        <div class="col-6" id="delete-domen" style=" border-right: 2px solid; border-color: white;">
+                            Удалить
+                        </div>
+                        <div class="col-6" id="add-new-domen">
+                            Добавить домен
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4">
-
+            <div class="col-3">
+                <div class="container-centre" style="height: 250px; ">
+                    <div class="c-c">
+                       <img id="save" src="assets/img/save.png" style="height: 6rem;">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

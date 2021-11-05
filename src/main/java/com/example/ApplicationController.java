@@ -20,6 +20,7 @@ import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.*;
+import java.util.function.Predicate;
 
 import static com.example.Constants.*;
 
@@ -313,6 +314,12 @@ public class ApplicationController {
 
         return "redirect:/file";
 
+    }
+    @PostMapping("/save")
+    public String save() throws SQLException {
+        ShrekBD shrek = new ShrekBD();
+        shrek.save();
+        return "redirect:/file";
     }
 
     @PostMapping("/addPreSet")

@@ -29,6 +29,10 @@ public class ShrekBD {
             throwables.printStackTrace();
         }
     }
+    public static void save() throws SQLException {
+        stmt = connection.createStatement();
+        stmt.executeUpdate("COMMIT WORK;");
+    }
 
     public static void deleteDuples(String email, List<String> data) throws SQLException {
         stmt = connection.createStatement();
