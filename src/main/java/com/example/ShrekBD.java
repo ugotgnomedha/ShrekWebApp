@@ -209,9 +209,12 @@ public class ShrekBD {
             if (userArray != null) {
                 for (User user : userArray) {
                     HashMap<String, String> item = new HashMap<>();
-                    item.put("name", user.getName());
-                    item.put("sets", user.getSets());
-                    items.add(item);
+                    if(user!=null){
+                        item.put("name", user.getName());
+                        item.put("sets", user.getSets());
+                        items.add(item);
+                    }
+
                 }
             }
 

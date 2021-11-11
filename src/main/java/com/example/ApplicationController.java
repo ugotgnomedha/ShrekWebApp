@@ -18,9 +18,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.crypto.NoSuchPaddingException;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.*;
-import java.util.function.Predicate;
 
 import static com.example.Constants.*;
 
@@ -187,6 +189,8 @@ public class ApplicationController {
         FileUtils.cleanDirectory(new File(uploadDirectory));
         storageService.store(file);
         StartConnection.start();
+        Pull.clear();
+        ActivePull.clear();
         return "redirect:/file";
     }
 
@@ -315,6 +319,7 @@ public class ApplicationController {
         return "redirect:/file";
 
     }
+
     @PostMapping("/save")
     public String save() throws SQLException {
         ShrekBD shrek = new ShrekBD();
@@ -380,7 +385,11 @@ public class ApplicationController {
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
+        String[] words = name.strip().split(" ");
+        ArrayList<String> keys = new ArrayList<>(Arrays.asList(words));
         createCheckPoint(Boolean.FALSE);
+        System.out.println("keys: " + keys);
+
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
@@ -388,14 +397,22 @@ public class ApplicationController {
         Gson gson = new Gson();
 
         User[] userArray = gson.fromJson(userJson, User[].class);
-        User[] newUserArray = new User[userArray.length - 1];
-        int counter = 0;
-        for (int i = 0; i < userArray.length; i++) {
-            if (!name.replaceAll("[<>]*", "").equals(userArray[i].getName())) {
-                newUserArray[counter] = userArray[i];
-                counter++;
+        ArrayList<User> userA = new ArrayList<>(Arrays.asList(userArray));
+        ArrayList<User> newUserA = new ArrayList<>(userA);
+        if (keys.get(0).equals("on")) {
+            newUserA.clear();
+        } else {
+            for (User user : userA) {
+                for (String key : keys) {
+                    if (user.getName().equals(key)) {
+                        newUserA.remove(user);
+                    }
+                }
             }
+
         }
+        User[] newUserArray = newUserA.toArray(new User[newUserA.size()]);
+        System.out.println(newUserA);
         String json = gson.toJson(newUserArray);
         try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
             writer.write(json);
@@ -408,7 +425,10 @@ public class ApplicationController {
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
+        String[] words = name.strip().split(" ");
+        ArrayList<String> keys = new ArrayList<>(Arrays.asList(words));
         createCheckPoint(Boolean.FALSE);
+
         String sets = "";
         final String dir = System.getProperty("user.dir");
         String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
@@ -416,14 +436,21 @@ public class ApplicationController {
         Gson gson = new Gson();
 
         User[] userArray = gson.fromJson(userJson, User[].class);
-        User[] newUserArray = new User[userArray.length - 1];
-        int counter = 0;
-        for (int i = 0; i < userArray.length; i++) {
-            if (!name.replaceAll("[<>]*", "").equals(userArray[i].getName())) {
-                newUserArray[counter] = userArray[i];
-                counter++;
+        ArrayList<User> userA = new ArrayList<>(Arrays.asList(userArray));
+        ArrayList<User> newUserA = new ArrayList<>(userA);
+        if (keys.get(0).equals("on")) {
+            newUserA.clear();
+        } else {
+            for (User user : userA) {
+                for (String key : keys) {
+                    if (user.getName().equals(key)) {
+                        newUserA.remove(user);
+                    }
+                }
             }
+
         }
+        User[] newUserArray = newUserA.toArray(new User[newUserA.size()]);
         String json = gson.toJson(newUserArray);
         try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
             writer.write(json);
@@ -577,7 +604,12 @@ public class ApplicationController {
             // запись всей строки
             if (history.size() > 0) {
                 String text = history.get(history.size() - 1).get(0);
+                if (text.equals("[]")) {
+                    text = "[]";
+                }
                 writer.write(text);
+            } else {
+                writer.write("[]");
             }
 
             writer.flush();
@@ -590,7 +622,12 @@ public class ApplicationController {
             // запись всей строки
             if (history.size() > 0) {
                 String text = history.get(history.size() - 1).get(1);
+                if (text.equals("[]")) {
+                    text = "[]";
+                }
                 writer.write(text);
+            } else {
+                writer.write("[]");
             }
 
             writer.flush();
@@ -607,6 +644,7 @@ public class ApplicationController {
 
 
     public void createCheckPoint(Boolean liveEdit) {
+        System.out.println(history);
         final String dir = System.getProperty("user.dir");
         String resultOfReading = "";
         try (FileReader reader = new FileReader(dir + "\\preSets\\domens.json")) {

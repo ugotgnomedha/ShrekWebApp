@@ -204,7 +204,7 @@ function deleteDomen() {
     var checkBoxes = getCheckedBoxes("domenForm");
     var checkBoxesDomens = "";
     for (var i = 0; i < checkBoxes.length; i++) {
-        checkBoxesDomens = checkBoxes[i].value;
+        checkBoxesDomens = checkBoxesDomens + " " + checkBoxes[i].value;
     }
 
     const XHR = new XMLHttpRequest();
@@ -247,7 +247,7 @@ function deletePreSet() {
     var checkBoxes = getCheckedBoxes("preSetForm");
     var checkBoxesDomens = "";
     for (var i = 0; i < checkBoxes.length; i++) {
-        checkBoxesDomens = checkBoxes[i].value;
+        checkBoxesDomens = checkBoxesDomens + " " + checkBoxes[i].value;
     }
 
     const XHR = new XMLHttpRequest();
@@ -292,7 +292,7 @@ while (row = table.rows[r++]) {
 }
 ;
 
-$("#save").click(function (){
+$("#save").click(function () {
     const XHR = new XMLHttpRequest();
 
     let urlEncodedData = "",
