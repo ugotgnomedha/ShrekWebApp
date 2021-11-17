@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "sets": "test.rf",
+    "name": "Test"
+  },
+  {
+    "sets": "",
+    "name": "ssdsds"
+  },
+  {
+    "sets": "inb0x.rf",
+    "name": "Inbox"
+  }
+]

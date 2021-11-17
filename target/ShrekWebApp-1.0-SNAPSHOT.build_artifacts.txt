@@ -1,3 +1,0 @@
-[EXECUTABLE]
-ShrekWebApp-1.0-SNAPSHOT.exe
-

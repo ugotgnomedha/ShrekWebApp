@@ -15,19 +15,10 @@
     <artifactId>ShrekWebApp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.security</groupId>-->
-        <!--            <artifactId>spring-security-test</artifactId>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -92,137 +83,23 @@
             <artifactId>log4j-core</artifactId>
             <version>2.14.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.0</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
-        <!--        </dependency>-->
     </dependencies>
 
-    <!--    <build>-->
-    <!--        <pluginManagement>-->
-    <!--            <plugins>-->
-    <!--                <plugin>-->
-    <!--                    <groupId>org.springframework.boot</groupId>-->
-    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-    <!--                    <configuration>-->
-    <!--                        <archive>-->
-    <!--                            <manifest>-->
-    <!--                                <addClasspath>true</addClasspath>-->
-    <!--                                <classpathPrefix>lib/</classpathPrefix>-->
-    <!--                                <mainClass>com.example.Application</mainClass>-->
-    <!--                            </manifest>-->
-    <!--                        </archive>-->
-    <!--                    </configuration>-->
-    <!--                    <executions>-->
-    <!--                        <execution>-->
-    <!--                            <goals>-->
-    <!--                                <goal>repackage</goal>-->
-    <!--                            </goals>-->
-    <!--                        </execution>-->
-    <!--                    </executions>-->
-    <!--                </plugin>-->
-    <!--            </plugins>-->
-    <!--        </pluginManagement>-->
-    <!--    </build>-->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
-                <configuration>
-                    <outputDirectory>out/</outputDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                        <descriptorRef>src</descriptorRef>
-                    </descriptorRefs>
-                    <outputDirectory>
-                        out
-                    </outputDirectory>
-                    <archive>
-                        <manifest>
-                            <mainClass>Application</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase> <!-- bind to the packaging phase -->
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>14</source>
-                    <target>14</target>
-                </configuration>
+                <version>2.4.3</version>
             </plugin>
         </plugins>
+        <finalName>spring-boot-docker</finalName>
     </build>
-
-    <!--    <build>-->
-    <!--        <pluginManagement>-->
-    <!--            <plugins>-->
-    <!--                <plugin>-->
-    <!--                    <groupId>org.springframework.boot</groupId>-->
-    <!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-    <!--                </plugin>-->
-    <!--                <plugin>-->
-    <!--                    &lt;!&ndash; Build an executable JAR &ndash;&gt;-->
-    <!--                    <groupId>org.apache.maven.plugins</groupId>-->
-    <!--                    <artifactId>maven-jar-plugin</artifactId>-->
-    <!--                    <version>3.1.0</version>-->
-    <!--                    <configuration>-->
-    <!--                        <archive>-->
-    <!--                            <manifest>-->
-    <!--                                <addClasspath>true</addClasspath>-->
-    <!--                                <classpathPrefix>lib/</classpathPrefix>-->
-    <!--                                <mainClass>com.example.Application</mainClass>-->
-    <!--                            </manifest>-->
-    <!--                        </archive>-->
-    <!--                    </configuration>-->
-    <!--                </plugin>-->
-    <!--            </plugins>-->
-    <!--        </pluginManagement>-->
-    <!--    </build>-->
 
 </project>
