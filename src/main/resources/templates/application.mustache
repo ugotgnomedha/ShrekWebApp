@@ -17,22 +17,23 @@
 </head>
 <body>
 <header>
-    <img src="assets/img/2.png" id="logo-img" style="margin-left: 2rem">
+    <img src="assets/img/nlogo.png" id="logo-img">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+        <div class="container-fluid hat">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <div class="container-centre">
-                            <div class="c-c">
+                        <div>
+                            <div>
                                 <form id="target" method="POST" enctype="multipart/form-data" action="/">
                                     <div class="box">
                                         <div class="example-1">
                                             <div class="form-group">
                                                 <label class="label">
-                                                    <div class="container-centre">
-                                                        <div class="c-c">
-                                                            <img class="import-img" src="assets/img/1588.png">
+                                                    <div class="container-centre-f">
+                                                        <div class="c-c-f">
+                                                            <img class="import-img" src="assets/img/Icon_import.png">
+                                                            <h4>Импорт</h4>
                                                             <input class="out" id="file" name="file" type="file"
                                                                    onChange="$(this).closest('form').submit()">
                                                         </div>
@@ -51,24 +52,27 @@
 
                     <li class="nav-item">
                         <div class="container-centre">
-                            <div class="c-c">
-                                <img src="assets/img/export.png" id="export-button">
+                            <div class="c-c-f">
+                                <img src="assets/img/Icon_export.png" class="centre-img">
+                                <h4>Экспорт</h4>
                             </div>
                         </div>
 
                     </li>
                     <li class="nav-item">
                         <div class="container-centre">
-                            <div class="c-c">
-                                <img id="filterButton" src="assets/img/filter.png" id="export-button">
+                            <div class="c-c-f">
+                                <img id="filterButton" src="assets/img/Icon_filter.png" class="centre-img">
+                                <h4>Фильтр</h4>
                             </div>
                         </div>
 
                     </li>
                     <li class="nav-item">
                         <div class="container-centre">
-                            <div class="c-c">
-                                <img src="assets/img/vr.png" id="cancel-button">
+                            <div class="c-c-f">
+                                <img src="assets/img/Icon_back.png" class="centre-img">
+                                <h4>Назад</h4>
                             </div>
                         </div>
 
@@ -96,7 +100,6 @@
         </button>
     </div>
 </div>
-<!--PopUp-->
 <!--PopUp-->
 <div class="popup center popup-export">
     <div class="icon">
@@ -128,7 +131,6 @@
     </div>
 </div>
 <!--PopUp-->
-<!--PopUp-->
 <div class="popup center popup-domen">
     <div class="icon">
         <i class="fa fa-check"></i>
@@ -145,7 +147,6 @@
         </button>
     </div>
 </div>
-<!--PopUp-->
 <!--PopUp-->
 <div class="popup center popup-edit">
     <div class="icon">
@@ -171,269 +172,365 @@
         <div class="row">
             <div class="ineer-div">
                 <form id="add-form" enctype="multipart/form-data" action="/add-form" method="post">
-                    <input name="searchTxt" placeholder="Name" type="text" id="searchTxt" style="margin-left: 2rem"/>
+                    <input name="searchTxt" placeholder="   Поиск" type="text" id="searchTxt" class="bordered"/>
                 </form>
             </div>
 
         </div>
         <div class="row second-row">
-            <div class="col-2">
-                <div class="container-centre cont-1">
+            <div class="col-2  myCol">
+                <div class="container-centre-add">
                     <div class="c-c">
-                        <img src="assets/img/552-5520952_play-button-watch-video-understand-the-power-clarip.png"
+                        <img src="assets/img/Icon_play.png" class="centre-img"
                              id="play-button">
+                        <h4>Отфильтровать</h4>
+
                     </div>
                 </div>
             </div>
-            <div class="col-3 colTwo">
+            <div class="col-3 myCol">
                 <div class="container-centre d-t">
                     <div class="c-c">
                         <div>Пресеты</div>
                     </div>
                 </div>
+                <div class="container-centre-pre">
+                    <div class="c-c bordered">
+                        <div class="preset-table">
+                            <table class="table gray" id="controls">
+                                <tbody>
+                                <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
+                                    <tr style="border: none; height: 3rem">
+                                        <td style="border: none; width: 3rem">
 
-                <div class="preset-table">
-                    <table class="table gray" id="controls">
-                        <tbody>
-                        <form id="preSetForm" enctype="multipart/form-data" action="/usePreSet" method="post">
-                        <tr style="border: none; height: 3rem">
-                            <td style="border: none; width: 3rem">
-
-                                <div class="container-centre" style="height: 3rem; ">
-                                    <div class="c-c">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox" id="checkbox">
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </td>
-                            <td style="border: none; text-align: center;background: #b0b0b0;">
-                                <div class="container-centre" style="height: 3rem; font-weight: 700;">
-                                    <div class="c-c">
-                                       Выбрать все
-                                    </div>
-                                </div>
-
-                            </td>
-                        </tr>
-                            {{#preSets}}
-                                <tr style="border: none; height: 3rem">
-
-                                    <td style="border: none; width: 3rem">
-
-                                        <div class="container-centre" style="height: 3rem; ">
-                                            <div class="c-c">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" name="used" value="{{name}}">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-
-                                    </td>
-                                    <td style="border: none; text-align: center;background: #b0b0b0;">
-                                        <div class="container-centre" style="height: 3rem; ">
-                                            <div class="c-c">
-                                                <div class="dropdown" style="background: #b0b0b0; ">
-                                                    <button class="dropbtn"
-                                                            style="background: #b0b0b0; border: none;">{{name}}</button>
-                                                    <div style="text-align: center" class="dropdown-content">
-                                                        <div style="text-align: center">{{sets}}</div>
-                                                    </div>
+                                            <div class="container-centre" style="height: 3rem; ">
+                                                <div class="c-c">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" id="checkbox">
+                                                        <span></span>
+                                                    </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </td>
+                                        <td style="border: none; text-align: center;">
+                                            <div class="container-centre" style="height: 3rem; font-weight: 700;">
+                                                <div class="c-c">
+                                                    Выбрать все
+                                                </div>
+                                            </div>
 
-                                    </td>
+                                        </td>
+                                    </tr>
+                                    {{#preSets}}
+                                        <tr style="border: none; height: 3rem">
 
-                                </tr>
-                            {{/preSets}}
-                        </form>
-                        </tbody>
-                    </table>
-                    <script>
-                        $('#checkbox').click(function(){
-                            if ($(this).is(':checked')){
-                                $('#controls input:checkbox').prop('checked', true);
-                            } else {
-                                $('#controls input:checkbox').prop('checked', false);
-                            }
-                        });
-                    </script>
-                </div>
-                <div class="container" style="background-color: #b0b0b0;
-font-size: 1rem;
-color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">
-                    <div class="row">
-                        <div class="col-6" id="delete-preset" style=" border-right: 2px solid; border-color: white;">
-                            Удалить
+                                            <td style="border: none; width: 3rem">
+
+                                                <div class="container-centre" style="height: 3rem; ">
+                                                    <div class="c-c">
+                                                        <label class="custom-checkbox">
+                                                            <input type="checkbox" name="used" value="{{name}}">
+                                                            <span></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+
+                                            </td>
+                                            <td style="border: none; text-align: center;">
+                                                <div class="container-centre" style="height: 3rem; ">
+                                                    <div class="c-c">
+                                                        <div class="dropdown gray">
+                                                            <button class="dropbtn gray"
+                                                                    style="border: none;">{{name}}</button>
+                                                            <div style="text-align: center" class="dropdown-content">
+                                                                <div style="text-align: center">{{sets}}</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+
+                                        </tr>
+                                    {{/preSets}}
+                                </form>
+                                </tbody>
+                            </table>
+                            <script>
+                                $('#checkbox').click(function () {
+                                    if ($(this).is(':checked')) {
+                                        $('#controls input:checkbox').prop('checked', true);
+                                    } else {
+                                        $('#controls input:checkbox').prop('checked', false);
+                                    }
+                                });
+                            </script>
                         </div>
-                        <div class="col-6" id="add-preSet">
-                            Добавить пресет
+                        <div class="container gray">
+                            <div class="row">
+                                <div class="col-6" id="delete-preset">
+                                    <div class="tab-button bordered">Удалить</div>
+
+                                </div>
+                                <div class="col-6" id="add-preSet">
+                                    <div class="tab-button bordered">Добавить пресет</div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-            <div class="col-1">
-                <div class="container-centre" style=" height: 250px;">
+            <div class="col-2">
+                <div class="container-centre-add">
                     <div class="c-c">
-                        <img id="add-domen" src="assets/img/arrow.png" style="margin-top: 7rem;">
+                        <img src="assets/img/Icon_add.png" class="centre-img"
+                             id="play-button">
+                        <h4>Добавить</h4>
 
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3  myCol">
                 <div class="container-centre d-t">
                     <div class="c-c">
                         <div>Домены</div>
                     </div>
                 </div>
+                <div class="container-centre-pre">
+                    <div class="c-c bordered">
+                        <div class="preset-table">
+                            <table class="table gray" id="controls-2">
+                                <tbody>
+                                <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
+                                    <tr style="border: none; height: 3rem">
+                                        <td style="border: none; width: 3rem">
 
-                <div class="preset-table">
-                    <table class="table" id="controls-2">
-                        <tbody>
-                        <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">
-                            <tr style="border: none; height: 3rem">
-                                <td style="border: none; width: 3rem">
-
-                                    <div class="container-centre" style="height: 3rem; ">
-                                        <div class="c-c">
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" id="checkbox-2">
-                                                <span></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td style="border: none; text-align: center;background: #b0b0b0;">
-                                    <div class="container-centre" style="height: 3rem; font-weight: 700;">
-                                        <div class="c-c">
-                                            Выбрать все
-                                        </div>
-                                    </div>
-
-                                </td>
-                            </tr>
-                            {{#domens}}
-                                <tr style="border: none; text-align: center">
-                                    <td style="border: none; width: 3rem">
-                                        <div class="container-centre" style="height: 3rem; width: 3rem">
-                                            <div class="c-c">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" name="used" value="{{name}}">
-                                                    <span></span>
-                                                </label>
+                                            <div class="container-centre" style="height: 3rem; ">
+                                                <div class="c-c">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" id="checkbox-2">
+                                                        <span></span>
+                                                    </label>
+                                                </div>
                                             </div>
-                                        </div>
-
-
-                                    </td>
-                                    <td style="border: none; text-align: center">
-                                        <div class="container-centre" style="height: 3rem; ">
-                                            <div class="c-c">
-                                                {{name}}
+                                        </td>
+                                        <td style="border: none; text-align: center;">
+                                            <div class="container-centre" style="height: 3rem; font-weight: 700;">
+                                                <div class="c-c">
+                                                    Выбрать все
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            {{/domens}}
-                        </form>
-                        </tbody>
-                    </table>
-                    <script>
-                        $('#checkbox-2').click(function(){
-                            if ($(this).is(':checked')){
-                                $('#controls-2 input:checkbox').prop('checked', true);
-                            } else {
-                                $('#controls-2 input:checkbox').prop('checked', false);
-                            }
-                        });
-                    </script>
-                </div>
-                <!--                <table>-->
-                <!--                    <tr>-->
-                <!--                        <td>-->
-                <!--                            <button type="button" class="btn btn-secondary" id="delete-domen">Удалить</button>-->
-                <!--                        </td>-->
-                <!--                        <td>-->
-                <!--                            <button type="button" class="btn btn-secondary" id="add-new-domen">Добавить домен</button>-->
-                <!--                        </td>-->
-                <!--                    </tr>-->
 
-                <!--                </table>-->
-                <div class="container" style="background-color: #b0b0b0;
-font-size: 1rem;
-color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">
-                    <div class="row">
-                        <div class="col-6" id="delete-domen" style=" border-right: 2px solid; border-color: white;">
-                            Удалить
+                                        </td>
+                                    </tr>
+                                    {{#domens}}
+                                        <tr style="border: none; text-align: center">
+                                            <td style="border: none; width: 3rem">
+                                                <div class="container-centre" style="height: 3rem; width: 3rem">
+                                                    <div class="c-c">
+                                                        <label class="custom-checkbox">
+                                                            <input type="checkbox" name="used" value="{{name}}">
+                                                            <span></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+
+                                            </td>
+                                            <td style="border: none; text-align: center">
+                                                <div class="container-centre" style="height: 3rem; ">
+                                                    <div class="c-c">
+                                                        {{name}}
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {{/domens}}
+                                </form>
+                                </tbody>
+                            </table>
+                            <script>
+                                $('#checkbox-2').click(function () {
+                                    if ($(this).is(':checked')) {
+                                        $('#controls-2 input:checkbox').prop('checked', true);
+                                    } else {
+                                        $('#controls-2 input:checkbox').prop('checked', false);
+                                    }
+                                });
+                            </script>
                         </div>
-                        <div class="col-6" id="add-new-domen">
-                            Добавить домен
+                        <div class="container gray">
+                            <div class="row">
+                                <div class="col-6" id="delete-domen">
+                                    <div class="tab-button bordered">Удалить</div>
+
+                                </div>
+                                <div class="col-6" id="add-new-domen">
+                                    <div class="tab-button bordered">Добавить домен</div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--            <div class="col-3  myCol">-->
+                <!--                <div class="container-centre d-t">-->
+                <!--                    <div class="c-c">-->
+                <!--                        <div>Домены</div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="container-centre">-->
+                <!--                    <div class="c-c">-->
+                <!--                        <div class="preset-table">-->
+                <!--                            <table class="table" id="controls-2">-->
+                <!--                                <tbody>-->
+                <!--                                <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">-->
+                <!--                                    <tr style="border: none; height: 3rem">-->
+                <!--                                        <td style="border: none; width: 3rem">-->
+
+                <!--                                            <div class="container-centre" style="height: 3rem; ">-->
+                <!--                                                <div class="c-c">-->
+                <!--                                                    <label class="custom-checkbox">-->
+                <!--                                                        <input type="checkbox" id="checkbox-2">-->
+                <!--                                                        <span></span>-->
+                <!--                                                    </label>-->
+                <!--                                                </div>-->
+                <!--                                            </div>-->
+                <!--                                        </td>-->
+                <!--                                        <td style="border: none; text-align: center;">-->
+                <!--                                            <div class="container-centre" style="height: 3rem; font-weight: 700;">-->
+                <!--                                                <div class="c-c">-->
+                <!--                                                    Выбрать все-->
+                <!--                                                </div>-->
+                <!--                                            </div>-->
+
+                <!--                                        </td>-->
+                <!--                                    </tr>-->
+                    <!--                                    {{#domens}}-->
+                <!--                                        <tr style="border: none; text-align: center">-->
+                <!--                                            <td style="border: none; width: 3rem">-->
+                <!--                                                <div class="container-centre" style="height: 3rem; width: 3rem">-->
+                <!--                                                    <div class="c-c">-->
+                <!--                                                        <label class="custom-checkbox">-->
+                <!--                                                            <input type="checkbox" name="used" value="{{name}}">-->
+                <!--                                                            <span></span>-->
+                <!--                                                        </label>-->
+                <!--                                                    </div>-->
+                <!--                                                </div>-->
+
+
+                <!--                                            </td>-->
+                <!--                                            <td style="border: none; text-align: center">-->
+                <!--                                                <div class="container-centre" style="height: 3rem; ">-->
+                <!--                                                    <div class="c-c">-->
+                <!--                                                        {{name}}-->
+                <!--                                                    </div>-->
+                <!--                                                </div>-->
+                <!--                                            </td>-->
+                <!--                                        </tr>-->
+                    <!--                                    {{/domens}}-->
+                <!--                                </form>-->
+                <!--                                </tbody>-->
+                <!--                            </table>-->
+                <!--                            <script>-->
+                <!--                                $('#checkbox-2').click(function () {-->
+                <!--                                    if ($(this).is(':checked')) {-->
+                <!--                                        $('#controls-2 input:checkbox').prop('checked', true);-->
+                <!--                                    } else {-->
+                <!--                                        $('#controls-2 input:checkbox').prop('checked', false);-->
+                <!--                                    }-->
+                <!--                                });-->
+                <!--                            </script>-->
+                <!--                        </div>-->
+                <!--                        <div class="container" style="-->
+                <!--font-size: 1rem;-->
+                <!--color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">-->
+                <!--                            <div class="row">-->
+                <!--                                <div class="col-6" id="delete-domen"-->
+                <!--                                     style=" border-right: 2px solid; border-color: white;">-->
+                <!--                                    Удалить-->
+                <!--                                </div>-->
+                <!--                                <div class="col-6" id="add-new-domen">-->
+                <!--                                    Добавить домен-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
             </div>
-            <div class="col-3">
-                <div class="container-centre d-t">
+            <div class="col-2  myCol">
+                <div class="container-centre-add">
                     <div class="c-c">
-                        <div> </div>
-                    </div>
-                </div>
-                <div class="container-centre" style="height: 250px; ">
-                    <div class="c-c">
-                       <img id="save" src="assets/img/save.png" style="height: 6rem;">
+                        <img src="assets/img/Icon_save.png" class="centre-img"
+                             id="play-button">
+                        <h4>Сохранить</h4>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
-
-
-</div>
-<div class="main-table" style="margin-left: 0">
-    <table class="table" id="main-table">
-        <thead>
-        <tr id="table-names">
-            {{#headers}}
-                <th style="border: none" scope="col">{{header}}</th>
-            {{/headers}}
-            <th style="border: none">Confirm</th>
-        </tr>
-        </thead>
-        <tbody id="tbod">
-        {{#data}}
-            <tr class="trr" style='border:  border-left: 1px solid #ddd;
-    border-right: none; border-bottom: none;'>
-                {{#.}}
-                    <td style='border:  border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd; border-bottom: none; text-align: center;' class="main-table-cell"><input
-                            style=' fon text-align: center; border: 0px;'
-                            value="{{Data}}"></td>
-                {{/.}}
-                <th style='border:  border-left: 1px solid #ddd;
-    border-right: none; border-bottom: none; text-align: center;'>
-                    <button style='border-radius: 20px' type="button" class=" btn btn-primary conf-button eButton">
-                        Подтвердить
-                    </button>
-                </th>
+    <div class="main-table">
+        <table class="table" id="main-table">
+            <thead>
+            <tr id="table-names">
+                <th style="border: none">Удалить</th>
+                {{#headers}}
+                    <th style="border: none" scope="col">{{header}}</th>
+                {{/headers}}
+                <th style="border: none">Подтвердить</th>
             </tr>
-        {{/data}}
-        </tbody>
-    </table>
+            </thead>
+            <tbody id="tbod">
+            {{#data}}
+                <tr class="trr" style='border-left: none;
+    border-right: none; border-bottom: none;'>
+                    <td style='border-left: none;
+    border-right:  1px solid #ddd;; border-bottom: none; text-align: center;'>
+                        <div class="container-centre" style="height: 3rem; ">
+                            <div class="c-c">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    {{#.}}
+                        <td style=' border-left: none;
+    border-right: 1px solid #ddd; border-bottom: none; text-align: center;' class="main-table-cell"><input
+                                style='text-align: center; border: 0px;'
+                                value="{{Data}}"></td>
+                    {{/.}}
+                    <td style='border-left: 1px solid #ddd;
+    border-right: none; border-bottom: none; text-align: center;'>
+                        <button style='border-radius: 20px; border-color: white; color: white; background-color: white'
+                                type="button" class=" btn btn-primary conf-button eButton">
+                            <img src="assets/img/confirm.png" class="centre-img">
+                        </button>
+                    </td>
+                </tr>
+            {{/data}}
+            </tbody>
+        </table>
+    </div>
+    <div class="move-buttons">
+        <form method="POST" enctype="multipart/form-data" action="/changeView">
+            <input type="hidden" name="direction" value="left"/>
+            <button class="btn btn-primary" type="submit" value="Log">left</button>
+        </form>
+        <form method="POST" enctype="multipart/form-data" action="/changeView">
+            <input type="hidden" name="direction" value="right"/>
+            <button class="btn btn-primary" type="submit" value="Log">right</button>
+        </form>
+    </div>
+    <script src="assets/js/application.js"></script>
 </div>
-<div class="move-buttons">
-    <form method="POST" enctype="multipart/form-data" action="/changeView">
-        <input type="hidden" name="direction" value="left"/>
-        <button class="btn btn-primary" type="submit" value="Log">left</button>
-    </form>
-    <form method="POST" enctype="multipart/form-data" action="/changeView">
-        <input type="hidden" name="direction" value="right"/>
-        <button class="btn btn-primary" type="submit" value="Log">right</button>
-    </form>
-</div>
-<script src="assets/js/application.js"></script>
 </body>
 </html>
