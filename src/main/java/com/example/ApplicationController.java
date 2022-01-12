@@ -96,15 +96,22 @@ public class ApplicationController {
                 }
 
                 for (int i = 0; i < headers.size(); i++) {
-                    HashMap<String, String> header = new HashMap<>();
-                    header.put("header", headers.get(i));
-                    tableHeaders.add(header);
-                }
-                if (headers != null && !headers.contains("comment")) {
-                    headers.add("comment");
+                    if(!headers.get(i).equals("id")){
+                        HashMap<String, String> header = new HashMap<>();
+                        if (headers.get(i).equals("comment")) {
+                            header.put("header", "Комментарий");
+                        } else {
+                            header.put("header", headers.get(i));
+                        }
+
+                        tableHeaders.add(header);
+                    }
 
                 }
+
             }
+            System.out.println(headers);
+            System.out.println(ActivePull);
 
             logger.info("Data received");
             model.put("headers", tableHeaders);

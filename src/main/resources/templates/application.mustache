@@ -17,7 +17,9 @@
 </head>
 <body>
 <header>
-    <img src="assets/img/nlogo.png" id="logo-img">
+<!--    <img src="assets/img/nlogo.png" id="logo-img">-->
+    <button type="button" class="btn btn-primary" style="height: 55px; width: 220px; font-size: 30px; background-color: #0692ce">Фильтрейшн
+    </button>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid hat">
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -53,7 +55,7 @@
                     <li class="nav-item">
                         <div class="container-centre">
                             <div class="c-c-f">
-                                <img src="assets/img/Icon_export.png" class="centre-img">
+                                <img src="assets/img/Icon_export.png" class="centre-img" id="export-button">
                                 <h4>Экспорт</h4>
                             </div>
                         </div>
@@ -71,7 +73,7 @@
                     <li class="nav-item">
                         <div class="container-centre">
                             <div class="c-c-f">
-                                <img src="assets/img/Icon_back.png" class="centre-img">
+                                <img src="assets/img/Icon_back.png" class="centre-img" id="cancel-button">
                                 <h4>Назад</h4>
                             </div>
                         </div>
@@ -82,7 +84,18 @@
         </div>
     </nav>
 </header>
-<hr class="top-hr">
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <hr class="top-hr">
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-primary" style="height: 43px; width: 180px; font-size: 22px; background-color: #0692ce">Статистика
+            </button>
+        </div>
+    </div>
+</div>
+
 <!--PopUp-->
 <div class="popup center popup-preset">
     <div class="icon">
@@ -492,7 +505,7 @@
                 <tr class="trr" style='border-left: none;
     border-right: none; border-bottom: none;'>
                     <td style='border-left: none;
-    border-right:  1px solid #ddd;; border-bottom: none; text-align: center;'>
+    border-right:  1px solid #ddd; border-bottom: none; text-align: center;'>
                         <div class="container-centre" style="height: 3rem; ">
                             <div class="c-c">
                                 <label class="custom-checkbox">
@@ -512,7 +525,9 @@
     border-right: none; border-bottom: none; text-align: center;'>
                         <button style='border-radius: 20px; border-color: white; color: white; background-color: white'
                                 type="button" class=" btn btn-primary conf-button eButton">
-                            <img src="assets/img/confirm.png" class="centre-img">
+<!--                            <img src="assets/img/confirm.png" class="centre-img">-->
+                            <button type="button" class="btn btn-primary" style="height: 40px; width: 180px; font-size: 20px; background-color: #0692ce">Подтвердить
+                            </button>
                         </button>
                     </td>
                 </tr>
@@ -521,14 +536,35 @@
         </table>
     </div>
     <div class="move-buttons">
-        <form method="POST" enctype="multipart/form-data" action="/changeView">
-            <input type="hidden" name="direction" value="left"/>
-            <button class="btn btn-primary" type="submit" value="Log">left</button>
-        </form>
-        <form method="POST" enctype="multipart/form-data" action="/changeView">
-            <input type="hidden" name="direction" value="right"/>
-            <button class="btn btn-primary" type="submit" value="Log">right</button>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form method="POST" enctype="multipart/form-data" action="/changeView">
+                        <input type="hidden" name="direction" value="left"/>
+                        <button class="btn btn-primary" type="submit" value="Log">left</button>
+                    </form>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+
+                <div class="col">
+                    <form method="POST" enctype="multipart/form-data" action="/changeView">
+                        <input type="hidden" name="direction" value="right"/>
+                        <button id="right-button" class="btn btn-primary" type="submit" value="Log">right</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <script src="assets/js/application.js"></script>
 </div>

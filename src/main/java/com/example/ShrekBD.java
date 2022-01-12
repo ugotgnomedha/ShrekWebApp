@@ -119,30 +119,31 @@ public class ShrekBD {
             headers = getOnlineTableHeaders();
             onlineExists = true;
         }
-
         if (headers.size() > 0) {
             ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
             while (rs.next()) {
                 List<HashMap<String, String>> mData = new ArrayList<>();
-                HashMap<String, String> indexH = new HashMap<>();
-                if (!onlineExists) {
-                    indexH.put("Data", String.valueOf(i));
-                    mData.add(indexH);
-                }
+//                HashMap<String, String> indexH = new HashMap<>();
+//                if (!onlineExists) {
+//                    indexH.put("Data", String.valueOf(i));
+//                    mData.add(indexH);
+//                }
 
 
                 for (String header : headers) {
-                    HashMap<String, String> item = new HashMap<>();
-                    if (rs.getString(header) == null) {
-                        item.put("Data", "-");
-                    } else {
-                        item.put("Data", rs.getString(header));
-                    }
+                    if(!header.equals("id")){
+                        HashMap<String, String> item = new HashMap<>();
+                        if (rs.getString(header) == null) {
+                            item.put("Data", "-");
+                        } else {
+                            item.put("Data", rs.getString(header));
+                        }
 
-                    mData.add(item);
+                        mData.add(item);
+                    }
                 }
                 items.add(mData);
-                i++;
+//                i++;
             }
         } else {
 
@@ -152,7 +153,7 @@ public class ShrekBD {
 
     public void export(String path) throws SQLException {
         stmt = connection.createStatement();
-        stmt.execute("COPY " + mainDataBaseName + " TO " + "'" + path + "\\\\" + mainDataBaseName + ".csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+        stmt.execute("COPY " + mainDataBaseName + " TO " + "'" + path + mainDataBaseName + ".csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
     }
 
     public static ArrayList<String> getOnlineTableHeaders() throws SQLException {
@@ -175,9 +176,10 @@ public class ShrekBD {
         stmt.execute("DROP TABLE " + temporaryDataBaseName + "");
         stmt.execute("CREATE TABLE " + temporaryDataBaseName + " AS TABLE " + mainDataBaseName + " WITH NO DATA;");
         for (String email : listOfEmails) {
-            stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE e_test LIKE '" + "%" + email + "%" + "' ");
+            stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE email LIKE '" + "%" + email + "%" + "' ");
         }
-        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+        System.out.println("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
 
     }
 
