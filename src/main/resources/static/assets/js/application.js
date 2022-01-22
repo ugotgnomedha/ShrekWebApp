@@ -127,8 +127,8 @@ $("#add-new-domen").click(function () {
 });
 
 // Pass the checkbox name to the function
-function getCheckedBoxes(chkboxName) {
-    var checkboxes = document.getElementById(chkboxName);
+function getCheckedBoxes(checkboxName) {
+    var checkboxes = document.getElementById(checkboxName);
     var checkboxesChecked = [];
     // loop over them all
     for (var i = 0; i < checkboxes.length; i++) {
@@ -325,7 +325,6 @@ $("#save").click(function () {
 
 $(".eButton").click(function () {
     var myClass = $(this).parent().attr("class");
-
     document.getElementById("confirm-popup-btn-edit").addEventListener("click", function () {
         var cusid_ele = $("." + myClass)
         var data = "";
@@ -362,13 +361,26 @@ $(".eButton").click(function () {
         });
 
         // Set up our request
-        XHR.open('POST', '/liveEdit');
+        var req = "td." + myClass + " " + "input[type=checkbox]"
+        let checkbox = $(req)
+        if (checkbox.is(":checked")) {
+            XHR.open('POST', '/liveDelete');
 
-        // Add the required HTTP header for form data POST requests
-        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            // Add the required HTTP header for form data POST requests
+            XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-        // Finally, send our data.
-        XHR.send(urlEncodedData);
+            // Finally, send our data.
+            XHR.send(urlEncodedData);
+        } else {
+            XHR.open('POST', '/liveEdit');
+
+            // Add the required HTTP header for form data POST requests
+            XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Finally, send our data.
+            XHR.send(urlEncodedData);
+        }
+
 
         document.getElementsByClassName("popup-edit")[0].classList.remove("active");
         $("#add-form").submit();
@@ -426,6 +438,19 @@ document.getElementById("dismiss-popup-btn-edit").addEventListener("click", func
 document.getElementById("cancel-button").addEventListener("click", function () {
     $("#cancel-form").submit();
 });
+
+$("#live-eidt-button-delete").click(function () {
+    var checkBoxes = getCheckedBoxes("table-checkbox");
+    var checkboxes = document.getElementsByClassName('checkbox');
+    var checkboxesChecked = []; // можно в массиве их хранить, если нужно использовать
+    for (var index = 0; index < checkboxes.length; index++) {
+        if (checkboxes[index].checked) {
+            checkboxesChecked.push(checkboxes[index].value); // положим в массив выбранный
+            alert(checkboxes[index].value); // делайте что нужно - это для наглядности
+        }
+    }
+    alert(checkBoxes);
+})
 // $('#file').change(function() {
 //     $('#target').submit();
 // });

@@ -29,6 +29,7 @@ public class ShrekBD {
             throwables.printStackTrace();
         }
     }
+
     public static void save() throws SQLException {
         stmt = connection.createStatement();
         stmt.executeUpdate("COMMIT WORK;");
@@ -94,14 +95,6 @@ public class ShrekBD {
                 for (String header : parser_excel.getHeaders()) {
                     item.put(header, rs.getString(header));
                 }
-
-
-//            item.put("comment", rs.getString(1));
-//            item.put("name", rs.getString(3));
-//            item.put("sex", rs.getString(4));
-//            item.put("age", rs.getString(5));
-//            item.put("phone", rs.getString(6));
-//            item.put("email", rs.getString(7));
                 items.add(item);
                 i++;
             }
@@ -112,7 +105,6 @@ public class ShrekBD {
     public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
         stmt = connection.createStatement();
         List<List<HashMap<String, String>>> items = new ArrayList<>();
-        int i = 1;
         Boolean onlineExists = false;
         List<String> headers = parser_excel.getHeaders();
         if (headers == null) {
@@ -123,15 +115,8 @@ public class ShrekBD {
             ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
             while (rs.next()) {
                 List<HashMap<String, String>> mData = new ArrayList<>();
-//                HashMap<String, String> indexH = new HashMap<>();
-//                if (!onlineExists) {
-//                    indexH.put("Data", String.valueOf(i));
-//                    mData.add(indexH);
-//                }
-
-
                 for (String header : headers) {
-                    if(!header.equals("id")){
+                    if (!header.equals("id")) {
                         HashMap<String, String> item = new HashMap<>();
                         if (rs.getString(header) == null) {
                             item.put("Data", "-");
@@ -143,7 +128,6 @@ public class ShrekBD {
                     }
                 }
                 items.add(mData);
-//                i++;
             }
         } else {
 
@@ -178,7 +162,6 @@ public class ShrekBD {
         for (String email : listOfEmails) {
             stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE email LIKE '" + "%" + email + "%" + "' ");
         }
-        System.out.println("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
         stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
 
     }
@@ -211,7 +194,7 @@ public class ShrekBD {
             if (userArray != null) {
                 for (User user : userArray) {
                     HashMap<String, String> item = new HashMap<>();
-                    if(user!=null){
+                    if (user != null) {
                         item.put("name", user.getName());
                         item.put("sets", user.getSets());
                         items.add(item);
@@ -254,6 +237,20 @@ public class ShrekBD {
         return null;
     }
 
+    public static void applyLiveDelete(String stringToEdit) throws SQLException {
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
+        ArrayList<String> column_names = getOnlineTableHeaders();
+        data.remove(0);
+        String email = data.get(data.size() - 1);
+        if (caller_transaction == 0) {
+            stmt.executeUpdate("BEGIN WORK;");
+            caller_transaction = caller_transaction + 1;
+        }
+        stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
+        stmt.executeUpdate("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
+
+    }
+
     public static void applyLiveEdit(String stringToEdit) throws SQLException {
         if (caller_transaction == 0) {
             stmt.executeUpdate("BEGIN WORK;");
@@ -262,16 +259,17 @@ public class ShrekBD {
         ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
         ArrayList<String> column_names = getOnlineTableHeaders();
         int j = 0;
+        String email = data.get(data.size() - 1);
         for (String ignored : column_names) {
-            System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)) + ";");
-            stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
-            stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where id = " + quote(data.get(0)) + ";");
-            if (j == data.size() - 1) {
-                break;
+            if (!column_names.get(j).equals("id")) {
+                stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
+                stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where email = " + quote(email) + ";");
+                if (j == data.size() - 1) {
+                    break;
+                }
             }
             j++;
         }
-        System.out.println("CREATED --- SAVEPOINT savepoint" + changes_num + ";");
         changes_num++;
     }
 

@@ -201,7 +201,7 @@ details[open] summary:after {
     /*display: flex;*/
 }
 
-#right-button{
+#right-button {
     margin-right: 0;
 }
 
@@ -213,6 +213,7 @@ details[open] summary:after {
     height: 200px;
     position: relative;
 }
+
 .container-centre-add {
     height: 23rem;
     position: relative;
@@ -227,7 +228,7 @@ details[open] summary:after {
     transform: translate(-50%, -50%);
 }
 
-.myCol{
+.myCol {
     height: 26rem;
 }
 
@@ -473,6 +474,7 @@ details[open] summary:after {
     position: relative;
     /*border: 3px solid green;*/
 }
+
 .container-centre-pre {
     height: 20rem;
     position: relative;
@@ -541,7 +543,6 @@ details[open] summary:after {
     height: 3rem;
     margin-bottom: 5px;
 }
-
 
 
 .main-table-cell {
@@ -613,8 +614,85 @@ div::-webkit-scrollbar-thumb {
 
 }
 
-.main-table {
+.main-data-section {
+    display: flex;
     margin-top: 5rem;
+}
+
+.left-zone {
+    width: 85%;
+}
+
+.right-zone {
+    width: 10%;
+    margin-left: 2rem;
+}
+
+.action-menu {
+    height: 17rem;
+    border-style: solid;
+    border-radius: 0.4rem;
+    border-color: #0892D0;
+    border-width: 2.5px;
+    position: sticky;
+    top: 5rem;
+}
+
+.action-button {
+    width: 8rem;
+}
+
+.action-button-div {
+    width: 8rem;
+    margin: 1rem auto;
+}
+
+.stat-table-div {
+    width: 100%;
+    /*overflow-y: scroll;*/
+    /*height: 15rem;*/
+}
+
+.stat-name {
+    /*text-align: center;*/
+    font-weight: 600;
+    width: 50%;
+}
+
+.stat-table {
+    /*text-align: center;*/
+    width: 13rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.stat-cell {
+}
+
+.stat-row {
+    border-bottom: 1px solid #dbdddf;
+}
+
+.stat-name-row {
+    width: 15rem;
+}
+
+.stat-block {
+    position: absolute;
+    top: 4rem;
+    height: 20rem;
+    width: 15rem;
+    border-style: solid;
+    border-radius: 0.4rem;
+    border-color: #0892D0;
+    border-width: 2.5px;
+}
+
+.stat-header {
+    background-color: #f3f3f3;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 @media (min-width: 1400px) {

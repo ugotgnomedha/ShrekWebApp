@@ -28,7 +28,10 @@ import static com.example.Constants.*;
 
 @Controller
 public class ApplicationController {
+
     private static final Logger logger = LogManager.getLogger(StartConnection.class);
+
+    public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
 
     private final int numerOfTableLines = 20;
     public static Integer counter = 1;
@@ -46,8 +49,6 @@ public class ApplicationController {
     public ApplicationController(StorageService storageService) {
         this.storageService = storageService;
     }
-
-    public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
 
 
     @GetMapping("/")
@@ -85,18 +86,8 @@ public class ApplicationController {
             }
 
             if (headers != null) {
-                HashMap<String, String> index = new HashMap<>();
-                Boolean flag = false;
-                for (String header : headers) {
-                    if (header.equals("id")) flag = true;
-                }
-                if (!flag) {
-                    index.put("header", "id");
-                    tableHeaders.add(index);
-                }
-
                 for (int i = 0; i < headers.size(); i++) {
-                    if(!headers.get(i).equals("id")){
+                    if (!headers.get(i).equals("id")) {
                         HashMap<String, String> header = new HashMap<>();
                         if (headers.get(i).equals("comment")) {
                             header.put("header", "Комментарий");
@@ -110,17 +101,23 @@ public class ApplicationController {
                 }
 
             }
-            System.out.println(headers);
-            System.out.println(ActivePull);
+            ArrayList<Domen> statistics = new ArrayList<>();
+            HashMap<String, Integer> mappedStatistic = ExcelDataInserter.getStatistics();
+            if (mappedStatistic != null) {
+                for (String key : mappedStatistic.keySet()) {
+                    statistics.add(new Domen(key, mappedStatistic.get(key)));
+                }
+            }
 
-            logger.info("Data received");
+            logger.info("Data loaded to frontend");
+            model.put("statistics", statistics);
             model.put("headers", tableHeaders);
             model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
             model.put("domens", shrek.getDomens());
 
         } catch (Exception e) {
-            logger.error("Connection failed", e);
+            logger.error("Failed to load data to frontend", e);
         }
         return "application";
     }
@@ -141,24 +138,6 @@ public class ApplicationController {
         return "sorting";
     }
 
-//
-//    @PostMapping("/sorting")
-//    public String handleDomen(@RequestParam("domen") String domen,
-//                              RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        ShrekBD shrek = new ShrekBD();
-//        List<HashMap<String, String>> items = new ArrayList<>();
-//        NeededItems.clear();
-//        items = shrek.getSortedListOfData();
-//        for (int i = 0; i < items.size(); i++) {
-//            if (items.get(i).get("email").contains(domen)) {
-//                NeededItems.add(items.get(i));
-//            }
-//        }
-//        return "redirect:/sorti";
-//    }
-
     @PostMapping("/liveEdit")
     public String handleLiveEditing(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
         createCheckPoint(Boolean.TRUE);
@@ -170,24 +149,15 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-
-    @GetMapping("/us")
-    public String main(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+    @PostMapping("/liveDelete")
+    public String handleLiveDeleting(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
+        createCheckPoint(Boolean.TRUE);
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        model.put("items", shrek.getSortedListOfData());
-        return "uploadFormUser";
-    }
-
-    @GetMapping("/loginError")
-    public String loginError() throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        return "loginError";
-    }
-
-    @GetMapping("/login")
-    public String login(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        return "login";
+        ShrekBD.applyLiveDelete(stringToEdit);
+        applyFrontLiveDelete(stringToEdit);
+        return "redirect:/file";
     }
 
     @PostMapping("/")
@@ -195,7 +165,8 @@ public class ApplicationController {
                                    RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         FileUtils.cleanDirectory(new File(uploadDirectory));
         storageService.store(file);
-        StartConnection.start();
+//        StartConnection.start();
+        DBConnect.connect();
         Pull.clear();
         ActivePull.clear();
         return "redirect:/file";
@@ -211,55 +182,29 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-
-    @PostMapping("/export")
-    public String handlePath(@RequestParam("path") String path,
-                             RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-        shrek.export(path);
-
-        return "redirect:/file";
-    }
-
     @PostMapping("/exportPreSet")
     public String exportPreSet(@RequestParam("path") String path,
                                RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-        System.out.println(path);
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-        List<HashMap<String, String>> NeededItems = new ArrayList<>();
-        List<String> listOfEmails = new ArrayList<String>();
-        for (HashMap dict : NeededItems) {
-            listOfEmails.add(dict.get("email").toString());
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(url, user, password);
+            ShrekBD shrek = new ShrekBD();
+            List<String> listOfEmails = new ArrayList<String>();
+            for (List<HashMap<String, String>> dict : ActivePull) {
+                for (HashMap<String, String> data : dict) {
+                    if (data.get("Data").contains("@")) {
+                        listOfEmails.add(data.get("Data"));
+                    }
+                }
+            }
+            shrek.exportPreSet(path, listOfEmails);
+            logger.info("Filtered data exported");
+        } catch (Exception e) {
+            logger.error("Failed to export data", e);
         }
-        shrek.exportPreSet(path, listOfEmails);
+
 
         return "redirect:/file";
-    }
-
-    @PostMapping("/log")
-    public String handleLogo(@RequestParam("logo") String logo, @RequestParam("passwd") String passwd) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException {
-
-//        if (logo.equals("admin@admin") && passwd.equals("admin")) {
-//            return "redirect:/file";
-//        } else if (logo.equals("user@user") && passwd.equals("user")) {
-//            return "redirect:/us";
-//        } else {
-//            return "redirect:/loginError";
-//        }
-//        if (logo.equals("admin")) {
-//            return "redirect:/file";
-//        } else if (logo.equals("user")) {
-//            return "redirect:/us";
-//        } else {
-//            return "redirect:/loginError";
-//        }
-        return "redirect:/file";
-
-
     }
 
     @PostMapping("/changeView")
@@ -329,8 +274,14 @@ public class ApplicationController {
 
     @PostMapping("/save")
     public String save() throws SQLException {
-        ShrekBD shrek = new ShrekBD();
-        shrek.save();
+        try {
+            ShrekBD shrek = new ShrekBD();
+            shrek.save();
+            logger.info("Data send to online");
+        } catch (Exception e) {
+            logger.error("Failed to send data to online", e);
+        }
+
         return "redirect:/file";
     }
 
@@ -395,7 +346,6 @@ public class ApplicationController {
         String[] words = name.strip().split(" ");
         ArrayList<String> keys = new ArrayList<>(Arrays.asList(words));
         createCheckPoint(Boolean.FALSE);
-        System.out.println("keys: " + keys);
 
         String sets = "";
         final String dir = System.getProperty("user.dir");
@@ -419,7 +369,6 @@ public class ApplicationController {
 
         }
         User[] newUserArray = newUserA.toArray(new User[newUserA.size()]);
-        System.out.println(newUserA);
         String json = gson.toJson(newUserArray);
         try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
             writer.write(json);
@@ -486,7 +435,6 @@ public class ApplicationController {
         Statement stmt = shrek.stmt;
         Integer index = shrek.changes_num - counter;
         if (shrek.changes_num - counter >= 0) {
-            System.out.println("ROLLBACK TO savepoint" + index + "");
             //index = index - 1;
             stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
             counter = counter + 1;
@@ -588,11 +536,12 @@ public class ApplicationController {
 
     public void applyFrontLiveEdt(String dataToEdit) {
         ArrayList<String> data = new ArrayList<>(Arrays.asList(dataToEdit.split("##")));
-        String idToEdit = data.get(0);
+        data.remove(0);
+        String emailToEdit = data.get(data.size() - 1);
         List<HashMap<String, String>> finded = new ArrayList<>();
         List<HashMap<String, String>> newDataRow = new ArrayList<>();
         for (List<HashMap<String, String>> dataRow : ActivePull) {
-            if (dataRow.get(0).get("Data").equals(idToEdit)) {
+            if (dataRow.get(data.size() - 1).get("Data").equals(emailToEdit)) {
                 for (String dataCell : data) {
                     HashMap<String, String> d = new HashMap<>();
                     d.put("Data", dataCell);
@@ -603,6 +552,20 @@ public class ApplicationController {
             }
         }
         ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+    }
+
+    public void applyFrontLiveDelete(String dataToEdit) {
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(dataToEdit.split("##")));
+        data.remove(0);
+        String emailToDelete = data.get(data.size() - 1);
+        List<HashMap<String, String>> finded = new ArrayList<>();
+        for (List<HashMap<String, String>> dataRow : ActivePull) {
+            if (dataRow.get(data.size() - 1).get("Data").equals(emailToDelete)) {
+                finded = dataRow;
+                break;
+            }
+        }
+        ActivePull.remove(ActivePull.indexOf(finded));
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
@@ -651,7 +614,6 @@ public class ApplicationController {
 
 
     public void createCheckPoint(Boolean liveEdit) {
-        System.out.println(history);
         final String dir = System.getProperty("user.dir");
         String resultOfReading = "";
         try (FileReader reader = new FileReader(dir + "\\preSets\\domens.json")) {
@@ -686,6 +648,10 @@ public class ApplicationController {
 
         history.add(data);
     }
+
+//    public static List<HashMap<String, String>> getStatistics( List<List<HashMap<String, String>>> Pull){
+//
+//    }
 
 }
 

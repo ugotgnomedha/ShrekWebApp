@@ -17,8 +17,9 @@
 </head>
 <body>
 <header>
-<!--    <img src="assets/img/nlogo.png" id="logo-img">-->
-    <button type="button" class="btn btn-primary" style="height: 55px; width: 220px; font-size: 30px; background-color: #0692ce">Фильтрейшн
+    <!--    <img src="assets/img/nlogo.png" id="logo-img">-->
+    <button type="button" class="btn btn-primary"
+            style="height: 55px; width: 220px; font-size: 30px; background-color: #0692ce">Фильтрейшн
     </button>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid hat">
@@ -84,97 +85,148 @@
         </div>
     </nav>
 </header>
-<div class="container">
+<div class="container" style="height: 20px">
     <div class="row">
         <div class="col-10">
             <hr class="top-hr">
         </div>
         <div class="col-2">
-            <button type="button" class="btn btn-primary" style="height: 43px; width: 180px; font-size: 22px; background-color: #0692ce">Статистика
-            </button>
+            <div class="stat-block">
+                <div class="stat-header">Статистика</div>
+                <div class="stat-table-div">
+                    <table class="stat-table">
+                        <tr class="stat-name-row">
+                            <th class="stat-name">Домен</th>
+                            <th class="stat-name">Количество</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="stat-table-div" style="height: 12rem; overflow-y: scroll;">
+                    <table class="stat-table">
+                        <tbody>
+
+                        {{#statistics}}
+                            <tr class="stat-row">
+                                <td class="stat-cell">{{domenName}}</td>
+                                <td class="stat-cell">{{domenCount}}</td>
+                            </tr>
+                        {{/statistics}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <!--PopUp-->
 <div class="popup center popup-preset">
-    <div class="icon">
-        <i class="fa fa-check"></i>
-    </div>
-    <div class="title">
-        Вы действительно хотите удалить пресет?
-    </div>
-    <div class="dismiss-btn">
-        <button id="dismiss-popup-btn-preset">
-            Нет
-        </button>
-        <button id="confirm-popup-btn-preset">
-            Да
-        </button>
+    <div class="container">
+        <div class="row">
+            <div>⠀⠀⠀</div>
+        </div>
+        <div class="row">
+            <h4>Вы действительно хотите удалить пресет?</h4>
+        </div>
+        <div class="row">
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn-preset" class="btn btn-primary btn-block"
+                        style="background-color: #d10750; border-width: 0px; margin-right: 20px">
+                    Нет
+                </button>
+                <button id="confirm-popup-btn-preset" class="btn btn-primary btn-block"
+                        style=" background-color: #08d0a1; border-width: 0px">
+                    Да
+                </button>
+            </div>
+
+        </div>
     </div>
 </div>
 <!--PopUp-->
 <div class="popup center popup-export">
-    <div class="icon">
-        <i class="fa fa-check"></i>
-    </div>
     <div class="title">
         <form method="POST" enctype="multipart/form-data" action="/exportPreSet">
+
             <div class="box">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="path" required="required"
-                           placeholder="Выберете место">
+                <div class="container">
+                    <div class="row">
+                        <div>⠀⠀⠀</div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="path" required="required"
+                                   placeholder="Выберете место">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dismiss-btn">
+                            <button id="dismiss-popup-btn-export" class="btn btn-primary btn-block"
+                                    style="background-color: #d10750; border-width: 0px">
+                                Отмена
+                            </button>
+                            <button type="submit" id="confirm-popup-btn-export"
+                                    class="btn btn-primary btn-block buttonToUpload"
+                                    value="Upload" style=" background-color: #08d0a1; border-width: 0px">
+                                Экспорт
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block buttonToUpload"
-                            value="Upload">
-                        Экспортировать
-                    </button>
-                </div>
+
+
             </div>
         </form>
     </div>
-    <div class="dismiss-btn">
-        <button id="dismiss-popup-btn-export">
-            Отмена
-        </button>
-        <button id="confirm-popup-btn-export">
-            Экспортировать
-        </button>
-    </div>
+
 </div>
 <!--PopUp-->
 <div class="popup center popup-domen">
-    <div class="icon">
-        <i class="fa fa-check"></i>
-    </div>
-    <div class="title">
-        Вы действительно хотите удалить домен?
-    </div>
-    <div class="dismiss-btn">
-        <button id="dismiss-popup-btn-domen">
-            Нет
-        </button>
-        <button id="confirm-popup-btn-domen">
-            Да
-        </button>
+    <div class="container">
+        <div class="row">
+            <div>⠀⠀⠀</div>
+        </div>
+        <div class="row">
+            <h4>Вы действительно хотите удалить домен?</h4>
+        </div>
+        <div class="row">
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn-domen" class="btn btn-primary btn-block"
+                        style="background-color: #d10750; border-width: 0px; margin-right: 20px">
+                    Нет
+                </button>
+                <button id="confirm-popup-btn-domen" class="btn btn-primary btn-block"
+                        style=" background-color: #08d0a1; border-width: 0px">
+                    Да
+                </button>
+            </div>
+
+        </div>
     </div>
 </div>
 <!--PopUp-->
 <div class="popup center popup-edit">
-    <div class="icon">
-        <i class="fa fa-check"></i>
-    </div>
-    <div class="title">
-        Вы действительно хотите изменить данные?
-    </div>
-    <div class="dismiss-btn">
-        <button id="dismiss-popup-btn-edit">
-            Нет
-        </button>
-        <button id="confirm-popup-btn-edit">
-            Да
-        </button>
+    <div class="container">
+        <div class="row">
+            <div>⠀⠀⠀</div>
+        </div>
+        <div class="row">
+            <h4>Вы действительно хотите изменить данные?</h4>
+        </div>
+        <div class="row">
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn-edit" class="btn btn-primary btn-block"
+                        style="background-color: #d10750; border-width: 0px; margin-right: 20px">
+                    Нет
+                </button>
+                <button id="confirm-popup-btn-edit" class="btn btn-primary btn-block"
+                        style=" background-color: #08d0a1; border-width: 0px">
+                    Да
+                </button>
+            </div>
+
+        </div>
     </div>
 </div>
 <form id="cancel-form" enctype="multipart/form-data" action="/cancel-form" method="post">
@@ -301,8 +353,8 @@
                 <div class="container-centre-add">
                     <div class="c-c">
                         <img src="assets/img/Icon_add.png" class="centre-img"
-                             id="play-button">
-                        <h4>Добавить</h4>
+                             id="add-domen">
+                        <h4 style="text-align: center">Добавить</h4>
 
                     </div>
                 </div>
@@ -390,98 +442,13 @@
                         </div>
                     </div>
                 </div>
-                <!--            <div class="col-3  myCol">-->
-                <!--                <div class="container-centre d-t">-->
-                <!--                    <div class="c-c">-->
-                <!--                        <div>Домены</div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="container-centre">-->
-                <!--                    <div class="c-c">-->
-                <!--                        <div class="preset-table">-->
-                <!--                            <table class="table" id="controls-2">-->
-                <!--                                <tbody>-->
-                <!--                                <form id="domenForm" enctype="multipart/form-data" action="/addDomen" method="post">-->
-                <!--                                    <tr style="border: none; height: 3rem">-->
-                <!--                                        <td style="border: none; width: 3rem">-->
-
-                <!--                                            <div class="container-centre" style="height: 3rem; ">-->
-                <!--                                                <div class="c-c">-->
-                <!--                                                    <label class="custom-checkbox">-->
-                <!--                                                        <input type="checkbox" id="checkbox-2">-->
-                <!--                                                        <span></span>-->
-                <!--                                                    </label>-->
-                <!--                                                </div>-->
-                <!--                                            </div>-->
-                <!--                                        </td>-->
-                <!--                                        <td style="border: none; text-align: center;">-->
-                <!--                                            <div class="container-centre" style="height: 3rem; font-weight: 700;">-->
-                <!--                                                <div class="c-c">-->
-                <!--                                                    Выбрать все-->
-                <!--                                                </div>-->
-                <!--                                            </div>-->
-
-                <!--                                        </td>-->
-                <!--                                    </tr>-->
-                    <!--                                    {{#domens}}-->
-                <!--                                        <tr style="border: none; text-align: center">-->
-                <!--                                            <td style="border: none; width: 3rem">-->
-                <!--                                                <div class="container-centre" style="height: 3rem; width: 3rem">-->
-                <!--                                                    <div class="c-c">-->
-                <!--                                                        <label class="custom-checkbox">-->
-                <!--                                                            <input type="checkbox" name="used" value="{{name}}">-->
-                <!--                                                            <span></span>-->
-                <!--                                                        </label>-->
-                <!--                                                    </div>-->
-                <!--                                                </div>-->
-
-
-                <!--                                            </td>-->
-                <!--                                            <td style="border: none; text-align: center">-->
-                <!--                                                <div class="container-centre" style="height: 3rem; ">-->
-                <!--                                                    <div class="c-c">-->
-                <!--                                                        {{name}}-->
-                <!--                                                    </div>-->
-                <!--                                                </div>-->
-                <!--                                            </td>-->
-                <!--                                        </tr>-->
-                    <!--                                    {{/domens}}-->
-                <!--                                </form>-->
-                <!--                                </tbody>-->
-                <!--                            </table>-->
-                <!--                            <script>-->
-                <!--                                $('#checkbox-2').click(function () {-->
-                <!--                                    if ($(this).is(':checked')) {-->
-                <!--                                        $('#controls-2 input:checkbox').prop('checked', true);-->
-                <!--                                    } else {-->
-                <!--                                        $('#controls-2 input:checkbox').prop('checked', false);-->
-                <!--                                    }-->
-                <!--                                });-->
-                <!--                            </script>-->
-                <!--                        </div>-->
-                <!--                        <div class="container" style="-->
-                <!--font-size: 1rem;-->
-                <!--color: white; border-top: 2px solid; border-color: white; text-align: center; font-weight: 700;">-->
-                <!--                            <div class="row">-->
-                <!--                                <div class="col-6" id="delete-domen"-->
-                <!--                                     style=" border-right: 2px solid; border-color: white;">-->
-                <!--                                    Удалить-->
-                <!--                                </div>-->
-                <!--                                <div class="col-6" id="add-new-domen">-->
-                <!--                                    Добавить домен-->
-                <!--                                </div>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--            </div>-->
             </div>
             <div class="col-2  myCol">
                 <div class="container-centre-add">
                     <div class="c-c">
                         <img src="assets/img/Icon_save.png" class="centre-img"
-                             id="play-button">
-                        <h4>Сохранить</h4>
+                             id="save">
+                        <h4 style="text-align: center">Сохранить</h4>
                     </div>
                 </div>
             </div>
@@ -489,52 +456,61 @@
 
 
     </div>
-    <div class="main-table">
-        <table class="table" id="main-table">
-            <thead>
-            <tr id="table-names">
-                <th style="border: none">Удалить</th>
-                {{#headers}}
-                    <th style="border: none" scope="col">{{header}}</th>
-                {{/headers}}
-                <th style="border: none">Подтвердить</th>
-            </tr>
-            </thead>
-            <tbody id="tbod">
-            {{#data}}
-                <tr class="trr" style='border-left: none;
+    <div class="main-data-section">
+        <div class="left-zone">
+            <div class="main-table">
+                <table class="table" id="main-table">
+                    <thead>
+                    <tr id="table-names">
+                        <th style="border: none">Выбрать</th>
+                        {{#headers}}
+                            <th style="border: none" scope="col">{{header}}</th>
+                        {{/headers}}
+                    </tr>
+                    </thead>
+                    <tbody id="tbod">
+                    {{#data}}
+                        <tr class="trr" style='border-left: none;
     border-right: none; border-bottom: none;'>
-                    <td style='border-left: none;
+                            <td style='border-left: none;
     border-right:  1px solid #ddd; border-bottom: none; text-align: center;'>
-                        <div class="container-centre" style="height: 3rem; ">
-                            <div class="c-c">
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox">
-                                    <span></span>
-                                </label>
-                            </div>
-                        </div>
-                    </td>
-                    {{#.}}
-                        <td style=' border-left: none;
+                                <div class="container-centre" style="height: 3rem; ">
+                                    <div class="c-c">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="table-checkbox">
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            {{#.}}
+                                <td style=' border-left: none;
     border-right: 1px solid #ddd; border-bottom: none; text-align: center;' class="main-table-cell"><input
-                                style='text-align: center; border: 0px;'
-                                value="{{Data}}"></td>
-                    {{/.}}
-                    <td style='border-left: 1px solid #ddd;
-    border-right: none; border-bottom: none; text-align: center;'>
-                        <button style='border-radius: 20px; border-color: white; color: white; background-color: white'
-                                type="button" class=" btn btn-primary conf-button eButton">
-<!--                            <img src="assets/img/confirm.png" class="centre-img">-->
-                            <button type="button" class="btn btn-primary" style="height: 40px; width: 180px; font-size: 20px; background-color: #0692ce">Подтвердить
-                            </button>
-                        </button>
-                    </td>
-                </tr>
-            {{/data}}
-            </tbody>
-        </table>
+                                        style='text-align: center; border: 0px;'
+                                        value="{{Data}}"></td>
+                            {{/.}}
+                        </tr>
+                    {{/data}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="right-zone">
+            <div class="action-menu">
+                <div class="stat-header">Действия</div>
+                <div class="action-button-div">
+                    <button type="button" class="btn btn-primary action-button" id="live-eidt-button-change">Изменить</button>
+                </div>
+                <div class="action-button-div" id="delete-button">
+                    <button type="button" class="btn btn-primary action-button" id="live-eidt-button-delete">Удалить</button>
+                </div>
+                <div class="action-button-div">
+                    <button type="button" class="btn btn-primary action-button" id="live-eidt-button-add">Добавить в пресет</button>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="move-buttons">
         <div class="container">
             <div class="row">
@@ -563,8 +539,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <script src="assets/js/application.js"></script>
 </div>

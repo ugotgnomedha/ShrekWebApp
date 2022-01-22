@@ -9284,3 +9284,1269 @@ INFO    2022-01-12 18:26:20,047 [http-nio-8080-exec-1] com.example.StartConnecti
 INFO    2022-01-12 18:26:38,777 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
 INFO    2022-01-12 18:26:47,987 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
 INFO    2022-01-12 18:29:09,370 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:12:30,051 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:13:13,868 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:30:00,680 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:31:08,031 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:32:14,784 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:32:54,768 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:35:25,544 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:35:34,783 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:36:27,478 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:36:30,613 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:37:51,530 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 18:37:56,064 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:10:44,055 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:11:04,441 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:11:52,035 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:15:12,044 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:16:01,368 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:16:15,455 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:17:18,896 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:17:31,136 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:18:12,219 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:18:33,487 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:18:53,188 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:19:29,690 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:21:05,730 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:21:48,260 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:22:00,350 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:25:04,382 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:25:49,565 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:26:20,380 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:26:57,328 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:15,978 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:38,404 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:51,554 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:54,349 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:54,477 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:58,560 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:28:58,682 [http-nio-8080-exec-7] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:05,907 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:10,233 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:10,361 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:14,259 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:14,389 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:17,784 [http-nio-8080-exec-9] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:31:17,908 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:36:33,896 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:38:34,454 [http-nio-8080-exec-5] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:41:36,484 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:42:14,752 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:43:20,333 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:44:01,571 [http-nio-8080-exec-4] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:268)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 19:44:49,201 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:44:55,684 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:45:50,194 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:46:02,184 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:46:55,051 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:47:59,493 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:50:02,307 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:50:07,540 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 19:50:24,031 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:50:36,667 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:268)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 19:51:20,187 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:51:28,642 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:268)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 19:52:36,407 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:52:42,799 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:269)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 19:53:23,900 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:53:31,577 [http-nio-8080-exec-2] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:269)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+ERROR   2022-01-19 19:53:52,349 [http-nio-8080-exec-1] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:163)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 42
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:269)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 19:56:23,020 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+ERROR   2022-01-19 19:56:30,883 [http-nio-8080-exec-3] com.example.StartConnection  - Connection failed
+org.postgresql.util.PSQLException: ERROR: current transaction is aborted, commands ignored until end of transaction block
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.example.ShrekBD.getOnlineTableHeaders(ShrekBD.java:164)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.postgresql.util.PSQLException: ERROR: invalid input syntax for type integer: ""
+  Позиция: 48
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:258)
+	at com.example.ShrekBD.applyLiveEdit(ShrekBD.java:271)
+	at com.example.ApplicationController.handleLiveEditing(ApplicationController.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	... 35 more
+INFO    2022-01-19 20:01:18,141 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:01:26,202 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:04:01,562 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:04:08,379 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:05:19,597 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:05:25,394 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:05:25,528 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:06:02,799 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:06:02,918 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:31,121 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:40,242 [http-nio-8080-exec-3] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:40,382 [http-nio-8080-exec-4] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:43,775 [http-nio-8080-exec-6] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:47,435 [http-nio-8080-exec-8] com.example.StartConnection  - Data received
+INFO    2022-01-19 20:10:47,635 [http-nio-8080-exec-10] com.example.StartConnection  - Data received
+INFO    2022-01-20 13:28:53,249 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:04:38,643 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:05:13,975 [http-nio-8080-exec-1] com.example.StartConnection  - Filtered data exported
+INFO    2022-01-20 14:05:14,122 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:06:36,569 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:07:05,649 [http-nio-8080-exec-1] com.example.StartConnection  - Filtered data exported
+INFO    2022-01-20 14:07:05,790 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:07:45,031 [http-nio-8080-exec-1] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:07:50,351 [http-nio-8080-exec-1] com.example.StartConnection  - Filtered data exported
+INFO    2022-01-20 14:07:50,492 [http-nio-8080-exec-2] com.example.StartConnection  - Data received
+INFO    2022-01-20 14:09:28,586 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:10:07,023 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:10:07,158 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:10:13,798 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:10:13,917 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:15:02,420 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:15:10,654 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:15:10,795 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:15:30,008 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:16:16,511 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:16:24,616 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:16:24,763 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:15,898 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:16,031 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:24,314 [http-nio-8080-exec-2] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:17:24,429 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:42,924 [http-nio-8080-exec-1] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:17:43,039 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:47,349 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:17:47,462 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:47,523 [http-nio-8080-exec-6] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:17:47,638 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:17:47,675 [http-nio-8080-exec-7] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:17:47,790 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:20:28,130 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:21:15,347 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:21:15,514 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:21:42,682 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-20 14:22:56,714 [http-nio-8080-exec-3] com.example.StartConnection  - Failed to load data to frontend
+org.postgresql.util.PSQLException: SSL error: Connection reset
+	at org.postgresql.ssl.MakeSSL.convert(MakeSSL.java:43)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.enableSSL(ConnectionFactoryImpl.java:534)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:149)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.net.ssl.SSLException: Connection reset
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:369)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:312)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:144)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1369)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1278)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:373)
+	at org.postgresql.ssl.MakeSSL.convert(MakeSSL.java:41)
+	... 60 more
+	Suppressed: java.net.SocketException: Connection reset by peer: socket write error
+		at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+		at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:110)
+		at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:150)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:83)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:400)
+		... 68 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:110)
+	... 65 more
+INFO    2022-01-20 14:23:28,582 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:23:33,859 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:23:33,999 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:23:42,887 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:23:43,019 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:23:44,861 [http-nio-8080-exec-9] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 14:23:44,979 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:24:46,138 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:24:46,268 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:24:48,890 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:24:49,014 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:02,421 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:02,538 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:12,829 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:12,949 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:17,745 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:17,897 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:27,115 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:46,044 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:25:53,683 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:27:59,300 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:28:10,099 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:28:10,241 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 14:28:22,363 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:02:39,609 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:03:38,462 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:14:07,803 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:36:33,792 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:37:40,823 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:37:48,263 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:37:48,402 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:38:21,073 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:39:08,629 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:39:55,822 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:41:57,909 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:42:16,698 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:42:23,139 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:42:23,283 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:47:13,348 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:47:18,848 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:47:18,986 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 20:50:28,190 [http-nio-8080-exec-1] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 20:50:28,308 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:29:40,588 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:29:46,136 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:19,790 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:24,366 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:24,506 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:30,237 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:30,372 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:30:56,914 [http-nio-8080-exec-8] com.example.StartConnection  - Data send to online
+INFO    2022-01-20 21:30:57,036 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:44:24,394 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:44:29,928 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:44:36,702 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:16,511 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:20,785 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:20,933 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:27,223 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:27,359 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:34,104 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:36,797 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:39,594 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:45,527 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:48,054 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:48,807 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:48,829 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:49,564 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:49,682 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:50,337 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:50,448 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:45:51,092 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-20 21:47:15,757 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 11:21:50,439 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 11:22:35,919 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 11:22:54,408 [http-nio-8080-exec-4] com.example.StartConnection  - Data send to online
+INFO    2022-01-21 11:22:54,527 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-21 12:03:34,956 [http-nio-8080-exec-3] com.example.StartConnection  - Failed to load data to frontend
+org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:303)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.example.ApplicationController.listUploadedFiles(ApplicationController.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	... 57 more
+INFO    2022-01-21 12:17:34,529 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:20:15,539 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:22:20,282 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:22:49,869 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:22:53,312 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:23:33,806 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:23:38,969 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:24:58,397 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:06,501 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:06,594 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:16,734 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:16,829 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:29,438 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:25:29,528 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:27:56,713 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:28:14,017 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:28:14,114 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:29:23,377 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:29:23,473 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:29:25,396 [http-nio-8080-exec-8] com.example.StartConnection  - Data send to online
+INFO    2022-01-21 12:29:25,476 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 12:30:51,793 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:44:09,100 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:46:38,434 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:47:08,895 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:47:35,501 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:47:50,805 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:48:25,537 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:49:55,066 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:50:05,726 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:50:14,655 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:50:27,859 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:51:20,673 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:51:34,942 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:54:18,596 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 13:58:35,663 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:02:26,653 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:03:02,059 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:03:32,785 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:04:28,324 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:06:20,271 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:06:31,787 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:07:19,834 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:07:40,899 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:07:58,900 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:08:13,928 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:08:57,542 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:20:29,366 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:20:29,478 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:22:42,227 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:22:42,319 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:22:48,394 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:22:48,502 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:26:09,965 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:26:10,076 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:43:50,639 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:44:29,700 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:44:41,441 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:44:54,080 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:46:02,584 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:46:13,680 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:46:37,888 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:47:28,476 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:48:08,004 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:48:16,003 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:49:22,842 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 14:59:40,771 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:00:12,385 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:01:31,810 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:03:32,274 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:04:18,830 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:05:10,003 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:05:40,228 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:05:51,916 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:06:06,011 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:09:58,177 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:10:23,046 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:14:42,657 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:15:56,829 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:21:11,366 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:22:21,087 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:22:37,712 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:22:49,635 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:25:13,195 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:26:12,796 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:26:48,229 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:27:57,057 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:28:20,489 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:28:49,311 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:29:30,680 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:29:55,798 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:30:16,888 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:30:31,938 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:31:26,799 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 15:31:43,179 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:48:53,012 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:52:05,446 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:52:13,238 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:53:29,873 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:53:36,230 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 16:54:23,479 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-21 16:54:30,291 [http-nio-8080-exec-3] com.example.TableCreator  - Could not add column to a database table.
+INFO    2022-01-21 16:54:30,400 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:16:14,007 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:16:20,846 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:18:06,359 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:18:11,545 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:23:15,693 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:23:24,260 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:24:08,785 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:24:15,127 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:30:29,459 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-21 17:30:34,902 [http-nio-8080-exec-1] com.example.TableCreator  - Statement can not be created
+INFO    2022-01-21 17:30:35,013 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:34:16,160 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 17:34:31,366 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:47:45,393 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:48:25,553 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:48:40,144 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:51:04,748 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:52:29,693 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:52:30,469 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:54:04,236 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:54:19,563 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:54:27,030 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:55:48,303 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 18:58:28,991 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 19:01:06,722 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-21 19:01:24,429 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-21 19:01:24,669 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-21 19:01:24,971 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-21 19:01:24,975 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-21 19:01:25,136 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-21 22:54:48,217 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 13:26:47,240 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 13:34:08,989 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 13:36:22,142 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 13:36:34,259 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 13:48:06,385 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:28:41,699 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:28:56,221 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:31:36,032 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:32:42,054 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:32:55,297 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:34:11,735 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:36:13,847 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:38:43,864 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:39:18,694 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:39:48,366 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:39:58,298 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:40:28,153 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:41:14,764 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:41:52,945 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:42:14,370 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:42:18,747 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:43:15,800 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:43:24,790 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:44:04,014 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:44:34,742 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:44:50,637 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:45:07,981 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:45:17,404 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:45:55,158 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:46:53,641 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:47:07,885 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:47:46,057 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:48:22,615 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:48:44,782 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:50:26,591 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:50:31,105 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:51:02,581 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:51:08,227 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:51:52,959 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:52:01,221 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:52:23,202 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:52:31,669 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:53:20,364 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:53:25,938 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:54:09,605 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:54:19,668 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:55:18,369 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:55:24,587 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:55:50,412 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:55:56,182 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 21:56:19,072 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:56:19,292 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:56:19,581 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:56:19,585 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 21:56:19,744 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:58:46,099 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 21:58:59,701 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:58:59,915 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:59:00,208 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 21:59:00,212 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 21:59:00,373 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 21:59:55,088 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:00:27,581 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:01:29,526 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:01:57,817 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:01:58,034 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:01:58,327 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:01:58,331 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:01:58,498 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:03:03,921 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:03:25,515 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:03:25,721 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:03:25,999 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:03:26,003 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:03:26,163 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:03:48,632 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:04:08,644 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:04:08,867 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:04:09,164 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:04:09,167 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:04:09,327 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:05:37,339 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:05:49,697 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:05:49,913 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:05:50,202 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:05:50,206 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:05:50,364 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:06:17,431 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:06:29,720 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:06:29,934 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:06:30,226 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:06:30,230 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:06:30,386 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:07:31,933 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:07:51,678 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:07:51,893 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:07:52,185 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:07:52,189 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:07:52,346 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:09:02,809 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:09:15,210 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:09:15,424 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:09:15,716 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:09:15,719 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:09:15,875 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:11:04,646 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:11:41,707 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:12:32,305 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:12:58,562 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:14:05,867 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:14:26,507 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:15:22,339 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:15:44,132 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:15:44,341 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:15:44,634 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:15:44,637 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:15:44,797 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:16:25,134 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-22 22:16:38,338 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:16:38,572 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:16:38,861 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-22 22:16:38,865 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-22 22:16:39,024 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:52,338 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:52,455 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:54,205 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:54,293 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:56,486 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:19:56,573 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:23:10,272 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:27:15,638 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-22 22:35:26,381 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
