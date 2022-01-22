@@ -10609,3 +10609,5 @@ INFO    2022-01-22 23:59:22,467 [http-nio-8080-exec-1] com.example.StartConnecti
 INFO    2022-01-22 23:59:28,466 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
 INFO    2022-01-22 23:59:28,762 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
 INFO    2022-01-22 23:59:28,844 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-23 00:34:35,176 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-23 00:37:02,205 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
