@@ -241,14 +241,14 @@ public class ShrekBD {
         ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
         ArrayList<String> column_names = getOnlineTableHeaders();
         data.remove(0);
-        String email = data.get(data.size() - 1);
         if (caller_transaction == 0) {
             stmt.executeUpdate("BEGIN WORK;");
             caller_transaction = caller_transaction + 1;
         }
         stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
-        stmt.executeUpdate("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
-
+        for(String email: data){
+            stmt.executeUpdate("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
+        }
     }
 
     public static void applyLiveEdit(String stringToEdit) throws SQLException {

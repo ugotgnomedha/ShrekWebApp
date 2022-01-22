@@ -440,12 +440,52 @@ document.getElementById("cancel-button").addEventListener("click", function () {
 });
 
 $("#live-eidt-button-delete").click(function () {
-    var checkBoxes = getCheckedBoxes("table-checkbox")
-    alert(checkBoxes)
+    var checkboxes = document.getElementsByClassName('table-checkbox');
+    var emailsToDelete = [];
+    for (var index = 0; index < checkboxes.length; index++) {
+        if (checkboxes[index].checked) {
+            // alert(checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList);
+            var requiredClass = checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList;
+            var elems = document.getElementsByClassName(requiredClass.toString());
+            var emailToDelete = elems.item(elems.length - 1).firstChild.value;
+            emailsToDelete.push(emailToDelete);
+        }
+    }
+
+    for (var i = 0; i < emailsToDelete.length; ++i) {
+        var data;
+        data = data + "##" + emailsToDelete[i];
+    }
+    const XHR = new XMLHttpRequest();
+
+    let urlEncodedData = "",
+        urlEncodedDataPairs = [],
+        name;
+
+    // Turn the data object into an array of URL-encoded key/value pairs.
+    urlEncodedDataPairs.push(encodeURIComponent('emailsToDelete') + '=' + encodeURIComponent(data));
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to
+    // the '+' character; matches the behavior of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+    // Define what happens on successful data submission
+    XHR.addEventListener('load', function (event) {
+        // alert('Yeah! Data sent and response loaded.');
+    });
+
+    // Define what happens in case of error
+    XHR.addEventListener('error', function (event) {
+        alert('Oops! Something went wrong.');
+    });
+    // Set up our request
+    XHR.open('POST', '/liveDelete');
+
+    // Add the required HTTP header for form data POST requests
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Finally, send our data.
+    XHR.send(urlEncodedData);
 })
-// $('#file').change(function() {
-//     $('#target').submit();
-// });
 
 
 

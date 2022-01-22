@@ -108,7 +108,7 @@ public class ApplicationController {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
                 }
             }
-
+            System.out.println(ActivePull);
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
             model.put("headers", tableHeaders);
@@ -150,13 +150,13 @@ public class ApplicationController {
     }
 
     @PostMapping("/liveDelete")
-    public String handleLiveDeleting(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
+    public String handleLiveDeleting(@RequestParam("emailsToDelete") String emailsToDelete) throws ClassNotFoundException, SQLException {
         createCheckPoint(Boolean.TRUE);
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
         ShrekBD shrek = new ShrekBD();
-        ShrekBD.applyLiveDelete(stringToEdit);
-        applyFrontLiveDelete(stringToEdit);
+        ShrekBD.applyLiveDelete(emailsToDelete);
+        applyFrontLiveDelete(emailsToDelete);
         return "redirect:/file";
     }
 
@@ -541,7 +541,7 @@ public class ApplicationController {
         List<HashMap<String, String>> finded = new ArrayList<>();
         List<HashMap<String, String>> newDataRow = new ArrayList<>();
         for (List<HashMap<String, String>> dataRow : ActivePull) {
-            if (dataRow.get(data.size() - 1).get("Data").equals(emailToEdit)) {
+            if (dataRow.get(dataRow.size() - 1).get("Data").equals(emailToEdit)) {
                 for (String dataCell : data) {
                     HashMap<String, String> d = new HashMap<>();
                     d.put("Data", dataCell);
@@ -554,18 +554,16 @@ public class ApplicationController {
         ActivePull.set(ActivePull.indexOf(finded), newDataRow);
     }
 
-    public void applyFrontLiveDelete(String dataToEdit) {
-        ArrayList<String> data = new ArrayList<>(Arrays.asList(dataToEdit.split("##")));
+    public void applyFrontLiveDelete(String emailsToDelete) {
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(emailsToDelete.split("##")));
+        List<List<HashMap<String, String>>> newActivePull = new ArrayList<>();
         data.remove(0);
-        String emailToDelete = data.get(data.size() - 1);
-        List<HashMap<String, String>> finded = new ArrayList<>();
         for (List<HashMap<String, String>> dataRow : ActivePull) {
-            if (dataRow.get(data.size() - 1).get("Data").equals(emailToDelete)) {
-                finded = dataRow;
-                break;
+            if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                newActivePull.add(dataRow);
             }
         }
-        ActivePull.remove(ActivePull.indexOf(finded));
+        ActivePull = newActivePull;
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
