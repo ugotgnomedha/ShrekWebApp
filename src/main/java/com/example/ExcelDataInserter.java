@@ -7,27 +7,36 @@ import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.HashMap;
+
+import static com.example.Constants.*;
 
 public class ExcelDataInserter {
     private static final Logger logger = LogManager.getLogger(ExcelDataInserter.class);
     public static HashMap<String, Integer> domain_counter = new HashMap<>();
 
-    public static void domianFunc(String email) {
+    public static void domianFunc() {
         try {
-            if (email.contains("@")) {
-                String domain_full = email.substring(email.indexOf("@"));
-                String domain = domain_full.substring(domain_full.indexOf("."));
-                // get the value of the specified domain.
-                Integer count = domain_counter.get(domain);
-                if (domain_counter.containsKey(domain)) {
-                    domain_counter.put(domain, count + 1);
-                } else {
-                    domain_counter.put(domain, 1);
+            Connection connection = DriverManager.getConnection(url, user, password);
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT email FROM jc_contact");
+            while (rs.next()) {
+                if (rs.getString(1).contains("@")) {
+                    String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
+                    String domain = domain_full.substring(domain_full.indexOf("."));
+                    // get the value of the specified domain.
+                    Integer count = domain_counter.get(domain);
+                    if (domain_counter.containsKey(domain)) {
+                        domain_counter.put(domain, count + 1);
+                    } else {
+                        domain_counter.put(domain, 1);
+                    }
                 }
             }
+            rs.close();
+            statement.close();
+            connection.close();
         } catch (Exception e) {
             logger.error("Invalid email format");
         }
@@ -43,7 +52,6 @@ public class ExcelDataInserter {
                     if (ExcelParser.excelheaders.get(i).equals("Email") || ExcelParser.excelheaders.get(i).equals("email")) {
                         Cell cell_email = row.getCell(ExcelParser.emailColumnIndex);
                         statement.executeUpdate("INSERT INTO " + "jc_contact" + "(email) VALUES ('" + cell_email + "') ON CONFLICT (email) DO NOTHING");
-                        domianFunc(cell_email.toString());
                     } else {
                         Cell cell_ = row.getCell(i);
                         if (cell_ != null) {
@@ -71,6 +79,7 @@ public class ExcelDataInserter {
                 }
             }
             statement.close();
+            domianFunc();
         } catch (SQLException ignored) {
             ignored.printStackTrace();
         }
@@ -90,6 +99,7 @@ public class ExcelDataInserter {
     }
 
     public static HashMap<String, Integer> getStatistics() {
+        domianFunc();
         return domain_counter;
     }
 }

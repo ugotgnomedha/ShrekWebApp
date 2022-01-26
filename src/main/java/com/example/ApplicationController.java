@@ -103,12 +103,12 @@ public class ApplicationController {
             }
             ArrayList<Domen> statistics = new ArrayList<>();
             HashMap<String, Integer> mappedStatistic = ExcelDataInserter.getStatistics();
+            System.out.println(mappedStatistic);
             if (mappedStatistic != null) {
                 for (String key : mappedStatistic.keySet()) {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
                 }
             }
-            System.out.println(ActivePull);
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
             model.put("headers", tableHeaders);
