@@ -10650,3 +10650,538 @@ ERROR   2022-01-26 12:02:36,589 [http-nio-8080-exec-5] com.example.ExcelDataInse
 INFO    2022-01-26 12:02:36,589 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
 ERROR   2022-01-26 12:11:22,226 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
 INFO    2022-01-26 12:11:22,227 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:55:04,445 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:55:04,473 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:22,067 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:22,068 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:25,783 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:25,783 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:25,971 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:25,971 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:34,868 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:34,868 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:35,051 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:35,051 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 21:59:57,432 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 21:59:57,433 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:02,430 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:02,431 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:02,630 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:02,630 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:13,571 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:13,572 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:13,762 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:13,762 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:43,630 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:43,630 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:01:43,806 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:01:43,806 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:02:25,063 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:02:31,198 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:09:15,934 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:09:16,224 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:11:02,083 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:11:26,185 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-26 22:11:26,451 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:11:26,451 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:14:08,047 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:14:15,269 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:17:44,053 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:18:10,573 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+ERROR   2022-01-26 22:18:10,820 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:18:10,820 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:18:13,882 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:18:13,882 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:21:12,924 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:21:12,925 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:21:34,281 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:21:34,281 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:21:34,475 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:21:34,475 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:21:45,179 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:21:45,179 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:21:45,369 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:21:45,369 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:22:12,557 [http-nio-8080-exec-9] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:22:12,816 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:22:12,816 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:22:16,649 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:22:16,649 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:22:19,443 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:22:19,605 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:22:19,606 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:22:58,720 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:22:58,721 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:24:39,977 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:24:39,978 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:25:06,905 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:06,906 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:25:27,840 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:27,841 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:25:42,539 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:42,540 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:25:54,488 [http-nio-8080-exec-1] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:25:54,653 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:54,653 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:25:55,072 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:25:55,230 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:55,230 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:25:55,541 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+INFO    2022-01-26 22:25:55,704 [http-nio-8080-exec-7] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:25:55,704 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:55,704 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:25:55,874 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:25:55,874 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:28:41,598 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:28:41,599 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:29:22,763 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:29:22,764 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:29:54,635 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:29:54,636 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:37:29,181 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:37:29,349 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:29,349 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:37:29,749 [http-nio-8080-exec-9] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:37:29,912 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:29,912 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:37:30,241 [http-nio-8080-exec-7] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:37:30,411 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:30,412 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:37:31,383 [http-nio-8080-exec-2] com.example.StartConnection  - Data send to online
+INFO    2022-01-26 22:37:31,539 [http-nio-8080-exec-6] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:37:31,555 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:31,555 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-26 22:37:31,708 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-26 22:37:31,727 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:31,727 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:37:31,897 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:31,897 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:37:48,667 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:48,668 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-26 22:37:48,866 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-26 22:37:48,867 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 19:57:48,655 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 19:57:48,670 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:08:01,313 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:08:01,314 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:08:07,481 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:08:07,481 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:08:07,665 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:08:07,665 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:08:56,202 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:08:56,203 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:10:53,518 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:10:53,519 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:11:25,066 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:11:25,067 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:12:09,036 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:12:09,037 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:15:51,507 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:15:51,508 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:16:20,923 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:16:20,924 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:16:23,554 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:16:23,554 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:17:25,698 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:17:25,699 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:17:27,990 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:17:27,990 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:20:23,819 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:20:23,820 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:20:27,568 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:20:27,569 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:20:27,758 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:20:27,758 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:20:33,616 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:20:33,616 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:20:33,800 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:20:33,800 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:22:20,748 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:22:20,749 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:22:27,590 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:22:27,590 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:22:27,768 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:22:27,769 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:23:38,036 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:23:38,037 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:23:48,435 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:23:48,436 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:23:56,915 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:23:56,915 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:24:34,230 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:24:34,231 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:24:40,242 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:24:40,242 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:24:46,773 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:24:46,773 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:24:46,955 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:24:46,955 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:24:49,893 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:24:49,893 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:26:15,614 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:26:15,615 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:26:21,844 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:26:21,844 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:26:22,016 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:26:22,016 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:26:33,345 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:26:33,345 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:26:33,517 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:26:33,517 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:36:52,321 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:36:52,322 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:36:59,209 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:36:59,209 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:36:59,401 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:36:59,401 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:38:08,506 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:38:08,507 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:38:13,930 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:38:13,930 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:38:14,217 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:38:14,217 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:17,015 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:17,016 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:22,411 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:22,412 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:22,597 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:22,597 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:32,612 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:32,613 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:32,792 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:32,792 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:49,878 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:49,879 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:39:56,640 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:39:56,641 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:40:45,253 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:40:45,254 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:40:49,764 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:40:49,764 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:40:49,969 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:40:49,969 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:43:31,220 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:43:31,221 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:44:20,736 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:44:20,736 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:44:20,921 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:44:20,921 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:44:24,555 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:44:24,712 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:44:24,712 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:45:16,883 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:45:16,884 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:45:19,248 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:45:19,248 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:45:33,975 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:45:33,976 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:45:40,351 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:45:40,351 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:45:44,412 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:45:44,789 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:45:44,790 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:47:03,831 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:03,832 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:47:07,012 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:47:07,172 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:07,172 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:47:07,479 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:47:07,647 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:07,647 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:47:37,121 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:37,122 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:47:44,557 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:44,557 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:47:44,742 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:44,743 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:47:48,175 [http-nio-8080-exec-6] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:47:48,343 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:47:48,343 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:48:46,060 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:48:46,061 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:48:52,705 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:48:52,705 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:48:52,885 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:48:52,885 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:00,568 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:00,568 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:06,605 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:06,606 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:12,614 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:12,614 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:12,791 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:12,792 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:49:18,144 [http-nio-8080-exec-7] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:49:18,304 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:18,304 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:24,357 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:24,357 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:30,275 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:30,275 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:30,494 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:30,494 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:37,289 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:37,289 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:43,073 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:43,073 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:49:43,253 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:49:43,254 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:51:10,802 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:51:10,803 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:51:24,050 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:51:24,051 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:51:30,700 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:51:30,700 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:51:30,925 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:51:30,925 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:51:40,951 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:51:40,953 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:52:49,584 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:52:49,584 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:53:11,176 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:53:11,177 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:53:17,486 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:53:17,486 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:53:17,676 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:53:17,676 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:54:23,536 [http-nio-8080-exec-10] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:54:23,699 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:54:23,699 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:54:41,010 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:54:41,011 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:54:46,268 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:54:46,443 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:54:46,443 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:55:02,106 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:55:02,107 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:55:13,954 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:55:13,954 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:56:12,114 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:56:12,115 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:56:17,883 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:56:17,883 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:56:18,066 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:56:18,066 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 20:56:26,373 [http-nio-8080-exec-3] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 20:56:26,530 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:56:26,530 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:59:02,615 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:59:02,616 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:59:11,770 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:59:11,770 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 20:59:48,933 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 20:59:48,934 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:08,760 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:08,761 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:17,593 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:17,594 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:17,774 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:17,774 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 21:00:25,675 [http-nio-8080-exec-6] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 21:00:25,940 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:25,940 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:46,145 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:46,146 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:54,599 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:54,600 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:00:54,795 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:00:54,795 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:01:08,549 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:08,550 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:01:15,292 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:15,292 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:01:15,480 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:15,480 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:01:25,807 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:25,807 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:01:25,981 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:25,981 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 21:01:39,667 [http-nio-8080-exec-9] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 21:01:39,824 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:01:39,824 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:03:44,391 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:03:44,392 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:03:55,302 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:03:55,303 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:04:01,124 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:01,124 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:04:01,305 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:01,305 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:04:18,856 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:18,857 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:04:27,727 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:27,727 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-01-29 21:04:27,910 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:27,910 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-01-29 21:04:54,555 [http-nio-8080-exec-5] com.example.StartConnection  - Data send to online
+ERROR   2022-01-29 21:04:54,726 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-01-29 21:04:54,726 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 15:37:54,429 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 15:37:54,449 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:00:28,414 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:00:28,415 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:00:36,945 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:00:36,945 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:00:37,136 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:00:37,136 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:01:57,837 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:01:57,838 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:02:40,071 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:02:40,072 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:05:44,832 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:05:44,833 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:05:53,348 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:05:53,348 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:05:53,519 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:05:53,519 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:00,546 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:00,546 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:00,825 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:00,825 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:08,404 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:08,404 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:08,592 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:08,592 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:17,160 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:17,160 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:06:55,331 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:06:55,332 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:00,675 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:00,675 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:00,852 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:00,852 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:06,292 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:06,292 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:06,568 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:06,569 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:12,924 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:12,924 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:13,104 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:13,105 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:40,447 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:40,447 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:40,622 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:40,622 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:44,499 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:44,499 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:07:44,676 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:07:44,677 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:08:44,216 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:08:44,217 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:08:50,926 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:08:50,926 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:08:51,095 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:08:51,095 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:08:56,465 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:08:56,465 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:08:56,628 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:08:56,628 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:09:07,646 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:09:07,646 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:09:07,838 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:09:07,838 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:09:36,320 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:09:36,320 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:12:55,107 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:12:55,108 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:00,986 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:00,986 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:01,153 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:01,153 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:06,092 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:06,092 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:06,261 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:06,261 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:17,798 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:17,798 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:17,987 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:17,987 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:22,742 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:22,742 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:49,825 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:49,826 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:50,007 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:50,007 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:13:53,882 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:13:53,883 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:14:05,491 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:14:05,491 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:14:14,095 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:14:14,097 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:14:30,531 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:14:30,531 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:14:30,733 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:14:30,733 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:14:36,580 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:14:36,580 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:20:54,842 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:20:54,843 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:22:46,708 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:22:46,709 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:22:56,427 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:22:56,427 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:22:56,611 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:22:56,611 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+INFO    2022-02-02 16:24:17,492 [http-nio-8080-exec-8] com.example.StartConnection  - Data send to online
+ERROR   2022-02-02 16:24:17,657 [http-nio-8080-exec-9] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:24:17,657 [http-nio-8080-exec-9] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:24:29,458 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:24:29,458 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:25:53,483 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:25:53,484 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:25:58,327 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:25:58,327 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:25:58,512 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:25:58,512 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:07,494 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:07,494 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:07,678 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:07,678 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:12,684 [http-nio-8080-exec-10] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:12,684 [http-nio-8080-exec-10] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:16,033 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:16,033 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:22,362 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:22,362 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:26,738 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:26,738 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:29,361 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:29,361 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:38,661 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:38,662 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:43,981 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:43,982 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:44,159 [http-nio-8080-exec-7] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:44,160 [http-nio-8080-exec-7] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:45,955 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:45,955 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:26:50,430 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:26:50,430 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:27:52,231 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:27:52,231 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:00,150 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:00,150 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:00,338 [http-nio-8080-exec-6] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:00,338 [http-nio-8080-exec-6] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:12,645 [http-nio-8080-exec-8] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:12,645 [http-nio-8080-exec-8] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:12,821 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:12,821 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:22,856 [http-nio-8080-exec-3] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:22,856 [http-nio-8080-exec-3] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:23,036 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:23,036 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:28,499 [http-nio-8080-exec-5] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:28,499 [http-nio-8080-exec-5] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:28,694 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:28,694 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:32,541 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:32,541 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:28:32,835 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:28:32,835 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:29:37,441 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:29:37,443 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:29:42,504 [http-nio-8080-exec-2] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:29:42,504 [http-nio-8080-exec-2] com.example.StartConnection  - Data loaded to frontend
+ERROR   2022-02-02 16:29:42,689 [http-nio-8080-exec-4] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-02 16:29:42,690 [http-nio-8080-exec-4] com.example.StartConnection  - Data loaded to frontend

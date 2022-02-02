@@ -102,8 +102,7 @@ public class ApplicationController {
 
             }
             ArrayList<Domen> statistics = new ArrayList<>();
-            HashMap<String, Integer> mappedStatistic = ExcelDataInserter.getStatistics();
-            System.out.println(mappedStatistic);
+            HashMap<String, Integer> mappedStatistic = ExcelDataInserter.domianFunc();
             if (mappedStatistic != null) {
                 for (String key : mappedStatistic.keySet()) {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
@@ -146,6 +145,7 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         ShrekBD.applyLiveEdit(stringToEdit);
         applyFrontLiveEdt(stringToEdit);
+//        System.out.println(stringToEdit);
         return "redirect:/file";
     }
 
@@ -464,14 +464,80 @@ public class ApplicationController {
         for (List<HashMap<String, String>> list : items) {
             for (HashMap<String, String> dict : list) {
                 for (String domen : domens.split(" ")) {
-                    if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
-                        NeededItems.add(list);
+                    if (!domen.contains("@")) {
+                        if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
+                            NeededItems.add(list);
+                        }
+                    } else {
+                        if (dict.get("Data").equals(domen)) {
+                            NeededItems.add(list);
+                        }
                     }
+
                 }
             }
         }
         Pull = NeededItems;
         ActivePull.clear();
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/addUserToPresetLive")
+    public String addUserToPresetLive(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        createCheckPoint(Boolean.FALSE);
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+
+        List<String> domenList = new ArrayList<>();
+        for (String domen : domens.split("##")) {
+            domen = domen.replaceAll("[<>]*", "");
+            domenList.add(domen);
+        }
+        domenList.remove(0);
+
+        List<String> preSetsInForm = new ArrayList<>();
+
+        for (String preSet : preSets.split("!")) {
+            preSet = preSet.replaceAll("[<>]*", "");
+            preSetsInForm.add(preSet);
+
+        }
+        final String dir = System.getProperty("user.dir");
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+
+            // Convert JSON to JsonElement, and later to String
+            JsonElement json = gson.fromJson(reader, JsonElement.class);
+            String jsonInString = gson.toJson(json);
+            User[] userArray = gson.fromJson(jsonInString, User[].class);
+            for (User user : userArray) {
+                for (String preSet : preSetsInForm) {
+                    if (user.getName().equals(preSet)) {
+                        for (String domen : domenList) {
+                            if (user.getSets().equals("")) {
+                                user.setSets(domen);
+                            } else {
+                                user.setSets(user.getSets() + " " + domen);
+                            }
+                        }
+                    }
+                }
+            }
+
+            String jsonToWrite = gson.toJson(userArray);
+            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+                writer.write(jsonToWrite);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return "redirect:/file";
 
     }
@@ -535,23 +601,30 @@ public class ApplicationController {
     }
 
     public void applyFrontLiveEdt(String dataToEdit) {
-        ArrayList<String> data = new ArrayList<>(Arrays.asList(dataToEdit.split("##")));
-        data.remove(0);
-        String emailToEdit = data.get(data.size() - 1);
-        List<HashMap<String, String>> finded = new ArrayList<>();
-        List<HashMap<String, String>> newDataRow = new ArrayList<>();
-        for (List<HashMap<String, String>> dataRow : ActivePull) {
-            if (dataRow.get(dataRow.size() - 1).get("Data").equals(emailToEdit)) {
-                for (String dataCell : data) {
-                    HashMap<String, String> d = new HashMap<>();
-                    d.put("Data", dataCell);
-                    newDataRow.add(d);
+        ArrayList<String> fullData = new ArrayList<>(Arrays.asList(dataToEdit.split("@@@")));
+        fullData.remove(0);
+        for (String string : fullData) {
+            ArrayList<String> data = new ArrayList<>(Arrays.asList(string.split("##")));
+            data.remove(0);
+            data.remove(0);
+            String emailToEdit = data.get(data.size() - 1);
+            List<HashMap<String, String>> finded = new ArrayList<>();
+            List<HashMap<String, String>> newDataRow = new ArrayList<>();
+            for (List<HashMap<String, String>> dataRow : ActivePull) {
+                if (dataRow.get(dataRow.size() - 1).get("Data").equals(emailToEdit)) {
+                    for (String dataCell : data) {
+                        HashMap<String, String> d = new HashMap<>();
+                        d.put("Data", dataCell);
+                        newDataRow.add(d);
+                    }
+                    finded = dataRow;
+                    break;
                 }
-                finded = dataRow;
-                break;
             }
+            ActivePull.set(ActivePull.indexOf(finded), newDataRow);
         }
-        ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+
+
     }
 
     public void applyFrontLiveDelete(String emailsToDelete) {

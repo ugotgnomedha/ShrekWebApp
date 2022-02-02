@@ -14,9 +14,10 @@ import static com.example.Constants.*;
 
 public class ExcelDataInserter {
     private static final Logger logger = LogManager.getLogger(ExcelDataInserter.class);
-    public static HashMap<String, Integer> domain_counter = new HashMap<>();
 
-    public static void domianFunc() {
+
+    public static HashMap<String, Integer> domianFunc() {
+        HashMap<String, Integer> domain_counter = new HashMap<>();
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
@@ -24,6 +25,7 @@ public class ExcelDataInserter {
             while (rs.next()) {
                 if (rs.getString(1).contains("@")) {
                     String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
+                    domain_full = domain_full.replaceAll(" ", "");
                     String domain = domain_full.substring(domain_full.indexOf("."));
                     // get the value of the specified domain.
                     Integer count = domain_counter.get(domain);
@@ -40,7 +42,7 @@ public class ExcelDataInserter {
         } catch (Exception e) {
             logger.error("Invalid email format");
         }
-
+        return domain_counter;
     }
 
     public static void inserter(XSSFSheet sheet) {
@@ -98,8 +100,7 @@ public class ExcelDataInserter {
         inserter(sheet);
     }
 
-    public static HashMap<String, Integer> getStatistics() {
-        domianFunc();
-        return domain_counter;
-    }
+//    public static HashMap<String, Integer> getStatistics() {
+//        return domain_counter;
+//    }
 }

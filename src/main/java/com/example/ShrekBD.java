@@ -33,6 +33,7 @@ public class ShrekBD {
     public static void save() throws SQLException {
         stmt = connection.createStatement();
         stmt.executeUpdate("COMMIT WORK;");
+        caller_transaction = 0;
     }
 
     public static void deleteDuples(String email, List<String> data) throws SQLException {
@@ -252,25 +253,49 @@ public class ShrekBD {
     }
 
     public static void applyLiveEdit(String stringToEdit) throws SQLException {
+        if(stmt == null){
+            stmt = connection.createStatement();
+        }
         if (caller_transaction == 0) {
             stmt.executeUpdate("BEGIN WORK;");
             caller_transaction = caller_transaction + 1;
         }
-        ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
+        ArrayList<ArrayList<String>>  clearData= new ArrayList<ArrayList<String>>();
+        ArrayList<String> listOfData = new ArrayList<>(Arrays.asList(stringToEdit.split("@@@")));
+        for(String string: listOfData){
+            ArrayList<String> data = new ArrayList<>(Arrays.asList(string.split("##")));
+            if(data.size()>1){
+                data.remove(0);
+                data.remove(0);
+            }
+
+            clearData.add(data);
+        }
+        clearData.remove(0);
+        System.out.println(clearData);
+
         ArrayList<String> column_names = getOnlineTableHeaders();
         int j = 0;
-        String email = data.get(data.size() - 1);
-        for (String ignored : column_names) {
-            if (!column_names.get(j).equals("id")) {
-                stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
-                stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(data.get(j)) + " where email = " + quote(email) + ";");
-                if (j == data.size() - 1) {
-                    break;
+        int i = 0;
+        for (ArrayList<String> man : clearData){
+            String email = man.get(man.size() - 1);
+            for (String ignored : column_names) {
+                if (!column_names.get(j).equals("id")) {
+                    stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
+                    stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
+                    System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
+                    if (i == man.size() - 1) {
+                        break;
+                    }
+                    i++;
                 }
+                j++;
+
             }
-            j++;
+            changes_num++;
         }
-        changes_num++;
+
+
     }
 
     public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {

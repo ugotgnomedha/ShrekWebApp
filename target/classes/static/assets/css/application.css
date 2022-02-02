@@ -326,6 +326,7 @@ details[open] summary:after {
 }
 
 .popup {
+    position: fixed;
     width: 350px;
     height: 280px;
     padding: 30px 20px;
@@ -502,6 +503,18 @@ details[open] summary:after {
 .centre-img {
     display: block;
     margin: auto;
+}
+
+#save:hover{
+    transform: scale(1.05,1.05);
+}
+
+#add-domen:hover{
+    transform: scale(1.05,1.05);
+}
+
+#play-button:hover{
+    transform: scale(1.05,1.05);
 }
 
 .c-c {
