@@ -167,6 +167,18 @@ public class ShrekBD {
 
     }
 
+    public void createExport(List<String> listOfEmails) throws SQLException {
+        stmt = connection.createStatement();
+        final String dir = System.getProperty("user.dir");
+        stmt.execute("DROP TABLE " + temporaryDataBaseName + "");
+        stmt.execute("CREATE TABLE " + temporaryDataBaseName + " AS TABLE " + mainDataBaseName + " WITH NO DATA;");
+        for (String email : listOfEmails) {
+            stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE email LIKE '" + "%" + email + "%" + "' ");
+        }
+        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + dir + "\\src\\main\\resources\\static\\assets\\export\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+        stmt.close();
+    }
+
     public void drop() throws SQLException {
         stmt = connection.createStatement();
         stmt.execute("delete from " + mainDataBaseName + ";");
@@ -247,24 +259,24 @@ public class ShrekBD {
             caller_transaction = caller_transaction + 1;
         }
         stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
-        for(String email: data){
+        for (String email : data) {
             stmt.executeUpdate("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
         }
     }
 
     public static void applyLiveEdit(String stringToEdit) throws SQLException {
-        if(stmt == null){
+        if (stmt == null) {
             stmt = connection.createStatement();
         }
         if (caller_transaction == 0) {
             stmt.executeUpdate("BEGIN WORK;");
             caller_transaction = caller_transaction + 1;
         }
-        ArrayList<ArrayList<String>>  clearData= new ArrayList<ArrayList<String>>();
+        ArrayList<ArrayList<String>> clearData = new ArrayList<ArrayList<String>>();
         ArrayList<String> listOfData = new ArrayList<>(Arrays.asList(stringToEdit.split("@@@")));
-        for(String string: listOfData){
+        for (String string : listOfData) {
             ArrayList<String> data = new ArrayList<>(Arrays.asList(string.split("##")));
-            if(data.size()>1){
+            if (data.size() > 1) {
                 data.remove(0);
                 data.remove(0);
             }
@@ -272,18 +284,16 @@ public class ShrekBD {
             clearData.add(data);
         }
         clearData.remove(0);
-        System.out.println(clearData);
 
         ArrayList<String> column_names = getOnlineTableHeaders();
         int j = 0;
         int i = 0;
-        for (ArrayList<String> man : clearData){
+        for (ArrayList<String> man : clearData) {
             String email = man.get(man.size() - 1);
             for (String ignored : column_names) {
                 if (!column_names.get(j).equals("id")) {
                     stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
                     stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
-                    System.out.println("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
                     if (i == man.size() - 1) {
                         break;
                     }
@@ -298,7 +308,7 @@ public class ShrekBD {
 
     }
 
-    public ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {
+    public static ArrayList<String> listFilesUsingDirectoryStream(String dir) throws IOException {
         ArrayList<String> fileList = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(dir))) {
             for (Path path : stream) {
@@ -309,6 +319,17 @@ public class ShrekBD {
             }
         }
         return fileList;
+    }
+
+    public static void createExportDelete() throws IOException {
+        final String dir = System.getProperty("user.dir");
+        deleteAllFilesFolder(dir + "\\src\\main\\resources\\static\\assets\\export");
+        System.out.println(listFilesUsingDirectoryStream(dir + "\\src\\main\\resources\\static\\assets\\export"));
+    }
+
+    public static void deleteAllFilesFolder(String path) {
+        for (File myFile : new File(path).listFiles())
+            if (myFile.isFile()) myFile.delete();
     }
 
 

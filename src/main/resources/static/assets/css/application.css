@@ -500,6 +500,10 @@ details[open] summary:after {
     padding-left: 0;
 }
 
+.zoom-button:hover{
+    transform: scale(1.05,1.05);
+}
+
 .centre-img {
     display: block;
     margin: auto;

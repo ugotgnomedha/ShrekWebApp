@@ -35,6 +35,7 @@ public class ApplicationController {
 
     private final int numerOfTableLines = 20;
     public static Integer counter = 1;
+    public static Boolean direction = true;
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
@@ -59,6 +60,7 @@ public class ApplicationController {
     @GetMapping("/file")
     public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
+            System.out.println(history);
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
@@ -434,11 +436,51 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         Statement stmt = shrek.stmt;
         Integer index = shrek.changes_num - counter;
-        if (shrek.changes_num - counter >= 0) {
-            //index = index - 1;
-            stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
-            counter = counter + 1;
+        if(direction){
+            if (shrek.changes_num - counter > 0) {
+                //index = index - 1;
+                index--;
+                stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
+                counter = counter + 1;
+            }
+            direction = false;
+        }else{
+            if (shrek.changes_num - counter >= 0) {
+                //index = index - 1;
+                stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
+                counter = counter + 1;
+            }
+            direction = false;
         }
+
+    }
+
+    @PostMapping("/EasyExport")
+    public String easyExport(@RequestParam("null") String neededArgument) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        List<String> listOfEmails = new ArrayList<String>();
+        for (List<HashMap<String, String>> dict : ActivePull) {
+            for (HashMap<String, String> data : dict) {
+                if (data.get("Data").contains("@")) {
+                    listOfEmails.add(data.get("Data"));
+                }
+            }
+        }
+        shrek.createExport(listOfEmails);
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/EasyExportDelete")
+    public String easyExportDelete(@RequestParam("null") String neededArgument) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        shrek.createExportDelete();
+        return "redirect:/file";
+
     }
 
     @PostMapping("/usePreSet")
@@ -542,6 +584,7 @@ public class ApplicationController {
 
     }
 
+
     @PostMapping("/getData")
     public String addData(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         createCheckPoint(Boolean.FALSE);
@@ -640,47 +683,50 @@ public class ApplicationController {
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
-        final String dir = System.getProperty("user.dir");
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
-            // запись всей строки
-            if (history.size() > 0) {
-                String text = history.get(history.size() - 1).get(0);
-                if (text.equals("[]")) {
-                    text = "[]";
+        if(history.size()>0){
+            final String dir = System.getProperty("user.dir");
+            try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
+                // запись всей строки
+                if (history.size() > 0) {
+                    String text = history.get(history.size() - 1).get(0);
+                    if (text.equals("[]")) {
+                        text = "[]";
+                    }
+                    writer.write(text);
+                } else {
+                    writer.write("[]");
                 }
-                writer.write(text);
-            } else {
-                writer.write("[]");
+
+                writer.flush();
+
+            } catch (IOException ex) {
+
+                System.out.println(ex.getMessage());
             }
-
-            writer.flush();
-
-        } catch (IOException ex) {
-
-            System.out.println(ex.getMessage());
-        }
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json", false)) {
-            // запись всей строки
-            if (history.size() > 0) {
-                String text = history.get(history.size() - 1).get(1);
-                if (text.equals("[]")) {
-                    text = "[]";
+            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json", false)) {
+                // запись всей строки
+                if (history.size() > 0) {
+                    String text = history.get(history.size() - 1).get(1);
+                    if (text.equals("[]")) {
+                        text = "[]";
+                    }
+                    writer.write(text);
+                } else {
+                    writer.write("[]");
                 }
-                writer.write(text);
-            } else {
-                writer.write("[]");
+
+                writer.flush();
+
+            } catch (IOException ex) {
+
+                System.out.println(ex.getMessage());
             }
-
-            writer.flush();
-
-        } catch (IOException ex) {
-
-            System.out.println(ex.getMessage());
+            if (history.size() > 0) {
+                cancelLiveEdit();
+            }
+            if (history.size() > 0) history.remove(history.size() - 1);
         }
-        if (history.size() > 0) {
-            cancelLiveEdit();
-        }
-        if (history.size() > 0) history.remove(history.size() - 1);
+
     }
 
 
