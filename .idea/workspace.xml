@@ -27,213 +27,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="add live edit add preset option">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_3_1.xml" beforeDir="false" />
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="fix back button and deploy prepare">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preSets/domens.json" beforeDir="false" afterPath="$PROJECT_DIR$/preSets/domens.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preSets/staff.json" beforeDir="false" afterPath="$PROJECT_DIR$/preSets/staff.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shrek.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/icon_save.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/Icon_save.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/js/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/application.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/application.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ApplicationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DBConnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Domen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelDataInserter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExelParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/StartConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/TableCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/basic_insert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/email_insert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/excel_parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/parse_determine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/parser_excel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/storage/FileSystemStorageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/storage/StorageException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/storage/StorageFileNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/storage/StorageProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/storage/StorageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/css/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/css/newApplication.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/1588.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/552-5520952_play-button-watch-video-understand-the-power-clarip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_import.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/Icon_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-author.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-inside-post.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-recent-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-recent-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-recent-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-recent-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/blog-recent-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/blog/comments-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/clients/client-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/confirm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/datalogo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/features-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/features-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/features.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/filt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/footer-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/hero-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/hero-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/hero-img.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/icon_save.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/loginError.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/nlogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/portfolio/portfolio-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/pricing-business.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/pricing-free.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/pricing-starter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/pricing-ultimate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/save.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/team-shape.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/team/team-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/team/team-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/team/team-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/team/team-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/testimonials/testimonials-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/testimonials/testimonials-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/testimonials/testimonials-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/testimonials/testimonials-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/testimonials/testimonials-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/values-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/values-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/values-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/vr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/img/фккщц.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/adding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/application.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/aos/aos.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/aos/aos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap-icons/bootstrap-icons.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap-icons/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/glightbox/css/glightbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/glightbox/css/glightbox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/glightbox/js/glightbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/glightbox/js/glightbox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/isotope-layout/isotope.pkgd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/isotope-layout/isotope.pkgd.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/php-email-form/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/purecounter/purecounter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.symbol.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/remixicon/remixicon.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/swiper/swiper-bundle.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/vendor/swiper/swiper-bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/application.mustache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newApplication.mustache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar.original" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,19 +107,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -497,7 +279,8 @@
       <workItem from="1643222615723" duration="4278000" />
       <workItem from="1643475173400" duration="4308000" />
       <workItem from="1643805443199" duration="3252000" />
-      <workItem from="1644055752165" duration="11767000" />
+      <workItem from="1644055752165" duration="11904000" />
+      <workItem from="1644073333046" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -709,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643808619524</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix back button and deploy prepare">
+      <created>1644071594925</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1644071594925</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +545,8 @@
     <MESSAGE value="new design" />
     <MESSAGE value="add action menu" />
     <MESSAGE value="add live edit add preset option" />
-    <option name="LAST_COMMIT_MESSAGE" value="add live edit add preset option" />
+    <MESSAGE value="fix back button and deploy prepare" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix back button and deploy prepare" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1642771557105">
@@ -786,62 +577,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1643187335881" />
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.0.center" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.0.left" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.0.right" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom" timestamp="1644071389380">
+    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389380" />
-    <state width="1877" height="300" key="GridCell.Tab.1.center" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.1.left" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="300" key="GridCell.Tab.1.right" timestamp="1644071389379">
+    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071389379" />
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1644068725277">
+    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1644071615944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644068725277" />
-    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1644068725277">
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615944" />
+    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644068725277" />
-    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1644068725276">
+    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644068725276" />
-    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1644068725277">
+    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
+    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1644071615943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644068725277" />
+    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
     <state x="666" y="240" key="RollbackChangesDialog" timestamp="1642608841794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -850,10 +641,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1644059213467" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1643808640736">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1644073389034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1643808640736" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1644073389034" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636733872466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
