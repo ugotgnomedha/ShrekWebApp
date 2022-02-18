@@ -27,93 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy prepare">
-      <change beforePath="$PROJECT_DIR$/-uploaded" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3b4bbf4e-2a3f-474c-a0fa-81886ad5aeca.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Headers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_add.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_back.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_export.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_filter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_import.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_play.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/icon_save.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image002.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PMdgHH09XxU.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PreSetedData.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PzO_QMQFvhc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShrekWebApp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShrekWebApp.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UNmail.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__MACOSX/._data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataDuplet.XLSX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataFull.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataDuplet.XLSX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataFull.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataShort.XLSX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataSmall.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/1 ßGaá¡¿µá/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/1 ßGaá¡¿µá/1.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/2 ßGaá¡¿µá/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/2 ßGaá¡¿µá/2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/3 «¬¡«/3.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/3 «¬¡«/3apß.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/4 «¬¡«/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/4 «¬¡«/4.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/1588.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/286-2866560_save-save-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/312.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/552-5520952_play-button-watch-video-understand-the-power-clarip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/check-mark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/ö«¡.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/ö«¡123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postgresql-42.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preSets/domens.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preSets/staff.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shrek.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExcelDataInserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExcelDataInserter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExcelParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExcelParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_import.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgtopng/icon_save.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ApplicationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelDataInserter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ExcelDataInserter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ExcelParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring-boot-docker.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring-boot-docker.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.ODS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tlvwqQ_0mR8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trash.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Снимок экрана 2021-12-23 155539.png" beforeDir="false" />
-    </list>
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy prepare" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -385,7 +299,7 @@
       <workItem from="1644592538435" duration="5262000" />
       <workItem from="1645180478331" duration="2164000" />
       <workItem from="1645183146920" duration="1260000" />
-      <workItem from="1645184515979" duration="759000" />
+      <workItem from="1645184515979" duration="1546000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
