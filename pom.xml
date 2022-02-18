@@ -15,7 +15,6 @@
     <artifactId>ShrekWebApp</artifactId>
     <version>1.0</version>
     <properties>
-        <java.version>17</java.version>
     </properties>
 
     <dependencies>
