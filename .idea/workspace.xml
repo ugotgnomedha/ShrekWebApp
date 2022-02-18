@@ -28,6 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,8 +129,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrekWebApp-1.0-SNAPSHOT.jar (1)" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/ShrekWebApp-1.0-SNAPSHOT.jar" />
+    <configuration name="ShrekWebApp-1.0.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/ShrekWebApp-1.0.jar" />
       <method v="2" />
     </configuration>
     <configuration name="ShrekWebApp.jar (1)" type="JarApplication" temporary="true">
@@ -152,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.ShrekWebApp-1.0.jar" />
         <item itemvalue="JAR Application.ShrekWebApp.jar (1)" />
         <item itemvalue="Application.Application" />
         <item itemvalue="JAR Application.spring-boot-docker.jar" />
         <item itemvalue="JAR Application.ShrekWebApp.jar" />
-        <item itemvalue="JAR Application.ShrekWebApp-1.0-SNAPSHOT.jar (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +306,8 @@
       <workItem from="1645184515979" duration="12959000" />
       <workItem from="1645201176916" duration="3196000" />
       <workItem from="1645204424995" duration="251000" />
-      <workItem from="1645204698141" duration="5440000" />
+      <workItem from="1645204698141" duration="6699000" />
+      <workItem from="1645212181001" duration="1665000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
