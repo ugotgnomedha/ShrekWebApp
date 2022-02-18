@@ -37,46 +37,6 @@ public class ShrekBD {
         caller_transaction = 0;
     }
 
-    public static void deleteDuples(String email, List<String> data) throws SQLException {
-        stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " WHERE email LIKE '" + email + "' ");
-        List<Map> items = new ArrayList<>();
-        List<String> phones = new ArrayList<>();
-        String phoneLine = "";
-        int i = 1;
-        while (rs.next()) {
-            Map<String, String> item = new HashMap<>();
-            item.put("index", String.valueOf(i));
-            item.put("Фио", rs.getString("name_"));
-            item.put("Пол", rs.getString("sex"));
-            item.put("Возраст", rs.getString("age"));
-            item.put("Телефон", rs.getString("phone"));
-            item.put("email", rs.getString("email"));
-            items.add(item);
-            i++;
-        }
-        for (int t = 0; t < items.size(); t++) {
-            String testPhone = String.valueOf(items.get(t).get("phone"));
-            boolean flag = false;
-            if (!phoneLine.equals("")) {
-                flag = true;
-            }
-            if (!phoneLine.contains(testPhone)) {
-                if (flag) {
-                    phoneLine = phoneLine + " • " + testPhone;
-                } else {
-                    phoneLine = phoneLine + testPhone;
-                }
-
-            }
-
-        }
-        String sql_update = "DELETE FROM " + mainDataBaseName + " WHERE email = " + spec_sym + email + spec_sym + "";
-        stmt.execute(sql_update);
-        stmt.execute("INSERT INTO " + mainDataBaseName + " (NAME_ , SEX, AGE, PHONE, EMAIL) VALUES (" + spec_sym + data.get(0) + spec_sym + "," + spec_sym + data.get(1) + spec_sym + "," + spec_sym + data.get(2) + spec_sym + "," + spec_sym + phoneLine + spec_sym + "," + spec_sym + data.get(4) + spec_sym + ")");
-    }
-
-
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
         File convFile = new File(file.getOriginalFilename());
         FileOutputStream fos = new FileOutputStream(convFile);
@@ -167,19 +127,6 @@ public class ShrekBD {
         stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
 
     }
-
-    public void createExport(List<String> listOfEmails) throws SQLException {
-        stmt = connection.createStatement();
-        final String dir = System.getProperty("user.dir");
-        stmt.execute("DROP TABLE " + temporaryDataBaseName + "");
-        stmt.execute("CREATE TABLE " + temporaryDataBaseName + " AS TABLE " + mainDataBaseName + " WITH NO DATA;");
-        for (String email : listOfEmails) {
-            stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE email LIKE '" + "%" + email + "%" + "' ");
-        }
-        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + dir + "\\src\\main\\resources\\static\\assets\\export\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
-        stmt.close();
-    }
-
     public void drop() throws SQLException {
         stmt = connection.createStatement();
         stmt.execute("delete from " + mainDataBaseName + ";");

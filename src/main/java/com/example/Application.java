@@ -22,10 +22,10 @@ public class Application {
     private static ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
-//        String configPath = System.getProperty("shrekAppConfig");
-        String configPath = "D:\\Files\\Programming\\projects\\JavaProgramming\\ShrekWebApp\\ShrekAppConfig.properties";
-        logger.info("config file - " + configPath + "");
-        ConfigGetter.get_configs(configPath);
+//        final String dir = System.getProperty("user.dir");
+//        String configPath = dir + "\\ShrekAppConfig.properties";
+//        logger.info("config file - " + configPath + "");
+//        ConfigGetter.get_configs(configPath);
         new File(uploadDirectory).mkdir();
         SpringApplication.run(Application.class, args);
     }

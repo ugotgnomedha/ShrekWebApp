@@ -344,7 +344,7 @@ public class ApplicationController {
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
-        String[] words = name.strip().split(" ");
+        String[] words = name.trim().split(" ");
         ArrayList<String> keys = new ArrayList<>(Arrays.asList(words));
         createCheckPoint(Boolean.FALSE);
 
@@ -382,7 +382,7 @@ public class ApplicationController {
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
-        String[] words = name.strip().split(" ");
+        String[] words = name.trim().split(" ");
         ArrayList<String> keys = new ArrayList<>(Arrays.asList(words));
         createCheckPoint(Boolean.FALSE);
 
@@ -451,24 +451,6 @@ public class ApplicationController {
             }
             direction = false;
         }
-
-    }
-
-    @PostMapping("/EasyExport")
-    public String easyExport(@RequestParam("null") String neededArgument) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-        ShrekBD shrek = new ShrekBD();
-        List<String> listOfEmails = new ArrayList<String>();
-        for (List<HashMap<String, String>> dict : ActivePull) {
-            for (HashMap<String, String> data : dict) {
-                if (data.get("Data").contains("@")) {
-                    listOfEmails.add(data.get("Data"));
-                }
-            }
-        }
-        shrek.createExport(listOfEmails);
-        return "redirect:/file";
 
     }
 

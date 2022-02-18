@@ -27,7 +27,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy prepare" />
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShrekAppConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ShrekAppConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preSets/domens.json" beforeDir="false" afterPath="$PROJECT_DIR$/preSets/domens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,11 +97,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.46" />
-    <property name="last_opened_file_path" value="C:/Java" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.5873563" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -98,7 +109,7 @@
       <recent name="D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -150,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
         <item itemvalue="JAR Application.ShrekWebApp.jar (1)" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="JAR Application.spring-boot-docker.jar" />
         <item itemvalue="JAR Application.ShrekWebApp.jar" />
         <item itemvalue="JAR Application.ShrekWebApp-1.0-SNAPSHOT.jar (1)" />
@@ -299,7 +310,10 @@
       <workItem from="1644592538435" duration="5262000" />
       <workItem from="1645180478331" duration="2164000" />
       <workItem from="1645183146920" duration="1260000" />
-      <workItem from="1645184515979" duration="1546000" />
+      <workItem from="1645184515979" duration="12959000" />
+      <workItem from="1645201176916" duration="3196000" />
+      <workItem from="1645204424995" duration="251000" />
+      <workItem from="1645204698141" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -525,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644489558749</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="gitignore">
+      <created>1645186223433</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1645186223433</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +567,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="gdsgfd" />
     <MESSAGE value="dfsd" />
     <MESSAGE value="Clean code, delete all SpringStorageServices" />
     <MESSAGE value="Add normal file adding menu" />
@@ -571,6 +591,7 @@
     <MESSAGE value="add live edit add preset option" />
     <MESSAGE value="fix back button and deploy prepare" />
     <MESSAGE value="deploy prepare" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy prepare" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>
