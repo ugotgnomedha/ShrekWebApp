@@ -1,1 +1,1 @@
-web: java -jar target/ShrekWebApp.jar
+web: java -jar target/ShrekWebApp-1.0.jar
