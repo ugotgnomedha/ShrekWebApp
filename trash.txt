@@ -1,7 +1,0 @@
-      {{#items}}
-                 <tr>
-                     {{#List}}
-                         <td><input class="table-input" type="text" name="some" value="{{Data}}"></td>
-                     {{/List}}
-                 </tr>
-             {{/items}}

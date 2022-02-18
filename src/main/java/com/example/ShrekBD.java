@@ -3,6 +3,7 @@ package com.example;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import org.springframework.core.env.Environment;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -192,12 +193,24 @@ public class ShrekBD {
                 .toString();
     }
 
-    public List<HashMap<String, String>> getPreSets() throws FileNotFoundException {
+    public List<HashMap<String, String>> getPreSets() throws IOException {
         final String dir = System.getProperty("user.dir");
-
+        String filePathString = dir + "\\preSets\\staff.json";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
-        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+        File f = new File(filePathString);
+        File folder = new File(dir +
+                File.separator + "preSets");
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
+        if(!f.exists() || f.isDirectory()) {
+            File newDir = new File(dir + "\\preSets");
+            File myFile = new File(dir + "\\preSets\\staff.json");
+            Writer writer = new FileWriter(filePathString);
+            writer.write("[]");
+            writer.close();
+        }
+        try (Reader reader = new FileReader(filePathString)) {
 
             // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
@@ -223,11 +236,23 @@ public class ShrekBD {
         return null;
     }
 
-    public List<HashMap<String, String>> getDomens() throws FileNotFoundException {
+    public List<HashMap<String, String>> getDomens() throws IOException {
         final String dir = System.getProperty("user.dir");
-
+        String filePathString = dir + "\\preSets\\domens.json";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
+        File f = new File(filePathString);
+        File folder = new File(dir +
+                File.separator + "preSets");
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
+        if(!f.exists() || f.isDirectory()) {
+            File newDir = new File(dir + "\\preSets");
+            File myFile = new File(dir + "\\preSets\\domens.json");
+            Writer writer = new FileWriter(filePathString);
+            writer.write("[]");
+            writer.close();
+        }
         try (Reader reader = new FileReader(dir + "\\preSets\\domens.json")) {
 
             // Convert JSON to JsonElement, and later to String

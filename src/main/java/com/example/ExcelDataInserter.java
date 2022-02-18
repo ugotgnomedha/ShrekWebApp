@@ -3,7 +3,6 @@ package com.example;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
@@ -45,49 +44,7 @@ public class ExcelDataInserter {
         return domain_counter;
     }
 
-    public static void inserter(XSSFSheet sheet) {
-        try {
-            Statement statement = DBConnect.connection.createStatement();
-            int column_count = sheet.getRow(0).getLastCellNum();
-            for (int i = 0; i < column_count; i++) {  // Switch columns.
-                for (Row row : sheet) {  // Switch rows.
-                    if (ExcelParser.excelheaders.get(i).equals("Email") || ExcelParser.excelheaders.get(i).equals("email")) {
-                        Cell cell_email = row.getCell(ExcelParser.emailColumnIndex);
-                        statement.executeUpdate("INSERT INTO " + "jc_contact" + "(email) VALUES ('" + cell_email + "') ON CONFLICT (email) DO NOTHING");
-                    } else {
-                        Cell cell_ = row.getCell(i);
-                        if (cell_ != null) {
-                            String cell = cell_.toString();
-                            String comment = "-";
-                            String value = (cell == null) ? "-" : cell;
-                            if (value.contains("—")) {
-                                comment = value.substring(value.indexOf("—") + 1);
-                            } else if (value.contains("•")) {
-                                comment = value.substring(value.indexOf("•") + 1);
-                            }
-
-                            if (cell.contains("•")) {
-                                cell = cell.substring(0, cell.indexOf("•"));
-                            } else if (cell.contains("—")) {
-                                cell = cell.substring(0, cell.indexOf("—"));
-                            }
-                            statement.executeUpdate("INSERT INTO jc_contact(email, " + ExcelParser.excelheaders.get(i) + ", comment) VALUES ('" + row.getCell(ExcelParser.emailColumnIndex) + "', '" + cell + "', '" + comment + "') ON CONFLICT (email) DO UPDATE SET " + ExcelParser.excelheaders.get(i) + " = '" + cell + "'");
-                            if (!comment.equals("-")) {
-                                statement.executeUpdate("INSERT INTO jc_contact(email, comment) VALUES ('" + row.getCell(ExcelParser.emailColumnIndex) + "', '" + comment + "') ON CONFLICT (email) DO UPDATE SET comment = '" + comment + "'");
-                            }
-                        }
-
-                    }
-                }
-            }
-            statement.close();
-            domianFunc();
-        } catch (SQLException ignored) {
-            ignored.printStackTrace();
-        }
-    }
-
-    public static void insert(XSSFSheet sheet, FormulaEvaluator formulaEvaluator) {
+    public static void columnCheck(XSSFSheet sheet) {
         if (!ExcelParser.dbtableheaders.containsAll(ExcelParser.excelheaders)) {
             try {
                 Statement statement = DBConnect.connection.createStatement();
@@ -97,7 +54,53 @@ public class ExcelDataInserter {
             }
             TableCreator.jcContactTable(); //Create table and columns.
         }
-        inserter(sheet);
+        bulkInsertAssembler(sheet);
+        //System.out.println(domain_counter);
+    }
+
+    public static void bulkInsertAssembler(XSSFSheet sheet) {
+        String insertSql = "INSERT INTO jc_contact" + "  (" + String.join(", ", ExcelParser.excelheaders) + ", comment) VALUES (-) ON CONFLICT (email) DO NOTHING";
+        for (int i = 0; i < ExcelParser.excelheaders.size(); i++) {
+            insertSql = insertSql.replaceAll("-", "?, -");
+        }
+        insertSql = insertSql.replace(", -", ", ?"); // Last one for comment.
+        //System.out.println(insertSql);
+
+        int column_count = sheet.getRow(0).getLastCellNum();
+        int count = 1;
+
+        try {
+            PreparedStatement preparedStatement = DBConnect.connection.prepareStatement(insertSql);
+            DBConnect.connection.setAutoCommit(false);
+
+            for (Row row : sheet) {  // Switch rows.
+                String comment = "-";
+                for (int i = 0; i < column_count; i++) {  // Switch columns.
+                    Cell cell = row.getCell(i);
+                    String value = (cell == null) ? "-" : cell.toString();
+                    if (value.contains("—")) {
+                        comment = value.substring(value.indexOf("—") + 1);
+                        value = value.substring(0, value.indexOf("—"));
+                    } else if (value.contains("•")) {
+                        comment = value.substring(value.indexOf("•") + 1);
+                        value = value.substring(0, value.indexOf("•"));
+                    }
+                    preparedStatement.setString(count, value);
+                    if (count == column_count) {
+                        count = 0;
+                    }
+                    count++;
+                }
+                preparedStatement.setString(column_count + 1, comment);
+                preparedStatement.addBatch();
+            }
+
+            preparedStatement.executeBatch();
+            DBConnect.connection.commit();
+            DBConnect.connection.setAutoCommit(true);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }
 
 //    public static HashMap<String, Integer> getStatistics() {

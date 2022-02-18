@@ -27,8 +27,92 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="fix back button and deploy prepare">
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy prepare">
+      <change beforePath="$PROJECT_DIR$/-uploaded" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3b4bbf4e-2a3f-474c-a0fa-81886ad5aeca.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Headers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_export.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_filter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_import.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/Icon_play.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Icons Filtration/Icons Filtration/icon_save.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image002.tif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PMdgHH09XxU.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PreSetedData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PzO_QMQFvhc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShrekWebApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShrekWebApp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Statistics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNmail.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__MACOSX/._data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataDuplet.XLSX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataFull.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataDuplet.XLSX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataFull.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataShort.XLSX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataSmall.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/1 ßGaá¡¿µá/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/1 ßGaá¡¿µá/1.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/2 ßGaá¡¿µá/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/2 ßGaá¡¿µá/2.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/3 «¬¡«/3.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/3 «¬¡«/3apß.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/4 «¬¡«/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/4 «¬¡«/4.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/1588.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/286-2866560_save-save-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/312.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/552-5520952_play-button-watch-video-understand-the-power-clarip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/check-mark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/ö«¡.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter/¿¬«¡¬¿/ö«¡123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgresql-42.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preSets/domens.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preSets/staff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shrek.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExcelDataInserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExcelDataInserter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ExcelParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ExcelParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_export.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_filter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_import.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/Icon_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svgtopng/icon_save.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ApplicationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelDataInserter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ExcelDataInserter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ExcelParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ExcelParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ShrekBD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring-boot-docker.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spring-boot-docker.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring-boot-docker.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.ODS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tlvwqQ_0mR8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Снимок экрана 2021-12-23 155539.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +138,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="C:\Users\phili\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -83,13 +171,12 @@
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.20.23" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/postgresql-42.3.1.jar" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.20.46" />
+    <property name="last_opened_file_path" value="C:/Java" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +184,20 @@
       <recent name="D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Application.Application">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Application" />
       <module name="ShrekWebApp" />
@@ -111,12 +211,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShrekWebApp-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/ShrekWebApp-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <method v="2" />
-    </configuration>
     <configuration name="ShrekWebApp-1.0-SNAPSHOT.jar (1)" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/ShrekWebApp-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShrekWebApp.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/ShrekWebApp.jar" />
       <method v="2" />
     </configuration>
     <configuration name="ShrekWebApp.jar" type="JarApplication" temporary="true">
@@ -136,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.spring-boot-docker.jar" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JAR Application.ShrekWebApp.jar (1)" />
+        <item itemvalue="JAR Application.spring-boot-docker.jar" />
         <item itemvalue="JAR Application.ShrekWebApp.jar" />
         <item itemvalue="JAR Application.ShrekWebApp-1.0-SNAPSHOT.jar (1)" />
-        <item itemvalue="JAR Application.ShrekWebApp-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -281,6 +381,11 @@
       <workItem from="1643805443199" duration="3252000" />
       <workItem from="1644055752165" duration="11904000" />
       <workItem from="1644073333046" duration="77000" />
+      <workItem from="1644489498422" duration="702000" />
+      <workItem from="1644592538435" duration="5262000" />
+      <workItem from="1645180478331" duration="2164000" />
+      <workItem from="1645183146920" duration="1260000" />
+      <workItem from="1645184515979" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -499,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644071594925</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="deploy prepare">
+      <created>1644489558749</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1644489558749</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,13 +627,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="add preSets" />
     <MESSAGE value="gdsgfd" />
     <MESSAGE value="dfsd" />
     <MESSAGE value="Clean code, delete all SpringStorageServices" />
@@ -546,116 +656,7 @@
     <MESSAGE value="add action menu" />
     <MESSAGE value="add live edit add preset option" />
     <MESSAGE value="fix back button and deploy prepare" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix back button and deploy prepare" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1642771557105">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1642771557105" />
-    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1643187660369">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1643187660369" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1642756675399">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642756675399" />
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1644062433151">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1644062433151" />
-    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1636732368391">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636732368391" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1642779652261">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642779652261" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1643187335881">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1643187335881" />
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1636626132128" />
-    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1237" height="161" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1636626132129" />
-    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1644071615944">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615944" />
-    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1644071615943">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1644071615943" />
-    <state x="666" y="240" key="RollbackChangesDialog" timestamp="1642608841794">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="666" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642608841794" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1644059213467">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1644059213467" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1644073389034">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1644073389034" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636733872466">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636733872466" />
-    <state x="549" y="140" key="new project wizard" timestamp="1643187552422">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="549" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1643187552422" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1642704382854">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1642704382854" />
+    <MESSAGE value="deploy prepare" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy prepare" />
   </component>
 </project>

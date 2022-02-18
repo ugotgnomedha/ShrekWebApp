@@ -33,7 +33,7 @@ public class ExcelParser {
             FormulaEvaluator formulaEvaluator = wb.getCreationHelper().createFormulaEvaluator();
             headerExcelGetter(sheet); //Get excel table headers.
             headerDBtableGetter(); //Get database table headers.
-            ExcelDataInserter.insert(sheet, formulaEvaluator); //Insert excel data into a database table.
+            ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
         } catch (FileNotFoundException exception) {
             logger.error("Error occurred while accessing excel file. Possibly the file path is incorrect.");
         } catch (IOException ignored) {

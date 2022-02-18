@@ -99,7 +99,7 @@
                 <version>2.4.3</version>
             </plugin>
         </plugins>
-        <finalName>spring-boot-docker</finalName>
+        <finalName>ShrekWebApp</finalName>
     </build>
 
 </project>

@@ -60,7 +60,6 @@ public class ApplicationController {
     @GetMapping("/file")
     public String listUploadedFiles(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
-            System.out.println(history);
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
