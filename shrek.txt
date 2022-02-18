@@ -12324,3 +12324,7 @@ INFO    2022-02-18 14:55:19,136 [main] com.example.Application  - config file - 
 INFO    2022-02-18 14:55:19,443 [restartedMain] com.example.Application  - config file - D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\ShrekAppConfig.properties
 INFO    2022-02-18 14:55:19,858 [main] com.example.Application  - config file - D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\ShrekAppConfig.properties
 INFO    2022-02-18 14:55:20,204 [restartedMain] com.example.Application  - config file - D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\ShrekAppConfig.properties
+INFO    2022-02-18 14:58:22,636 [main] com.example.Application  - config file - D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\ShrekAppConfig.properties
+INFO    2022-02-18 14:58:22,902 [restartedMain] com.example.Application  - config file - D:\Files\Programming\projects\JavaProgramming\ShrekWebApp\ShrekAppConfig.properties
+ERROR   2022-02-18 14:58:26,002 [http-nio-8080-exec-1] com.example.ExcelDataInserter  - Invalid email format
+INFO    2022-02-18 14:58:26,003 [http-nio-8080-exec-1] com.example.StartConnection  - Data loaded to frontend
