@@ -28,16 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShrekAppConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ShrekAppConfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preSets/domens.json" beforeDir="false" afterPath="$PROJECT_DIR$/preSets/domens.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +91,7 @@
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.46" />
     <property name="last_opened_file_path" value="C:/Program Files/Java" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5873563" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -313,7 +305,7 @@
       <workItem from="1645184515979" duration="12959000" />
       <workItem from="1645201176916" duration="3196000" />
       <workItem from="1645204424995" duration="251000" />
-      <workItem from="1645204698141" duration="3184000" />
+      <workItem from="1645204698141" duration="4834000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
