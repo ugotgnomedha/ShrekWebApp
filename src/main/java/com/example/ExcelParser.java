@@ -27,7 +27,7 @@ public class ExcelParser {
         try {
             ShrekBD shrek = new ShrekBD();
             final String dir = System.getProperty("user.dir");
-            FileInputStream fis = new FileInputStream(dir + "\\upload-dir\\" + shrek.listFilesUsingDirectoryStream(dir + "\\upload-dir").get(0));
+            FileInputStream fis = new FileInputStream(dir + "/upload-dir/" + shrek.listFilesUsingDirectoryStream(dir + "/upload-dir").get(0));
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);
             FormulaEvaluator formulaEvaluator = wb.getCreationHelper().createFormulaEvaluator();
@@ -36,6 +36,7 @@ public class ExcelParser {
             ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
         } catch (FileNotFoundException exception) {
             logger.error("Error occurred while accessing excel file. Possibly the file path is incorrect.");
+            exception.printStackTrace();
         } catch (IOException ignored) {
         }
     }

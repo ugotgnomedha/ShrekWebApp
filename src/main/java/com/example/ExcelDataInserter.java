@@ -102,8 +102,4 @@ public class ExcelDataInserter {
             ex.printStackTrace();
         }
     }
-
-//    public static HashMap<String, Integer> getStatistics() {
-//        return domain_counter;
-//    }
 }
