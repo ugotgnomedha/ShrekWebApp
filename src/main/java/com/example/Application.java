@@ -23,6 +23,7 @@ public class Application {
 
     public static void main(String[] args) {
         try {
+//            access check
             new File(uploadDirectory).mkdir();
             SpringApplication.run(Application.class, args);
         } catch (Exception e) {
