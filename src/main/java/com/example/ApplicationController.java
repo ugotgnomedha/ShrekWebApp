@@ -118,15 +118,20 @@ public class ApplicationController {
 
         } catch (Exception e) {
             logger.error("Failed to load data to frontend", e);
+            e.printStackTrace();
         }
         return "application";
     }
 
     @GetMapping("/sorting")
     public String sortin(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        ShrekBD shrek = new ShrekBD();
-        model.put("preSets", shrek.getPreSets());
-        model.put("items", NeededItems);
+        try {
+            ShrekBD shrek = new ShrekBD();
+            model.put("preSets", shrek.getPreSets());
+            model.put("items", NeededItems);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "sorting";
     }
 
@@ -164,12 +169,16 @@ public class ApplicationController {
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
-        FileUtils.cleanDirectory(new File(uploadDirectory));
-        storageService.store(file);
+        try {
+            FileUtils.cleanDirectory(new File(uploadDirectory));
+            storageService.store(file);
 //        StartConnection.start();
-        DBConnect.connect();
-        Pull.clear();
-        ActivePull.clear();
+            DBConnect.connect();
+            Pull.clear();
+            ActivePull.clear();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "redirect:/file";
     }
 
@@ -435,7 +444,7 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         Statement stmt = shrek.stmt;
         Integer index = shrek.changes_num - counter;
-        if(direction){
+        if (direction) {
             if (shrek.changes_num - counter > 0) {
                 //index = index - 1;
                 index--;
@@ -443,7 +452,7 @@ public class ApplicationController {
                 counter = counter + 1;
             }
             direction = false;
-        }else{
+        } else {
             if (shrek.changes_num - counter >= 0) {
                 //index = index - 1;
                 stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
@@ -664,7 +673,7 @@ public class ApplicationController {
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
-        if(history.size()>0){
+        if (history.size() > 0) {
             final String dir = System.getProperty("user.dir");
             try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
                 // запись всей строки

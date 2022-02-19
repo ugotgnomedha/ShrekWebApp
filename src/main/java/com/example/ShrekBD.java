@@ -65,35 +65,41 @@ public class ShrekBD {
     }
 
     public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
-        stmt = connection.createStatement();
-        List<List<HashMap<String, String>>> items = new ArrayList<>();
-        Boolean onlineExists = false;
-        List<String> headers = parser_excel.getHeaders();
-        if (headers == null) {
-            headers = getOnlineTableHeaders();
-            onlineExists = true;
-        }
-        if (headers.size() > 0) {
-            ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
-            while (rs.next()) {
-                List<HashMap<String, String>> mData = new ArrayList<>();
-                for (String header : headers) {
-                    if (!header.equals("id")) {
-                        HashMap<String, String> item = new HashMap<>();
-                        if (rs.getString(header) == null) {
-                            item.put("Data", "-");
-                        } else {
-                            item.put("Data", rs.getString(header));
-                        }
-
-                        mData.add(item);
-                    }
-                }
-                items.add(mData);
+        List<List<HashMap<String, String>>> items = null;
+        try {
+            stmt = connection.createStatement();
+            items = new ArrayList<>();
+            Boolean onlineExists = false;
+            List<String> headers = parser_excel.getHeaders();
+            if (headers == null) {
+                headers = getOnlineTableHeaders();
+                onlineExists = true;
             }
-        } else {
+            if (headers.size() > 0) {
+                ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
+                while (rs.next()) {
+                    List<HashMap<String, String>> mData = new ArrayList<>();
+                    for (String header : headers) {
+                        if (!header.equals("id")) {
+                            HashMap<String, String> item = new HashMap<>();
+                            if (rs.getString(header) == null) {
+                                item.put("Data", "-");
+                            } else {
+                                item.put("Data", rs.getString(header));
+                            }
 
+                            mData.add(item);
+                        }
+                    }
+                    items.add(mData);
+                }
+            } else {
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return items;
     }
 

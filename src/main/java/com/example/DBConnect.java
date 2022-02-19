@@ -17,6 +17,7 @@ public class DBConnect {
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException exception) {
             logger.error("Could not connect to database.");
+            exception.printStackTrace();
         }
         if (connection != null){
             ExcelParser.excelInitializer(); // Start parsing excel file.
@@ -25,6 +26,7 @@ public class DBConnect {
             connection.close();
         }catch (SQLException exception){
             logger.error("Could not close a connection to database.");
+            exception.printStackTrace();
         }
     }
 }

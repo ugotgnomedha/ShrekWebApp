@@ -22,12 +22,13 @@ public class Application {
     private static ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
-//        final String dir = System.getProperty("user.dir");
-//        String configPath = dir + "\\ShrekAppConfig.properties";
-//        logger.info("config file - " + configPath + "");
-//        ConfigGetter.get_configs(configPath);
-        new File(uploadDirectory).mkdir();
-        SpringApplication.run(Application.class, args);
+        try {
+            new File(uploadDirectory).mkdir();
+            SpringApplication.run(Application.class, args);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Bean

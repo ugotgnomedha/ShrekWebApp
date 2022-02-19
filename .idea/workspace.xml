@@ -29,6 +29,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shrek.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shrek.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/DBConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ShrekBD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +311,9 @@
       <workItem from="1645204424995" duration="251000" />
       <workItem from="1645204698141" duration="6699000" />
       <workItem from="1645212181001" duration="3136000" />
-      <workItem from="1645215364169" duration="1042000" />
+      <workItem from="1645215364169" duration="1860000" />
+      <workItem from="1645261763287" duration="623000" />
+      <workItem from="1645262417497" duration="853000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
@@ -560,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645216027631</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="deploy">
+      <created>1645216600576</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1645216600576</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
