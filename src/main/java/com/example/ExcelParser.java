@@ -25,6 +25,8 @@ public class ExcelParser {
 
     public static void excelInitializer() {
         try {
+            excelheaders.clear();
+            dbtableheaders.clear();
             ShrekBD shrek = new ShrekBD();
             final String dir = System.getProperty("user.dir");
             FileInputStream fis = new FileInputStream(dir + "/upload-dir/" + shrek.listFilesUsingDirectoryStream(dir + "/upload-dir").get(0));
