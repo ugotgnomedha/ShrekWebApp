@@ -127,7 +127,7 @@ public class ApplicationController {
     public void giveFile(HttpServletResponse response) throws IOException {
         File file = new File("files/data.txt");
 
-        response.setContentType("application/octet-stream");
+        response.setContentType("application/txt");
         ServletOutputStream outputStream = response.getOutputStream();
         BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
 
