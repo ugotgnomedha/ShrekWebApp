@@ -16,6 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -119,6 +121,25 @@ public class ApplicationController {
             e.printStackTrace();
         }
         return "application";
+    }
+
+    @GetMapping("/fileDownload")
+    public void giveFile(HttpServletResponse response) throws IOException {
+        File file = new File("files/data.txt");
+
+        response.setContentType("application/octet-stream");
+        ServletOutputStream outputStream = response.getOutputStream();
+        BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
+
+        byte[] buffer = new byte[8192];
+        int bytesRead = -1;
+
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, bytesRead);
+        }
+
+        inputStream.close();
+        outputStream.close();
     }
 
     @GetMapping("/sorting")

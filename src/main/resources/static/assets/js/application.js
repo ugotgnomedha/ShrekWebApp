@@ -536,7 +536,37 @@ document.getElementById("dismiss-popup-btn-export").addEventListener("click", fu
     document.getElementsByClassName("popup-export")[0].classList.remove("active");
 });
 document.getElementById("confirm-popup-btn-export").addEventListener("click", function () {
-    document.getElementsByClassName("popup-export")[0].classList.remove("active");
+    // document.getElementsByClassName("popup-export")[0].classList.remove("active");
+    const XHR = new XMLHttpRequest();
+
+    let urlEncodedData = "",
+        urlEncodedDataPairs = [],
+        name;
+
+    // Turn the data object into an array of URL-encoded key/value pairs.
+    urlEncodedDataPairs.push(encodeURIComponent('data') + '=' + encodeURIComponent("data"));
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to
+    // the '+' character; matches the behavior of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+    // Define what happens on successful data submission
+    XHR.addEventListener('load', function (event) {
+        // alert('Yeah! Data sent and response loaded.');
+    });
+
+    // Define what happens in case of error
+    XHR.addEventListener('error', function (event) {
+        alert('Oops! Something went wrong.');
+    });
+    // Set up our request
+    XHR.open('POST', '/fileDownload');
+
+    // Add the required HTTP header for form data POST requests
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Finally, send our data.
+    XHR.send(urlEncodedData);
+
 });
 document.getElementById("live-edit-button-delete").addEventListener("click", function () {
     document.getElementsByClassName("popup-delete")[0].classList.add("active");
