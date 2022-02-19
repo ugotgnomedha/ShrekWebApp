@@ -300,7 +300,7 @@ public class ApplicationController {
         createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+        String userJson = new Scanner(new File(dir + "/preSets/staff.json")).useDelimiter("\\Z").next();
 
         Gson gson = new Gson();
 
@@ -314,7 +314,7 @@ public class ApplicationController {
         newUser.setSets(sets);
         newUserArray[newUserArray.length - 1] = newUser;
         String json = gson.toJson(newUserArray);
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+        try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json")) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();
@@ -328,7 +328,7 @@ public class ApplicationController {
         createCheckPoint(Boolean.FALSE);
         String sets = "";
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
+        String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
 
         Gson gson = new Gson();
 
@@ -342,7 +342,7 @@ public class ApplicationController {
         newUser.setSets(sets);
         newUserArray[newUserArray.length - 1] = newUser;
         String json = gson.toJson(newUserArray);
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
+        try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();
@@ -359,7 +359,7 @@ public class ApplicationController {
 
         String sets = "";
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\domens.json")).useDelimiter("\\Z").next();
+        String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
 
         Gson gson = new Gson();
 
@@ -380,7 +380,7 @@ public class ApplicationController {
         }
         User[] newUserArray = newUserA.toArray(new User[newUserA.size()]);
         String json = gson.toJson(newUserArray);
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json")) {
+        try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();
@@ -397,7 +397,7 @@ public class ApplicationController {
 
         String sets = "";
         final String dir = System.getProperty("user.dir");
-        String userJson = new Scanner(new File(dir + "\\preSets\\staff.json")).useDelimiter("\\Z").next();
+        String userJson = new Scanner(new File(dir + "/preSets/staff.json")).useDelimiter("\\Z").next();
 
         Gson gson = new Gson();
 
@@ -418,7 +418,7 @@ public class ApplicationController {
         }
         User[] newUserArray = newUserA.toArray(new User[newUserA.size()]);
         String json = gson.toJson(newUserArray);
-        try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+        try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json")) {
             writer.write(json);
         } catch (IOException e) {
             e.printStackTrace();
@@ -539,7 +539,7 @@ public class ApplicationController {
         final String dir = System.getProperty("user.dir");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+        try (Reader reader = new FileReader(dir + "/preSets/staff.json")) {
 
             // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
@@ -560,7 +560,7 @@ public class ApplicationController {
             }
 
             String jsonToWrite = gson.toJson(userArray);
-            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+            try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json")) {
                 writer.write(jsonToWrite);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -598,7 +598,7 @@ public class ApplicationController {
         final String dir = System.getProperty("user.dir");
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (Reader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+        try (Reader reader = new FileReader(dir + "/preSets/staff.json")) {
 
             // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
@@ -619,7 +619,7 @@ public class ApplicationController {
             }
 
             String jsonToWrite = gson.toJson(userArray);
-            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json")) {
+            try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json")) {
                 writer.write(jsonToWrite);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -675,7 +675,7 @@ public class ApplicationController {
     public void cancelPresetsAndDomens() throws SQLException {
         if (history.size() > 0) {
             final String dir = System.getProperty("user.dir");
-            try (FileWriter writer = new FileWriter(dir + "\\preSets\\domens.json", false)) {
+            try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json", false)) {
                 // запись всей строки
                 if (history.size() > 0) {
                     String text = history.get(history.size() - 1).get(0);
@@ -693,7 +693,7 @@ public class ApplicationController {
 
                 System.out.println(ex.getMessage());
             }
-            try (FileWriter writer = new FileWriter(dir + "\\preSets\\staff.json", false)) {
+            try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json", false)) {
                 // запись всей строки
                 if (history.size() > 0) {
                     String text = history.get(history.size() - 1).get(1);
@@ -723,7 +723,7 @@ public class ApplicationController {
     public void createCheckPoint(Boolean liveEdit) {
         final String dir = System.getProperty("user.dir");
         String resultOfReading = "";
-        try (FileReader reader = new FileReader(dir + "\\preSets\\domens.json")) {
+        try (FileReader reader = new FileReader(dir + "/preSets/domens.json")) {
             // читаем посимвольно
             int c;
             while ((c = reader.read()) != -1) {
@@ -737,7 +737,7 @@ public class ApplicationController {
         List<String> data = new ArrayList<>();
         data.add(resultOfReading);
         resultOfReading = "";
-        try (FileReader reader = new FileReader(dir + "\\preSets\\staff.json")) {
+        try (FileReader reader = new FileReader(dir + "/preSets/staff.json")) {
             // читаем посимвольно
             int c;
             while ((c = reader.read()) != -1) {

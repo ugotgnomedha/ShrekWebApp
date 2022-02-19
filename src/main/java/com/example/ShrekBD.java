@@ -148,7 +148,7 @@ public class ShrekBD {
 
     public List<HashMap<String, String>> getPreSets() throws IOException {
         final String dir = System.getProperty("user.dir");
-        String filePathString = dir + "\\preSets\\staff.json";
+        String filePathString = dir + "/preSets/staff.json";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         File f = new File(filePathString);
         File folder = new File(dir +
@@ -157,8 +157,8 @@ public class ShrekBD {
             folder.mkdir();
         }
         if(!f.exists() || f.isDirectory()) {
-            File newDir = new File(dir + "\\preSets");
-            File myFile = new File(dir + "\\preSets\\staff.json");
+            File newDir = new File(dir + "/preSets");
+            File myFile = new File(dir + "/preSets/staff.json");
             Writer writer = new FileWriter(filePathString);
             writer.write("[]");
             writer.close();
@@ -191,7 +191,7 @@ public class ShrekBD {
 
     public List<HashMap<String, String>> getDomens() throws IOException {
         final String dir = System.getProperty("user.dir");
-        String filePathString = dir + "\\preSets\\domens.json";
+        String filePathString = dir + "/preSets/domens.json";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         File f = new File(filePathString);
         File folder = new File(dir +
@@ -200,13 +200,13 @@ public class ShrekBD {
             folder.mkdir();
         }
         if(!f.exists() || f.isDirectory()) {
-            File newDir = new File(dir + "\\preSets");
-            File myFile = new File(dir + "\\preSets\\domens.json");
+            File newDir = new File(dir + "/preSets");
+            File myFile = new File(dir + "/preSets/domens.json");
             Writer writer = new FileWriter(filePathString);
             writer.write("[]");
             writer.close();
         }
-        try (Reader reader = new FileReader(dir + "\\preSets\\domens.json")) {
+        try (Reader reader = new FileReader(dir + "/preSets/domens.json")) {
 
             // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
