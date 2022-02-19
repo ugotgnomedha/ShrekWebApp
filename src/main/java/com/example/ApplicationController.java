@@ -125,12 +125,45 @@ public class ApplicationController {
         return "application";
     }
 
+//    @RequestMapping("/pdf/{fileName:.+}")
+//    public void downloadPDFResource( HttpServletRequest request,
+//                                     HttpServletResponse response,
+//                                     @PathVariable("fileName") String fileName,
+//                                     @RequestHeader String referer)
+//    {
+//        //Check the renderer
+//        if(referer != null && !referer.isEmpty()) {
+//            //do nothing
+//            //or send error
+//        }
+//        //If user is not authorized - he should be thrown out from here itself
+//
+//        //Authorized user will download the file
+//        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/downloads/pdf/");
+//        Path file = Paths.get(dataDirectory, fileName);
+//        if (Files.exists(file))
+//        {
+//            response.setContentType("application/pdf");
+//            response.addHeader("Content-Disposition", "attachment; filename="+fileName);
+//            try
+//            {
+//                Files.copy(file, response.getOutputStream());
+//                response.getOutputStream().flush();
+//            }
+//            catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//        }
+//    }
 
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
-        File file = new File("files/data.csv");
+        File file = new File("files/data.txt");
 
-        response.setContentType("application/csv");
+        response.setContentType("application/txt");
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=users.csv";
+        response.setHeader(headerKey, headerValue);
         ServletOutputStream outputStream = response.getOutputStream();
         BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
 
