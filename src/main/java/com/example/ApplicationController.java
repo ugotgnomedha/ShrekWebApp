@@ -26,6 +26,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static com.example.Constants.*;
@@ -158,11 +160,16 @@ public class ApplicationController {
 
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
-        File file = new File("files/data.txt");
+        File file = new File("files/data.csv");
 
-        response.setContentType("application/txt");
+        response.setContentType("application/csv");
+
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String currentDateTime = dateFormatter.format(new Date());
+
+
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=users.csv";
+        String headerValue = "attachment; filename=data_" + currentDateTime + ".csv";
         response.setHeader(headerKey, headerValue);
         ServletOutputStream outputStream = response.getOutputStream();
         BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
