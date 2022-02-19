@@ -27,11 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/application.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/application.mustache" afterDir="false" />
-    </list>
+    <list default="true" id="6b4bfec9-9483-47c6-9bed-503208ecb8ce" name="Default Changelist" comment="deploy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -305,7 +301,7 @@
       <workItem from="1645212181001" duration="3136000" />
       <workItem from="1645215364169" duration="1860000" />
       <workItem from="1645261763287" duration="623000" />
-      <workItem from="1645262417497" duration="17591000" />
+      <workItem from="1645262417497" duration="17987000" />
     </task>
     <task id="LOCAL-00001" summary="add preSets">
       <created>1625612313152</created>
