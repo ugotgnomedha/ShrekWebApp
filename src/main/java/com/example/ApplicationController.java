@@ -9,16 +9,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -123,11 +125,12 @@ public class ApplicationController {
         return "application";
     }
 
+
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
-        File file = new File("files/data.txt");
+        File file = new File("files/data.csv");
 
-        response.setContentType("application/txt");
+        response.setContentType("application/csv");
         ServletOutputStream outputStream = response.getOutputStream();
         BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(file));
 
