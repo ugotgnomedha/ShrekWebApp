@@ -45,24 +45,6 @@ public class ShrekBD {
         return convFile;
     }
 
-    public List<HashMap<String, String>> getSortedListOfData() throws SQLException {
-        stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC, Фио ASC;");
-        List<HashMap<String, String>> items = new ArrayList<>();
-        int i = 1;
-        if (parser_excel.getHeaders() != null) {
-            while (rs.next()) {
-                HashMap<String, String> item = new HashMap<>();
-                item.put("index", String.valueOf(i));
-                for (String header : parser_excel.getHeaders()) {
-                    item.put(header, rs.getString(header));
-                }
-                items.add(item);
-                i++;
-            }
-        }
-        return items;
-    }
 
     public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
         List<List<HashMap<String, String>>> items = null;
@@ -70,7 +52,7 @@ public class ShrekBD {
             stmt = connection.createStatement();
             items = new ArrayList<>();
             Boolean onlineExists = false;
-            List<String> headers = parser_excel.getHeaders();
+            List<String> headers = ExcelParser.excelheaders;
             if (headers == null) {
                 headers = getOnlineTableHeaders();
                 onlineExists = true;
@@ -130,7 +112,7 @@ public class ShrekBD {
         for (String email : listOfEmails) {
             stmt.execute(" INSERT INTO " + temporaryDataBaseName + " SELECT * FROM " + mainDataBaseName + " WHERE email LIKE '" + "%" + email + "%" + "' ");
         }
-        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "\\PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
+        stmt.execute("COPY " + temporaryDataBaseName + " TO " + "'" + path + "/PreSetedData.csv" + "'" + " DELIMITER " + " ','" + " CSV HEADER;");
 
     }
     public void drop() throws SQLException {

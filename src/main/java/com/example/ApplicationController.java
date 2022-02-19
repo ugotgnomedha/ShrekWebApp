@@ -29,10 +29,8 @@ import static com.example.Constants.*;
 @Controller
 public class ApplicationController {
 
-    private static final Logger logger = LogManager.getLogger(StartConnection.class);
-
+    private static final Logger logger = LogManager.getLogger(ApplicationController.class);
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-
     private final int numerOfTableLines = 20;
     public static Integer counter = 1;
     public static Boolean direction = true;
@@ -81,7 +79,7 @@ public class ApplicationController {
 
             List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
-            List<String> headers = parser_excel.headers;
+            List<String> headers = ExcelParser.excelheaders;
             if (headers == null) {
                 headers = shrek.getOnlineTableHeaders();
             }
