@@ -128,6 +128,7 @@ public class ApplicationController {
 
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
+<<<<<<< HEAD
         try {
             final String dir = System.getProperty("user.dir");
             try {
@@ -143,6 +144,28 @@ public class ApplicationController {
                     writer.write(listString);
                     writer.write("\n");
                 }
+=======
+        final String dir = System.getProperty("user.dir");
+        try {
+            FileWriter writer = new FileWriter(dir+ "/files/data.csv");
+            System.out.println(PresettedData);
+            for (List<HashMap<String, String>> row : PresettedData) {
+                List<String> clearList = new ArrayList<>();
+                for (HashMap<String, String> dataCell : row) {
+                    clearList.add(dataCell.get("Data"));
+                }
+                String listString = String.join(", ", clearList);
+                writer.write(listString);
+                writer.write("\n");
+            }
+
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        File file = new File(dir+ "/files/data.csv");
+>>>>>>> master
 
                 writer.close();
             } catch (Exception e) {
@@ -166,6 +189,7 @@ public class ApplicationController {
             byte[] buffer = new byte[8192];
             int bytesRead = -1;
 
+<<<<<<< HEAD
             while ((bytesRead = inputStream.read(buffer)) != -1) {
                 outputStream.write(buffer, 0, bytesRead);
             }
@@ -191,6 +215,16 @@ public class ApplicationController {
             e.printStackTrace();
         }
 
+=======
+    @PostMapping("/liveEdit")
+    public String handleLiveEditing(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
+        createCheckPoint(Boolean.TRUE);
+        Class.forName("org.postgresql.Driver");
+        Connection connection = DriverManager.getConnection(url, user, password);
+        ShrekBD shrek = new ShrekBD();
+        ShrekBD.applyLiveEdit(stringToEdit);
+        applyFrontLiveEdt(stringToEdit);
+>>>>>>> master
         return "redirect:/file";
     }
 
@@ -629,8 +663,14 @@ public class ApplicationController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+<<<<<<< HEAD
 
 
+=======
+        Pull = NeededItems;
+        PresettedData = NeededItems;
+        ActivePull.clear();
+>>>>>>> master
         return "redirect:/file";
 
     }
@@ -723,6 +763,7 @@ public class ApplicationController {
             }
             final String dir = System.getProperty("user.dir");
 
+<<<<<<< HEAD
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             try (Reader reader = new FileReader(dir + "/preSets/staff.json")) {
 
@@ -738,6 +779,19 @@ public class ApplicationController {
                                 } else {
                                     user.setSets(user.getSets() + " " + domen);
                                 }
+=======
+            JsonElement json = gson.fromJson(reader, JsonElement.class);
+            String jsonInString = gson.toJson(json);
+            User[] userArray = gson.fromJson(jsonInString, User[].class);
+            for (User user : userArray) {
+                for (String preSet : preSetsInForm) {
+                    if (user.getName().equals(preSet)) {
+                        for (String domen : domenList) {
+                            if (user.getSets().equals("")) {
+                                user.setSets(domen);
+                            } else {
+                                user.setSets(user.getSets() + " " + domen);
+>>>>>>> master
                             }
                         }
                     }
@@ -787,14 +841,20 @@ public class ApplicationController {
                 ActivePull.set(ActivePull.indexOf(finded), newDataRow);
                 PresettedData.set(PresettedData.indexOf(finded), newDataRow);
             }
+<<<<<<< HEAD
         } catch (Exception e) {
             e.printStackTrace();
+=======
+            ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+            PresettedData.set(PresettedData.indexOf(finded), newDataRow);
+>>>>>>> master
         }
 
 
     }
 
     public void applyFrontLiveDelete(String emailsToDelete) {
+<<<<<<< HEAD
         try {
             ArrayList<String> data = new ArrayList<>(Arrays.asList(emailsToDelete.split("##")));
             List<List<HashMap<String, String>>> newActivePull = new ArrayList<>();
@@ -809,13 +869,32 @@ public class ApplicationController {
                 if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
                     newPresettedData.add(dataRow);
                 }
+=======
+        ArrayList<String> data = new ArrayList<>(Arrays.asList(emailsToDelete.split("##")));
+        List<List<HashMap<String, String>>> newActivePull = new ArrayList<>();
+        List<List<HashMap<String, String>>> newPresettedData = new ArrayList<>();
+        data.remove(0);
+        for (List<HashMap<String, String>> dataRow : ActivePull) {
+            if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                newActivePull.add(dataRow);
+>>>>>>> master
             }
             ActivePull = newActivePull;
             PresettedData = newPresettedData;
         } catch (Exception e) {
             e.printStackTrace();
         }
+<<<<<<< HEAD
 
+=======
+        for (List<HashMap<String, String>> dataRow : PresettedData) {
+            if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                newPresettedData.add(dataRow);
+            }
+        }
+        ActivePull = newActivePull;
+        PresettedData = newPresettedData;
+>>>>>>> master
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
@@ -838,7 +917,22 @@ public class ApplicationController {
 
                 } catch (IOException ex) {
 
+<<<<<<< HEAD
                     ex.printStackTrace();
+=======
+                ex.printStackTrace();
+            }
+            try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json", false)) {
+                // запись всей строки
+                if (history.size() > 0) {
+                    String text = history.get(history.size() - 1).get(1);
+                    if (text.equals("[]")) {
+                        text = "[]";
+                    }
+                    writer.write(text);
+                } else {
+                    writer.write("[]");
+>>>>>>> master
                 }
                 try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json", false)) {
                     // запись всей строки
@@ -856,12 +950,19 @@ public class ApplicationController {
 
                 } catch (IOException ex) {
 
+<<<<<<< HEAD
                     ex.printStackTrace();
                 }
                 if (history.size() > 0) {
                     cancelLiveEdit();
                 }
                 if (history.size() > 0) history.remove(history.size() - 1);
+=======
+                ex.printStackTrace();
+            }
+            if (history.size() > 0) {
+                cancelLiveEdit();
+>>>>>>> master
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -898,19 +999,45 @@ public class ApplicationController {
                 }
             } catch (IOException ex) {
 
+<<<<<<< HEAD
                 ex.printStackTrace();
+=======
+            ex.printStackTrace();
+        }
+        List<String> data = new ArrayList<>();
+        data.add(resultOfReading);
+        resultOfReading = "";
+        try (FileReader reader = new FileReader(dir + "/preSets/staff.json")) {
+            // читаем посимвольно
+            int c;
+            while ((c = reader.read()) != -1) {
+
+                resultOfReading += (char) c;
+>>>>>>> master
             }
             data.add(resultOfReading);
             if (liveEdit) {
                 data.add("RegisteredLiveEdit");
             } else data.add("LiveEditNotRegistered");
 
+<<<<<<< HEAD
             history.add(data);
         } catch (Exception e) {
             e.printStackTrace();
+=======
+            ex.printStackTrace();
+>>>>>>> master
         }
 
     }
 
+<<<<<<< HEAD
+=======
+//    public void createCSVFile(List<List<HashMap<String, String>>> data) throws IOException {
+//
+//
+//    }
+
+>>>>>>> master
 }
 
