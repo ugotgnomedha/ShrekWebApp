@@ -128,9 +128,10 @@ public class ApplicationController {
 
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
-
+        final String dir = System.getProperty("user.dir");
         try {
-            FileWriter writer = new FileWriter("files/data.csv");
+            FileWriter writer = new FileWriter(dir+ "/files/data.csv");
+            System.out.println(dir);
             writer.write("dfdd,dfd,df");
 //            for (List<HashMap<String, String>> row : PresettedData) {
 //                List<String> clearList = new ArrayList<>();
@@ -147,7 +148,7 @@ public class ApplicationController {
             e.printStackTrace();
         }
 
-        File file = new File("files/data.csv");
+        File file = new File(dir+ "/files/data.csv");
 
         response.setContentType("application/csv");
 
