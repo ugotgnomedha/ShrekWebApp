@@ -9,18 +9,16 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.crypto.NoSuchPaddingException;
 import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,6 +43,7 @@ public class ApplicationController {
     private boolean flag = false;
     List<List<HashMap<String, String>>> NeededItems = new ArrayList<>();
     List<List<HashMap<String, String>>> ItemsToLoad = new ArrayList<>();
+    List<List<HashMap<String, String>>> PresettedData = new ArrayList<>();
     List<List<HashMap<String, String>>> Pull = new ArrayList<>();
     List<List<HashMap<String, String>>> ActivePull = new ArrayList<>();
     List<List<HashMap<String, String>>> PullToShow = new ArrayList<>();
@@ -80,9 +79,9 @@ public class ApplicationController {
                 } else {
                     ActivePull = Pull;
                 }
+
+                PresettedData = Pull;
             }
-
-
             List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
             List<String> headers = ExcelParser.excelheaders;
@@ -127,39 +126,11 @@ public class ApplicationController {
         return "application";
     }
 
-//    @RequestMapping("/pdf/{fileName:.+}")
-//    public void downloadPDFResource( HttpServletRequest request,
-//                                     HttpServletResponse response,
-//                                     @PathVariable("fileName") String fileName,
-//                                     @RequestHeader String referer)
-//    {
-//        //Check the renderer
-//        if(referer != null && !referer.isEmpty()) {
-//            //do nothing
-//            //or send error
-//        }
-//        //If user is not authorized - he should be thrown out from here itself
-//
-//        //Authorized user will download the file
-//        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/downloads/pdf/");
-//        Path file = Paths.get(dataDirectory, fileName);
-//        if (Files.exists(file))
-//        {
-//            response.setContentType("application/pdf");
-//            response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-//            try
-//            {
-//                Files.copy(file, response.getOutputStream());
-//                response.getOutputStream().flush();
-//            }
-//            catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-//        }
-//    }
-
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
+
+        createCSVFile(PresettedData);
+
         File file = new File("files/data.csv");
 
         response.setContentType("application/csv");
@@ -185,26 +156,6 @@ public class ApplicationController {
         outputStream.close();
     }
 
-    @GetMapping("/sorting")
-    public String sortin(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        try {
-            ShrekBD shrek = new ShrekBD();
-            model.put("preSets", shrek.getPreSets());
-            model.put("items", NeededItems);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "sorting";
-    }
-
-    @GetMapping("/sorti")
-    public String sorting(Map<String, Object> model) throws IOException, SQLException, NoSuchAlgorithmException, NoSuchPaddingException {
-        ShrekBD shrek = new ShrekBD();
-        model.put("preSets", shrek.getPreSets());
-        model.put("items", NeededItems);
-        return "sorting";
-    }
-
     @PostMapping("/liveEdit")
     public String handleLiveEditing(@RequestParam("stringToEdit") String stringToEdit) throws ClassNotFoundException, SQLException {
         createCheckPoint(Boolean.TRUE);
@@ -213,7 +164,6 @@ public class ApplicationController {
         ShrekBD shrek = new ShrekBD();
         ShrekBD.applyLiveEdit(stringToEdit);
         applyFrontLiveEdt(stringToEdit);
-//        System.out.println(stringToEdit);
         return "redirect:/file";
     }
 
@@ -234,10 +184,10 @@ public class ApplicationController {
         try {
             FileUtils.cleanDirectory(new File(uploadDirectory));
             storageService.store(file);
-//        StartConnection.start();
             DBConnect.connect();
             Pull.clear();
             ActivePull.clear();
+            PresettedData.clear();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -262,7 +212,7 @@ public class ApplicationController {
             Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
             List<String> listOfEmails = new ArrayList<String>();
-            for (List<HashMap<String, String>> dict : ActivePull) {
+            for (List<HashMap<String, String>> dict : PresettedData) {
                 for (HashMap<String, String> data : dict) {
                     if (data.get("Data").contains("@")) {
                         listOfEmails.add(data.get("Data"));
@@ -572,6 +522,7 @@ public class ApplicationController {
             }
         }
         Pull = NeededItems;
+        PresettedData = NeededItems;
         ActivePull.clear();
         return "redirect:/file";
 
@@ -662,7 +613,6 @@ public class ApplicationController {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (Reader reader = new FileReader(dir + "/preSets/staff.json")) {
 
-            // Convert JSON to JsonElement, and later to String
             JsonElement json = gson.fromJson(reader, JsonElement.class);
             String jsonInString = gson.toJson(json);
             User[] userArray = gson.fromJson(jsonInString, User[].class);
@@ -717,6 +667,7 @@ public class ApplicationController {
                 }
             }
             ActivePull.set(ActivePull.indexOf(finded), newDataRow);
+            PresettedData.set(PresettedData.indexOf(finded), newDataRow);
         }
 
 
@@ -725,13 +676,20 @@ public class ApplicationController {
     public void applyFrontLiveDelete(String emailsToDelete) {
         ArrayList<String> data = new ArrayList<>(Arrays.asList(emailsToDelete.split("##")));
         List<List<HashMap<String, String>>> newActivePull = new ArrayList<>();
+        List<List<HashMap<String, String>>> newPresettedData = new ArrayList<>();
         data.remove(0);
         for (List<HashMap<String, String>> dataRow : ActivePull) {
             if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
                 newActivePull.add(dataRow);
             }
         }
+        for (List<HashMap<String, String>> dataRow : PresettedData) {
+            if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                newPresettedData.add(dataRow);
+            }
+        }
         ActivePull = newActivePull;
+        PresettedData = newPresettedData;
     }
 
     public void cancelPresetsAndDomens() throws SQLException {
@@ -753,7 +711,7 @@ public class ApplicationController {
 
             } catch (IOException ex) {
 
-                System.out.println(ex.getMessage());
+                ex.printStackTrace();
             }
             try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json", false)) {
                 // запись всей строки
@@ -771,7 +729,7 @@ public class ApplicationController {
 
             } catch (IOException ex) {
 
-                System.out.println(ex.getMessage());
+                ex.printStackTrace();
             }
             if (history.size() > 0) {
                 cancelLiveEdit();
@@ -794,7 +752,7 @@ public class ApplicationController {
             }
         } catch (IOException ex) {
 
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
         List<String> data = new ArrayList<>();
         data.add(resultOfReading);
@@ -808,7 +766,7 @@ public class ApplicationController {
             }
         } catch (IOException ex) {
 
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
         data.add(resultOfReading);
         if (liveEdit) {
@@ -818,9 +776,26 @@ public class ApplicationController {
         history.add(data);
     }
 
-//    public static List<HashMap<String, String>> getStatistics( List<List<HashMap<String, String>>> Pull){
-//
-//    }
+    public void createCSVFile(List<List<HashMap<String, String>>> data) throws IOException {
+        try {
+            final String dir = System.getProperty("user.dir");
+            FileWriter writer = new FileWriter(dir + "/files/data.csv");
+
+            for (List<HashMap<String, String>> row : data) {
+                List<String> clearList = new ArrayList<>();
+                for (HashMap<String, String> dataCell : row) {
+                    clearList.add(dataCell.get("Data"));
+                }
+                String listString = String.join(", ", clearList);
+                writer.write(listString);
+                writer.write("\n");
+                writer.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }
 
