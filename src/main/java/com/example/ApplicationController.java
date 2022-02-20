@@ -129,7 +129,24 @@ public class ApplicationController {
     @GetMapping("/fileDownload")
     public void giveFile(HttpServletResponse response) throws IOException {
 
-        createCSVFile(PresettedData);
+        try {
+            final String dir = System.getProperty("user.dir");
+            FileWriter writer = new FileWriter(dir + "/files/data.csv");
+
+            for (List<HashMap<String, String>> row : PresettedData) {
+                List<String> clearList = new ArrayList<>();
+                for (HashMap<String, String> dataCell : row) {
+                    clearList.add(dataCell.get("Data"));
+                }
+                String listString = String.join(", ", clearList);
+                writer.write(listString);
+                writer.write("\n");
+            }
+
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         File file = new File("files/data.csv");
 
@@ -776,26 +793,10 @@ public class ApplicationController {
         history.add(data);
     }
 
-    public void createCSVFile(List<List<HashMap<String, String>>> data) throws IOException {
-        try {
-            final String dir = System.getProperty("user.dir");
-            FileWriter writer = new FileWriter(dir + "/files/data.csv");
-
-            for (List<HashMap<String, String>> row : data) {
-                List<String> clearList = new ArrayList<>();
-                for (HashMap<String, String> dataCell : row) {
-                    clearList.add(dataCell.get("Data"));
-                }
-                String listString = String.join(", ", clearList);
-                writer.write(listString);
-                writer.write("\n");
-                writer.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
+//    public void createCSVFile(List<List<HashMap<String, String>>> data) throws IOException {
+//
+//
+//    }
 
 }
 
