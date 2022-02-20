@@ -461,8 +461,8 @@ document.getElementById("confirm-popup-btn-domen").addEventListener("click", fun
     document.getElementsByClassName("popup-domen")[0].classList.remove("active");
 });
 
-document.getElementById("export-button").addEventListener("click", function () {
-    document.getElementsByClassName("popup-export")[0].classList.add("active");
+// document.getElementById("export-button").addEventListener("click", function () {
+//     document.getElementsByClassName("popup-export")[0].classList.add("active");
     // let XHR = new XMLHttpRequest();
     //
     // let urlEncodedData = "",
@@ -531,7 +531,7 @@ document.getElementById("export-button").addEventListener("click", function () {
     // link.click();
 
 
-});
+// });
 document.getElementById("dismiss-popup-btn-export").addEventListener("click", function () {
     document.getElementsByClassName("popup-export")[0].classList.remove("active");
 });

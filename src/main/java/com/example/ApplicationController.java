@@ -132,7 +132,6 @@ public class ApplicationController {
         try {
             FileWriter writer = new FileWriter(dir+ "/files/data.csv");
             System.out.println(PresettedData);
-            writer.write("dfdd,dfd,df");
             for (List<HashMap<String, String>> row : PresettedData) {
                 List<String> clearList = new ArrayList<>();
                 for (HashMap<String, String> dataCell : row) {
