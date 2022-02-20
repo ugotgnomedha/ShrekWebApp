@@ -40,36 +40,40 @@ public class ExcelDataInserter {
             connection.close();
         } catch (Exception e) {
             logger.error("Invalid email format");
+            e.printStackTrace();
         }
         return domain_counter;
     }
 
     public static void columnCheck(XSSFSheet sheet) {
-        if (!ExcelParser.dbtableheaders.containsAll(ExcelParser.excelheaders)) {
-            try {
-                Statement statement = DBConnect.connection.createStatement();
-                statement.executeUpdate("DROP TABLE " + "jc_contact" + "");  // Drop old table from database.
-                statement.close();
-            } catch (SQLException ignored) {
+        try {
+            if (!ExcelParser.dbtableheaders.containsAll(ExcelParser.excelheaders)) {
+                try {
+                    Statement statement = DBConnect.connection.createStatement();
+                    statement.executeUpdate("DROP TABLE " + "jc_contact" + "");  // Drop old table from database.
+                    statement.close();
+                } catch (SQLException ignored) {
+                }
+                TableCreator.jcContactTable(); //Create table and columns.
             }
-            TableCreator.jcContactTable(); //Create table and columns.
+            bulkInsertAssembler(sheet);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        bulkInsertAssembler(sheet);
-        //System.out.println(domain_counter);
     }
 
     public static void bulkInsertAssembler(XSSFSheet sheet) {
-        String insertSql = "INSERT INTO jc_contact" + "  (" + String.join(", ", ExcelParser.excelheaders) + ", comment) VALUES (-) ON CONFLICT (email) DO NOTHING";
-        for (int i = 0; i < ExcelParser.excelheaders.size(); i++) {
-            insertSql = insertSql.replaceAll("-", "?, -");
-        }
-        insertSql = insertSql.replace(", -", ", ?"); // Last one for comment.
-        //System.out.println(insertSql);
-
-        int column_count = sheet.getRow(0).getLastCellNum();
-        int count = 1;
-
         try {
+            String insertSql = "INSERT INTO jc_contact" + "  (" + String.join(", ", ExcelParser.excelheaders) + ", comment) VALUES (-) ON CONFLICT (email) DO NOTHING";
+            for (int i = 0; i < ExcelParser.excelheaders.size(); i++) {
+                insertSql = insertSql.replaceAll("-", "?, -");
+            }
+            insertSql = insertSql.replace(", -", ", ?"); // Last one for comment.
+            //System.out.println(insertSql);
+
+            int column_count = sheet.getRow(0).getLastCellNum();
+            int count = 1;
+
             PreparedStatement preparedStatement = DBConnect.connection.prepareStatement(insertSql);
             DBConnect.connection.setAutoCommit(false);
 
@@ -98,8 +102,8 @@ public class ExcelDataInserter {
             preparedStatement.executeBatch();
             DBConnect.connection.commit();
             DBConnect.connection.setAutoCommit(true);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

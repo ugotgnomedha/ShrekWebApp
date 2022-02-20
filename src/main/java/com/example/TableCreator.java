@@ -25,8 +25,9 @@ public class TableCreator {
                 }
             }
             statement.close();
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             logger.error("Could not add column to a database table.");
+            exception.printStackTrace();
         }
     }
 }

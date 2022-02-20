@@ -52,8 +52,9 @@ public class ExcelParser {
             }
             rs.close();
             statement.close();
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             logger.error("Error occurred while getting headers from database table.");
+            exception.printStackTrace();
         }
     }
 
@@ -69,6 +70,7 @@ public class ExcelParser {
             }
         } catch (Exception exception) {
              logger.error("Error occurred while getting headers from excel sheet.");
+             exception.printStackTrace();
         }
     }
 

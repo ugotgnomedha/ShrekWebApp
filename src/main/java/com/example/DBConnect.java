@@ -20,7 +20,7 @@ public class DBConnect {
             exception.printStackTrace();
         }
         if (connection != null){
-            ExcelParser.excelInitializer(); // Start parsing excel file.
+            ExcelParser.excelInitializer();
         }
         try {
             connection.close();
