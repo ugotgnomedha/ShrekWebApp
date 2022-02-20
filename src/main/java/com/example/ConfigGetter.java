@@ -6,7 +6,6 @@ import java.util.Properties;
 
 public class ConfigGetter {
     public static void get_configs(String path) {
-        //Getting configs.
         try {
             FileInputStream fis = new FileInputStream(path);
             Properties prop = new Properties();
