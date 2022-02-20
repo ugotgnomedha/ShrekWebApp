@@ -131,17 +131,17 @@ public class ApplicationController {
         final String dir = System.getProperty("user.dir");
         try {
             FileWriter writer = new FileWriter(dir+ "/files/data.csv");
-            System.out.println(dir);
+            System.out.println(PresettedData);
             writer.write("dfdd,dfd,df");
-//            for (List<HashMap<String, String>> row : PresettedData) {
-//                List<String> clearList = new ArrayList<>();
-//                for (HashMap<String, String> dataCell : row) {
-//                    clearList.add(dataCell.get("Data"));
-//                }
-//                String listString = String.join(", ", clearList);
-//                writer.write(listString);
-//                writer.write("\n");
-//            }
+            for (List<HashMap<String, String>> row : PresettedData) {
+                List<String> clearList = new ArrayList<>();
+                for (HashMap<String, String> dataCell : row) {
+                    clearList.add(dataCell.get("Data"));
+                }
+                String listString = String.join(", ", clearList);
+                writer.write(listString);
+                writer.write("\n");
+            }
 
             writer.close();
         } catch (Exception e) {
