@@ -132,7 +132,6 @@ public class ApplicationController {
             final String dir = System.getProperty("user.dir");
             try {
                 FileWriter writer = new FileWriter(dir + "/files/data.csv");
-                System.out.println(PresettedData);
                 for (List<HashMap<String, String>> row : PresettedData) {
                     List<String> clearList = new ArrayList<>();
                     for (HashMap<String, String> dataCell : row) {
@@ -513,43 +512,46 @@ public class ApplicationController {
     @PostMapping("/usePreSet")
     public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
-            ShrekBD shrek = new ShrekBD();
-            List<List<HashMap<String, String>>> items = shrek.getSortedListOfDataImpact();
-            NeededItems.clear();
-            String domens = "";
-            List<String> preSetsInForm = new ArrayList<>();
-            List<HashMap<String, String>> preSets = shrek.getPreSets();
-            for (String preSet : used.split(",")) {
-                preSet = preSet.replaceAll("[<>]*", "");
-                preSetsInForm.add(preSet);
-                for (HashMap dict : preSets) {
-                    if (dict.get("name").equals(preSet)) {
-                        domens += (String) dict.get("sets");
-                    }
-                }
-
-            }
-            for (List<HashMap<String, String>> list : items) {
-                for (HashMap<String, String> dict : list) {
-                    for (String domen : domens.split(" ")) {
-                        if (!domen.contains("@")) {
-                            if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
-                                NeededItems.add(list);
-                            }
-                        } else {
-                            if (dict.get("Data").equals(domen)) {
-                                NeededItems.add(list);
-                            }
+            if (used.length() > 2) {
+                Class.forName("org.postgresql.Driver");
+                Connection connection = DriverManager.getConnection(url, user, password);
+                ShrekBD shrek = new ShrekBD();
+                List<List<HashMap<String, String>>> items = shrek.getSortedListOfDataImpact();
+                NeededItems.clear();
+                String domens = "";
+                List<String> preSetsInForm = new ArrayList<>();
+                List<HashMap<String, String>> preSets = shrek.getPreSets();
+                for (String preSet : used.split(",")) {
+                    preSet = preSet.replaceAll("[<>]*", "");
+                    preSetsInForm.add(preSet);
+                    for (HashMap dict : preSets) {
+                        if (dict.get("name").equals(preSet)) {
+                            domens += (String) dict.get("sets");
                         }
+                    }
 
+                }
+                for (List<HashMap<String, String>> list : items) {
+                    for (HashMap<String, String> dict : list) {
+                        for (String domen : domens.split(" ")) {
+                            if (!domen.contains("@")) {
+                                if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
+                                    NeededItems.add(list);
+                                }
+                            } else {
+                                if (dict.get("Data").equals(domen)) {
+                                    NeededItems.add(list);
+                                }
+                            }
+
+                        }
                     }
                 }
+                Pull = NeededItems;
+                PresettedData = NeededItems;
+                ActivePull.clear();
             }
-            Pull = NeededItems;
-            PresettedData = NeededItems;
-            ActivePull.clear();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
