@@ -71,7 +71,6 @@ public class ExcelDataInserter {
             insertSql = insertSql.replace(", -", ", ?"); // Last one for comment.
             //System.out.println(insertSql);
 
-            int column_count = sheet.getRow(0).getLastCellNum();
             int count = 1;
 
             PreparedStatement preparedStatement = DBConnect.connection.prepareStatement(insertSql);
@@ -79,7 +78,7 @@ public class ExcelDataInserter {
 
             for (Row row : sheet) {  // Switch rows.
                 String comment = "-";
-                for (int i = 0; i < column_count; i++) {  // Switch columns.
+                for (int i = 0; i < ExcelParser.column_count; i++) {  // Switch columns.
                     Cell cell = row.getCell(i);
                     String value = (cell == null) ? "-" : cell.toString();
                     if (value.contains("—")) {
@@ -90,16 +89,17 @@ public class ExcelDataInserter {
                         value = value.substring(0, value.indexOf("•"));
                     }
                     preparedStatement.setString(count, value);
-                    if (count == column_count) {
+                    if (count == ExcelParser.column_count) {
                         count = 0;
                     }
                     count++;
                 }
-                preparedStatement.setString(column_count + 1, comment);
+                preparedStatement.setString(ExcelParser.column_count + 1, comment);
                 preparedStatement.addBatch();
             }
 
             preparedStatement.executeBatch();
+            preparedStatement.close();
             DBConnect.connection.commit();
             DBConnect.connection.setAutoCommit(true);
         } catch (Exception e) {

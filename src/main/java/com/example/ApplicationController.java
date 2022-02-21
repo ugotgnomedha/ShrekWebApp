@@ -471,10 +471,10 @@ public class ApplicationController {
     public void cancelLiveEdit() throws SQLException {
         try {
             ShrekBD shrek = new ShrekBD();
-            Statement stmt = shrek.stmt;
-            Integer index = shrek.changes_num - counter;
+            Statement stmt = ShrekBD.stmt;
+            int index = ShrekBD.changes_num - counter;
             if (direction) {
-                if (shrek.changes_num - counter > 0) {
+                if (ShrekBD.changes_num - counter > 0) {
                     //index = index - 1;
                     index--;
                     stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
@@ -482,13 +482,14 @@ public class ApplicationController {
                 }
                 direction = false;
             } else {
-                if (shrek.changes_num - counter >= 0) {
+                if (ShrekBD.changes_num - counter >= 0) {
                     //index = index - 1;
                     stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
                     counter = counter + 1;
                 }
                 direction = false;
             }
+            stmt.close();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -514,7 +515,6 @@ public class ApplicationController {
         try {
             if (used.length() > 2) {
                 Class.forName("org.postgresql.Driver");
-                Connection connection = DriverManager.getConnection(url, user, password);
                 ShrekBD shrek = new ShrekBD();
                 List<List<HashMap<String, String>>> items = shrek.getSortedListOfDataImpact();
                 NeededItems.clear();
@@ -564,8 +564,6 @@ public class ApplicationController {
         try {
             createCheckPoint(Boolean.FALSE);
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
-            ShrekBD shrek = new ShrekBD();
 
             List<String> domenList = new ArrayList<>();
             for (String domen : domens.split("##")) {
@@ -628,8 +626,6 @@ public class ApplicationController {
         try {
             createCheckPoint(Boolean.FALSE);
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
-            ShrekBD shrek = new ShrekBD();
 
             List<String> domenList = new ArrayList<>();
             for (String domen : domens.split("!")) {

@@ -1,11 +1,8 @@
 package com.example;
 
-import com.example.DBConnect;
-import com.example.ExcelParser;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class TableCreator {

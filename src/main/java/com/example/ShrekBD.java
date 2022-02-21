@@ -11,32 +11,31 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static com.example.Constants.*;
 
 public class ShrekBD {
 
-    public static Statement stmt;
-    public static Connection connection;
+    public static Statement stmt = null;
+    public static Connection connection = null;
     public static Integer changes_num = 0;
     public static Integer caller_transaction = 0;
 
     static {
         try {
             connection = DriverManager.getConnection(url, user, password);
+            stmt = connection.createStatement();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public static void save() throws SQLException {
+    public static void save() {
         try {
-            stmt = connection.createStatement();
-            stmt.executeUpdate("COMMIT WORK;");
+            Statement stat = connection.createStatement();
+            stat.executeUpdate("COMMIT WORK;");
+            stat.close();
             caller_transaction = 0;
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,7 +46,7 @@ public class ShrekBD {
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
         File convFile = null;
         try {
-            convFile = new File(file.getOriginalFilename());
+            convFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
             FileOutputStream fos = new FileOutputStream(convFile);
             fos.write(file.getBytes());
             fos.close();
@@ -59,19 +58,17 @@ public class ShrekBD {
     }
 
 
-    public List<List<HashMap<String, String>>> getSortedListOfDataImpact() throws SQLException {
+    public List<List<HashMap<String, String>>> getSortedListOfDataImpact() {
         List<List<HashMap<String, String>>> items = null;
         try {
-            stmt = connection.createStatement();
+            Statement stat = connection.createStatement();
             items = new ArrayList<>();
-            Boolean onlineExists = false;
             List<String> headers = ExcelParser.excelheaders;
             if (headers == null) {
                 headers = getOnlineTableHeaders();
-                onlineExists = true;
             }
             if (headers.size() > 0) {
-                ResultSet rs = stmt.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
+                ResultSet rs = stat.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
                 while (rs.next()) {
                     List<HashMap<String, String>> mData = new ArrayList<>();
                     for (String header : headers) {
@@ -88,9 +85,8 @@ public class ShrekBD {
                     }
                     items.add(mData);
                 }
-            } else {
-
             }
+            stat.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -98,13 +94,13 @@ public class ShrekBD {
         return items;
     }
 
-    public static ArrayList<String> getOnlineTableHeaders() throws SQLException {
+    public static ArrayList<String> getOnlineTableHeaders() {
         ArrayList<String> headers = null;
         try {
-            stmt = connection.createStatement();
+            Statement stat = connection.createStatement();
             headers = new ArrayList<>();
             headers = new ArrayList<String>();
-            ResultSet rsH = stmt.executeQuery("SELECT *\n" +
+            ResultSet rsH = stat.executeQuery("SELECT *\n" +
                     "  FROM information_schema.columns\n" +
                     " WHERE table_schema = 'public'\n" +
                     "   AND table_name   = 'jc_contact'\n" +
@@ -112,6 +108,8 @@ public class ShrekBD {
             while (rsH.next()) {
                 headers.add(rsH.getString("column_name"));
             }
+            rsH.close();
+            stat.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -127,7 +125,7 @@ public class ShrekBD {
                 .toString();
     }
 
-    public List<HashMap<String, String>> getPreSets() throws IOException {
+    public List<HashMap<String, String>> getPreSets() {
         try {
             final String dir = System.getProperty("user.dir");
             String filePathString = dir + "/preSets/staff.json";
@@ -175,7 +173,7 @@ public class ShrekBD {
         return null;
     }
 
-    public List<HashMap<String, String>> getDomens() throws IOException {
+    public List<HashMap<String, String>> getDomens() {
         try {
             final String dir = System.getProperty("user.dir");
             String filePathString = dir + "/preSets/domens.json";
@@ -219,10 +217,9 @@ public class ShrekBD {
         return null;
     }
 
-    public static void applyLiveDelete(String stringToEdit) throws SQLException {
+    public static void applyLiveDelete(String stringToEdit) {
         try {
             ArrayList<String> data = new ArrayList<>(Arrays.asList(stringToEdit.split("##")));
-            ArrayList<String> column_names = getOnlineTableHeaders();
             data.remove(0);
             if (caller_transaction == 0) {
                 stmt.executeUpdate("BEGIN WORK;");
@@ -238,11 +235,8 @@ public class ShrekBD {
 
     }
 
-    public static void applyLiveEdit(String stringToEdit) throws SQLException {
+    public static void applyLiveEdit(String stringToEdit) {
         try {
-            if (stmt == null) {
-                stmt = connection.createStatement();
-            }
             if (caller_transaction == 0) {
                 stmt.executeUpdate("BEGIN WORK;");
                 caller_transaction = caller_transaction + 1;
@@ -305,7 +299,7 @@ public class ShrekBD {
         return fileList;
     }
 
-    public static void createExportDelete() throws IOException {
+    public static void createExportDelete() {
         try {
             final String dir = System.getProperty("user.dir");
             deleteAllFilesFolder(dir + "\\src\\main\\resources\\static\\assets\\export");
@@ -318,7 +312,7 @@ public class ShrekBD {
 
     public static void deleteAllFilesFolder(String path) {
         try {
-            for (File myFile : new File(path).listFiles())
+            for (File myFile : Objects.requireNonNull(new File(path).listFiles()))
                 if (myFile.isFile()) myFile.delete();
         } catch (Exception e) {
             e.printStackTrace();
