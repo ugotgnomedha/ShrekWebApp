@@ -409,6 +409,8 @@ public class ApplicationController {
 
     }
 
+
+
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
         try {
@@ -829,5 +831,12 @@ public class ApplicationController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @PostMapping("/Click")
+    public String click(@RequestParam("presets") String variable) {
+        System.out.println(variable);
+        return "redirect:/file";
+
     }
 }
