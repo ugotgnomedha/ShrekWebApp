@@ -20,8 +20,6 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
@@ -64,7 +62,6 @@ public class ApplicationController {
     public String listUploadedFiles(Map<String, Object> model) {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
             List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
 
@@ -181,7 +178,6 @@ public class ApplicationController {
         try {
             createCheckPoint(Boolean.TRUE);
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
             ShrekBD.applyLiveEdit(stringToEdit);
             applyFrontLiveEdt(stringToEdit);
@@ -196,7 +192,6 @@ public class ApplicationController {
         try {
             createCheckPoint(Boolean.TRUE);
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
             ShrekBD.applyLiveDelete(emailsToDelete);
             applyFrontLiveDelete(emailsToDelete);
@@ -227,7 +222,6 @@ public class ApplicationController {
     public String moveView(@RequestParam("direction") String direction) {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
 
             ActivePull.clear();
@@ -500,7 +494,6 @@ public class ApplicationController {
     public String easyExportDelete(@RequestParam("null") String neededArgument) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url, user, password);
             ShrekBD shrek = new ShrekBD();
             shrek.createExportDelete();
         } catch (Exception e) {

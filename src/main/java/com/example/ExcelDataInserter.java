@@ -1,5 +1,8 @@
 package com.example;
 
+import com.google.i18n.phonenumbers.NumberParseException;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
+import com.google.i18n.phonenumbers.Phonenumber;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
@@ -14,13 +17,36 @@ import static com.example.Constants.*;
 public class ExcelDataInserter {
     private static final Logger logger = LogManager.getLogger(ExcelDataInserter.class);
 
+    public static HashMap<String, String> phoneRegionFunc(String columnName) {
+        HashMap<String, String> phone_region = new HashMap<>();
+        try {
+            Connection connection = DriverManager.getConnection(url, user, password);
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT " + columnName + " FROM jc_contact");
+            while (rs.next()) {
+                PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
+                try {
+                    Phonenumber.PhoneNumber numberProto = phoneUtil.parse(rs.getString(1), "RU");
+                    phone_region.put(rs.getString(1), numberProto.toString());
+                } catch (NumberParseException e) {
+                    logger.error("Error parsing phone number.");
+                }
+            }
+            rs.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return phone_region;
+    }
 
     public static HashMap<String, Integer> domianFunc() {
         HashMap<String, Integer> domain_counter = new HashMap<>();
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT email FROM jc_contact");
+            ResultSet rs = statement.executeQuery("SELECT " + ExcelParser.emailNameFromExcel + " FROM jc_contact");
             while (rs.next()) {
                 if (rs.getString(1).contains("@")) {
                     String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
@@ -64,7 +90,7 @@ public class ExcelDataInserter {
 
     public static void bulkInsertAssembler(XSSFSheet sheet) {
         try {
-            String insertSql = "INSERT INTO jc_contact" + "  (" + String.join(", ", ExcelParser.excelheaders) + ", comment) VALUES (-) ON CONFLICT (email) DO NOTHING";
+            String insertSql = "INSERT INTO jc_contact" + "  (" + String.join(", ", ExcelParser.excelheaders) + ", comment) VALUES (-) ON CONFLICT (" + ExcelParser.emailNameFromExcel + ") DO NOTHING";
             for (int i = 0; i < ExcelParser.excelheaders.size(); i++) {
                 insertSql = insertSql.replaceAll("-", "?, -");
             }
@@ -76,10 +102,11 @@ public class ExcelDataInserter {
             PreparedStatement preparedStatement = DBConnect.connection.prepareStatement(insertSql);
             DBConnect.connection.setAutoCommit(false);
 
-            for (Row row : sheet) {  // Switch rows.
+            int rowCount = sheet.getLastRowNum();
+            for (int j = 1; j < rowCount; j++) {  // Switch rows.
                 String comment = "-";
                 for (int i = 0; i < ExcelParser.column_count; i++) {  // Switch columns.
-                    Cell cell = row.getCell(i);
+                    Cell cell = sheet.getRow(j).getCell(i);
                     String value = (cell == null) ? "-" : cell.toString();
                     if (value.contains("—")) {
                         comment = value.substring(value.indexOf("—") + 1);

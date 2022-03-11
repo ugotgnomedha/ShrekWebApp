@@ -22,7 +22,7 @@ public class ShrekBD {
     public static Integer changes_num = 0;
     public static Integer caller_transaction = 0;
 
-    static {
+    public static void tempBeginConnection() {
         try {
             connection = DriverManager.getConnection(url, user, password);
             stmt = connection.createStatement();
@@ -68,7 +68,7 @@ public class ShrekBD {
                 headers = getOnlineTableHeaders();
             }
             if (headers.size() > 0) {
-                ResultSet rs = stat.executeQuery("select * from " + mainDataBaseName + " ORDER BY email ASC;");
+                ResultSet rs = stat.executeQuery("select * from " + mainDataBaseName + " ORDER BY "+ExcelParser.emailNameFromExcel+" ASC;");
                 while (rs.next()) {
                     List<HashMap<String, String>> mData = new ArrayList<>();
                     for (String header : headers) {

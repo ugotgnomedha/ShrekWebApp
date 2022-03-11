@@ -7,14 +7,16 @@ import java.sql.Statement;
 
 public class TableCreator {
     private static final Logger logger = LogManager.getLogger(TableCreator.class);
-    public static void jcContactTable(){
+
+    public static void jcContactTable() {
         Statement statement;
         try {
             statement = DBConnect.connection.createStatement();
             statement.executeUpdate("CREATE TABLE jc_contact(id SERIAL UNIQUE, comment VARCHAR)");
             for (String header : ExcelParser.excelheaders) {
-                if (header.contains("email") || header.contains("Email")) {
-                    statement.executeUpdate("ALTER TABLE jc_contact ADD COLUMN email VARCHAR PRIMARY KEY");
+                if (header.contains("email") || header.contains("Email") || header.contains("почта")
+                        || header.contains("Почта") || header.contains("e-mail")) {
+                    statement.executeUpdate("ALTER TABLE jc_contact ADD COLUMN " + ExcelParser.emailNameFromExcel + " VARCHAR PRIMARY KEY");
                 } else if (header.equals("")) {
                     continue;
                 } else {

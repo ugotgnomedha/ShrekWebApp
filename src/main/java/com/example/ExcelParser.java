@@ -21,6 +21,7 @@ public class ExcelParser {
     public static ArrayList<String> excelheaders = new ArrayList<>();
     public static ArrayList<String> dbtableheaders = new ArrayList<>();
     public static int column_count = 0;
+    public static String emailNameFromExcel = "";
 
     public static void excelInitializer() {
         try {
@@ -62,13 +63,14 @@ public class ExcelParser {
         try {
             Row row = sheet.getRow(0);
             for (Cell cell : row) {
-                if (cell.getStringCellValue().equals("email") || cell.getStringCellValue().equals("Email")
-                        || cell.getStringCellValue().equals("почта") || cell.getStringCellValue().equals("Почта")) {
+                if (cell.getStringCellValue().contains("email") || cell.getStringCellValue().contains("Email")
+                        || cell.getStringCellValue().contains("почта") || cell.getStringCellValue().contains("Почта") || cell.getStringCellValue().contains("e-mail")) {
                     emailColumnIndex = cell.getColumnIndex();
-                    excelheaders.add(cell.toString().toLowerCase());
+                    excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
+                    emailNameFromExcel = headersTransform.TranslateNameToDB(cell.toString().toLowerCase());
                     column_count ++;
                 } else if (!cell.toString().equals("")){
-                    excelheaders.add(cell.toString().toLowerCase());
+                    excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
                     column_count ++;
                 }
             }
