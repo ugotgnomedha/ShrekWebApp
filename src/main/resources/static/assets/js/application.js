@@ -108,7 +108,6 @@ $("#play-button").click(function () {
         // Add the required HTTP header for form data POST requests
         XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-        // Finally, send our data.
         XHR.send(urlEncodedData);
         $("#add-form").submit();
     } catch (error) {
