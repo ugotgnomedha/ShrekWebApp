@@ -514,7 +514,9 @@ public class ApplicationController {
     @PostMapping("/usePreSet")
     public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
-            if (used.length() > 2) {
+            System.out.println(used);
+            if (used.length() > 0) {
+                System.out.println(used);
                 Class.forName("org.postgresql.Driver");
                 Connection connection = DriverManager.getConnection(url, user, password);
                 ShrekBD shrek = new ShrekBD();
@@ -551,9 +553,8 @@ public class ApplicationController {
                 }
                 Pull = NeededItems;
                 PresettedData = NeededItems;
-                ActivePull.clear();
             }
-
+            ActivePull.clear();
         } catch (Exception e) {
             e.printStackTrace();
         }
