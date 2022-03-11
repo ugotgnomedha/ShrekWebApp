@@ -63,7 +63,7 @@ function sendData(data) {
 
 
 $("#play-button").click(function () {
-    alert("Hello")
+    alert("Hello");
 
     try {
         flag = false;
