@@ -226,8 +226,16 @@ $("#live-edit-button-add").click(function () {
             if (checkboxes[index].checked) {
                 var requiredClass = checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList;
                 var elems = document.getElementsByClassName(requiredClass.toString());
-                var emailToAdd = elems.item(elems.length - 1).firstChild.value;
-                emailsToAdd.push(emailToAdd);
+                for (var i = 0; i < elems.length; i++) {
+                    try {
+                        if(elems.item(i).firstChild.value.includes("@")) {
+                            emailsToAdd.push(elems.item(i).firstChild.value);
+                        }
+                    }catch (e) {
+                        console.error(e);
+                    }
+
+                }
             }
         }
 
