@@ -3,7 +3,6 @@ package com.example;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -12,7 +11,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -22,9 +20,13 @@ public class ExcelParser {
     public static Integer emailColumnIndex = 0;
     public static ArrayList<String> excelheaders = new ArrayList<>();
     public static ArrayList<String> dbtableheaders = new ArrayList<>();
+    public static int column_count = 0;
+    public static String emailNameFromExcel = "";
 
     public static void excelInitializer() {
         try {
+            emailColumnIndex = 0;
+            column_count = 0;
             excelheaders.clear();
             dbtableheaders.clear();
             ShrekBD shrek = new ShrekBD();
@@ -32,7 +34,6 @@ public class ExcelParser {
             FileInputStream fis = new FileInputStream(dir + "/upload-dir/" + shrek.listFilesUsingDirectoryStream(dir + "/upload-dir").get(0));
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheetAt(0);
-            FormulaEvaluator formulaEvaluator = wb.getCreationHelper().createFormulaEvaluator();
             headerExcelGetter(sheet); //Get excel table headers.
             headerDBtableGetter(); //Get database table headers.
             ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
@@ -62,11 +63,16 @@ public class ExcelParser {
         try {
             Row row = sheet.getRow(0);
             for (Cell cell : row) {
-                if (cell.getStringCellValue().equals("email") || cell.getStringCellValue().equals("Email")
-                        || cell.getStringCellValue().equals("почта") || cell.getStringCellValue().equals("Почта")) {
+                if (cell.getStringCellValue().contains("email") || cell.getStringCellValue().contains("Email")
+                        || cell.getStringCellValue().contains("почта") || cell.getStringCellValue().contains("Почта") || cell.getStringCellValue().contains("e-mail")) {
                     emailColumnIndex = cell.getColumnIndex();
+                    excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
+                    emailNameFromExcel = headersTransform.TranslateNameToDB(cell.toString().toLowerCase());
+                    column_count ++;
+                } else if (!cell.toString().equals("")){
+                    excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
+                    column_count ++;
                 }
-                excelheaders.add(cell.toString().toLowerCase());
             }
         } catch (Exception exception) {
              logger.error("Error occurred while getting headers from excel sheet.");
