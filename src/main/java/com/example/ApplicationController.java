@@ -64,7 +64,6 @@ public class ApplicationController {
             Class.forName("org.postgresql.Driver");
             ShrekBD shrek = new ShrekBD();
             List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
-
             if (Pull.isEmpty()) {
                 Pull = shrek.getSortedListOfDataImpact();
             }
@@ -508,9 +507,7 @@ public class ApplicationController {
     @PostMapping("/usePreSet")
     public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
-            System.out.println(used);
             if (used.length() > 0) {
-                System.out.println(used);
                 Class.forName("org.postgresql.Driver");
                 ShrekBD shrek = new ShrekBD();
                 List<List<HashMap<String, String>>> items = shrek.getSortedListOfDataImpact();
@@ -544,8 +541,10 @@ public class ApplicationController {
                         }
                     }
                 }
-                Pull = NeededItems;
+                Pull = new ArrayList<>(NeededItems);
                 PresettedData = NeededItems;
+            }else {
+                Pull.clear();
             }
             ActivePull.clear();
         } catch (Exception e) {
