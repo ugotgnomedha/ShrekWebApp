@@ -1,4 +1,4 @@
-var filter = $("#filter-section");
+var filter = $("#control-panel");
 var opened = true;
 $("#filterButton").click(function () {
     try {

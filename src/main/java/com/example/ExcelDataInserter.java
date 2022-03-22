@@ -48,23 +48,28 @@ public class ExcelDataInserter {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("SELECT " + ExcelParser.emailNameFromExcel + " FROM jc_contact");
             while (rs.next()) {
-                if (rs.getString(1).contains("@")) {
-                    String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
-                    domain_full = domain_full.replaceAll(" ", "");
-                    String domain = "";
-                    if (domain_full.contains(".")) {
-                        domain = domain_full.substring(domain_full.indexOf("."));
-                    } else {
-                        domain = domain_full;
+                try {
+                    if (rs.getString(1).contains("@")) {
+                        String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
+                        domain_full = domain_full.replaceAll(" ", "");
+                        String domain = "";
+                        if (domain_full.contains(".")) {
+                            domain = domain_full.substring(domain_full.indexOf("."));
+                        } else {
+                            domain = domain_full;
+                        }
+                        // get the value of the specified domain.
+                        Integer count = domain_counter.get(domain);
+                        if (domain_counter.containsKey(domain)) {
+                            domain_counter.put(domain, count + 1);
+                        } else {
+                            domain_counter.put(domain, 1);
+                        }
                     }
-                    // get the value of the specified domain.
-                    Integer count = domain_counter.get(domain);
-                    if (domain_counter.containsKey(domain)) {
-                        domain_counter.put(domain, count + 1);
-                    } else {
-                        domain_counter.put(domain, 1);
-                    }
+                } catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
             rs.close();
             statement.close();

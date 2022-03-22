@@ -26,8 +26,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.example.Constants.*;
-
 @Controller
 public class ApplicationController {
 
@@ -102,7 +100,13 @@ public class ApplicationController {
 
             }
             ArrayList<Domen> statistics = new ArrayList<>();
-            HashMap<String, Integer> mappedStatistic = ExcelDataInserter.domianFunc();
+            HashMap<String, Integer> mappedStatistic = null;
+            try {
+                mappedStatistic = ExcelDataInserter.domianFunc();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
             if (mappedStatistic != null) {
                 for (String key : mappedStatistic.keySet()) {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
@@ -403,7 +407,6 @@ public class ApplicationController {
     }
 
 
-
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
         try {
@@ -543,7 +546,7 @@ public class ApplicationController {
                 }
                 Pull = new ArrayList<>(NeededItems);
                 PresettedData = NeededItems;
-            }else {
+            } else {
                 Pull.clear();
             }
             ActivePull.clear();
