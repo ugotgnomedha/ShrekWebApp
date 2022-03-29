@@ -1,12 +1,15 @@
 var filter = $("#control-panel");
+var mainSection = $(".main-data-section")
 var opened = true;
 $("#filterButton").click(function () {
     try {
         if (!opened) {
             filter.removeClass("filter-section-closed");
+            mainSection.removeClass("table-top-margin");
             opened = true;
         } else {
             filter.addClass("filter-section-closed");
+            mainSection.addClass("table-top-margin");
             opened = false;
         }
     } catch (error) {
