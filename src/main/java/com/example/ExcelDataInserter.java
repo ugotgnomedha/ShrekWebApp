@@ -87,12 +87,12 @@ public class ExcelDataInserter {
                     if (rs.getString(1).contains("@")) {
                         String domain_full = rs.getString(1).substring(rs.getString(1).indexOf("@"));
                         domain_full = domain_full.replaceAll(" ", "");
-                        String domain = "";
-                        if (domain_full.contains(".")) {
-                            domain = domain_full.substring(domain_full.indexOf("."));
-                        } else {
-                            domain = domain_full;
-                        }
+                        String domain = domain_full;
+//                        if (domain_full.contains(".")) {
+//                            domain = domain_full.substring(domain_full.indexOf("."));
+//                        } else {
+//                            domain = domain_full;
+//                        }
                         // get the value of the specified domain.
                         Integer count = domain_counter.get(domain);
                         if (domain_counter.containsKey(domain)) {
