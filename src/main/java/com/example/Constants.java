@@ -12,10 +12,10 @@ public class Constants {
     public static String user = "fiykczfrcmpymp";
     public static String password = "2a2a2012e8ededb59604977d4bf427dd80c9984549dbb78f6585b5232890da10";
 
-    public static String mainDataBaseName = "jc_contact";
-    public static String temporaryDataBaseName = "MyTemporary";
-    public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-    public static List<List<Integer>> presetAndDomenHistory = new ArrayList<>();
+//    public static String mainDataBaseName = "jc_contact";
+//    public static String temporaryDataBaseName = "MyTemporary";
+//    public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
+//    public static List<List<Integer>> presetAndDomenHistory = new ArrayList<>();
 
 
 }
