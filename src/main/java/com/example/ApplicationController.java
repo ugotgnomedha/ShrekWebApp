@@ -79,7 +79,7 @@ public class ApplicationController {
             List<HashMap<String, String>> tableHeaders = new ArrayList<>();
 
             List<String> headers = ExcelParser.excelheaders;
-            if (headers == null|| headers.size() ==0) {
+            if (headers == null || headers.size() == 0) {
                 headers = shrek.getOnlineTableHeaders();
             }
 
@@ -112,6 +112,8 @@ public class ApplicationController {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
                 }
             }
+
+            addDomensAutomaticly(statistics);
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
             model.put("headers", tableHeaders);
@@ -124,6 +126,38 @@ public class ApplicationController {
             e.printStackTrace();
         }
         return "application";
+    }
+
+    public void addDomensAutomaticly(ArrayList<Domen> statistics) {
+        try {
+            for (Domen domen : statistics) {
+                String name = domen.getDomenName();
+                String sets = "";
+                final String dir = System.getProperty("user.dir");
+                String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
+
+                Gson gson = new Gson();
+
+                User[] userArray = gson.fromJson(userJson, User[].class);
+                User[] newUserArray = new User[userArray.length + 1];
+                for (int i = 0; i < userArray.length; i++) {
+                    newUserArray[i] = userArray[i];
+                }
+                User newUser = new User();
+                newUser.setName(name);
+                newUser.setSets(sets);
+                newUserArray[newUserArray.length - 1] = newUser;
+                String json = gson.toJson(newUserArray);
+                try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
+                    writer.write(json);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @GetMapping("/fileDownload")

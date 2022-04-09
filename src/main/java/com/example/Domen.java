@@ -10,4 +10,11 @@ public class Domen {
         this.domenCount = domenCount;
     }
 
+    public String getDomenName() {
+        return domenName;
+    }
+
+    public Integer getDomenCount() {
+        return domenCount;
+    }
 }
