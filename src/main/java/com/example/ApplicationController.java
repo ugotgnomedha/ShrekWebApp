@@ -37,6 +37,7 @@ public class ApplicationController {
     private final StorageService storageService;
     private int startPosition = numerOfTableLines;
     private boolean flag = false;
+    private boolean newFileUpload = false;
     List<List<HashMap<String, String>>> NeededItems = new ArrayList<>();
     List<List<HashMap<String, String>>> ItemsToLoad = new ArrayList<>();
     List<List<HashMap<String, String>>> PresettedData = new ArrayList<>();
@@ -112,8 +113,10 @@ public class ApplicationController {
                     statistics.add(new Domen(key, mappedStatistic.get(key)));
                 }
             }
+            if (newFileUpload) {
+                addDomensAutomaticly(statistics);
+            }
 
-            addDomensAutomaticly(statistics);
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
             model.put("headers", tableHeaders);
@@ -131,7 +134,7 @@ public class ApplicationController {
     public void addDomensAutomaticly(ArrayList<Domen> statistics) {
         try {
             for (Domen domen : statistics) {
-                String name = domen.getDomenName();
+                String name = domen.getDomenName().substring(1);
                 String sets = "";
                 final String dir = System.getProperty("user.dir");
                 String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
@@ -158,6 +161,7 @@ public class ApplicationController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        newFileUpload = false;
     }
 
     @GetMapping("/fileDownload")
@@ -249,6 +253,7 @@ public class ApplicationController {
             Pull.clear();
             ActivePull.clear();
             PresettedData.clear();
+            newFileUpload = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -566,7 +571,8 @@ public class ApplicationController {
                     for (HashMap<String, String> dict : list) {
                         for (String domen : domens.split(" ")) {
                             if (!domen.contains("@")) {
-                                if (dict.get("Data").substring(dict.get("Data").indexOf("@") + 1).contains(domen)) {
+                                String data = dict.get("Data").substring(dict.get("Data").indexOf("@") + 1);
+                                if (data.contains(domen)) {
                                     NeededItems.add(list);
                                 }
                             } else {
