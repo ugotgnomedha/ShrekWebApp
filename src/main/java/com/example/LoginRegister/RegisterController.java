@@ -1,5 +1,6 @@
 package com.example.LoginRegister;
 
+import com.example.LoginRegister.RegisterProcess.EmailAuth;
 import com.example.LoginRegister.RegisterProcess.RegisterEstablish;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,7 @@ public class RegisterController {
         System.out.println(registerForm.getPasswordRegister());
         System.out.println(registerForm.getUserNameRegister());
         if (RegisterEstablish.startLogin(registerForm.getEmailRegister(), registerForm.getPasswordRegister(), registerForm.getUserNameRegister())){
+            //EmailAuth.sendAuthEmail(registerForm.getEmailRegister());
             return "redirect:/loginPage";
         } else {
             return "registerPage";
