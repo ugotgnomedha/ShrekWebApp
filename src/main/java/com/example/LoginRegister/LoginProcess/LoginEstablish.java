@@ -18,7 +18,6 @@ public class LoginEstablish {
         try {
             Connection loginConn = DriverManager.getConnection(Constants.url, Constants.user, Constants.password);
             Statement loginStat = loginConn.createStatement();
-            // INSERT INTO registered_users (email, password, user_name) VALUES ('test@test.com',crypt('test123', gen_salt('bf')),'Darth');
             ResultSet res = loginStat.executeQuery("SELECT * FROM registered_users WHERE email = '" + email + "' AND password = crypt('" + password + "', password)");
             if (res.next()) {
                 flag = true;

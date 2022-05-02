@@ -14,7 +14,7 @@ public class LoginController {
     }
 
     @PostMapping("/loginPage")
-    public String greetingSubmit(@ModelAttribute("loginForm") LoginForm loginForm) {
+    public String loginSubmit(@ModelAttribute("loginForm") LoginForm loginForm) {
         if (LoginEstablish.startLogin(loginForm.getEmailLogin(), loginForm.getPasswordLogin())) {
             return "redirect:/file";
         } else {

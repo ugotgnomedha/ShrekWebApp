@@ -25,14 +25,14 @@ iframe {
 
 .txt1 {
     font-family: Poppins-Regular;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.5;
     color:#999
 }
 
 .txt2 {
     font-family: Poppins-Regular;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.5;
     color:#666
 }
@@ -89,8 +89,8 @@ iframe {
 }
 
 .login100-form-title {
-    font-family: Poppins-Bold;
-    font-size: 24px;
+    font-family: "Lucida Grande";
+    font-size: 36px;
     color: #333;
     line-height: 1.2;
     text-align: center;
@@ -108,7 +108,7 @@ iframe {
 
 .input100 {
     font-family: Poppins-Medium;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.5;
     color: #666;
     display: block;
