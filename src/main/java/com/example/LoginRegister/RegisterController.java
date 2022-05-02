@@ -22,7 +22,7 @@ public class RegisterController {
         System.out.println(registerForm.getPasswordRegister());
         System.out.println(registerForm.getUserNameRegister());
         if (RegisterEstablish.startLogin(registerForm.getEmailRegister(), registerForm.getPasswordRegister(), registerForm.getUserNameRegister())){
-            //EmailAuth.sendAuthEmail(registerForm.getEmailRegister());
+            EmailAuth.sendAuthEmail(registerForm.getEmailRegister(), registerForm.getUserNameRegister());
             return "redirect:/loginPage";
         } else {
             return "registerPage";
