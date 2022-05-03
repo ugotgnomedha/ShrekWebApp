@@ -1,5 +1,6 @@
 package com.example.LoginRegister;
 
+import com.example.LoginRegister.RegisterProcess.EmailAuth;
 import com.example.LoginRegister.VerificationEmailProcess.VerificationEmailEstablish;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -17,7 +17,7 @@ import java.util.Random;
 public class EmailAuth {
     private static final Logger logger = LogManager.getLogger(EmailAuth.class);
 
-    public static void assignVerificationCode(String email, String verificationCode, String password, String userName) {
+    private static void assignVerificationCode(String email, String verificationCode, String password, String userName) {
         try {
             Connection connection = DriverManager.getConnection(Constants.url, Constants.user, Constants.password);
             Statement statement = connection.createStatement();
@@ -62,7 +62,6 @@ public class EmailAuth {
             int number = rnd.nextInt(999999);
             String code = String.format("%06d", number);
             assignVerificationCode(userEmail, code, password, userName);
-
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));

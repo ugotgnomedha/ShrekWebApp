@@ -1,6 +1,8 @@
 package com.example.LoginRegister.VerificationEmailProcess;
 
 import com.example.Constants;
+import com.example.LoginRegister.LoginForm;
+import com.example.LoginRegister.LoginProcess.LoginEstablish;
 import com.example.LoginRegister.RegisterForm;
 
 import java.sql.*;
@@ -16,17 +18,29 @@ public class VerificationEmailEstablish {
             Connection connection = DriverManager.getConnection(Constants.url, Constants.user, Constants.password);
             Statement statement = connection.createStatement();
 
-            ResultSet res = statement.executeQuery("SELECT verification_code FROM registered_users WHERE email = '"+RegisterForm.emailTempRegister+"'");
+            ResultSet res;
+            if (!RegisterForm.emailTempRegister.equals("")){
+                res = statement.executeQuery("SELECT verification_code, user_name FROM registered_users WHERE email = '"+RegisterForm.emailTempRegister+"'");
+            } else {
+                res = statement.executeQuery("SELECT verification_code, user_name FROM registered_users WHERE email = '"+ LoginForm.emailTempLogin+"'");
+            }
             String verifCode = "";
-            while (res.next()){
+            String userName = "";
+            if (res.next()){
                 verifCode = res.getString(1);
+                userName = res.getString(2);
             }
             res.close();
 
             if (verificationCode.equals(verifCode)) {
                 confirmedCode = true;
-                statement.executeUpdate("INSERT INTO registered_users(email, password, user_name, verification_status, verification_code)" +
-                        " VALUES('"+ RegisterForm.emailTempRegister+"', '"+RegisterForm.passwordTempRegister+"', '"+RegisterForm.userNameTempRegister+"', 'verified', '"+verificationCode+"') ON CONFLICT (email) DO UPDATE SET verification_status = 'verified'");
+                if (!RegisterForm.emailTempRegister.equals("")){
+                    statement.executeUpdate("INSERT INTO registered_users(email, password, user_name, verification_status, verification_code)" +
+                            " VALUES('"+ RegisterForm.emailTempRegister+"', '"+RegisterForm.passwordTempRegister+"', '"+userName+"', 'verified', '"+verificationCode+"') ON CONFLICT (email) DO UPDATE SET verification_status = 'verified'");
+                } else {
+                    statement.executeUpdate("INSERT INTO registered_users(email, password, user_name, verification_status, verification_code)" +
+                            " VALUES('"+ LoginForm.emailTempLogin+"', '"+LoginForm.passwordTempLogin+"', '"+userName+"', 'verified', '"+verificationCode+"') ON CONFLICT (email) DO UPDATE SET verification_status = 'verified'");
+                }
             }
 
             statement.close();

@@ -6,9 +6,9 @@ public class RegisterForm {
     private String passwordRegister;
     private String userNameRegister;
 
-    public static String emailTempRegister;
-    public static String passwordTempRegister;
-    public static String userNameTempRegister;
+    public static String emailTempRegister = "";
+    public static String passwordTempRegister = "";
+    public static String userNameTempRegister = "";
 
     public String getEmailRegister() {
         return emailRegister;
