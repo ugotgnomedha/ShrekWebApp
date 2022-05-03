@@ -18,12 +18,9 @@ public class RegisterController {
 
     @PostMapping("/registerPage")
     public String registerSubmit(@ModelAttribute("registerForm") RegisterForm registerForm) {
-        System.out.println(registerForm.getEmailRegister());
-        System.out.println(registerForm.getPasswordRegister());
-        System.out.println(registerForm.getUserNameRegister());
         if (RegisterEstablish.startLogin(registerForm.getEmailRegister(), registerForm.getPasswordRegister(), registerForm.getUserNameRegister())){
-            EmailAuth.sendAuthEmail(registerForm.getEmailRegister(), registerForm.getUserNameRegister());
-            return "redirect:/loginPage";
+            EmailAuth.sendAuthEmail(registerForm.getEmailRegister(), registerForm.getUserNameRegister(), registerForm.getPasswordRegister());
+            return "redirect:/verificationEmailPage";
         } else {
             return "registerPage";
         }

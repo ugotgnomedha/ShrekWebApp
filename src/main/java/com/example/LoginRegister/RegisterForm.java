@@ -6,6 +6,9 @@ public class RegisterForm {
     private String passwordRegister;
     private String userNameRegister;
 
+    public static String emailTempRegister;
+    public static String passwordTempRegister;
+    public static String userNameTempRegister;
 
     public String getEmailRegister() {
         return emailRegister;
@@ -13,6 +16,7 @@ public class RegisterForm {
 
     public void setEmailRegister(String emailRegister) {
         this.emailRegister = emailRegister;
+        emailTempRegister = emailRegister;
     }
 
     public String getPasswordRegister() {
@@ -21,6 +25,7 @@ public class RegisterForm {
 
     public void setPasswordRegister(String passwordRegister) {
         this.passwordRegister = passwordRegister;
+        passwordTempRegister = passwordRegister;
     }
 
     public String getUserNameRegister() {
@@ -29,5 +34,6 @@ public class RegisterForm {
 
     public void setUserNameRegister(String userNameRegister) {
         this.userNameRegister = userNameRegister;
+        userNameTempRegister = userNameRegister;
     }
 }

@@ -8,6 +8,7 @@
 
     <meta name="robots" content="noindex, follow">
 <body>
+<script src="assets/js/application.js"></script>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -47,7 +48,7 @@
 </span>
                 </div>
                 <div class="container-login100-form-btn">
-                    <button onclick="popupregister()" id="register-btn-popup" name="register-btn-popup" type="submit" class="login100-form-btn">
+                    <button type="submit" class="login100-form-btn" onclick="emailTempSave()">
                         Зарегистрироваться
                     </button>
                 </div>
@@ -60,25 +61,7 @@
             </form>
         </div>
     </div>
-
-    <div class="form-popup" id="auth-code" name="auth-code" style="margin:0 auto;">
-        <form class="form-container" th:action="@{/verificationCodePopup}" name="VerificationCodeForm" method="post">
-            <h1 class="login100-form-title">Код верификации</h1>
-            <p style="text-align: center" class="txt2">На указанный почтовый адресс было отправлено письмо с верификационным кодом</p>
-            <input type="text" placeholder="Введите код верификации" name="код" style="font-size: 18px" required>
-
-            <button type="submit" style="font-size: 18px" class="btn">Ввести</button>
-        </form>
-    </div>
-    <script src="assets/js/application.js"></script>
 </div>
-
-<script type="text/javascript">
-    function popupregister(){
-        document.getElementById("auth-code").style.display = "none";
-        document.getElementById("auth-code").style.display = "block";
-    }
-</script>
 
 </body>
 </html>
