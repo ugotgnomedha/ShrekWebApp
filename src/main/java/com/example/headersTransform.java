@@ -2,7 +2,7 @@ package com.example;
 
 public class headersTransform {
     public static String TranslateNameToDB(String header) {
-        header = header.replaceAll("[^a-zA-Z]", "");
+        header = header.replaceAll("[^A-Za-zА-Яа-я0-9]", "");
 //        header = header.replace(" ", "_");
 //        header = header.replace(":", "_");
 //        header = header.replace("(", "");
