@@ -1,45 +1,45 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box
+    box-sizing: border-box
 }
 
 input {
     outline: none;
-    border:none
+    border: none
 }
 
 button {
     outline: none !important;
     border: none;
-    background:0 0
+    background: 0 0
 }
 
 button:hover {
-    cursor:pointer
+    cursor: pointer
 }
 
 iframe {
-    border:none !important
+    border: none !important
 }
 
 .txt1 {
     font-family: Poppins-Regular;
     font-size: 18px;
     line-height: 1.5;
-    color:#999
+    color: #999
 }
 
 .txt2 {
     font-family: Poppins-Regular;
     font-size: 18px;
     line-height: 1.5;
-    color:#666
+    color: #666
 }
 
 .limiter {
     width: 100%;
-    margin:0 auto
+    margin: 0 auto
 }
 
 .container-login100 {
@@ -58,7 +58,7 @@ iframe {
     background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-    background:linear-gradient(-135deg, #c850c0, #4158d0)
+    background: linear-gradient(-135deg, #c850c0, #4158d0)
 }
 
 .wrap-login100 {
@@ -73,19 +73,19 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding:177px 130px 33px 95px
+    padding: 177px 130px 33px 95px
 }
 
 .login100-pic {
-    width:316px
+    width: 316px
 }
 
 .login100-pic img {
-    max-width:100%
+    max-width: 100%
 }
 
 .login100-form {
-    width:290px
+    width: 290px
 }
 
 .login100-form-title {
@@ -96,14 +96,14 @@ iframe {
     text-align: center;
     width: 100%;
     display: block;
-    padding-bottom:54px
+    padding-bottom: 54px
 }
 
 .wrap-input100 {
     position: relative;
     width: 100%;
     z-index: 1;
-    margin-bottom:10px
+    margin-bottom: 10px
 }
 
 .input100 {
@@ -116,7 +116,7 @@ iframe {
     background: #e6e6e6;
     height: 50px;
     border-radius: 25px;
-    padding:0 30px 0 68px
+    padding: 0 30px 0 68px
 }
 
 .focus-input100 {
@@ -129,25 +129,25 @@ iframe {
     width: 100%;
     height: 100%;
     box-shadow: 0 0;
-    color:rgba(87, 184, 70, .8)
+    color: rgba(87, 184, 70, .8)
 }
 
 .input100:focus + .focus-input100 {
     -webkit-animation: anim-shadow .5s ease-in-out forwards;
-    animation:anim-shadow .5s ease-in-out forwards
+    animation: anim-shadow .5s ease-in-out forwards
 }
 
 @-webkit-keyframes anim-shadow {
     to {
         box-shadow: 0 0 70px 25px;
-        opacity:0
+        opacity: 0
     }
 }
 
 @keyframes anim-shadow {
     to {
         box-shadow: 0 0 70px 25px;
-        opacity:0
+        opacity: 0
     }
 }
 
@@ -171,12 +171,12 @@ iframe {
     -webkit-transition: all .4s;
     -o-transition: all .4s;
     -moz-transition: all .4s;
-    transition:all .4s
+    transition: all .4s
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
     color: #57b846;
-    padding-left:28px
+    padding-left: 28px
 }
 
 .container-login100-form-btn {
@@ -188,7 +188,7 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top:20px
+    padding-top: 20px
 }
 
 .login100-form-btn {
@@ -212,9 +212,82 @@ iframe {
     -webkit-transition: all .4s;
     -o-transition: all .4s;
     -moz-transition: all .4s;
-    transition:all .4s
+    transition: all .4s
 }
 
 .login100-form-btn:hover {
-    background:#333
+    background: #333
+}
+
+{
+    box-sizing: border-box
+;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
 }

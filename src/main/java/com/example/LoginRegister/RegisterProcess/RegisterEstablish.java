@@ -19,7 +19,7 @@ public class RegisterEstablish {
         try {
             Connection registerConn = DriverManager.getConnection(Constants.url, Constants.user, Constants.password);
             Statement registerStat = registerConn.createStatement();
-            ResultSet res = registerStat.executeQuery("SELECT * FROM registered_users WHERE email = '" + email + "' AND password = crypt('" + password + "', password)");
+            ResultSet res = registerStat.executeQuery("SELECT * FROM registered_users WHERE email = '" + email + "'");
             if (res.next()) {
                 logger.info("email: " + email + " is already registered.");
                 flag = false;

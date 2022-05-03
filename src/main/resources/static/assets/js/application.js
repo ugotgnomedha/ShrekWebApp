@@ -230,10 +230,10 @@ $("#live-edit-button-add").click(function () {
                 var elems = document.getElementsByClassName(requiredClass.toString());
                 for (var i = 0; i < elems.length; i++) {
                     try {
-                        if(elems.item(i).firstChild.value.includes("@")) {
+                        if (elems.item(i).firstChild.value.includes("@")) {
                             emailsToAdd.push(elems.item(i).firstChild.value);
                         }
-                    }catch (e) {
+                    } catch (e) {
                         console.error(e);
                     }
 
@@ -715,9 +715,6 @@ document.getElementById("Click").click(function () {
     XHR.send(urlEncodedData);
 
 })
-
-
-
 
 
 
