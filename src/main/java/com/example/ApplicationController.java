@@ -31,13 +31,16 @@ public class ApplicationController {
 
     private static final Logger logger = LogManager.getLogger(ApplicationController.class);
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-    private final int numerOfTableLines = 100;
+    private final int numberOfTableLines = 5;
     public static Integer counter = 1;
     public static Boolean direction = true;
     private final StorageService storageService;
-    private int startPosition = numerOfTableLines;
+    private int startPosition = numberOfTableLines;
     private boolean flag = false;
     private boolean newFileUpload = false;
+    private boolean firstStart = true;
+    private int shownFrom = 0;
+    private int shownTo = 0;
     List<List<HashMap<String, String>>> NeededItems = new ArrayList<>();
     List<List<HashMap<String, String>>> ItemsToLoad = new ArrayList<>();
     List<List<HashMap<String, String>>> PresettedData = new ArrayList<>();
@@ -63,16 +66,20 @@ public class ApplicationController {
             Class.forName("org.postgresql.Driver");
             ShrekBD shrek = new ShrekBD();
             List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
-            if (Pull.isEmpty() || Pull == null) {
+            if (Pull == null || Pull.isEmpty()) {
                 Pull = shrek.getSortedListOfDataImpact();
             }
             if (ActivePull.isEmpty()) {
-                if (numerOfTableLines < Pull.size()) {
-                    for (int i = 0; i < numerOfTableLines; i++) {
+                if (numberOfTableLines < Pull.size()) {
+                    shownFrom = 1;
+                    shownTo = numberOfTableLines;
+                    for (int i = 0; i < numberOfTableLines; i++) {
                         ActivePull.add(Pull.get(i));
                     }
                 } else {
                     ActivePull = Pull;
+                    shownFrom = 0;
+                    shownTo = Pull.size();
                 }
 
                 PresettedData = Pull;
@@ -116,6 +123,17 @@ public class ApplicationController {
             if (newFileUpload) {
                 addDomensAutomaticly(statistics);
             }
+            if(firstStart){
+                if(ActivePull.size()> 0){
+                    shownFrom = 1;
+                }
+                if(Pull.size()>numberOfTableLines){
+                    shownTo = numberOfTableLines;
+                }else {
+                    shownTo = Pull.size();
+                }
+                firstStart = false;
+            }
 
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
@@ -123,6 +141,7 @@ public class ApplicationController {
             model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
             model.put("domens", shrek.getDomens());
+            model.put("location", String.valueOf(shownFrom) + "-" + String.valueOf(shownTo));
 
         } catch (Exception e) {
             logger.error("Failed to load data to frontend", e);
@@ -244,8 +263,7 @@ public class ApplicationController {
     }
 
     @PostMapping("/")
-    public String handleFileUpload(@RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) {
+    public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
         try {
             FileUtils.cleanDirectory(new File(uploadDirectory));
             storageService.store(file);
@@ -270,55 +288,71 @@ public class ApplicationController {
 
             Boolean movementRight = true;
             if (direction.equals("right")) {
-                if (movementRight) {
-                    if (Pull.size() > numerOfTableLines) {
-                        for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
-                            ActivePull.add(Pull.get(i));
-                        }
-                        if (startPosition + numerOfTableLines < Pull.size()) {
-                            startPosition += numerOfTableLines;
-                        }
+                if (Pull.size() > numberOfTableLines) {
+                    shownFrom = shownFrom + numberOfTableLines;
+                    if (shownFrom + numberOfTableLines < Pull.size()) {
+                        shownTo = shownFrom + numberOfTableLines;
                     }
-
-                } else {
-                    movementRight = true;
-                    startPosition += numerOfTableLines;
-
-                    if (Pull.size() > numerOfTableLines) {
-                        for (int i = startPosition; i < startPosition + numerOfTableLines; i++) {
-                            ActivePull.add(Pull.get(i));
-                        }
-                    } else {
-                        ActivePull = Pull;
+                    else {
+                        shownTo = Pull.size();
                     }
-                    if (startPosition + numerOfTableLines < Pull.size()) {
-                        startPosition += numerOfTableLines;
+                    for(int i = shownFrom; i< shownTo;i++){
+                        ActivePull.add(Pull.get(i-1));
                     }
                 }
-
-            } else if (direction.equals("left")) {
-                if (!movementRight) {
-                    for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
-                        ActivePull.add(Pull.get(i));
-                    }
-                    if (startPosition - numerOfTableLines > 0) {
-                        startPosition -= numerOfTableLines;
-                    }
-
-                } else {
-                    movementRight = false;
-                    if (startPosition - numerOfTableLines > 0) {
-                        startPosition -= numerOfTableLines;
-                    }
-                    for (int i = startPosition - numerOfTableLines; i < startPosition; i++) {
-                        ActivePull.add(Pull.get(i));
-                    }
-                    if (startPosition - numerOfTableLines > 0) {
-                        startPosition -= numerOfTableLines;
-                    }
-                }
-
             }
+
+
+//            if (direction.equals("right")) {
+//                if (movementRight) {
+//                    if (Pull.size() > numberOfTableLines) {
+//                        for (int i = startPosition; i < startPosition + numberOfTableLines; i++) {
+//                            ActivePull.add(Pull.get(i));
+//                        }
+//                        if (startPosition + numberOfTableLines < Pull.size()) {
+//                            startPosition += numberOfTableLines;
+//                        }
+//                    }
+//
+//                } else {
+//                    movementRight = true;
+//                    startPosition += numberOfTableLines;
+//
+//                    if (Pull.size() > numberOfTableLines) {
+//                        for (int i = startPosition; i < startPosition + numberOfTableLines; i++) {
+//                            ActivePull.add(Pull.get(i));
+//                        }
+//                    } else {
+//                        ActivePull = Pull;
+//                    }
+//                    if (startPosition + numberOfTableLines < Pull.size()) {
+//                        startPosition += numberOfTableLines;
+//                    }
+//                }
+//
+//            } else if (direction.equals("left")) {
+//                if (!movementRight) {
+//                    for (int i = startPosition - numberOfTableLines; i < startPosition; i++) {
+//                        ActivePull.add(Pull.get(i));
+//                    }
+//                    if (startPosition - numberOfTableLines > 0) {
+//                        startPosition -= numberOfTableLines;
+//                    }
+//
+//                } else {
+//                    movementRight = false;
+//                    if (startPosition - numberOfTableLines > 0) {
+//                        startPosition -= numberOfTableLines;
+//                    }
+//                    for (int i = startPosition - numberOfTableLines; i < startPosition; i++) {
+//                        ActivePull.add(Pull.get(i));
+//                    }
+//                    if (startPosition - numberOfTableLines > 0) {
+//                        startPosition -= numberOfTableLines;
+//                    }
+//                }
+//
+//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
