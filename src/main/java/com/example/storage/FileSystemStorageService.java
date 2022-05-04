@@ -28,11 +28,11 @@ public class FileSystemStorageService implements com.example.storage.StorageServ
 	public void store(MultipartFile file) {
 		try {
 			if (file.isEmpty()) {
-				throw new com.example.storage.StorageException("Failed to store empty file " + file.getOriginalFilename());
+				throw new com.example.storage.StorageException("Failed to store empty file " + "data");
 			}
-			Files.copy(file.getInputStream(), this.rootLocation.resolve(file.getOriginalFilename()));
+			Files.copy(file.getInputStream(), this.rootLocation.resolve("data"));
 		} catch (IOException e) {
-			throw new com.example.storage.StorageException("Failed to store file " + file.getOriginalFilename(), e);
+			throw new com.example.storage.StorageException("Failed to store file " + "data", e);
 		}
 	}
 

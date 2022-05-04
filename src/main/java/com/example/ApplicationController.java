@@ -63,7 +63,7 @@ public class ApplicationController {
             Class.forName("org.postgresql.Driver");
             ShrekBD shrek = new ShrekBD();
             List<HashMap<String, String>> ItemsToLoadOn = new ArrayList<>();
-            if (Pull.isEmpty()) {
+            if (Pull.isEmpty() || Pull == null) {
                 Pull = shrek.getSortedListOfDataImpact();
             }
             if (ActivePull.isEmpty()) {
