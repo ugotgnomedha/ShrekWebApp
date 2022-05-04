@@ -286,6 +286,7 @@ public class ApplicationController {
 
             ActivePull.clear();
 
+
             Boolean movementRight = true;
             if (direction.equals("right")) {
                 if (Pull.size() > numberOfTableLines) {
