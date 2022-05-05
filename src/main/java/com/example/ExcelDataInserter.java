@@ -19,6 +19,15 @@ import static com.example.Constants.*;
 public class ExcelDataInserter {
     private static final Logger logger = LogManager.getLogger(ExcelDataInserter.class);
 
+    public static boolean isRowEmpty(Row row) {
+        for (int c = row.getFirstCellNum(); c < row.getLastCellNum(); c++) {
+            Cell cell = row.getCell(c);
+            if (cell != null && cell.getCellType() != Cell.CELL_TYPE_BLANK)
+                return false;
+        }
+        return true;
+    }
+
     public static HashMap<String, String> phoneRegionFunc(String columnName) {
         HashMap<String, String> phone_region = new HashMap<>();
         try {
@@ -147,8 +156,12 @@ public class ExcelDataInserter {
             PreparedStatement preparedStatement = DBConnect.connection.prepareStatement(insertSql);
             DBConnect.connection.setAutoCommit(false);
 
-            int rowCount = sheet.getLastRowNum();
-            for (int j = 1; j < rowCount; j++) {  // Switch rows.
+            int rowCount = sheet.getPhysicalNumberOfRows();  // Count existing rows.
+
+            for (int j = 1; j < rowCount; j++) { // Switch rows.
+                if (isRowEmpty(sheet.getRow(j))){
+                    continue;
+                }
                 String comment = "-";
                 for (int i = 0; i < ExcelParser.column_count; i++) {  // Switch columns.
                     Cell cell = sheet.getRow(j).getCell(i);
@@ -169,7 +182,6 @@ public class ExcelDataInserter {
                 preparedStatement.setString(ExcelParser.column_count + 1, comment);
                 preparedStatement.addBatch();
             }
-
             preparedStatement.executeBatch();
             preparedStatement.close();
             DBConnect.connection.commit();
