@@ -23,7 +23,8 @@ public class ExcelParser {
     public static int column_count = 0;
     public static String emailNameFromExcel = "";
 
-    public static void excelInitializer() {
+    public static boolean excelInitializer() {
+        boolean newTable = false;
         try {
             emailColumnIndex = 0;
             column_count = 0;
@@ -36,12 +37,13 @@ public class ExcelParser {
             XSSFSheet sheet = wb.getSheetAt(0);
             headerExcelGetter(sheet); //Get excel table headers.
             headerDBtableGetter(); //Get database table headers.
-            ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
+            newTable = ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
         } catch (FileNotFoundException exception) {
             logger.error("Error occurred while accessing excel file. Possibly the file path is incorrect.");
             exception.printStackTrace();
         } catch (IOException ignored) {
         }
+        return newTable;
     }
 
     public static void headerDBtableGetter() {
@@ -68,15 +70,15 @@ public class ExcelParser {
                     emailColumnIndex = cell.getColumnIndex();
                     excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
                     emailNameFromExcel = headersTransform.TranslateNameToDB(cell.toString().toLowerCase());
-                    column_count ++;
-                } else if (!cell.toString().equals("")){
+                    column_count++;
+                } else if (!cell.toString().equals("")) {
                     excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
-                    column_count ++;
+                    column_count++;
                 }
             }
         } catch (Exception exception) {
-             logger.error("Error occurred while getting headers from excel sheet.");
-             exception.printStackTrace();
+            logger.error("Error occurred while getting headers from excel sheet.");
+            exception.printStackTrace();
         }
     }
 

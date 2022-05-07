@@ -148,7 +148,7 @@ $("#add-preSet").click(function () {
         // Finally, send our data.
         XHR.send(urlEncodedData);
         // alert(data);
-        $("#add-form").submit();
+        // $("#add-form").submit();
     } catch (error) {
         console.error(error);
     }
@@ -676,7 +676,7 @@ $("#confirm-popup-btn-edit").click(function () {
         // Finally, send our data.
         XHR.send(urlEncodedData);
         document.getElementsByClassName("popup-edit")[0].classList.remove("active");
-        $("#add-form").submit();
+        // $("#add-form").submit();
     } catch (error) {
         console.error(error);
     }

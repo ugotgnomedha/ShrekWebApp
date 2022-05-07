@@ -12,21 +12,24 @@ import static com.example.Constants.*;
 public class DBConnect {
     private static final Logger logger = LogManager.getLogger(DBConnect.class);
     public static Connection connection = null;
-    public static void connect() {
+
+    public static boolean connect() {
+        boolean newTable = false;
         try {
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException exception) {
             logger.error("Could not connect to database.");
             exception.printStackTrace();
         }
-        if (connection != null){
-            ExcelParser.excelInitializer();
+        if (connection != null) {
+            newTable = ExcelParser.excelInitializer();
         }
         try {
             connection.close();
-        }catch (SQLException exception){
+        } catch (SQLException exception) {
             logger.error("Could not close a connection to database.");
             exception.printStackTrace();
         }
+        return newTable;
     }
 }

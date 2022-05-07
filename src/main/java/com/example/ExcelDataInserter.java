@@ -125,9 +125,11 @@ public class ExcelDataInserter {
         return domain_counter;
     }
 
-    public static void columnCheck(XSSFSheet sheet) {
+    public static boolean columnCheck(XSSFSheet sheet) {
+        boolean newTable = false;
         try {
             if (!ExcelParser.dbtableheaders.containsAll(ExcelParser.excelheaders)) {
+                newTable = true;
                 try {
                     Statement statement = DBConnect.connection.createStatement();
                     statement.executeUpdate("DROP TABLE " + "jc_contact" + "");  // Drop old table from database.
@@ -135,11 +137,14 @@ public class ExcelDataInserter {
                 } catch (SQLException ignored) {
                 }
                 TableCreator.jcContactTable(); //Create table and columns.
+
             }
             bulkInsertAssembler(sheet);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        return newTable;
     }
 
     public static void bulkInsertAssembler(XSSFSheet sheet) {

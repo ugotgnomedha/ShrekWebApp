@@ -41,6 +41,9 @@ public class ApplicationController {
     private boolean firstStart = true;
     private int shownFrom = 0;
     private int shownTo = 0;
+    private int shownToFormal = shownTo;
+    private boolean canGoRight = false;
+    private boolean canGoLeft = false;
     List<List<HashMap<String, String>>> NeededItems = new ArrayList<>();
     List<List<HashMap<String, String>>> ItemsToLoad = new ArrayList<>();
     List<List<HashMap<String, String>>> PresettedData = new ArrayList<>();
@@ -123,15 +126,17 @@ public class ApplicationController {
             if (newFileUpload) {
                 addDomensAutomaticly(statistics);
             }
-            if(firstStart){
-                if(ActivePull.size()> 0){
+            if (firstStart) {
+                if (ActivePull.size() > 0) {
                     shownFrom = 1;
                 }
-                if(Pull.size()>numberOfTableLines){
+                if (Pull.size() > numberOfTableLines) {
                     shownTo = numberOfTableLines;
-                }else {
+                    canGoRight = true;
+                } else {
                     shownTo = Pull.size();
                 }
+                shownToFormal = shownTo;
                 firstStart = false;
             }
 
@@ -141,7 +146,7 @@ public class ApplicationController {
             model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
             model.put("domens", shrek.getDomens());
-            model.put("location", String.valueOf(shownFrom) + "-" + String.valueOf(shownTo));
+            model.put("location", String.valueOf(shownFrom) + "-" + String.valueOf(shownToFormal));
 
         } catch (Exception e) {
             logger.error("Failed to load data to frontend", e);
@@ -241,6 +246,7 @@ public class ApplicationController {
             ShrekBD shrek = new ShrekBD();
             ShrekBD.applyLiveEdit(stringToEdit);
             applyFrontLiveEdt(stringToEdit);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -265,9 +271,16 @@ public class ApplicationController {
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
         try {
+            firstStart = true;
+            canGoRight = false;
+            canGoLeft = false;
             FileUtils.cleanDirectory(new File(uploadDirectory));
             storageService.store(file);
-            DBConnect.connect();
+            boolean drop = DBConnect.connect();
+            if (drop) {
+                dropDomens();
+            }
+            ;
             Pull.clear();
             ActivePull.clear();
             PresettedData.clear();
@@ -278,82 +291,71 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
+    public static void dropDomens() throws IOException {
+        final String dir = System.getProperty("user.dir");
+
+        FileWriter writer = new FileWriter(dir + "/preSets/domens.json");
+        writer.write("[]");
+        writer.close();
+
+    }
+
+
     @PostMapping("/changeView")
     public String moveView(@RequestParam("direction") String direction) {
         try {
             Class.forName("org.postgresql.Driver");
             ShrekBD shrek = new ShrekBD();
 
-            ActivePull.clear();
-
 
             Boolean movementRight = true;
             if (direction.equals("right")) {
-                if (Pull.size() > numberOfTableLines) {
-                    shownFrom = shownFrom + numberOfTableLines;
-                    if (shownFrom + numberOfTableLines < Pull.size()) {
-                        shownTo = shownFrom + numberOfTableLines;
+                if (canGoRight) {
+                    ActivePull.clear();
+
+                    if (Pull.size() > numberOfTableLines) {
+                        shownFrom = shownFrom + numberOfTableLines;
+                        if (shownFrom + numberOfTableLines < Pull.size()) {
+                            shownTo = shownFrom + numberOfTableLines;
+                            for (int i = shownFrom; i < shownTo; i++) {
+                                ActivePull.add(Pull.get(i - 1));
+                            }
+                            shownToFormal = shownTo - 1;
+                        } else {
+                            shownTo = shownTo + numberOfTableLines;
+                            shownToFormal = Pull.size();
+                            for (int i = shownFrom; i < Pull.size() + 1; i++) {
+                                ActivePull.add(Pull.get(i - 1));
+                            }
+                            canGoRight = false;
+                        }
+                        canGoLeft = true;
+
+                    } else {
+                        canGoRight = false;
+                        for (int i = 0; i < Pull.size(); i++) {
+                            ActivePull.add(Pull.get(i));
+                        }
+                        shownToFormal = shownTo;
                     }
-                    else {
-                        shownTo = Pull.size();
+                }
+            } else {
+                if (canGoLeft) {
+                    ActivePull.clear();
+                    canGoRight = true;
+
+                    shownFrom -= numberOfTableLines;
+                    shownTo -= numberOfTableLines;
+                    if (shownFrom == 1) {
+                        canGoLeft = false;
                     }
-                    for(int i = shownFrom; i< shownTo;i++){
-                        ActivePull.add(Pull.get(i-1));
+                    for (int i = shownFrom; i < shownTo; i++) {
+                        ActivePull.add(Pull.get(i - 1));
                     }
+                    shownToFormal = shownTo - 1;
                 }
             }
 
-
-//            if (direction.equals("right")) {
-//                if (movementRight) {
-//                    if (Pull.size() > numberOfTableLines) {
-//                        for (int i = startPosition; i < startPosition + numberOfTableLines; i++) {
-//                            ActivePull.add(Pull.get(i));
-//                        }
-//                        if (startPosition + numberOfTableLines < Pull.size()) {
-//                            startPosition += numberOfTableLines;
-//                        }
-//                    }
-//
-//                } else {
-//                    movementRight = true;
-//                    startPosition += numberOfTableLines;
-//
-//                    if (Pull.size() > numberOfTableLines) {
-//                        for (int i = startPosition; i < startPosition + numberOfTableLines; i++) {
-//                            ActivePull.add(Pull.get(i));
-//                        }
-//                    } else {
-//                        ActivePull = Pull;
-//                    }
-//                    if (startPosition + numberOfTableLines < Pull.size()) {
-//                        startPosition += numberOfTableLines;
-//                    }
-//                }
-//
-//            } else if (direction.equals("left")) {
-//                if (!movementRight) {
-//                    for (int i = startPosition - numberOfTableLines; i < startPosition; i++) {
-//                        ActivePull.add(Pull.get(i));
-//                    }
-//                    if (startPosition - numberOfTableLines > 0) {
-//                        startPosition -= numberOfTableLines;
-//                    }
-//
-//                } else {
-//                    movementRight = false;
-//                    if (startPosition - numberOfTableLines > 0) {
-//                        startPosition -= numberOfTableLines;
-//                    }
-//                    for (int i = startPosition - numberOfTableLines; i < startPosition; i++) {
-//                        ActivePull.add(Pull.get(i));
-//                    }
-//                    if (startPosition - numberOfTableLines > 0) {
-//                        startPosition -= numberOfTableLines;
-//                    }
-//                }
-//
-//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -396,9 +398,11 @@ public class ApplicationController {
             String json = gson.toJson(newUserArray);
             try (FileWriter writer = new FileWriter(dir + "/preSets/staff.json")) {
                 writer.write(json);
+                writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -552,15 +556,14 @@ public class ApplicationController {
                     stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
                     counter = counter + 1;
                 }
-                direction = false;
             } else {
                 if (ShrekBD.changes_num - counter >= 0) {
                     //index = index - 1;
                     stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
                     counter = counter + 1;
                 }
-                direction = false;
             }
+            direction = false;
             stmt.close();
 
         } catch (Exception e) {
@@ -789,6 +792,7 @@ public class ApplicationController {
         try {
             ArrayList<String> data = new ArrayList<>(Arrays.asList(emailsToDelete.split("##")));
             List<List<HashMap<String, String>>> newActivePull = new ArrayList<>();
+            List<List<HashMap<String, String>>> newPull = new ArrayList<>();
             List<List<HashMap<String, String>>> newPresettedData = new ArrayList<>();
             data.remove(0);
             for (List<HashMap<String, String>> dataRow : ActivePull) {
@@ -801,8 +805,14 @@ public class ApplicationController {
                     newPresettedData.add(dataRow);
                 }
             }
+            for (List<HashMap<String, String>> dataRow : Pull) {
+                if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                    newPull.add(dataRow);
+                }
+            }
             ActivePull = newActivePull;
             PresettedData = newPresettedData;
+            Pull = newPull;
         } catch (Exception e) {
             e.printStackTrace();
         }
