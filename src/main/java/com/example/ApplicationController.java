@@ -376,8 +376,10 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
+
     @PostMapping("/addPreSet")
-    public String addPreSet(@RequestParam("name") String name) throws FileNotFoundException {
+    public String addPreSetVoid(@RequestParam("name") String name) throws FileNotFoundException {
+//        System.out.println("AllRight");
         try {
             createCheckPoint(Boolean.FALSE);
             String sets = "";
@@ -406,6 +408,7 @@ public class ApplicationController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return "redirect:/file";
 
     }
@@ -432,6 +435,7 @@ public class ApplicationController {
             String json = gson.toJson(newUserArray);
             try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
                 writer.write(json);
+                writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -441,6 +445,7 @@ public class ApplicationController {
         return "redirect:/file";
 
     }
+
 
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {

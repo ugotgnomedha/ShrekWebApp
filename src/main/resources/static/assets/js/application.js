@@ -17,7 +17,41 @@ $("#filterButton").click(function () {
     }
 
 });
+$("#add-preSet").click(function () {
+    try {
+        let data = document.getElementById("searchTxt").value;
+        // alert(data);
+        const XHR = new XMLHttpRequest();
 
+        let urlEncodedData = "",
+            urlEncodedDataPairs = [],
+            name;
+
+        urlEncodedDataPairs.push(encodeURIComponent('name') + '=' + encodeURIComponent(data));
+        urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+        // Define what happens on successful data submission
+        XHR.addEventListener('load', function (event) {
+            // alert('Yeah! Data sent and response loaded.');
+        });
+
+        // Define what happens in case of error
+        XHR.addEventListener('error', function (event) {
+            alert('Oops! Something went wrong.');
+        });
+
+        XHR.open('POST', '/addPreSet');
+
+        // Add the required HTTP header for form data POST requests
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Finally, send our data.
+        XHR.send(urlEncodedData);
+        $("#add-form").submit();
+    } catch (error) {
+        console.error(error);
+    }
+});
 
 const btn = document.querySelector("#rightButton");
 
@@ -118,41 +152,41 @@ $("#play-button").click(function () {
     }
 });
 
-$("#add-preSet").click(function () {
-    try {
-        let data = document.getElementById("searchTxt").value;
-        const XHR = new XMLHttpRequest();
-
-        let urlEncodedData = "",
-            urlEncodedDataPairs = [],
-            name;
-
-        urlEncodedDataPairs.push(encodeURIComponent('name') + '=' + encodeURIComponent(data));
-        urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-
-        // Define what happens on successful data submission
-        XHR.addEventListener('load', function (event) {
-            // alert('Yeah! Data sent and response loaded.');
-        });
-
-        // Define what happens in case of error
-        XHR.addEventListener('error', function (event) {
-            alert('Oops! Something went wrong.');
-        });
-
-        XHR.open('POST', '/addPreSet');
-
-        // Add the required HTTP header for form data POST requests
-        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        // Finally, send our data.
-        XHR.send(urlEncodedData);
-        // alert(data);
-        // $("#add-form").submit();
-    } catch (error) {
-        console.error(error);
-    }
-});
+// $("#add-preSet").click(function () {
+//     try {
+//         let data = document.getElementById("searchTxt").value;
+//         const XHR = new XMLHttpRequest();
+//
+//         let urlEncodedData = "",
+//             urlEncodedDataPairs = [],
+//             name;
+//
+//         urlEncodedDataPairs.push(encodeURIComponent('name') + '=' + encodeURIComponent(data));
+//         urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+//
+//         // Define what happens on successful data submission
+//         XHR.addEventListener('load', function (event) {
+//             // alert('Yeah! Data sent and response loaded.');
+//         });
+//
+//         // Define what happens in case of error
+//         XHR.addEventListener('error', function (event) {
+//             alert('Oops! Something went wrong.');
+//         });
+//
+//         XHR.open('POST', '/addPreSet');
+//
+//         // Add the required HTTP header for form data POST requests
+//         XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//
+//         // Finally, send our data.
+//         XHR.send(urlEncodedData);
+//         // alert(data);
+//         $("#add-form").submit();
+//     } catch (error) {
+//         console.error(error);
+//     }
+// });
 
 $("#add-new-domen").click(function () {
     try {
