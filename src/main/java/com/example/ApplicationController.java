@@ -31,7 +31,7 @@ public class ApplicationController {
 
     private static final Logger logger = LogManager.getLogger(ApplicationController.class);
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
-    private final int numberOfTableLines = 5;
+    private final int numberOfTableLines = 50;
     public static Integer counter = 1;
     public static Boolean direction = true;
     private final StorageService storageService;
