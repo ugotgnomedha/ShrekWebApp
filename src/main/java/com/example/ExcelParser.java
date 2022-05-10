@@ -65,8 +65,8 @@ public class ExcelParser {
         try {
             Row row = sheet.getRow(0);
             for (Cell cell : row) {
-                if (cell.getStringCellValue().contains("email") || cell.getStringCellValue().contains("Email")
-                        || cell.getStringCellValue().contains("почта") || cell.getStringCellValue().contains("Почта") || cell.getStringCellValue().contains("e-mail")) {
+                if (cell.toString().contains("email") || cell.toString().contains("Email")
+                        || cell.toString().contains("почта") || cell.toString().contains("Почта") || cell.toString().contains("e-mail")) {
                     emailColumnIndex = cell.getColumnIndex();
                     excelheaders.add(headersTransform.TranslateNameToDB(cell.toString().toLowerCase()));
                     emailNameFromExcel = headersTransform.TranslateNameToDB(cell.toString().toLowerCase());
