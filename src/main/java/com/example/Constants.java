@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constants {
+
 //    public static String url = "jdbc:postgresql://localhost/postgres";
 //    public static String user = "postgres";
 //    public static String password = "root";

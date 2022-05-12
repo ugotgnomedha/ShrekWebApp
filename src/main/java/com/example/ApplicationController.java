@@ -146,46 +146,14 @@ public class ApplicationController {
             model.put("data", ActivePull);
             model.put("preSets", shrek.getPreSets());
             model.put("domens", shrek.getDomens());
-            model.put("location", String.valueOf(shownFrom) + "-" + String.valueOf(shownToFormal));
+            int showToStat = (shownToFormal < Pull.size()) ? shownToFormal : Pull.size();
+            model.put("location", String.valueOf(shownFrom) + "-" + String.valueOf(showToStat) + " из " + String.valueOf(Pull.size()));
 
         } catch (Exception e) {
             logger.error("Failed to load data to frontend", e);
             e.printStackTrace();
         }
         return "application";
-    }
-
-    public void addDomensAutomaticly(ArrayList<Domen> statistics) {
-        try {
-            for (Domen domen : statistics) {
-                String name = domen.getDomenName().substring(1);
-                String sets = "";
-                final String dir = System.getProperty("user.dir");
-                String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
-
-                Gson gson = new Gson();
-
-                User[] userArray = gson.fromJson(userJson, User[].class);
-                User[] newUserArray = new User[userArray.length + 1];
-                for (int i = 0; i < userArray.length; i++) {
-                    newUserArray[i] = userArray[i];
-                }
-                User newUser = new User();
-                newUser.setName(name);
-                newUser.setSets(sets);
-                newUserArray[newUserArray.length - 1] = newUser;
-                String json = gson.toJson(newUserArray);
-                try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
-                    writer.write(json);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        newFileUpload = false;
     }
 
     @GetMapping("/fileDownload")
@@ -291,16 +259,6 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-    public static void dropDomens() throws IOException {
-        final String dir = System.getProperty("user.dir");
-
-        FileWriter writer = new FileWriter(dir + "/preSets/domens.json");
-        writer.write("[]");
-        writer.close();
-
-    }
-
-
     @PostMapping("/changeView")
     public String moveView(@RequestParam("direction") String direction) {
         try {
@@ -376,7 +334,6 @@ public class ApplicationController {
         return "redirect:/file";
     }
 
-
     @PostMapping("/addPreSet")
     public String addPreSetVoid(@RequestParam("name") String name) throws FileNotFoundException {
 //        System.out.println("AllRight");
@@ -446,7 +403,6 @@ public class ApplicationController {
 
     }
 
-
     @PostMapping("/deleteDomen")
     public String deleteDomen(@RequestParam("domens") String name) throws FileNotFoundException {
         try {
@@ -488,7 +444,6 @@ public class ApplicationController {
         return "redirect:/file";
 
     }
-
 
     @PostMapping("/deletePreset")
     public String deletePreset(@RequestParam("presets") String name) throws FileNotFoundException {
@@ -547,33 +502,6 @@ public class ApplicationController {
             e.printStackTrace();
         }
         return "redirect:/file";
-    }
-
-    public void cancelLiveEdit() throws SQLException {
-        try {
-            ShrekBD shrek = new ShrekBD();
-            Statement stmt = ShrekBD.stmt;
-            int index = ShrekBD.changes_num - counter;
-            if (direction) {
-                if (ShrekBD.changes_num - counter > 0) {
-                    //index = index - 1;
-                    index--;
-                    stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
-                    counter = counter + 1;
-                }
-            } else {
-                if (ShrekBD.changes_num - counter >= 0) {
-                    //index = index - 1;
-                    stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
-                    counter = counter + 1;
-                }
-            }
-            direction = false;
-            stmt.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @PostMapping("/EasyExportDelete")
@@ -701,7 +629,6 @@ public class ApplicationController {
 
     }
 
-
     @PostMapping("/getData")
     public String addData(@RequestParam("preSets") String preSets, @RequestParam("domens") String domens) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
@@ -757,6 +684,13 @@ public class ApplicationController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return "redirect:/file";
+
+    }
+
+    @PostMapping("/Click")
+    public String click(@RequestParam("presets") String variable) {
+        System.out.println(variable);
         return "redirect:/file";
 
     }
@@ -874,7 +808,6 @@ public class ApplicationController {
 
     }
 
-
     public void createCheckPoint(Boolean liveEdit) {
         try {
             final String dir = System.getProperty("user.dir");
@@ -915,10 +848,72 @@ public class ApplicationController {
         }
     }
 
-    @PostMapping("/Click")
-    public String click(@RequestParam("presets") String variable) {
-        System.out.println(variable);
-        return "redirect:/file";
+    public static void dropDomens() throws IOException {
+        final String dir = System.getProperty("user.dir");
 
+        FileWriter writer = new FileWriter(dir + "/preSets/domens.json");
+        writer.write("[]");
+        writer.close();
+
+    }
+
+    public void cancelLiveEdit() throws SQLException {
+        try {
+            ShrekBD shrek = new ShrekBD();
+            Statement stmt = ShrekBD.stmt;
+            int index = ShrekBD.changes_num - counter;
+            if (direction) {
+                if (ShrekBD.changes_num - counter > 0) {
+                    //index = index - 1;
+                    index--;
+                    stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
+                    counter = counter + 1;
+                }
+            } else {
+                if (ShrekBD.changes_num - counter >= 0) {
+                    //index = index - 1;
+                    stmt.executeUpdate("ROLLBACK TO savepoint" + index + "");
+                    counter = counter + 1;
+                }
+            }
+            direction = false;
+            stmt.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addDomensAutomaticly(ArrayList<Domen> statistics) {
+        try {
+            for (Domen domen : statistics) {
+                String name = domen.getDomenName().substring(1);
+                String sets = "";
+                final String dir = System.getProperty("user.dir");
+                String userJson = new Scanner(new File(dir + "/preSets/domens.json")).useDelimiter("\\Z").next();
+
+                Gson gson = new Gson();
+
+                User[] userArray = gson.fromJson(userJson, User[].class);
+                User[] newUserArray = new User[userArray.length + 1];
+                for (int i = 0; i < userArray.length; i++) {
+                    newUserArray[i] = userArray[i];
+                }
+                User newUser = new User();
+                newUser.setName(name);
+                newUser.setSets(sets);
+                newUserArray[newUserArray.length - 1] = newUser;
+                String json = gson.toJson(newUserArray);
+                try (FileWriter writer = new FileWriter(dir + "/preSets/domens.json")) {
+                    writer.write(json);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        newFileUpload = false;
     }
 }
