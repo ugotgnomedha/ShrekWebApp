@@ -132,6 +132,7 @@ public class ExcelDataInserter {
                 newTable = true;
                 try {
                     Statement statement = DBConnect.connection.createStatement();
+                    ShrekBD.save();
                     statement.executeUpdate("DROP TABLE " + "jc_contact" + "");  // Drop old table from database.
                     statement.close();
                 } catch (SQLException ignored) {
