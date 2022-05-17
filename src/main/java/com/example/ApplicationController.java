@@ -33,7 +33,6 @@ public class ApplicationController {
     public static String uploadDirectory = System.getProperty("user.dir") + "/upload-dir";
     private final int numberOfTableLines = 50;
     public static Integer counter = 1;
-    public static Boolean direction = true;
     private final StorageService storageService;
     private int startPosition = numberOfTableLines;
     private boolean flag = false;
@@ -42,6 +41,7 @@ public class ApplicationController {
     private int shownFrom = 0;
     private int shownTo = 0;
     private int shownToFormal = shownTo;
+    public static Boolean direction = true;
     private boolean canGoRight = false;
     private boolean canGoLeft = false;
     List<List<HashMap<String, String>>> NeededItems = new ArrayList<>();
@@ -307,10 +307,18 @@ public class ApplicationController {
                     if (shownFrom == 1) {
                         canGoLeft = false;
                     }
-                    for (int i = shownFrom; i < shownTo; i++) {
-                        ActivePull.add(Pull.get(i - 1));
+                    if (numberOfTableLines > 2 * Pull.size()) {
+                        for (int i = shownFrom; i < shownTo; i++) {
+                            ActivePull.add(Pull.get(i - 1));
+                        }
+                        shownToFormal = shownTo - 1;
+                    } else {
+                        for (int i = shownFrom; i < shownTo + 1; i++) {
+                            ActivePull.add(Pull.get(i - 1));
+                        }
+                        shownToFormal = shownTo;
                     }
-                    shownToFormal = shownTo - 1;
+
                 }
             }
 
@@ -520,6 +528,10 @@ public class ApplicationController {
     @PostMapping("/usePreSet")
     public String handlePreSet(@RequestParam("used") String used) throws SQLException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException {
         try {
+            firstStart = true;
+            direction = true;
+            canGoRight = false;
+            canGoLeft = false;
             if (used.length() > 0) {
                 Class.forName("org.postgresql.Driver");
                 ShrekBD shrek = new ShrekBD();
