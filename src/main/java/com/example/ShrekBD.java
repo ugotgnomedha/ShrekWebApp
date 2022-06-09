@@ -270,7 +270,7 @@ public class ShrekBD {
             clearData.remove(0);
 
             ArrayList<String> column_names = getOnlineTableHeaders();
-            System.out.println("Column_names: " + column_names+ "\n\n\n\n");
+            System.out.println("Column_names: " + column_names + "\n\n\n\n");
 
             int j = 0;
             int i = 0;
@@ -281,7 +281,7 @@ public class ShrekBD {
                         stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
                         stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
 
-                        System.out.println( "Request to SQL: " + "update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";\n\n\n");
+                        System.out.println("Request to SQL: " + "update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";\n\n\n");
                         if (i == man.size() - 1) {
                             break;
                         }
@@ -337,6 +337,19 @@ public class ShrekBD {
             e.printStackTrace();
         }
 
+    }
+
+    public static int getIndexOfEmail(ArrayList<String> strings) {
+        List<String> emailSynonyms = new ArrayList<>();
+        emailSynonyms.add("email");
+        emailSynonyms.add("почта");
+        emailSynonyms.add("почтовый ящик");
+        emailSynonyms.add("e-mail");
+
+        for (String string : strings) {
+            if (emailSynonyms.contains(string)) return strings.indexOf(string);
+        }
+        return -1;
     }
 
 }

@@ -214,8 +214,8 @@ public class ApplicationController {
             ShrekBD shrek = new ShrekBD();
             ShrekBD.applyLiveEdit(stringToEdit);
             applyFrontLiveEdt(stringToEdit);
-            System.out.println("Active Pull: "+ ActivePull.toString());
-            System.out.println("Presetted Pull: "+ PresettedData.toString());
+            System.out.println("Active Pull: " + ActivePull.toString());
+            System.out.println("Presetted Pull: " + PresettedData.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -717,11 +717,12 @@ public class ApplicationController {
                 ArrayList<String> data = new ArrayList<>(Arrays.asList(string.split("##")));
                 data.remove(0);
                 data.remove(0);
-                String emailToEdit = data.get(data.size() - 1);
+                int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
+                String emailToEdit = data.get(indexOfEmail);
                 List<HashMap<String, String>> finded = new ArrayList<>();
                 List<HashMap<String, String>> newDataRow = new ArrayList<>();
                 for (List<HashMap<String, String>> dataRow : ActivePull) {
-                    if (dataRow.get(dataRow.size() - 1).get("Data").equals(emailToEdit)) {
+                    if (dataRow.get(indexOfEmail).get("Data").equals(emailToEdit)) {
                         for (String dataCell : data) {
                             HashMap<String, String> d = new HashMap<>();
                             d.put("Data", dataCell);
@@ -733,7 +734,7 @@ public class ApplicationController {
                 }
                 int activePullIndex = ActivePull.indexOf(finded);
                 int presettedDataIndex = PresettedData.indexOf(finded);
-                if(activePullIndex>=0&&presettedDataIndex>=0){
+                if (activePullIndex >= 0 && presettedDataIndex >= 0) {
                     ActivePull.set(activePullIndex, newDataRow);
                     PresettedData.set(presettedDataIndex, newDataRow);
                 }
@@ -753,6 +754,8 @@ public class ApplicationController {
             List<List<HashMap<String, String>>> newPull = new ArrayList<>();
             List<List<HashMap<String, String>>> newPresettedData = new ArrayList<>();
             data.remove(0);
+            int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
+            String emailToEdit = data.get(indexOfEmail);
             for (List<HashMap<String, String>> dataRow : ActivePull) {
                 if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
                     newActivePull.add(dataRow);
