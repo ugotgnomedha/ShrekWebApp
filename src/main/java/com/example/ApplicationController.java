@@ -729,8 +729,13 @@ public class ApplicationController {
                         break;
                     }
                 }
-                ActivePull.set(ActivePull.indexOf(finded), newDataRow);
-                PresettedData.set(PresettedData.indexOf(finded), newDataRow);
+                int activePullIndex = ActivePull.indexOf(finded);
+                int presettedDataIndex = PresettedData.indexOf(finded);
+                if(activePullIndex>=0&&presettedDataIndex>=0){
+                    ActivePull.set(activePullIndex, newDataRow);
+                    PresettedData.set(presettedDataIndex, newDataRow);
+                }
+
             }
         } catch (Exception e) {
             e.printStackTrace();
