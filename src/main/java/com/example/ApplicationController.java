@@ -214,8 +214,8 @@ public class ApplicationController {
             ShrekBD shrek = new ShrekBD();
             ShrekBD.applyLiveEdit(stringToEdit);
             applyFrontLiveEdt(stringToEdit);
-            System.out.println("Active Pull: " + ActivePull.toString());
-            System.out.println("Presetted Pull: " + PresettedData.toString());
+//            System.out.println("Active Pull: " + ActivePull.toString());
+//            System.out.println("Presetted Pull: " + PresettedData.toString());
 
         } catch (Exception e) {
             e.printStackTrace();

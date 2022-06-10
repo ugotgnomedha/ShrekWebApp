@@ -270,18 +270,15 @@ public class ShrekBD {
             clearData.remove(0);
 
             ArrayList<String> column_names = getOnlineTableHeaders();
-            System.out.println("Column_names: " + column_names + "\n\n\n\n");
-
             int j = 0;
             int i = 0;
             for (ArrayList<String> man : clearData) {
-                String email = man.get(man.size() - 1);
+                int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
+                String email = man.get(indexOfEmail);
                 for (String ignored : column_names) {
                     if (!column_names.get(j).equals("id")) {
                         stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
                         stmt.executeUpdate("update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";");
-
-                        System.out.println("Request to SQL: " + "update jc_contact set " + column_names.get(j) + " = " + quote(man.get(i)) + " where email = " + quote(email) + ";\n\n\n");
                         if (i == man.size() - 1) {
                             break;
                         }
