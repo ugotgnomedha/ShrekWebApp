@@ -273,6 +273,7 @@ public class ShrekBD {
             int j = 0;
             int i = 0;
             for (ArrayList<String> man : clearData) {
+                System.out.println(ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1);
                 int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
                 String email = man.get(indexOfEmail);
                 for (String ignored : column_names) {
