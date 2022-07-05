@@ -92,7 +92,11 @@ public class ApplicationController {
             List<String> headers = ExcelParser.excelheaders;
             if (headers == null || headers.size() == 0) {
                 headers = shrek.getOnlineTableHeaders();
+                System.out.println("Online table headers: " + tableHeaders);
             }
+//            if(!headers.contains("comment")){
+//                headers.add(0, "comment");
+//            }
 
             if (headers != null) {
                 for (int i = 0; i < headers.size(); i++) {
@@ -139,6 +143,7 @@ public class ApplicationController {
                 shownToFormal = shownTo;
                 firstStart = false;
             }
+            System.out.println(tableHeaders.toString());
 
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);
@@ -754,20 +759,24 @@ public class ApplicationController {
             List<List<HashMap<String, String>>> newPull = new ArrayList<>();
             List<List<HashMap<String, String>>> newPresettedData = new ArrayList<>();
             data.remove(0);
+
             int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
-            String emailToEdit = data.get(indexOfEmail);
+            System.out.println(data);
+//            String emailToEdit = data.get(indexOfEmail);
+
             for (List<HashMap<String, String>> dataRow : ActivePull) {
-                if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                System.out.println(dataRow.get(indexOfEmail).get("Data"));
+                if (!data.contains(dataRow.get(indexOfEmail).get("Data"))) {
                     newActivePull.add(dataRow);
                 }
             }
             for (List<HashMap<String, String>> dataRow : PresettedData) {
-                if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                if (!data.contains(dataRow.get(indexOfEmail).get("Data"))) {
                     newPresettedData.add(dataRow);
                 }
             }
             for (List<HashMap<String, String>> dataRow : Pull) {
-                if (!data.contains(dataRow.get(dataRow.size() - 1).get("Data"))) {
+                if (!data.contains(dataRow.get(indexOfEmail).get("Data"))) {
                     newPull.add(dataRow);
                 }
             }

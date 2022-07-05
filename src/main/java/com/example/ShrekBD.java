@@ -243,6 +243,7 @@ public class ShrekBD {
             stmt.executeUpdate("SAVEPOINT savepoint" + changes_num + ";");
             for (String email : data) {
                 stmt.executeUpdate("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
+                System.out.println("DELETE FROM " + mainDataBaseName + " WHERE email = " + quote(email) + ";");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -273,7 +274,7 @@ public class ShrekBD {
             int j = 0;
             int i = 0;
             for (ArrayList<String> man : clearData) {
-                int indexOfEmail = ShrekBD.getIndexOfEmail(ShrekBD.getOnlineTableHeaders())-1;
+                int indexOfEmail = ShrekBD.getIndexOfEmail( ShrekBD.getOnlineTableHeaders())-1;
                 String email = man.get(indexOfEmail);
                 for (String ignored : column_names) {
                     if (!column_names.get(j).equals("id")) {

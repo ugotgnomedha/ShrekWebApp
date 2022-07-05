@@ -55,6 +55,19 @@ $("#add-preSet").click(function () {
 
 const btn = document.querySelector("#rightButton");
 
+function getIndexOfEmail() {
+    var sinonims = ["email", "почта", "Email", "емеил"];
+    var elems = document.getElementsByClassName("1");
+    for (var i = 0; i < elems.length; i++) {
+        if (sinonims.includes(elems[i].textContent)) {
+            return i;
+
+        }
+
+    }
+    return -1;
+}
+
 function sendData(data) {
     try {
         console.log('Sending data');
@@ -243,6 +256,7 @@ function getCheckedBoxes(checkboxName) {
 }
 
 $("#live-edit-button-add").click(function () {
+    var indexOfEmail = getIndexOfEmail();
     try {
         flag = false;
         var checkBoxesPreSets = getCheckedBoxes("preSetForm");
@@ -262,16 +276,17 @@ $("#live-edit-button-add").click(function () {
             if (checkboxes[index].checked) {
                 var requiredClass = checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList;
                 var elems = document.getElementsByClassName(requiredClass.toString());
-                for (var i = 0; i < elems.length; i++) {
-                    try {
-                        if (elems.item(i).firstChild.value.includes("@")) {
-                            emailsToAdd.push(elems.item(i).firstChild.value);
-                        }
-                    } catch (e) {
-                        console.error(e);
-                    }
-
-                }
+                emailsToAdd.push(elems.item(indexOfEmail).firstChild.value)
+                // for (var i = 0; i < elems.length; i++) {
+                //     try {
+                //         if (elems.item(i).firstChild.value.includes("@")) {
+                //             emailsToAdd.push(elems.item(i).firstChild.value);
+                //         }
+                //     } catch (e) {
+                //         console.error(e);
+                //     }
+                //
+                // }
             }
         }
 
@@ -522,6 +537,7 @@ $("#save").click(function () {
 
 document.getElementById("confirm-popup-btn-delete").addEventListener("click", function () {
     try {
+         var indexOfEmail = getIndexOfEmail();
         var checkboxes = document.getElementsByClassName('table-checkbox');
         var emailsToDelete = [];
         for (var index = 0; index < checkboxes.length; index++) {
@@ -529,7 +545,7 @@ document.getElementById("confirm-popup-btn-delete").addEventListener("click", fu
                 // alert(checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList);
                 var requiredClass = checkboxes[index].parentElement.parentElement.parentElement.parentElement.classList;
                 var elems = document.getElementsByClassName(requiredClass.toString());
-                var emailToDelete = elems.item(elems.length - 1).firstChild.value;
+                var emailToDelete = elems.item(indexOfEmail).firstChild.value;
                 emailsToDelete.push(emailToDelete);
             }
         }
