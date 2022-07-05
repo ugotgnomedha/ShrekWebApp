@@ -92,7 +92,6 @@ public class ApplicationController {
             List<String> headers = ExcelParser.excelheaders;
             if (headers == null || headers.size() == 0) {
                 headers = shrek.getOnlineTableHeaders();
-                System.out.println("Online table headers: " + tableHeaders);
             }
 //            if(!headers.contains("comment")){
 //                headers.add(0, "comment");
@@ -143,7 +142,6 @@ public class ApplicationController {
                 shownToFormal = shownTo;
                 firstStart = false;
             }
-            System.out.println(tableHeaders.toString());
 
             logger.info("Data loaded to frontend");
             model.put("statistics", statistics);

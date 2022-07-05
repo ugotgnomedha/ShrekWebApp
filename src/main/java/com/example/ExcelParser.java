@@ -38,6 +38,9 @@ public class ExcelParser {
             headerExcelGetter(sheet); //Get excel table headers.
             headerDBtableGetter(); //Get database table headers.
             newTable = ExcelDataInserter.columnCheck(sheet); //Insert excel data into a database table.
+
+            excelheaders.add(0, "comment");   // Dumbest thing that is needed because something in the
+            // front of the program utilized this variable wrongly and now this needs additional comment value...
         } catch (FileNotFoundException exception) {
             logger.error("Error occurred while accessing excel file. Possibly the file path is incorrect.");
             exception.printStackTrace();
